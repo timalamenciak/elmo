@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/elmo
+
+idspace: ELMO
+base_url: /obo/elmo
+
+products:
+- elmo.owl: https://raw.githubusercontent.com/timalamenciak/elmo/main/elmo.owl
+- elmo.obo: https://raw.githubusercontent.com/timalamenciak/elmo/main/elmo.obo
+
+term_browser: ontobee
+example_terms:
+- ELMO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/timalamenciak/elmo/v
+
+- prefix: /tracker/
+  replacement: https://github.com/timalamenciak/elmo/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/ELMO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/timalamenciak/elmo/main/
+

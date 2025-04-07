@@ -1,0 +1,14 @@
+format-version: 1.2
+data-version: elmo/releases/2025-04-07/elmo-simple.owl
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+idspace: terms http://purl.org/dc/terms/ 
+ontology: elmo/elmo-simple
+property_value: owl:versionInfo "2025-04-07" xsd:string
+property_value: terms:description "None" xsd:string
+property_value: terms:license https://creativecommons.org/licenses/unspecified
+property_value: terms:title "Ecolink Model Ontology (ELMO)" xsd:string
+
+[Term]
+id: ELMO:0000000
+name: root node
+

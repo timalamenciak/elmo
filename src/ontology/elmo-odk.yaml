@@ -1,0 +1,21 @@
+id: elmo
+title: Ecolink Model Ontology (ELMO)
+github_org: timalamenciak
+repo: elmo
+report_fail_on: NONE
+use_dosdps: TRUE
+export_formats:
+  - owl
+  - obo
+  - json
+release_artefacts: 
+  - base
+  - simple
+  - full
+import_group:
+  products:
+    - id: ro
+      use_base: True
+    - id: envo
+      use_base: True
+robot_java_args: '-Xmx8G'
