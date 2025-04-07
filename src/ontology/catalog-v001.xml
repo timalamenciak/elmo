@@ -8,7 +8,7 @@
   
   <uri name="http://purl.obolibrary.org/obo/elmo/imports/envo_import.owl" uri="imports/envo_import.owl"/>
   
-  
+  <uri name="http://purl.obolibrary.org/obo/ro/imports/orcidio_import.owl" uri="imports/orcidio_import.owl"/>
 
 
   

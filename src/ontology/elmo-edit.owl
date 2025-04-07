@@ -16,6 +16,7 @@ Import(<http://purl.obolibrary.org/obo/elmo/imports/ro_import.owl>)
 
 Import(<http://purl.obolibrary.org/obo/elmo/imports/envo_import.owl>)
 
+Import(<http://purl.obolibrary.org/obo/ro/imports/orcidio_import.owl>)
 
 
 Import(<http://purl.obolibrary.org/obo/elmo/patterns/definitions.owl>)

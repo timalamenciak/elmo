@@ -13,9 +13,19 @@ release_artefacts:
   - simple
   - full
 import_group:
+  annotation_properties:
+    - rdfs:label
+    - dc:description
+    - dc:source
+    - IAO:0000115
   products:
     - id: ro
       use_base: True
     - id: envo
       use_base: True
+    - id: orcidio
+      mirror_from: https://w3id.org/orcidio/orcidio.owl
+      module_type: filter
+      base_iris:
+        - https://orcid.org/
 robot_java_args: '-Xmx8G'
