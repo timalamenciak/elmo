@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                efcd6625f1ea383d5c993591e49fb24ce087eebeb3d3ae60891f5c1908905319
+CONFIG_HASH=                006d26e0a7ea7fea83dce89f25b97421de448a20d4fc0d530754ac161fb16a40
 
 
 # ----------------------------------------
@@ -164,7 +164,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro envo orcidio
+IMPORTS =  ro cob orcidio
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -429,12 +429,12 @@ mirror-ro: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: envo
-.PHONY: mirror-envo
-.PRECIOUS: $(MIRRORDIR)/envo.owl
-mirror-envo: | $(TMPDIR)
-	curl -L $(OBOBASE)/envo/envo-base.owl --create-dirs -o $(TMPDIR)/envo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/envo-download.owl -o $(TMPDIR)/$@.owl
+## ONTOLOGY: cob
+.PHONY: mirror-cob
+.PRECIOUS: $(MIRRORDIR)/cob.owl
+mirror-cob: | $(TMPDIR)
+	curl -L $(OBOBASE)/cob/cob-base.owl --create-dirs -o $(TMPDIR)/cob-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/cob-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: orcidio
