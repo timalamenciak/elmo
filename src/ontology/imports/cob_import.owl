@@ -10,5 +10,3 @@ Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 Ontology(<http://purl.obolibrary.org/obo/elmo/imports/cob_import.owl>
 # This is a placeholder, it will be regenerated when makefile is first executed.
 )
-
-Declaration(Class(obo:ENVO_02500000))
