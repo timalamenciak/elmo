@@ -1,4 +1,5 @@
-Prefix(:=<http://purl.obolibrary.org/obo/elmo.owl#>)
+
+Prefix(:=<https://w3id.org/elmo/elmo.owl#>)
 Prefix(dce:=<http://purl.org/dc/elements/1.1/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
@@ -8,45 +9,46 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
-Ontology(<http://purl.obolibrary.org/obo/elmo.owl>
-Import(<http://purl.obolibrary.org/obo/elmo/imports/envo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/elmo/imports/ro_import.owl>)
-Import(<http://purl.obolibrary.org/obo/elmo/imports/cob_import.owl>)
-Import(<http://purl.obolibrary.org/obo/elmo/patterns/definitions.owl>)
-Import(<http://purl.obolibrary.org/obo/ro/imports/orcidio_import.owl>)
-Annotation(dcterms:description "The Ecolink Model Ontology (ELMO) is a project ontology that includes terms relevant to ecology, including ecological processes, ecosystem types and environmental variables. ELMO is designed to be used with the Ecolink Model - a structured schema for representing ecological knowledge."@en-ca)
+Ontology(<https://w3id.org/elmo/elmo.owl>
+
+
+Import(<https://w3id.org/elmo/elmo/imports/ro_import.owl>)
+
+Import(<https://w3id.org/elmo/elmo/imports/cob_import.owl>)
+
+Import(<https://w3id.org/elmo/elmo/imports/envo_import.owl>)
+
+Import(<https://w3id.org/elmo/elmo/imports/orcidio_import.owl>)
+
+
+
+Import(<https://w3id.org/elmo/elmo/patterns/definitions.owl>)
+Annotation(dcterms:description "None")
 Annotation(dcterms:license <https://creativecommons.org/public-domain/>)
 Annotation(dcterms:title "Ecolink Model Ontology (ELMO)")
 
-Declaration(Class(<http://purl.obolibrary.org/obo/ELMO_0000000>))
+
+Declaration(Class(<https://w3id.org/elmo/ELMO_0000000>))
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
+
 ############################
 #   Annotation Properties
 ############################
 
-# Annotation Property: dcterms:description (description)
-
 AnnotationAssertion(rdfs:label dcterms:description "description")
-
-# Annotation Property: dcterms:license (license)
-
 AnnotationAssertion(rdfs:label dcterms:license "license")
-
-# Annotation Property: dcterms:title (title)
-
 AnnotationAssertion(rdfs:label dcterms:title "title")
-
-
 
 ############################
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/ELMO_0000000> (root node)
+# Class: <https://w3id.org/elmo/ELMO_0000000> (root node)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ELMO_0000000> "root node"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/ELMO_0000000> "root node"@en)
 
 
 )
+

@@ -31,7 +31,9 @@ products:
     name: "Ecolink Model Ontology (ELMO) additional release in OBOJSon format"
 dependencies:
 - id: ro
+- id: cob
 - id: envo
+- id: orcidio
 
 tracker: https://github.com/timalamenciak/elmo/issues
 license:

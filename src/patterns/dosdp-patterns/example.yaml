@@ -1,5 +1,5 @@
 pattern_name: example
-pattern_iri: http://purl.obolibrary.org/obo/elmo/example.yaml
+pattern_iri: https://w3id.org/elmo/elmo/example.yaml
 description: "This is a minimal example pattern."
 
 classes:

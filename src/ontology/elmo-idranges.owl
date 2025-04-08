@@ -11,12 +11,12 @@ Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: idrange: <http://purl.obolibrary.org/obo/ro/idrange/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 
-Ontology: <http://purl.obolibrary.org/obo/elmo/elmo-idranges.owl>
+Ontology: <https://w3id.org/elmo/elmo/elmo-idranges.owl>
 
 
 Annotations: 
     idsfor: "ELMO",
-    idprefix: "http://purl.obolibrary.org/obo/ELMO_",
+    idprefix: "https://w3id.org/elmo/ELMO_",
     iddigits: 7
 
 AnnotationProperty: idprefix:
@@ -33,10 +33,10 @@ AnnotationProperty: allocatedto:
 Datatype: idrange:1
 
     Annotations: 
-        allocatedto: "Tim Alamenciak"
+        allocatedto: "ONTOLOGY-CREATOR"
     
     EquivalentTo: 
-        xsd:integer[>= 6000000 , <= 6500000]
+        xsd:integer[>= 0 , <= 999999]
 
     
 Datatype: idrange:2
@@ -45,7 +45,7 @@ Datatype: idrange:2
         allocatedto: "ADDITIONAL EDITOR"
     
     EquivalentTo: 
-        xsd:integer[>= 6500000 , <= 6505000]
+        xsd:integer[>= 1000000 , <= 1999999]
     
     
 Datatype: xsd:integer
