@@ -10,7 +10,7 @@
   
   <uri name="http://purl.obolibrary.org/obo/ro/imports/orcidio_import.owl" uri="imports/orcidio_import.owl"/>
 
-
+  <uri name="http://purl.obolibrary.org/obo/cob/imports/cob_import.owl" uri="imports/cob_import.owl"/>
   
  
   <uri name="http://purl.obolibrary.org/obo/elmo/patterns/definitions.owl" uri="../patterns/definitions.owl"/>
