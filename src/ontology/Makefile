@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                c1702872bcf3b49c5e3f622e541847648d34f54313b8396f74410625315a5171
+CONFIG_HASH=                a1d969a4fac1b2aba4a6f9d14cf37138a72116fe0da5818a0f0f4c5ec69e0b12
 
 
 # ----------------------------------------
@@ -19,9 +19,9 @@ CONFIG_HASH=                c1702872bcf3b49c5e3f622e541847648d34f54313b8396f7441
 # these can be overwritten on the command line
 
 OBOBASE=                    http://purl.obolibrary.org/obo
-URIBASE=                    http://purl.obolibrary.org/obo
+URIBASE=                    https://w3id.org/elmo
 ONT=                        elmo
-ONTBASE=                    http://purl.obolibrary.org/obo/elmo
+ONTBASE=                    https://w3id.org/elmo/elmo
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 MAKE_FAST=                  $(MAKE) IMP=false PAT=false COMP=false MIR=false
@@ -725,6 +725,8 @@ update_repo:
 	sh $(SCRIPTSDIR)/update_repo.sh
 	
 
+update_docs:
+	mkdocs gh-deploy --config-file ../../mkdocs.yaml
 
 # Note to future generations: computing the real path relative to the
 # current directory is a way to ensure we only clean up directories that

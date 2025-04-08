@@ -1,9 +1,14 @@
 id: elmo
 title: Ecolink Model Ontology (ELMO)
 github_org: timalamenciak
+contact: tim.alamenciak [at] gmail [.] com
 repo: elmo
+license: https://creativecommons.org/public-domain/
 report_fail_on: NONE
 use_dosdps: TRUE
+documentation:
+  documentation_system: mkdocs
+uribase: https://w3id.org/elmo
 export_formats:
   - owl
   - obo
