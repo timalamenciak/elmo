@@ -21,7 +21,7 @@ import_group:
   products:
     - id: ro
       use_base: True
-    - id: envo
+    - id: cob
       use_base: True
     - id: orcidio
       mirror_from: https://w3id.org/orcidio/orcidio.owl
