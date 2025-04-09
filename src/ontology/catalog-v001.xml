@@ -7,9 +7,7 @@
   <uri name="https://w3id.org/elmo/elmo/imports/ro_import.owl" uri="imports/ro_import.owl"/>
   
   <uri name="https://w3id.org/elmo/elmo/imports/cob_import.owl" uri="imports/cob_import.owl"/>
-  
-  <uri name="https://w3id.org/elmo/elmo/imports/envo_import.owl" uri="imports/envo_import.owl"/>
-  
+   
   <uri name="https://w3id.org/elmo/elmo/imports/orcidio_import.owl" uri="imports/orcidio_import.owl"/>
   
   

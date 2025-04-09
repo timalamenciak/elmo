@@ -18,7 +18,6 @@ These are the current imports in ELMO
 | ------ | --- | ---- |
 | ro | http://purl.obolibrary.org/obo/ro.owl | None |
 | cob | http://purl.obolibrary.org/obo/cob.owl | None |
-| envo | http://purl.obolibrary.org/obo/envo.owl | None |
 | orcidio | https://w3id.org/orcidio/orcidio.owl | filter |
 
 ## Components

@@ -16,8 +16,6 @@ Import(<https://w3id.org/elmo/elmo/imports/ro_import.owl>)
 
 Import(<https://w3id.org/elmo/elmo/imports/cob_import.owl>)
 
-Import(<https://w3id.org/elmo/elmo/imports/envo_import.owl>)
-
 Import(<https://w3id.org/elmo/elmo/imports/orcidio_import.owl>)
 
 
