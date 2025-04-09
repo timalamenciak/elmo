@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                a1d969a4fac1b2aba4a6f9d14cf37138a72116fe0da5818a0f0f4c5ec69e0b12
+CONFIG_HASH=                b4602683b19e7e65740d708dec038481affd30b56f49d554f33f7f3a4f738490
 
 
 # ----------------------------------------
@@ -347,10 +347,23 @@ $(SIMPLESEED): $(SRCMERGED) $(ONTOLOGYTERMS)
 	cat $@.tmp $(ONTOLOGYTERMS) | sort | uniq >  $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SubsetProperty" >> $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty" >> $@
+ 
+IMPORT_MODULE_TEMPLATE=$(TEMPLATEDIR)/external_import.tsv
+IMPORT_MODULE_SIGNATURE=$(TMPDIR)/external_import_terms.txt
+IMPORT_MODULE=$(IMPORTDIR)/external_import.owl
+$(IMPORT_MODULE): $(IMPORT_MODULE_TEMPLATE) | $(TMPDIR)
+	$(ROBOT) template --template $< \
+ 		--ontology-iri "$(ONTBASE)/external_import.owl" \
+  		convert -f ofn \
+  		--output $@
+
+$(IMPORT_MODULE_SIGNATURE): $(IMPORT_MODULE) | $(TMPDIR)
+	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
+	cat $@.tmp | sort | uniq >  $@
 
 
 ALLSEED = $(PRESEED)  $(TMPDIR)/all_pattern_terms.txt \
-
+ $(IMPORT_MODULE_SIGNATURE) 
 
 $(IMPORTSEED): $(ALLSEED) | $(TMPDIR)
 	if [ $(IMP) = true ]; then cat $(ALLSEED) | sort | uniq > $@; fi

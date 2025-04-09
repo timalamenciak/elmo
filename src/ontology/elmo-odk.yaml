@@ -9,6 +9,7 @@ use_dosdps: TRUE
 documentation:
   documentation_system: mkdocs
 uribase: https://w3id.org/elmo
+use_custom_import_module: TRUE
 export_formats:
   - owl
   - obo
