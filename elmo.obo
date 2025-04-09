@@ -16,8 +16,18 @@ property_value: dcterms:title "Ecolink Model Ontology (ELMO)" xsd:string
 property_value: owl:versionInfo "2025-04-09" xsd:string
 
 [Term]
+id: BFO:0000015
+name: process
+
+[Term]
 id: ELMO:0000000
 name: root node
+
+[Term]
+id: ENVO:02500000
+name: environmental system process
+def: "A process in which includes the components of an environmental system as participants." []
+is_a: BFO:0000015 ! process
 
 [Typedef]
 id: BFO:0000050

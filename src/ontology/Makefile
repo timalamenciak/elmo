@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                445ab7a1f1cb093e46bce714c5a775757cd4865493fb430ce96a19fbbd11c814
+CONFIG_HASH=                be5d7258d2f9ec7fd7ea2249ef011e8f0c44878c03ebbb140a374c307ba544ae
 
 
 # ----------------------------------------
@@ -446,7 +446,7 @@ mirror-ro: | $(TMPDIR)
 .PHONY: mirror-cob
 .PRECIOUS: $(MIRRORDIR)/cob.owl
 mirror-cob: | $(TMPDIR)
-	curl -L $(OBOBASE)/cob/cob-base.owl --create-dirs -o $(TMPDIR)/cob-download.owl --retry 4 --max-time 200 && \
+	curl -L $(OBOBASE)/cob.owl --create-dirs -o $(TMPDIR)/cob-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/cob-download.owl -o $(TMPDIR)/$@.owl
 
 

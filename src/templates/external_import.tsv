@@ -1,4 +1,4 @@
 ID	Entity Type
 ID	TYPE
 owl:Thing	owl:Class
-
+ENVO:02500000   owl:Class

@@ -28,7 +28,6 @@ import_group:
     - id: ro
       use_base: True
     - id: cob
-      use_base: True
     - id: orcidio
       mirror_from: https://w3id.org/orcidio/orcidio.owl
       module_type: filter
