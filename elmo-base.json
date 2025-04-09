@@ -16,9 +16,9 @@
         "val" : "Ecolink Model Ontology (ELMO)"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2025-04-08"
+        "val" : "2025-04-09"
       } ],
-      "version" : "https://w3id.org/elmo/elmo/releases/2025-04-08/elmo-base.json"
+      "version" : "https://w3id.org/elmo/elmo/releases/2025-04-09/elmo-base.json"
     },
     "nodes" : [ {
       "id" : "https://w3id.org/elmo/ELMO_0000000",
