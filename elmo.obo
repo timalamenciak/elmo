@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: https://w3id.org/elmo/elmo/releases/2025-04-09/elmo.owl
+data-version: https://w3id.org/elmo/elmo/releases/2025-04-13/elmo.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -13,21 +13,11 @@ ontology: https://w3id.org/elmo/elmo.owl
 property_value: dcterms:description "None" xsd:string
 property_value: dcterms:license https://creativecommons.org/public-domain/
 property_value: dcterms:title "Ecolink Model Ontology (ELMO)" xsd:string
-property_value: owl:versionInfo "2025-04-09" xsd:string
-
-[Term]
-id: BFO:0000015
-name: process
+property_value: owl:versionInfo "2025-04-13" xsd:string
 
 [Term]
 id: ELMO:0000000
 name: root node
-
-[Term]
-id: ENVO:02500000
-name: environmental system process
-def: "A process in which includes the components of an environmental system as participants." []
-is_a: BFO:0000015 ! process
 
 [Typedef]
 id: BFO:0000050

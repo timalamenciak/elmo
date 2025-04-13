@@ -13,11 +13,11 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/elmo/elmo.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/elmo/elmo/releases/2025-04-09/elmo.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/elmo/elmo/releases/2025-04-13/elmo.owl"/>
         <dcterms:description>None</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/public-domain/"/>
         <dcterms:title>Ecolink Model Ontology (ELMO)</dcterms:title>
-        <owl:versionInfo>2025-04-09</owl:versionInfo>
+        <owl:versionInfo>2025-04-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -344,24 +344,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
-        <rdfs:label xml:lang="en">process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_02500000 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115>A process in which includes the components of an environmental system as participants.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">environmental system process</rdfs:label>
-    </owl:Class>
     
 
 
