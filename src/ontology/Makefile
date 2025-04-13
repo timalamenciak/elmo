@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                d286731fb44112439fa863ff521de1138deaa82fec3246ed25709d973153780d
+CONFIG_HASH=                fa929a1ac190ee0ac9b657e1d72b8ba9f3f314ee16ffee43469c2fbeee67c3eb
 
 
 # ----------------------------------------
@@ -96,7 +96,7 @@ release_diff: $(REPORTDIR)/release-diff.md
 
 .PHONY: reason_test
 reason_test: $(EDIT_PREPROCESSED)
-	$(ROBOT) reason --input $< --reasoner ELK --equivalent-classes-allowed asserted-only \
+	$(ROBOT) reason --input $< --reasoner ELK --equivalent-classes-allowed all \
 		--exclude-tautologies structural --output test.owl && rm test.owl
 
 .PHONY: odkversion
@@ -658,7 +658,7 @@ ROBOT_RELEASE_IMPORT_MODE_BASE=$(ROBOT) remove --input $< --select imports --tri
 # base: A version of the ontology that does not include any externally imported axioms.
 $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 	$(ROBOT_RELEASE_IMPORT_MODE) \
-	reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms False \
+	reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural --annotate-inferred-axioms False \
 	relax \
 	reduce -r ELK \
 	remove --base-iri $(URIBASE)/ELMO --axioms external --preserve-structure false --trim false \
@@ -669,7 +669,7 @@ $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 # Full: The full artefacts with imports merged, reasoned.
 $(ONT)-full.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 	$(ROBOT_RELEASE_IMPORT_MODE) \
-		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
+		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
 		relax \
 		reduce -r ELK \
 		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
@@ -678,7 +678,7 @@ $(ONT)-full.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 #	remove --select imports --trim false
 $(ONT)-simple.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(SIMPLESEED) $(IMPORT_FILES)
 	$(ROBOT_RELEASE_IMPORT_MODE) \
-		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms False \
+		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural --annotate-inferred-axioms False \
 		relax \
 		remove --axioms equivalent \
 		relax \
