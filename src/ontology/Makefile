@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                be5d7258d2f9ec7fd7ea2249ef011e8f0c44878c03ebbb140a374c307ba544ae
+CONFIG_HASH=                d286731fb44112439fa863ff521de1138deaa82fec3246ed25709d973153780d
 
 
 # ----------------------------------------
@@ -164,7 +164,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro cob orcidio
+IMPORTS =  ro envo cob orcidio
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -368,7 +368,7 @@ ALLSEED = $(PRESEED)  $(TMPDIR)/all_pattern_terms.txt \
 $(IMPORTSEED): $(ALLSEED) | $(TMPDIR)
 	if [ $(IMP) = true ]; then cat $(ALLSEED) | sort | uniq > $@; fi
 
-ANNOTATION_PROPERTIES=rdfs:label dc:description dc:source IAO:0000115 
+ANNOTATION_PROPERTIES=rdfs:label dc:description dc:source IAO:0000115 IAO:0000114 IAO:0000119 OBI:0001886 IAO:0000111 oboInOwl:hasAlternativeId 
 
 # ----------------------------------------
 # Import modules
@@ -440,6 +440,14 @@ ifeq ($(strip $(MIR)),true)
 mirror-ro: | $(TMPDIR)
 	curl -L $(OBOBASE)/ro/ro-base.owl --create-dirs -o $(TMPDIR)/ro-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) convert -i $(TMPDIR)/ro-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: envo
+.PHONY: mirror-envo
+.PRECIOUS: $(MIRRORDIR)/envo.owl
+mirror-envo: | $(TMPDIR)
+	curl -L $(OBOBASE)/envo.owl --create-dirs -o $(TMPDIR)/envo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/envo-download.owl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: cob

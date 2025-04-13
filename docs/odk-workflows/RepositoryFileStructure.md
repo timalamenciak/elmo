@@ -17,6 +17,7 @@ These are the current imports in ELMO
 | Import | URL | Type |
 | ------ | --- | ---- |
 | ro | http://purl.obolibrary.org/obo/ro.owl | None |
+| envo | http://purl.obolibrary.org/obo/envo.owl | None |
 | cob | http://purl.obolibrary.org/obo/cob.owl | None |
 | orcidio | https://w3id.org/orcidio/orcidio.owl | filter |
 
