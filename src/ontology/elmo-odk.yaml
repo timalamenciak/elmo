@@ -33,7 +33,6 @@ import_group:
     - id: ro
       use_base: True
     - id: envo
-      use_custom_import_module: TRUE
     - id: cob
     - id: orcidio
       mirror_from: https://w3id.org/orcidio/orcidio.owl
@@ -41,3 +40,4 @@ import_group:
       base_iris:
         - https://orcid.org/
 robot_java_args: '-Xmx8G'
+allow_equivalents: 'all'
