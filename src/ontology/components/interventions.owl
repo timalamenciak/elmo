@@ -1,0 +1,404 @@
+Prefix(:=<https://w3id.org/elmo/elmo/components/interventions.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://w3id.org/elmo/elmo/components/interventions.owl>
+<https://w3id.org/elmo/elmo/releases/2025-04-16/components/interventions.owl>
+Annotation(owl:versionInfo "2025-04-16")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001170>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620020>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620021>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620022>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620023>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620024>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620025>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620026>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620027>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620028>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620029>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620030>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620031>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620032>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620033>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620034>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620035>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620036>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620037>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620038>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620039>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620040>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620041>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620042>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620043>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620044>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620046>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620047>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620048>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620049>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620050>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620052>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620053>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620054>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620055>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620056>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620057>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620058>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620059>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620060>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620061>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620062>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620063>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620064>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620065>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620066>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620067>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620068>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620069>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620070>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620071>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620072>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620073>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620074>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <https://w3id.org/elmo/elmo_3620020> (mechanical ecosystem management process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620020> "An active ecosystem management process during which a human employs machines or tools to directly impact an ecosystem and realize some ecosystem management goal."@en)
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <https://w3id.org/elmo/elmo_3620020> <https://orcid.org/0000-0003-4817-0423>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3620020> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620020> "mechanical ecosystem management process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620020> <http://purl.obolibrary.org/obo/ENVO_01001170>)
+
+# Class: <https://w3id.org/elmo/elmo_3620021> (mechanical vegetation removal process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620021> "A mechanical ecosystem management process during which vegetation is removed."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620021> "mechanical vegetation removal process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620021> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620022> (root wrench removal process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620022> "A mechanical vegetation removal process in which some human employs a tool comprising a lever and gripping portion (root wrench) to remove shrubs or small trees."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620022> "root wrench removal process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620022> <https://w3id.org/elmo/elmo_3620021>)
+
+# Class: <https://w3id.org/elmo/elmo_3620023> (cut and cover removal process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620023> "A mechanical vegetation removal process during which plants at ground level are cut and residual stumps are covered with a sun-blocking material (e.g. silage tarp)."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620023> "cut and cover removal process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620023> <https://w3id.org/elmo/elmo_3620021>)
+
+# Class: <https://w3id.org/elmo/elmo_3620024> (cutting removal process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620024> "A mechanical vegetation removal process in which some human cuts and removes plant material."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620024> "cutting removal process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620024> <https://w3id.org/elmo/elmo_3620021>)
+
+# Class: <https://w3id.org/elmo/elmo_3620025> (spading removal process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://www.ontarioinvasiveplants.ca/wp-content/uploads/2018/05/OPWG-Spading-Postcard-1.pdf>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620025> "A mechanical vegetation removal process in which some human severs subsoil roots using a spade and pries the plant out of the ground."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620025> "spading removal process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620025> <https://w3id.org/elmo/elmo_3620021>)
+
+# Class: <https://w3id.org/elmo/elmo_3620026> (canopy thinning process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1111/rec.13043>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620026> "A mechanical vegetation removal process in which some human removes trees from a given area with the goal of reducing overall canopy cover thereby increasing light availability for understorey plants."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620026> "canopy thinning process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620026> <https://w3id.org/elmo/elmo_3620021>)
+
+# Class: <https://w3id.org/elmo/elmo_3620027> (leaf litter removal process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620027> "A mechanical vegetation removal process in which some human removes leaf litter from the ground thereby increasing the light availability for soil."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620027> "leaf litter removal process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620027> <https://w3id.org/elmo/elmo_3620021>)
+
+# Class: <https://w3id.org/elmo/elmo_3620028> (mechanical fauna control process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620028> "A mechanical ecosystem management process in which some human employs some mechanical means to control fauna."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620028> "mechanical fauna control process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620028> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620029> (mammal trapping process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Trapping>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620029> "A mechanical fauna control process in which some human uses traps to control fauna by containing and removing or killing them."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620029> "mammal trapping process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620029> <https://w3id.org/elmo/elmo_3620028>)
+
+# Class: <https://w3id.org/elmo/elmo_3620030> (predator control process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://agrilife.org/txwildlifeservices/files/2011/07/PredatorControlforWildlifeMgt.pdf>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620030> "A mechanical fauna control process in which some human targets predators for removal from the ecosystem by some mechanical means."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620030> "predator control process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620030> <https://w3id.org/elmo/elmo_3620028>)
+
+# Class: <https://w3id.org/elmo/elmo_3620031> (fencing process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1016/j.biocon.2017.08.001>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620031> "A mechanical fauna control process in which some human installs fencing to restrict either immigration or emmigration of fauna from a particular area."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620031> "fencing process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620031> <https://w3id.org/elmo/elmo_3620067>)
+
+# Class: <https://w3id.org/elmo/elmo_3620032> (mechanical species deterrent process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1111/jfb.13769>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620032> "A mechanical fauna control process in which some human installs a device to deter species from a particular area."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620032> "mechanical species deterrent process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620032> <https://w3id.org/elmo/elmo_3620028>)
+
+# Class: <https://w3id.org/elmo/elmo_3620033> (mechanical hydrological alteration process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Water_cycle>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620033> "A mechanical ecosystem management process during which the hydrologic cycle in an area is deliberately altered."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620033> "mechanical hydrological alteration process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620033> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620034> (dam construction process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1093/biosci/biu036>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620034> "A mechanical hydrological alteration process in which some human constructs some dam to restore a meander sequence to a river or stream."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620034> "beaver dam analogue"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620034> "dam construction process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620034> <https://w3id.org/elmo/elmo_3620033>)
+
+# Class: <https://w3id.org/elmo/elmo_3620035> (dam removal process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.12952/journal.elementa.000108>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620035> "A mechanical hydrological alteration process in which some human removes some dam with the goal of altering the hydroperiod of surrounding lands and reconnecting rivers."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620035> "dam removal process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620035> <https://w3id.org/elmo/elmo_3620033>)
+
+# Class: <https://w3id.org/elmo/elmo_3620036> (tile drain crushing process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620036> "A mechanical hydrological alteration process in which some human uncovers and collapses subterranean tile drains in situ to reduce drainage on the landscape and restore wetland hydroperiod."@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/elmo/elmo_3620036> "This technique is actively practiced by the Nature Conservancy of Canada, but has not been documented in the literature yet."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620036> "tile drain crushing process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620036> <https://w3id.org/elmo/elmo_3620033>)
+
+# Class: <https://w3id.org/elmo/elmo_3620037> (tile drain removal process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620037> "A mechanical hydrological alteration process in which some human uncovers and removes subterranean tile drains to reduce drainage on the landscape and restore wetland hydroperiod."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620037> "tile drain removal process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620037> <https://w3id.org/elmo/elmo_3620033>)
+
+# Class: <https://w3id.org/elmo/elmo_3620038> (nest site creation process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1186/S41610-021-00192-Z>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620038> "A mechanical ecosystem management process in which some human creates nest sites for fauna."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620038> "nest site creation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620038> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620039> (perch creation process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1007/s11258-016-0619-4>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620039> "A mechanical ecosystem management process in which some human creates artificial perches for birds."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620039> "perch creation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620039> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620040> (buffer strip creation process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.2134/jeq2018.03.0120>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620040> "A mechanical ecosystem management process in which some human cultivates strips of flora between landscape features using earthworks and planting processes."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620040> "buffer strip creation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620040> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620041> (riparian buffer strip creation process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1890/08-2064.1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620041> "A mechanical ecosystem management process in which some human cultivates strips of flora in the riparian areas of rivers."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620041> "riparian buffer strip creation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620041> <https://w3id.org/elmo/elmo_3620040>)
+
+# Class: <https://w3id.org/elmo/elmo_3620042> (buffer strip retention process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.2134/jeq2018.03.0120>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620042> "A mechanical ecosystem management process in which some human leaves strips of flora untouched when clearing the land for other purposes."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620042> "buffer strip retention process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620042> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620043> (earthworks process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620043> "A mechanical ecosystem management process during which the topology of some area is deliberately changed."@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/elmo/elmo_3620043> "Add comment here, describing issues with scale"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620043> "earthworks process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620043> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620044> (berm creation process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1007/s11273-013-9285-7>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620044> "An earthworks process in which earthen barriers (berms) are constructed with the goal of obstructing or slowing floodwaters."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620044> "berm creation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620044> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620046> (pond creation process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1007/s10531-021-02312-6>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620046> "An earthworks process in which some human creates a pond by altering the topology of an area."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620046> "pond creation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620046> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620047> (pond reprofiling process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1016/j.jenvman.2024.120992>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620047> "An earthworks process in which some human reshapes the banks or basin of a pond using mechanical tools."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620047> "pond reprofiling process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620047> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620048> (soil decompaction process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1111/j.1526-100X.2008.00477.x>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620048> "An earthworks process in which some human alleviates the compaction of soil to encourage flora productivity."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620048> "soil decompaction process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620048> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620049> (tilling process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1111/j.1526-100X.1995.tb00096.x>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620049> "An earthworks process in which some human breaks up the soil with a mechanical implement, and sometimes organic matter is added."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <https://w3id.org/elmo/elmo_3620049> "soil ripping process"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620049> "tilling process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620049> <https://w3id.org/elmo/elmo_3620048>)
+
+# Class: <https://w3id.org/elmo/elmo_3620050> (ploughing process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1007/s12224-024-09448-7>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620050> "An earthworks process in which some human deeply breaks up and overturns soil and vegetation using a mechanical implement."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620050> "ploughing process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620050> <https://w3id.org/elmo/elmo_3620048>)
+
+# Class: <https://w3id.org/elmo/elmo_3620052> (grading process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Grading_(earthworks)>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620052> "An earthworks process in which some human alters the topology of some land to create a specific slope."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620052> "grading process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620052> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620053> (slope stabilization process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Cellular_confinement>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620053> "An earthworks process in which some human installs inorganic material, usually a mesh, to stabilize a slope."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620053> "slope stabilization process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620053> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620054> (shoreline reinforcement process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Cellular_confinement>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620054> "An earthworks process in which some human installs inorganic material, usually in a mesh, to stabilize a slope on the bank of a body of water."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620054> "shoreline reinforcement process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620054> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620055> (pit and mound excavation process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1016/j.foreco.2017.02.048>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620055> "An earthworks process in which some human digs pits and mounds to recreate a natural disturbance regime."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620055> "pit and mound excavation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620055> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620056> (channel realignment process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://streamhandbook.org/project/stream-channel-realignment/>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620056> "An earthworks process in which some human realigns the channel of a stream by digging out replacement pathways and filling existing ones."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620056> "channel realignment process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620056> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620057> (natural channel realignment process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://streamhandbook.org/project/stream-channel-realignment/>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620057> "An earthworks process in which some human realigns the channel of a stream by digging out replacement pathways and filling existing ones with the goal of recreating a natural pool-riffle-pool meander sequence."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620057> "natural channel realignment process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620057> <https://w3id.org/elmo/elmo_3620056>)
+
+# Class: <https://w3id.org/elmo/elmo_3620058> (dredging process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Dredging>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620058> "An earthworks process in which some human removes the sediment layer of a water body."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620058> "dredging process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620058> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620059> (fauna passage creation process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Wildlife_crossing>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620059> "A mechanical ecosystem management process in which some human creates a crossing (bridge or underpass) to help fauna pass through a barrier such as a road, fence or property."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620059> "fauna passage creation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620059> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620060> (topsoil removal process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1111/avsc.12063>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620060> "A mechanical ecosystem management process in which some human removes the topsoil layer."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620060> "topsoil removal process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620060> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620061> (erosion control process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Erosion_control>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620061> "A mechanical ecosystem management process in which some human installs some material to reduce erosion."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620061> "erosion control process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620061> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620062> (erosion blanket process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620062> "An erosion control process in which some human installs a textile to prevent erosion."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620062> "erosion blanket process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620062> <https://w3id.org/elmo/elmo_3620061>)
+
+# Class: <https://w3id.org/elmo/elmo_3620063> (erosion fencing process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Silt_fence>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620063> "An erosion control process in which some human installs a fence with a geotextile to restrict sediment transport."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620063> "erosion fencing process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620063> <https://w3id.org/elmo/elmo_3620061>)
+
+# Class: <https://w3id.org/elmo/elmo_3620064> (wattle fencing process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://hatchetnseed.ca/soil-bio-engineering-for-erosion-control/>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620064> "An erosion control process in which some human interleaves live materials to make short fencing along a slope and prevent erosion."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620064> "wattle fencing process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620064> <https://w3id.org/elmo/elmo_3620061>)
+
+# Class: <https://w3id.org/elmo/elmo_3620065> (irrigation process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Irrigation>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620065> "A mechanical ecosystem management process in which some human installs semi-permanent lines to supply a controlled amount of water to plants."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620065> "irrigation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620065> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620066> (deterrence-focused predator control process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620066> "A predator control process in which some human installs a mechanical device designed to deter predators from a given area."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620066> "deterrence-focused predator control process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620066> <https://w3id.org/elmo/elmo_3620030>)
+
+# Class: <https://w3id.org/elmo/elmo_3620067> (fauna exclusion process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620067> "A mechanical fauna control process in which some human uses mechanical means to exclude fauna from a specific area."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620067> "fauna exclusion process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620067> <https://w3id.org/elmo/elmo_3620028>)
+
+# Class: <https://w3id.org/elmo/elmo_3620068> (mechanical fauna deterrent process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620068> "A mechanical fauna control process in which some human uses mechanical means to deter fauna from a specific area."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620068> "mechanical fauna deterrent process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620068> <https://w3id.org/elmo/elmo_3620028>)
+
+# Class: <https://w3id.org/elmo/elmo_3620069> (fauna capture for conservation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620069> "A mechanical fauna control process in which some human captures fauna for the purposes of protecting existing organisms from some threat."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620069> "fauna capture for conservation"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620069> <https://w3id.org/elmo/elmo_3620028>)
+
+# Class: <https://w3id.org/elmo/elmo_3620070> (fish bypass installation process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620070> "A mechanical ecosystem management process in which some human installs some means of bypassing hazards (e.g. dams) for fish."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620070> "fish bypass installation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620070> <https://w3id.org/elmo/elmo_3620020>)
+
+# Class: <https://w3id.org/elmo/elmo_3620071> (fish ladder installation process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://oceanservice.noaa.gov/facts/fish-ladder.html>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620071> "A fish bypass installation process in which some human installs a chute consisting of a series of stepped pools to allow fish to move past a dam."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620071> "fish ladder installation process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620071> <https://w3id.org/elmo/elmo_3620070>)
+
+# Class: <https://w3id.org/elmo/elmo_3620072> (ditch plugging process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://www.ducks.ca/stories/biodiversity/years-in-the-making-for-record-breaking-conservation-project/>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620072> "An earthworks process in which some human fills in a drainage ditch to restore the hydroperiod to a given area."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620072> "ditch plugging process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620072> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620073> (sediment addition process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620073> "An earthworks process in which some human adds sediment to a water body in order to modify the substrate composition."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620073> "sediment addition process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620073> <https://w3id.org/elmo/elmo_3620043>)
+
+# Class: <https://w3id.org/elmo/elmo_3620074> (new plant protection process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620074> "A mechanical ecosystem management process in which some human installs a barrier to protect newly planted flora from herbivory."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620074> "new plant protection process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620074> <https://w3id.org/elmo/elmo_3620020>)
+
+
+)

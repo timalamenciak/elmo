@@ -9,7 +9,6 @@ use_dosdps: TRUE
 documentation:
   documentation_system: mkdocs
 uribase: https://w3id.org/elmo
-use_custom_import_module: TRUE
 export_formats:
   - owl
   - obo
@@ -33,11 +32,19 @@ import_group:
     - id: ro
       use_base: True
     - id: envo
+      module_type: minimal
     - id: cob
     - id: orcidio
       mirror_from: https://w3id.org/orcidio/orcidio.owl
       module_type: filter
       base_iris:
         - https://orcid.org/
+components:
+  products:
+    - filename: interventions.owl
+      template_options: "--prefix 'ELMO: https://w3id.org/elmo/elmo_'"
+      use_template: true
+      templates:
+        - interventions.tsv
 robot_java_args: '-Xmx8G'
 allow_equivalents: 'all'

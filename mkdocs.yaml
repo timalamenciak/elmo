@@ -23,6 +23,7 @@ repo_url: https://github.com/timalamenciak/elmo/
 
 nav:
   - Getting started: index.md
+  - LODE docs: lode.md
   - Cite: cite.md
   - How-to guides:
       - Standard ODK workflows:

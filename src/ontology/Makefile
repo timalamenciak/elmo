@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                fa929a1ac190ee0ac9b657e1d72b8ba9f3f314ee16ffee43469c2fbeee67c3eb
+CONFIG_HASH=                c455c1b437f29372ba154d7ea473f85cd40b2856433a5e8651d96c89e30e8384
 
 
 # ----------------------------------------
@@ -53,7 +53,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/interventions.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 PATTERNDIR=                 ../patterns
@@ -347,23 +347,10 @@ $(SIMPLESEED): $(SRCMERGED) $(ONTOLOGYTERMS)
 	cat $@.tmp $(ONTOLOGYTERMS) | sort | uniq >  $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SubsetProperty" >> $@ &&\
 	echo "http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty" >> $@
- 
-IMPORT_MODULE_TEMPLATE=$(TEMPLATEDIR)/external_import.tsv
-IMPORT_MODULE_SIGNATURE=$(TMPDIR)/external_import_terms.txt
-IMPORT_MODULE=$(IMPORTDIR)/external_import.owl
-$(IMPORT_MODULE): $(IMPORT_MODULE_TEMPLATE) | $(TMPDIR)
-	$(ROBOT) template --template $< \
- 		--ontology-iri "$(ONTBASE)/external_import.owl" \
-  		convert -f ofn \
-  		--output $@
-
-$(IMPORT_MODULE_SIGNATURE): $(IMPORT_MODULE) | $(TMPDIR)
-	$(ROBOT) query -f csv -i $< --query ../sparql/terms.sparql $@.tmp &&\
-	cat $@.tmp | sort | uniq >  $@
 
 
 ALLSEED = $(PRESEED)  $(TMPDIR)/all_pattern_terms.txt \
- $(IMPORT_MODULE_SIGNATURE) 
+
 
 $(IMPORTSEED): $(ALLSEED) | $(TMPDIR)
 	if [ $(IMP) = true ]; then cat $(ALLSEED) | sort | uniq > $@; fi
@@ -391,6 +378,16 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 		$(ANNOTATE_CONVERT_FILE); fi
 
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
+
+## Module for ontology: envo
+
+$(IMPORTDIR)/envo_import.owl: $(MIRRORDIR)/envo.owl $(IMPORTDIR)/envo_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+    extract -T $(IMPORTDIR)/envo_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
+		remove --base-iri $(OBOBASE)/ENVO --axioms external --preserve-structure false --trim false \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru \
+		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) --term rdfs:label --term IAO:0000115  -T $(IMPORTDIR)/envo_terms_combined.txt --select complement --select "classes individuals annotation-properties" \
+		$(ANNOTATE_CONVERT_FILE); fi
 
 ## Module for ontology: orcidio
 
@@ -423,6 +420,45 @@ refresh-%:
 no-mirror-refresh-%:
 	$(MAKE) IMP=true IMP_LARGE=true MIR=false PAT=false $(IMPORTDIR)/$*_import.owl -B
 
+
+# ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+COMP=true # Global parameter to bypass component generation
+
+.PHONY: all_components
+all_components: $(OTHER_SRC)
+
+.PHONY: recreate-components
+recreate-components:
+	$(MAKE) COMP=true IMP=false MIR=true PAT=true IMP_LARGE=false all_components -B
+
+.PHONY: no-mirror-recreate-components
+no-mirror-recreate-components:
+	$(MAKE) COMP=true IMP=false MIR=false PAT=true IMP_LARGE=false all_components -B
+
+.PHONY: recreate-%
+recreate-%:
+	$(MAKE) COMP=true IMP=false IMP_LARGE=false MIR=true PAT=true $(COMPONENTSDIR)/$*.owl -B
+
+.PHONY: no-mirror-recreate-%
+no-mirror-recreate-%:
+	$(MAKE) COMP=true IMP=false IMP_LARGE=false MIR=false PAT=true $(COMPONENTSDIR)/$*.owl -B
+
+$(COMPONENTSDIR)/%.owl: | $(COMPONENTSDIR)
+	test -f $@ || touch $@
+.PRECIOUS: $(COMPONENTSDIR)/%.owl
+
+
+
+$(COMPONENTSDIR)/interventions.owl: $(TEMPLATEDIR)/interventions.tsv
+	if [ $(COMP) = true ] ; then $(ROBOT) template --prefix 'ELMO: https://w3id.org/elmo/elmo_' \
+		$(patsubst %, --template %, $^) \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+.PRECIOUS: $(COMPONENTSDIR)/interventions.owl
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
