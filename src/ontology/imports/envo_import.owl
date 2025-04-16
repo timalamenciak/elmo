@@ -1,4 +1,4 @@
-Prefix(:=<https://w3id.org/elmo/elmo_/elmo/imports/envo_import.owl#>)
+Prefix(:=<https://w3id.org/elmo/elmo/imports/envo_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,8 +6,8 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<https://w3id.org/elmo/elmo_/elmo/imports/envo_import.owl>
-<https://w3id.org/elmo/elmo_/elmo/releases/2025-04-16/imports/envo_import.owl>
+Ontology(<https://w3id.org/elmo/elmo/imports/envo_import.owl>
+<https://w3id.org/elmo/elmo/releases/2025-04-16/imports/envo_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/contributor> <https://orcid.org/0000-0002-2996-719X>)
 Annotation(<http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-4366-3088>)
 Annotation(<http://purl.org/dc/elements/1.1/creator> "http://orcid.org/0000-0002-6601-2165")

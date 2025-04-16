@@ -10,9 +10,22 @@ Ontology(<https://w3id.org/elmo/elmo/imports/orcidio_import.owl>
 <https://w3id.org/elmo/elmo/releases/2025-04-16/imports/orcidio_import.owl>
 Annotation(owl:versionInfo "2025-04-16")
 
+Declaration(NamedIndividual(<https://orcid.org/0000-0002-1296-2528>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/source>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <https://orcid.org/0000-0002-1296-2528> (Tim Alamenciak)
+
+AnnotationAssertion(Annotation(<http://purl.org/dc/terms/source> <http://www.wikidata.org/entity/Q120766436>) <http://purl.org/dc/terms/description> <https://orcid.org/0000-0002-1296-2528> "postdoctoral fellow")
+AnnotationAssertion(Annotation(<http://purl.org/dc/terms/source> <http://www.wikidata.org/entity/Q120766436>) rdfs:label <https://orcid.org/0000-0002-1296-2528> "Tim Alamenciak")
 
 
 )
