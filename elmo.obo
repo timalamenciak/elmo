@@ -1,97 +1,1801 @@
 format-version: 1.2
-data-version: https://w3id.org/elmo/elmo/releases/2025-04-13/elmo.owl
-subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
-subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
-subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
-subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
-subsetdef: ro-eco ""
+data-version: https://w3id.org/elmo/elmo/releases/2025-04-22/elmo.owl
 idspace: dce http://purl.org/dc/elements/1.1/ 
 idspace: dcterms http://purl.org/dc/terms/ 
+idspace: doap http://usefulinc.com/ns/doap# 
 idspace: foaf http://xmlns.com/foaf/0.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 ontology: https://w3id.org/elmo/elmo.owl
 property_value: dcterms:description "None" xsd:string
 property_value: dcterms:license https://creativecommons.org/public-domain/
 property_value: dcterms:title "Ecolink Model Ontology (ELMO)" xsd:string
-property_value: owl:versionInfo "2025-04-13" xsd:string
+property_value: owl:versionInfo "2025-04-22" xsd:string
+
+[Term]
+id: BFO:0000015
+name: process
 
 [Term]
 id: ELMO:0000000
 name: root node
 
-[Typedef]
-id: BFO:0000050
-name: part of
-def: "a core relation that holds between a part and its whole" []
-subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
-subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
-subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
-subset: http://purl.obolibrary.org/obo/valid_for_gocam
-property_value: IAO:0000111 "is part of" xsd:string
-property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
-property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
-property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
-property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
-property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
-property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
-property_value: IAO:0000118 "part_of" xsd:string
-property_value: RO:0001900 RO:0001901
-property_value: RO:0040042 BFO:0000002
-property_value: RO:0040042 BFO:0000003
-property_value: RO:0040042 BFO:0000004
-property_value: RO:0040042 BFO:0000017
-property_value: RO:0040042 BFO:0000019
-property_value: RO:0040042 BFO:0000020
-property_value: RO:0040042 BFO:0000031
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
-property_value: seeAlso "http://www.obofoundry.org/ro/#OBO_REL:part_of" xsd:string
-property_value: seeAlso "https://wiki.geneontology.org/Part_of" xsd:anyURI
-is_transitive: true
-is_a: RO:0002131 ! overlaps
-inverse_of: BFO:0000051 ! has part
+[Term]
+id: ENVO:01001170
+name: active ecosystem management process
+def: "A process during which an ecosystem, its parts, or the processes it participates in are modified by human intervention to accomplish an objective." [https://www.iucn.org/theme/protected-areas/about/protected-areas-categories/category-iv-habitatspecies-management-area]
+synonym: "ecosystem management" EXACT []
+is_a: ENVO:02500000 ! environmental system process
+relationship: RO:0002211 ENVO:02500000 ! environmental system process
+
+[Term]
+id: ENVO:01001436
+name: planned environmental usage process
+def: "A planned process during which humans access and obtain resources, benefits, or services from a natural or anthropised ecosystem." []
+is_a: ENVO:02500000 ! environmental system process
+relationship: BFO:0000051 ENVO:01001170 ! active ecosystem management process
+created_by: https://orcid.org/0000-0002-4366-3088
+
+[Term]
+id: ENVO:02500000
+name: environmental system process
+def: "A process in which includes the components of an environmental system as participants." []
+is_a: BFO:0000015 ! process
+
+[Term]
+id: elmo:3620020
+name: mechanical ecosystem management process
+def: "An active ecosystem management process during which a human employs machines or tools to directly impact an ecosystem and realize some ecosystem management goal." []
+is_a: ENVO:01001170 ! active ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620021
+name: mechanical vegetation removal process
+def: "A mechanical ecosystem management process during which vegetation is removed." []
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620022
+name: root wrench removal process
+def: "A mechanical vegetation removal process in which a human employs a tool comprising a lever and gripping portion (root wrench)." []
+is_a: elmo:3620021 ! mechanical vegetation removal process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620023
+name: cut and cover removal process
+def: "A mechanical vegetation removal process during which plants at ground level are cut and residual stumps are covered with a sun-blocking material (e.g. silage tarp)." []
+is_a: elmo:3620021 ! mechanical vegetation removal process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620024
+name: cutting removal process
+def: "A mechanical vegetation removal process in which a human cuts and removes plant material." []
+is_a: elmo:3620021 ! mechanical vegetation removal process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620025
+name: spading removal process
+def: "A mechanical vegetation removal process in which a human severs subsoil roots using a spade and pries the plant out of the ground." [https://www.ontarioinvasiveplants.ca/wp-content/uploads/2018/05/OPWG-Spading-Postcard-1.pdf]
+is_a: elmo:3620021 ! mechanical vegetation removal process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620026
+name: canopy thinning process
+def: "A mechanical vegetation removal process in which a human removes trees from a given area with the goal of reducing overall canopy cover thereby increasing light availability for understorey plants." [doi:10.1111/rec.13043]
+is_a: elmo:3620021 ! mechanical vegetation removal process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620027
+name: leaf litter removal process
+def: "A mechanical vegetation removal process in which a human removes leaf litter from the ground thereby increasing the light availability for soil." []
+is_a: elmo:3620021 ! mechanical vegetation removal process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620028
+name: mechanical fauna control process
+def: "A mechanical ecosystem management process in which a human controls fauna populations." []
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620029
+name: mammal trapping process
+def: "A mechanical fauna control process in which a human uses traps to control fauna." [https://en.wikipedia.org/wiki/Trapping]
+is_a: elmo:3620028 ! mechanical fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620030
+name: predator control process
+def: "A mechanical fauna control process in which a human targets predators for removal from the ecosystem." [https://agrilife.org/txwildlifeservices/files/2011/07/PredatorControlforWildlifeMgt.pdf]
+is_a: elmo:3620028 ! mechanical fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620031
+name: fencing process
+def: "A mechanical fauna control process in which a human installs fencing to restrict either immigration or emmigration of fauna from a particular area." [doi:10.1016/j.biocon.2017.08.001]
+is_a: elmo:3620067 ! fauna exclusion process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620032
+name: mechanical species deterrent process
+def: "A mechanical fauna control process in which a human installs an electronic device to deter species from a particular area." [doi:10.1111/jfb.13769]
+is_a: elmo:3620028 ! mechanical fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620033
+name: mechanical hydrological alteration process
+def: "A mechanical ecosystem management process during which a human deliberately alters the hydrologic cycle in an area." [https://en.wikipedia.org/wiki/Water_cycle]
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620034
+name: dam construction process
+def: "A mechanical hydrological alteration process in which a human constructs some dam to restore a meander sequence to a river or stream." [doi:10.1093/biosci/biu036]
+synonym: "beaver dam analogue" EXACT []
+is_a: elmo:3620033 ! mechanical hydrological alteration process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620035
+name: dam removal process
+def: "A mechanical hydrological alteration process in which a human removes some dam with the goal of altering the hydroperiod of surrounding lands and reconnecting rivers." [doi:10.12952/journal.elementa.000108]
+is_a: elmo:3620033 ! mechanical hydrological alteration process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620036
+name: tile drain crushing process
+def: "A mechanical hydrological alteration process in which a human uncovers and collapses subterranean tile drains in situ to reduce drainage on the landscape and restore wetland hydroperiod." []
+is_a: elmo:3620033 ! mechanical hydrological alteration process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: IAO:0000116 "This technique is actively practiced by the Nature Conservancy of Canada, but has not been documented in the literature yet." xsd:string
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620037
+name: tile drain removal process
+def: "A mechanical hydrological alteration process in which a human uncovers and removes subterranean tile drains to reduce drainage on the landscape and restore wetland hydroperiod." []
+is_a: elmo:3620033 ! mechanical hydrological alteration process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620038
+name: nest site creation process
+def: "A mechanical ecosystem management process in which a human creates sites for fauna to breed, feed and shelter." [doi:10.1186/S41610-021-00192-Z]
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620039
+name: perch creation process
+def: "A mechanical ecosystem management process in which a human creates places for birds to perch." [doi:10.1007/s11258-016-0619-4]
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620040
+name: buffer strip creation process
+def: "A mechanical ecosystem management process in which a human cultivates strips of flora between landscape features using earthworks and planting processes." [doi:10.2134/jeq2018.03.0120]
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620041
+name: riparian buffer strip creation process
+def: "A mechanical ecosystem management process in which a human cultivates strips of flora in the riparian areas of rivers." [doi:10.1890/08-2064.1]
+is_a: elmo:3620040 ! buffer strip creation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620042
+name: buffer strip retention process
+def: "A mechanical ecosystem management process in which a human leaves strips of flora untouched when clearing the land for other purposes." [doi:10.2134/jeq2018.03.0120]
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620043
+name: earthworks process
+def: "A mechanical ecosystem management process during which the topology of some area is deliberately changed at least at the micro scale (e.g. 1m2)." []
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: IAO:0000116 "Difficult to suggest a firm border for scale. I doubt digging out a small hole would be called earthworks but settled on at least 1 m2 of earth moved. See Landscape Microscale Size and its associated scale properties for more nuance: ENVO:03620005; ENVO:03620006; ENVO:03620007; ENVO:03620008" xsd:string
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620044
+name: berm creation process
+def: "An earthworks process in which earthen barriers (berms) are constructed with the goal of obstructing or slowing floodwaters." [doi:10.1007/s11273-013-9285-7]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620046
+name: pond creation process
+def: "An earthworks process in which a human creates a pond." [doi:10.1007/s10531-021-02312-6]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620047
+name: pond reprofiling process
+def: "An earthworks process in which a human reshapes the banks or basin of a pond." [doi:10.1016/j.jenvman.2024.120992]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620048
+name: soil decompaction process
+def: "An earthworks process in which a human alleviates the compaction of soil." [doi:10.1111/j.1526-100X.2008.00477.x]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620049
+name: tilling process
+def: "An earthworks process in which a human breaks up the soil, and sometimes adds organic matter." [doi:10.1111/j.1526-100X.1995.tb00096.x]
+synonym: "soil ripping process" NARROW []
+is_a: elmo:3620048 ! soil decompaction process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620050
+name: ploughing process
+def: "An earthworks process in which a human deeply breaks up and overturns soil and vegetation." [doi:10.1007/s12224-024-09448-7]
+is_a: elmo:3620048 ! soil decompaction process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620052
+name: grading process
+def: "An earthworks process in which a human creates a specific slope." [https://en.wikipedia.org/wiki/Grading_(earthworks)]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620053
+name: slope stabilization process
+def: "An earthworks process in which a human installs inorganic material, usually a mesh, to stabilize a slope." [https://en.wikipedia.org/wiki/Cellular_confinement]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620054
+name: shoreline reinforcement process
+def: "An earthworks process in which a human installs inorganic material, usually in a mesh, to stabilize a slope on the bank of a body of water." [https://en.wikipedia.org/wiki/Cellular_confinement]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620055
+name: pit and mound excavation process
+def: "An earthworks process in which a human digs pits and creates mounds to reproduce a natural disturbance regime." [doi:10.1016/j.foreco.2017.02.048]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620056
+name: channel realignment process
+def: "An earthworks process in which a human realigns the channel of a stream by digging out replacement pathways and filling existing ones." [https://streamhandbook.org/project/stream-channel-realignment/]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620057
+name: natural channel realignment process
+def: "An earthworks process in which a human realigns the channel of a stream by digging out replacement pathways and filling existing ones with the goal of recreating a natural pool-riffle-pool meander sequence." [https://streamhandbook.org/project/stream-channel-realignment/]
+is_a: elmo:3620056 ! channel realignment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620058
+name: dredging process
+def: "An earthworks process in which a human removes the sediment layer of a water body." [https://en.wikipedia.org/wiki/Dredging]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620059
+name: fauna passage creation process
+def: "A mechanical ecosystem management process in which a human creates a crossing (bridge or underpass) to help fauna pass through a barrier such as a road, fence or property." [https://en.wikipedia.org/wiki/Wildlife_crossing]
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620060
+name: topsoil removal process
+def: "A mechanical ecosystem management process in which a human removes the topsoil layer." [doi:10.1111/avsc.12063]
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620061
+name: erosion control process
+def: "A mechanical ecosystem management process in which a human installs some material to reduce erosion." [https://en.wikipedia.org/wiki/Erosion_control]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620062
+name: erosion blanket process
+def: "An erosion control process in which a human installs a textile." []
+is_a: elmo:3620061 ! erosion control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620063
+name: erosion fencing process
+def: "An erosion control process in which a human installs a fence with a geotextile to restrict sediment transport." [https://en.wikipedia.org/wiki/Silt_fence]
+is_a: elmo:3620061 ! erosion control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620064
+name: wattle fencing process
+def: "An erosion control process in which a human interleaves live materials to make short fencing along a slope." [https://hatchetnseed.ca/soil-bio-engineering-for-erosion-control/]
+is_a: elmo:3620061 ! erosion control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620065
+name: irrigation process
+def: "A mechanical ecosystem management process in which a human installs semi-permanent lines to supply a controlled amount of water to plants." [https://en.wikipedia.org/wiki/Irrigation]
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620066
+name: deterrence-focused predator control process
+def: "A predator control process in which a human installs a mechanical device designed to deter predators from a given area." []
+is_a: elmo:3620030 ! predator control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620067
+name: fauna exclusion process
+def: "A mechanical fauna control process in which a human excludes fauna from a specific area." []
+is_a: elmo:3620028 ! mechanical fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620068
+name: mechanical fauna deterrent process
+def: "A mechanical fauna control process in which a human deters fauna from a specific area." []
+is_a: elmo:3620028 ! mechanical fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620069
+name: fauna capture for conservation
+def: "A mechanical fauna control process in which a human captures fauna for the purposes of protecting existing organisms from some threat." []
+is_a: elmo:3620028 ! mechanical fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620070
+name: fish bypass installation process
+def: "A mechanical ecosystem management process in which a human installs some means of bypassing hazards (e.g. dams) for fish." []
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620071
+name: fish ladder installation process
+def: "A fish bypass installation process in which a human installs a chute consisting of a series of stepped pools to allow fish to move past a dam." [https://oceanservice.noaa.gov/facts/fish-ladder.html]
+is_a: elmo:3620070 ! fish bypass installation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620072
+name: ditch plugging process
+def: "An earthworks process in which a human fills in a drainage ditch to restore the hydroperiod to a given area." [https://www.ducks.ca/stories/biodiversity/years-in-the-making-for-record-breaking-conservation-project/]
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620073
+name: sediment addition process
+def: "An earthworks process in which a human adds sediment to a water body in order to modify the substrate composition." []
+is_a: elmo:3620043 ! earthworks process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620074
+name: new plant protection process
+def: "A mechanical ecosystem management process in which a human installs a barrier to protect newly planted flora from herbivory." []
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620500
+name: chemical ecosystem management process
+def: "An active ecosystem management process in which a human applys or releases a chemical substance to realize some ecological management goal." [doi:10.1016/j.scitotenv.2021.148631]
+is_a: ENVO:01001170 ! active ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620501
+name: chemical application process
+def: "A chemical ecosystem management process in which a human applies some chemical to an ecosystem." [doi:10.1016/j.scitotenv.2021.148631]
+is_a: elmo:3620500 ! chemical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620502
+name: fertilizer application process
+def: "A chemical application process in which a human applies chemical fertilizer to a given area with the goal of increasing the available carbon, nitrogen or phosphorous." [wd:Q1213511]
+is_a: elmo:3620501 ! chemical application process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620503
+name: lime application process
+def: "A chemical application process in which a human adds lime to soil or water in order to reduce the pH." [doi:10.1046/j.1365-2427.2001.00788.x]
+is_a: elmo:3620501 ! chemical application process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620504
+name: herbicide application process
+def: "A chemical application process in which a human applies herbicide to plants or soil in a given area." [doi:10.1111/avsc.12183]
+is_a: elmo:3620501 ! chemical application process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620505
+name: glyphosate application process
+def: "A herbicide application process in which a human applies the herbicide glyphosate to plants in some area." [doi:10.1111/avsc.12183]
+is_a: elmo:3620501 ! chemical application process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620506
+name: insecticide application process
+def: "A chemical application process in which a human introduces an insecticide to some area with the goal of managing an insect population." [doi:10.1016/j.biocontrol.2018.07.012]
+is_a: elmo:3620501 ! chemical application process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620600
+name: biological ecosystem management process
+def: "An active ecosystem management process in which a human adds or removes biological material from an area to realize some ecological management goal." []
+is_a: ENVO:01001170 ! active ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620601
+name: planting process
+def: "A biological ecosystem management process in which a human plants flora (defined as at least having sprouted true leaves) in the soil of a given area." []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620602
+name: plug planting process
+def: "A planting process in which a human plants flora grown in a plug tray." [doi:10.1111/j.1526-100X.2007.00350.x]
+is_a: elmo:3620601 ! planting process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620603
+name: shrub planting process
+def: "A planting process in which a human plants shrubs." []
+is_a: elmo:3620601 ! planting process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620604
+name: tree planting process
+def: "A planting process in which a human plants trees." []
+is_a: elmo:3620601 ! planting process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620605
+name: seedling planting process
+def: "A planting process in which a human plants trees that have been grown in plug trays." []
+is_a: elmo:3620604 ! tree planting process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620606
+name: caliper tree planting process
+def: "A planting process in which a human plants trees that have grown to a diameter greater than 5 cm." []
+is_a: elmo:3620604 ! tree planting process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620607
+name: live staking process
+def: "A planting process in which a human inserts cut branches of a flora into soil such that that flora will take root and grow." []
+is_a: elmo:3620601 ! planting process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620608
+name: nurse plant process
+def: "A planting process in which a human plants flora with the goal of assisting the growth of other flora." [doi:10.1890/03-5084]
+is_a: elmo:3620601 ! planting process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620609
+name: seeding process
+def: "A biological ecosystem management process in which a human sows seeds in a particular area." []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620610
+name: tree seeding process
+def: "A seeding process in which a human sows tree seeds." []
+is_a: elmo:3620609 ! seeding process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620611
+name: line seeding process
+def: "A seeding process in which a human sows seeds in lines along a landscape." []
+is_a: elmo:3620609 ! seeding process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620612
+name: drill seeding process
+def: "A seeding process in which a human uses a drill seeder to sow seeds." [doi:10.3375/043.038.0504]
+is_a: elmo:3620609 ! seeding process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620613
+name: broadcast seeding process
+def: "A seeding process in which a human sows seeds by scattering them through the air." [doi:10.3375/043.038.0504]
+is_a: elmo:3620609 ! seeding process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620614
+name: hand broadcast seeding process
+def: "A seeding process in which a human scatters seeds by hand." [doi:10.1111/j.1526-100X.2007.00350.x]
+is_a: elmo:3620613 ! broadcast seeding process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620615
+name: hydroseeding process
+def: "A seeding process in which a human applies seed in a slurry of nutrients and fixatives." [doi:10.3375/043.038.0504]
+is_a: elmo:3620609 ! seeding process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620616
+name: seed treatment process
+def: "A biological ecosystem management process in which a human applies a treatment to seed prior to sowing it." [doi:10.1111/rec.13210]
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620617
+name: seed scarification process
+def: "A seed treatment process in which a human damages the coating of the seed, usually using sandpaper, to enhance germination." [doi:10.1111/rec.13210]
+is_a: elmo:3620616 ! seed treatment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620618
+name: heat seed treatment process
+def: "A seed treatment process in which a human applies heat to some seed in order to enhance germination." [doi:10.1111/rec.13210]
+is_a: elmo:3620616 ! seed treatment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620619
+name: chill seed treatment process
+def: "A seed treatment process in which a human applies cold to some seed in order to enhance germination, such as in cold stratification." [doi:10.1111/rec.13210]
+is_a: elmo:3620616 ! seed treatment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620620
+name: soak seed treatment process
+def: "A seed treatment process in which a human soaks seeds in order to enhance germination." [doi:10.1111/rec.13210]
+is_a: elmo:3620616 ! seed treatment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620621
+name: light seed treatment process
+def: "A seed treatment process in which light is applied to seeds in order to enhance germination." [doi:10.1111/rec.13210]
+is_a: elmo:3620616 ! seed treatment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620622
+name: chemical seed treatment process
+def: "A seed treatment process in which some chemical is applied to some seed in order to enhance germination." [doi:10.1111/rec.13210]
+is_a: elmo:3620616 ! seed treatment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620623
+name: biological fauna control process
+def: "A biological ecosystem management process in which a human uses biological means to reduce or increase a population of fauna." []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620624
+name: captive breeding and release process
+def: "A biological ecosystem management process in which a human facilitates the breeding of fauna, rears the young for a period of time and releases them in some environment." [doi:10.1111/j.1523-1739.2008.00967.x]
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620625
+name: egg relocation and release process
+def: "A captive breeding and release process in which a human collects eggs and relocates them to a safe environment, whereupon they are allowed to hatch." []
+is_a: elmo:3620624 ! captive breeding and release process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620626
+name: egg incubation and release process
+def: "An egg relocation and release process in which a human collects eggs and relocates them into an incubator, whereupon they are allowed to hatch and released into some environment." []
+is_a: elmo:3620625 ! egg relocation and release process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620627
+name: young capture, rearing and release
+def: "A captive breeding and release process in which a human captures young fauna, rears them into adulthood and releases them into some environment." []
+is_a: elmo:3620624 ! captive breeding and release process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620628
+name: supplemental water process
+def: "A biological ecosystem management process in which a human provides supplemental water to flora or fauna." []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620629
+name: supplemental feeding process
+def: "A biological ecosystem management process in which a human provides supplemental food to fauna." []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620630
+name: plant material transfer process
+def: "A biological ecosystem management process in which a human transfers plant material from some area to another." []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620631
+name: moss layer transfer process
+def: "A plant material transfer process in which a human restores the hydroperiod of a peatland by blocking drainage ditches or other means and subsequently moves material from the moss layer (top 10 cm) of another peatland onto the one being restored." [doi:10.1016/j.ecoleng.2014.03.051]
+is_a: elmo:3620630 ! plant material transfer process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620632
+name: soil transfer process
+def: "A biological ecosystem management process in which a human transfers soil from one area to another." []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620633
+name: fauna sterilization process
+def: "A biological fauna control process in which a human renders some fauna sterile in order to reduce their population." []
+is_a: elmo:3620623 ! biological fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620634
+name: egg destruction process
+def: "A biological fauna control process in which a human destroys the eggs of some fauna (e.g. oiling goose eggs)." []
+is_a: elmo:3620623 ! biological fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620635
+name: nest establishment deterrence process
+def: "A biological ecosystem management process in which a human implements measures to deter fauna from establishing nest sites in a given area." []
+is_a: elmo:3620623 ! biological fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620636
+name: seabed amendment process
+def: "A biological ecosystem management process in which a human adds material to a seabed to facilitate nesting." []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620637
+name: soil amendment process
+def: "A biological ecosystem management process in which a human adds some material to soil." [doi:10.2134/jeq2015.01.0009]
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620638
+name: mulch addition process
+def: "A soil amendment process in which a human adds mulch (i.e. woody debris)." []
+is_a: elmo:3620637 ! soil amendment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620639
+name: peat addition process
+def: "A soil amendment process in which a human adds peat." []
+is_a: elmo:3620637 ! soil amendment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620640
+name: topsoil addition process
+def: "A soil amendment process in which a human adds topsoil." []
+is_a: elmo:3620637 ! soil amendment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620641
+name: compost addition process
+def: "A soil amendment process in which a human adds some composted organic material." [doi:10.2134/jeq2015.01.0009]
+is_a: elmo:3620637 ! soil amendment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620642
+name: manure addition process
+def: "A soil amendment process in which a human adds some manure." [doi:10.2134/jeq2015.01.0009]
+is_a: elmo:3620637 ! soil amendment process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620643
+name: artificial reef creation process
+def: "A biological ecosystem management process in which a human creates an artificial reef out of materials with the goal of attracting coral." [doi:10.1111/1365-2664.13748]
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620644
+name: intentional grazing
+def: "A biological ecosystem management process in which a human introduces grazing animals to an area with the goal of recreating a disturbance regime." [doi:10.1111/j.1526-100X.2009.00567.x]
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620645
+name: mycorrhizae addition process
+def: "A biological ecosystem management process in which a human adds mycorrhizae spores to some environment." [doi:10.3389/fmicb.2016.01095]
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620646
+name: peatland rewetting process
+def: "A biological ecosystem management process in which a human alters the hydroperiod of a peatland such that more water is available." [doi:10.1007/s11027-023-10046-9]
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620647
+name: fauna rescue, rehabilitation and release process
+def: "A biological fauna control process in which a human captures injured fauna from some environment, rehabilitates and releases them." [doi:10.1371/journal.pone.0265514]
+is_a: elmo:3620623 ! biological fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620648
+name: fauna reintroduction process
+def: "A biological fauna control process in which a human reintroduces fauna into some environment where the fauna once existed." []
+is_a: elmo:3620623 ! biological fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620649
+name: fauna medical care process
+def: "A biological fauna control process in which a human provides medical care to some fauna." []
+is_a: elmo:3620623 ! biological fauna control process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620650
+name: translocation process
+def: "A biological ecosystem management process in which a human translocates some flora or fauna from one area to another." []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620651
+name: fauna translocation process
+def: "A translocation process in which a human translocates some fauna from one area to another." []
+is_a: elmo:3620650 ! translocation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620652
+name: coral translocation process
+def: "A translocation process in which a human translocates coral from one area to another." [doi:10.3389/fmars.2019.00540]
+is_a: elmo:3620650 ! translocation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620800
+name: ecosystem-oriented social process
+def: "An environmental system process in which a human employs social means to realize some ecosystem management goal." []
+is_a: ENVO:02500000 ! environmental system process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620801
+name: legislation process
+def: "A ecosystem-oriented social process in which a humans collectively implement legislation with pro-environmental goals." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620802
+name: legal protection process
+def: "A legislation process in which the legislation explicitly protects something from degradation." []
+is_a: elmo:3620801 ! legislation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620803
+name: legal habitat protection process
+def: "A legal protection process in which the legal protection applies to a specific habitat." []
+is_a: elmo:3620802 ! legal protection process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620804
+name: legal landscape protection process
+def: "A legal protection process in which the legal protection applies to a specific landscape." []
+is_a: elmo:3620802 ! legal protection process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620805
+name: legal species protection process
+def: "A legal protection process in which the legal protection applies to some taxa." []
+is_a: elmo:3620802 ! legal protection process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620806
+name: legal marine area protection process
+def: "A legal protection process in which the legal protection applies to some marine area." []
+is_a: elmo:3620802 ! legal protection process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620807
+name: private land protection process
+def: "A legal protection process in which the legal protection applies to some privately held land." []
+is_a: elmo:3620802 ! legal protection process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620808
+name: conservation easement process
+def: "A private land protection process in which a landowner agrees to conserve a portion of their land in perpetuity." []
+is_a: elmo:3620807 ! private land protection process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620809
+name: area policy process
+def: "A legislation process in which some legislation applies to some area." []
+is_a: elmo:3620801 ! legislation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620810
+name: local bylaw process
+def: "An area policy process in which some pro-conservation bylaw is established by a local authority." []
+is_a: elmo:3620809 ! area policy process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620811
+name: provincial or state legislation process
+def: "A legislation process in which some group passes pro-conservation legislation at the state or province level." []
+is_a: elmo:3620801 ! legislation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620812
+name: national legislation process
+def: "A legislation process in which some group passes pro-conservation legislation at the national level." []
+is_a: elmo:3620801 ! legislation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620813
+name: international agreement process
+def: "A ecosystem-oriented social process in which a humans collectively agree to measures that protect, conserve and restore biodiversity." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620814
+name: active enforcement process
+def: "A ecosystem-oriented social process in which a human actively enforces the pro-conservation legislation or policies governing a specific area." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620815
+name: human-wildlife conflict reduction process
+def: "A ecosystem-oriented social process in which a human implements measures to reduce conflict between fauna and humans." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620816
+name: human-assisted road crossing process
+def: "A ecosystem-oriented social process in which a human assists a species in crossing a road." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620817
+name: awareness-raising process
+def: "A ecosystem-oriented social process in which a human undertakes a process in order to make others more aware of threats to biodiversity." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620818
+name: social media campaign process
+def: "An awareness-raising process in which a human uses social media to spread messages about threats to biodiversity." []
+is_a: elmo:3620817 ! awareness-raising process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620819
+name: community event creation process
+def: "An awareness-raising process in which a human hosts an event for the community in a given area." []
+is_a: elmo:3620817 ! awareness-raising process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620820
+name: education process
+def: "An awareness-raising process in which a human endeavours to improve the knowledge of others vis-a-vis restoration or conservation of biodiversity." []
+is_a: elmo:3620817 ! awareness-raising process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620821
+name: citizen science process
+def: "An awareness-raising process in which a humans gather measurements of some ecosystem elements." []
+is_a: elmo:3620817 ! awareness-raising process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620822
+name: community engagement process
+def: "An awareness-raising process in which a humans are gathered in a given area and engaged in the restoration and conservation of biodiversity." []
+is_a: elmo:3620817 ! awareness-raising process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620823
+name: pro-environmental behaviour change process
+def: "A ecosystem-oriented social process in which a human endeavours to alter the behaviour of others vis-a-vis the degradation of ecosystems." [doi:10.1038/s41562-022-01473-w]
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620824
+name: signage installation process
+def: "A pro-environmental behaviour change process in which signage is installed to encourage or deter activities in an area." []
+is_a: elmo:3620823 ! pro-environmental behaviour change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620825
+name: individual outreach process
+def: "A pro-environmental behaviour change process in which a human reaches out to people directly to encourage or deter activities in an area." []
+is_a: elmo:3620823 ! pro-environmental behaviour change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620826
+name: landowner outreach process
+def: "A pro-environmental behaviour change process in which a human reaches out to a landowner to encourage or deter activities in an area." []
+is_a: elmo:3620823 ! pro-environmental behaviour change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620827
+name: sensitive features marking process
+def: "A pro-environmental behaviour change process in which a human marks environmentally sensitive features to deter degradation or interference." []
+is_a: elmo:3620823 ! pro-environmental behaviour change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620828
+name: fundraising process
+def: "A ecosystem-oriented social process in which a human raises funds to support the restoration and conservation of a specific area." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620829
+name: financial incentive process
+def: "A ecosystem-oriented social process in which financial incentives are offered to a humans in order to take pro-environmental measures." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620830
+name: environmental usage regulation process
+def: "A ecosystem-oriented social process in which some authority regulates the usage of environments." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620831
+name: regulate grazing
+def: "An environmental usage regulation process in which some authority regulates grazing in a given area." []
+is_a: elmo:3620830 ! environmental usage regulation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620832
+name: prohibit grazing
+def: "An environmental usage regulation process in which some authority prohibits grazing in a given area." []
+is_a: elmo:3620831 ! regulate grazing
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620833
+name: regulate fishing
+def: "An environmental usage regulation process in which some authority regulates fishing in a given area." []
+is_a: elmo:3620830 ! environmental usage regulation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620834
+name: prohibit fishing
+def: "An environmental usage regulation process in which some authority prohibits fishing in a given area." []
+is_a: elmo:3620833 ! regulate fishing
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620835
+name: regulate chemical usage
+def: "An environmental usage regulation process in which some authority regulates chemical usage in a given area." []
+is_a: elmo:3620830 ! environmental usage regulation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620836
+name: prohibit chemical usage
+def: "An environmental usage regulation process in which some authority prohibits chemical usage in a given area." []
+is_a: elmo:3620835 ! regulate chemical usage
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620837
+name: regulate hunting
+def: "An environmental usage regulation process in which some authority regulates hunting in a given area." []
+is_a: elmo:3620830 ! environmental usage regulation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620838
+name: prohibit hunting
+def: "An environmental usage regulation process in which some authority prohibits hunting in a given area." []
+is_a: elmo:3620837 ! regulate hunting
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620839
+name: regulate recreational activities
+def: "An environmental usage regulation process in which some authority regulates recreational activities in a given area." []
+is_a: elmo:3620830 ! environmental usage regulation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620840
+name: prohibit recreational activities
+def: "An environmental usage regulation process in which some authority prohibits recreational activities in a given area." []
+is_a: elmo:3620839 ! regulate recreational activities
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620841
+name: limit public access
+def: "An environmental usage regulation process in which some authority limits public access to a given area." []
+is_a: elmo:3620830 ! environmental usage regulation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620842
+name: prohibit public access
+def: "An environmental usage regulation process in which some authority prohibits public access to a given area." []
+is_a: elmo:3620841 ! limit public access
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620843
+name: regulate dredging
+def: "An environmental usage regulation process in which some authority regulates dredging in a given area." []
+is_a: elmo:3620830 ! environmental usage regulation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620844
+name: prohibit dredging
+def: "An environmental usage regulation process in which some authority prohibits dredging in a given area." []
+is_a: elmo:3620843 ! regulate dredging
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620845
+name: regulate aquaculture
+def: "An environmental usage regulation process in which some authority regulates aquaculture in a given area." []
+is_a: elmo:3620830 ! environmental usage regulation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620846
+name: prohibit aquaculture
+def: "An environmental usage regulation process in which some authority prohibits aquaculture in a given area." []
+is_a: elmo:3620845 ! regulate aquaculture
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620847
+name: cultural ecosystem management process
+def: "A ecosystem-oriented social process in which a humans undertake shared practices passed down through generations to manage the ecosystem in which they live." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620848
+name: cultural ecosystem usage process
+def: "A ecosystem-oriented social process in which a humans harvest resources from the environment for shared practices that are passed down through generations." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620849
+name: plan specification change process
+def: "A ecosystem-oriented social process in which a human alters the way in which some planned process is undertaken." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620850
+name: alter mowing timing
+def: "A change to the mowing regime in which a human alters the timing of regular mowing with the goal of protecting specific taxa." []
+is_a: elmo:3620851 ! alter mowing regime
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620851
+name: alter mowing regime
+def: "A plan specification change process in which a human alters the mowing regime (i.e. frequency, height, timing)" []
+is_a: elmo:3620849 ! plan specification change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620852
+name: alter mowing height
+def: "A change to the mowing regime in which a human alters the height of a mower with the goal of protecting specific taxa." []
+is_a: elmo:3620851 ! alter mowing regime
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620853
+name: alter tilling regime
+def: "A change to the tilling regime in which a human alters the frequency, timing or severity of a regular tilling process." []
+is_a: elmo:3620849 ! plan specification change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620854
+name: alter chemical regime
+def: "A change to the chemical regime in which a human alters the frequency, timing or severity of a regular chemical application process." []
+is_a: elmo:3620849 ! plan specification change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620855
+name: alter insecticide regime
+def: "A change to the insecticide regime in which a human alters the frequency, timing or severity of a regular insecticide application process." []
+is_a: elmo:3620854 ! alter chemical regime
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620856
+name: alter fertilizer regime
+def: "A change to the fertilizer regime in which a human alters the frequency, timing or severity of a regular fertilizer application process." []
+is_a: elmo:3620849 ! plan specification change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620857
+name: alter lighting regime
+def: "A change to the lighting regime in which a human alters the frequency, timing or intensity of lighting." []
+is_a: elmo:3620849 ! plan specification change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620858
+name: alter grazing regime
+def: "A change to the grazing regime in which a human alters the frequency, timing or intensity of grazing." []
+is_a: elmo:3620849 ! plan specification change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620859
+name: alter dam regime
+def: "A change to the dam regime in which a human alters the frequency, timing or intensity of water released by a dam." []
+is_a: elmo:3620849 ! plan specification change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620860
+name: alter herbicide regime
+def: "A change to the herbicide regime in which a human alters the frequency, timing or severity of a regular herbicide application process." []
+is_a: elmo:3620854 ! alter chemical regime
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620861
+name: cease herbicide usage
+def: "A change to the herbicide regime in which a human ceases some herbicide application process." []
+is_a: elmo:3620860 ! alter herbicide regime
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621000
+name: fishing with equipment modified for conservation
+def: "A planned environmental usage process in which fishing equipment is modified for conservation (e.g. bycatch deterrent devices are installed)" []
+is_a: ENVO:01001436 ! planned environmental usage process
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621001
+name: fishing with net modified for conservation
+def: "A fishing process in which a human uses a net that has been modified to reduce bycatch or accomplish some other conservation-oriented goal." []
+is_a: elmo:3621000 ! fishing with equipment modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621002
+name: fishing with hook modified for conservation
+def: "A fishing process in which a human uses a hook that has been modified for conservation." []
+is_a: elmo:3621000 ! fishing with equipment modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621003
+name: fishing with added acoustic devices for conservation
+def: "A fishing process in which a human adds acoustic devices to fishing gear to deter bycatch." []
+is_a: elmo:3621000 ! fishing with equipment modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621004
+name: fishing with modified traps
+def: "A fishing process in which a human uses traps modified to deter bycatch." []
+is_a: elmo:3621000 ! fishing with equipment modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621005
+name: fishing with modified line-setting procedure
+def: "A fishing process in which a human attaches bait to lines in a way that deters seabird scavenging (i.e. underwater)" []
+is_a: elmo:3621000 ! fishing with equipment modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621006
+name: aquaculture process modified for conservation
+def: "A planned environmental usage process in which a human engages in aquaculture with modifications for conservation (e.g. disease control measures)" []
+is_a: ENVO:01001436 ! planned environmental usage process
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621007
+name: underwater turbine modified for conservation
+def: "A planned environmental usage process in which a human installs an underwater turbine modified for conservation." []
+is_a: ENVO:01001436 ! planned environmental usage process
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621008
+name: farming process modified for conservation
+def: "A planned environmental usage process in which a human engages in farming with modifications for the conservation of biodiversity." []
+is_a: ENVO:01001436 ! planned environmental usage process
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621009
+name: farming with intercropping
+def: "A farming process modified for conservation in which a human grows two or more crop varities in close proximity to one another." [ISBN:9781933395210]
+is_a: elmo:3621008 ! farming process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621010
+name: agroforestry process
+def: "A farming process modified for conservation in which a human integrates trees and crops or pasture." [wd:Q397350]
+is_a: elmo:3621008 ! farming process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621011
+name: alley cropping farming process
+def: "An agroforestry process in which crops are grown in between rows of trees and shrubs." [ISBN:9781933395210]
+is_a: elmo:3621010 ! agroforestry process
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621012
+name: no-till farming
+def: "A farming process modified for conservation in which a human does not disturb the soil in between crop plantings." [wd:Q1227672]
+is_a: elmo:3621008 ! farming process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621013
+name: organic farming regime
+def: "A farming process modified for conservation in which a human avoids synthetic or chemical inputs in the farming process. The definition of organic is often the subject of government regulation." [https://en.wikipedia.org/wiki/Organic_farming]
+is_a: elmo:3621008 ! farming process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621014
+name: crop rotation
+def: "A farming process modified for conservation in which the crop type is rotated year over year." [ISBN:9781933395210]
+is_a: elmo:3621008 ! farming process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621015
+name: set aside farmland for conservation
+def: "A farming process modified for conservation in which a human agrees not to farm some portion of a landscape." [https://en.wikipedia.org/wiki/Set-aside]
+is_a: elmo:3621008 ! farming process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621016
+name: forestry process modified for conservation
+def: "A planned environmental usage process in which a human harvests trees in a manner that attempts to ameliorate the impact on the landscape." []
+is_a: ENVO:01001436 ! planned environmental usage process
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621017
+name: coppice process
+def: "A forestry process in which a human cuts trees down to the stump, allowing the trees to regenerate from the stump." [https://en.wikipedia.org/wiki/Coppicing]
+is_a: elmo:3621016 ! forestry process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621018
+name: selective harvesting process
+def: "A forestry process in which a human harvests trees according to their age with the goal of preserving some overall age for a forest stand." [https://en.wikipedia.org/wiki/Selection_cutting]
+is_a: elmo:3621016 ! forestry process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621019
+name: woody debris removal process
+def: "A forestry process in which a human removes coarse woody debris after harvesting trees, thereby reducing the risk and intensity of forest fire." [https://en.wikipedia.org/wiki/Coarse_woody_debris]
+is_a: elmo:3621016 ! forestry process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621020
+name: leave woody debris
+def: "A forestry process in which a human leaves coarse woody debris after harvesting, thereby increasing available resources." [https://en.wikipedia.org/wiki/Coarse_woody_debris]
+is_a: elmo:3621016 ! forestry process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621021
+name: shelterwood cutting process
+def: "A forestry process in which a human primarily harvests large trees in order to increase light availability for seedling species." [https://en.wikipedia.org/wiki/Shelterwood_cutting]
+is_a: elmo:3621016 ! forestry process modified for conservation
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621022
+name: regulate wind turbine speed
+def: "A planned environmental usage process in which a human modifies the level of wind speed required to spin turbines, thereby preventing avifauna fatalities." [doi:10.1002/2688-8319.12371]
+synonym: "curtailment" EXACT []
+synonym: "doi:10.1002/2688-8319.12371" BROAD []
+is_a: ENVO:01001436 ! planned environmental usage process
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
 
 [Typedef]
-id: BFO:0000051
-name: has part
-def: "a core relation that holds between a whole and its part" []
-subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
-subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
-subset: http://purl.obolibrary.org/obo/valid_for_gocam
-property_value: IAO:0000111 "has part" xsd:string
-property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
-property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
-property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
-property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
-property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
-property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
-property_value: IAO:0000118 "has_part" xsd:string
-property_value: RO:0001900 RO:0001901
-is_transitive: true
-is_a: RO:0002131 ! overlaps
+id: ENVO:01001307
+name: partially_surrounded_by
+def: "x partially_surrounded_by y if and only if (1) x is adjacent to y and for the region r that is adjacent to x, r partially overlaps y (2) the shared boundary between x and y occupies  a non-trivial proportion of the outermost boundary of x" []
 
 [Typedef]
-id: RO:0002131
-name: overlaps
-def: "x overlaps y if and only if there exists some z such that x has part z and z part of y" []
-subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
-subset: http://purl.obolibrary.org/obo/valid_for_gocam
-subset: ro-eco
-property_value: IAO:0000114 IAO:0000125
-property_value: RO:0001900 RO:0001901
-holds_over_chain: BFO:0000050 BFO:0000050
-holds_over_chain: BFO:0000051 BFO:0000050 {RO:0002582="true"}
-holds_over_chain: BFO:0000051 RO:0002131
-is_symmetric: true
-is_a: RO:0002323 ! mereotopologically related to
-transitive_over: BFO:0000050 ! part of
-expand_expression_to: "http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.obolibrary.org/obo/BFO_0000050 some ?Y)" []
+id: ENVO:01003004
+name: derives from part of
+def: "A relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist through the separation or transformation of a part of the old entity, and the new entity inherits a significant portion of the matter belonging to that part of the old entity." []
 
 [Typedef]
-id: RO:0002323
-name: mereotopologically related to
-def: "A mereological relationship or a topological relationship" []
-property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
-property_value: IAO:0000232 "Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships" xsd:string
-property_value: RO:0001900 RO:0001901
+id: ENVO:02000200
+name: has increased levels of
+def: "A has part relationship between a whole and a part, where the number of parts present in the whole is higher than in comparable entities." []
+is_a: RO:0002180
 

@@ -7,10 +7,11 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/imports/orcidio_import.owl>
-<https://w3id.org/elmo/elmo/releases/2025-04-16/imports/orcidio_import.owl>
-Annotation(owl:versionInfo "2025-04-16")
+<https://w3id.org/elmo/elmo/releases/2025-04-22/imports/orcidio_import.owl>
+Annotation(owl:versionInfo "2025-04-22")
 
 Declaration(NamedIndividual(<https://orcid.org/0000-0002-1296-2528>))
+Declaration(NamedIndividual(<https://orcid.org/0000-0002-4366-3088>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
@@ -26,6 +27,11 @@ Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
 
 AnnotationAssertion(Annotation(<http://purl.org/dc/terms/source> <http://www.wikidata.org/entity/Q120766436>) <http://purl.org/dc/terms/description> <https://orcid.org/0000-0002-1296-2528> "postdoctoral fellow")
 AnnotationAssertion(Annotation(<http://purl.org/dc/terms/source> <http://www.wikidata.org/entity/Q120766436>) rdfs:label <https://orcid.org/0000-0002-1296-2528> "Tim Alamenciak")
+
+# Individual: <https://orcid.org/0000-0002-4366-3088> (Pier Luigi Buttigieg)
+
+AnnotationAssertion(Annotation(<http://purl.org/dc/terms/source> <http://www.wikidata.org/entity/Q41566750>) <http://purl.org/dc/terms/description> <https://orcid.org/0000-0002-4366-3088> "researcher")
+AnnotationAssertion(Annotation(<http://purl.org/dc/terms/source> <http://www.wikidata.org/entity/Q41566750>) rdfs:label <https://orcid.org/0000-0002-4366-3088> "Pier Luigi Buttigieg")
 
 
 )

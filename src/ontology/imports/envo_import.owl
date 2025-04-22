@@ -7,7 +7,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/imports/envo_import.owl>
-<https://w3id.org/elmo/elmo/releases/2025-04-16/imports/envo_import.owl>
+<https://w3id.org/elmo/elmo/releases/2025-04-22/imports/envo_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/contributor> <https://orcid.org/0000-0002-2996-719X>)
 Annotation(<http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-4366-3088>)
 Annotation(<http://purl.org/dc/elements/1.1/creator> "http://orcid.org/0000-0002-6601-2165")
@@ -26,10 +26,11 @@ Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.o
 Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/envo/modules/entity_quality_location.owl>) VersionIRI(<null>))) [Axioms: 40 Logical Axioms: 6]")
 Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/envo/modules/process_attribute.owl>) VersionIRI(<null>))) [Axioms: 21 Logical Axioms: 2]")
 Annotation(owl:versionInfo "2025-02-05")
-Annotation(owl:versionInfo "2025-04-16")
+Annotation(owl:versionInfo "2025-04-22")
 Annotation(<http://xmlns.com/foaf/0.1/homepage> "http://environmentontology.org/"^^xsd:anyURI)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001170>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001436>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_02500000>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
@@ -69,6 +70,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002509>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002608>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000114>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000119>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/contributor>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
@@ -81,6 +83,7 @@ Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#GitRepository>))
 Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#bug-database>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#default-namespace>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
@@ -119,6 +122,14 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001170> "active ecosystem management process"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001170> <http://purl.obolibrary.org/obo/ENVO_02500000>)
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001170> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/ENVO_02500000>))
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_01001436> (planned environmental usage process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01001436> "A planned process during which humans access and obtain resources, benefits, or services from a natural or anthropised ecosystem.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ENVO_01001436> <https://orcid.org/0000-0002-4366-3088>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001436> "planned environmental usage process"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001436> <http://purl.obolibrary.org/obo/ENVO_02500000>)
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001436> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01001170>))
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_02500000> (environmental system process)
 
