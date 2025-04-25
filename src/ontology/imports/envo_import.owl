@@ -31,6 +31,7 @@ Annotation(<http://xmlns.com/foaf/0.1/homepage> "http://environmentontology.org/
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000191>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000254>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001110>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001170>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001436>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001884>))
@@ -138,12 +139,20 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_01000254> "environment")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000254> "environmental system")
 
+# Class: <http://purl.obolibrary.org/obo/ENVO_01001110> (ecosystem)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Ecosystem") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01001110> "An environmental system which includes both living and non-living components.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://vocab.lternet.edu/vocab/vocab/index.php?tema=173&/ecosystems") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_01001110> "LTER:173")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001110> "ecosystem"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001110> <http://purl.obolibrary.org/obo/ENVO_01000254>)
+
 # Class: <http://purl.obolibrary.org/obo/ENVO_01001170> (active ecosystem management process)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.iucn.org/theme/protected-areas/about/protected-areas-categories/category-iv-habitatspecies-management-area") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01001170> "A process during which an ecosystem, its parts, or the processes it participates in are modified by human intervention to accomplish an objective.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_01001170> "ecosystem management")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001170> "active ecosystem management process"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001170> <http://purl.obolibrary.org/obo/ENVO_02500000>)
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001170> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/ENVO_01001110>))
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001170> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/ENVO_02500000>))
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_01001436> (planned environmental usage process)

@@ -6,7 +6,6 @@ For details on what components are, please see component section of [repository 
 To add custom components to an ODK repo, please follow the following steps:
 
 1) Locate your odk yaml file and open it with your favourite text editor (src/ontology/elmo-odk.yaml)
-
 2) Search if there is already a component section to the yaml file, if not add it accordingly, adding the name of your component:
 
 ```
@@ -35,8 +34,15 @@ Import(<https://w3id.org/elmo/elmo/components/your-component-name.owl>)
 ```
 
 5) Refresh your repo by running `sh run.sh make update_repo` - this should create a new file in src/ontology/components.
+6) In your custom makefile (src/ontology/elmo.Makefile) add a goal for your custom make file. In this example, the goal is a ROBOT template.
 
-6) Add your template .tsv in src/templates.
+```
+$(COMPONENTSDIR)/your-component-name.owl: $(SRC) ../templates/your-component-template.tsv 
+	$(ROBOT) template --template ../templates/your-component-template.tsv \
+  annotate --ontology-iri $(ONTBASE)/$@ --output $(COMPONENTSDIR)/your-component-name.owl
+```
 
-7) Make the file by running `sh run.sh make components/your-component-name.owl`. This command will update the owl file from the ROBOT template and should be re-run when the template is updated.
+(If using a ROBOT template, do not forget to add your template tsv in src/templates/)
+
+7) Make the file by running `sh run.sh make components/your-component-name.owl`
 
