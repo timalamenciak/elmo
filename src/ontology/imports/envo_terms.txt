@@ -1,2 +1,2 @@
-ENVO:02500000
-ENVO:01001170
+ENVO:02500000 #environmental system process
+ENVO:01001170 #active ecosystem management process
