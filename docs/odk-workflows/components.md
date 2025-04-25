@@ -38,5 +38,5 @@ Import(<https://w3id.org/elmo/elmo/components/your-component-name.owl>)
 
 6) Add your template .tsv in src/templates.
 
-7) Make the file by running `sh run.sh make components/your-component-name.owl`
+7) Make the file by running `sh run.sh make components/your-component-name.owl`. This command will update the owl file from the ROBOT template and should be re-run when the template is updated.
 
