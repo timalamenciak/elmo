@@ -1,0 +1,57 @@
+Prefix(:=<https://w3id.org/elmo/elmo/components/ecosystems.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://w3id.org/elmo/elmo/components/ecosystems.owl>
+<https://w3id.org/elmo/elmo/releases/2025-04-25/components/ecosystems.owl>
+Annotation(owl:versionInfo "2025-04-25")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000191>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000254>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001884>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001886>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630000>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630001>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630002>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_01001884> (surface landform)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001884> "surface landform"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001884> <http://purl.obolibrary.org/obo/ENVO_01001886>)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_01001886> (landform)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001886> "landform"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001886> <http://purl.obolibrary.org/obo/ENVO_00000191>)
+
+# Class: <https://w3id.org/elmo/elmo_3630000> (lowland)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Upland_and_lowland>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630000> "A landform which has an elevation lower than 200m above sea level."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630000> "lowland"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3630000> <http://purl.obolibrary.org/obo/ENVO_01001884>)
+
+# Class: <https://w3id.org/elmo/elmo_3630001> (plant community)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630001> "An environmental system which consists of a set of plants at some stage in the community assembly process."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630001> "plant community"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3630001> <http://purl.obolibrary.org/obo/ENVO_01000254>)
+
+# Class: <https://w3id.org/elmo/elmo_3630002> (rainforest plant community)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630002> "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy, is subject to high humidity and rainfall and includes populations of epiphytes, lianas and vegetation adapted to high moisture."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630002> "rainforest plant community"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3630002> <https://w3id.org/elmo/elmo_3630001>)
+
+
+)

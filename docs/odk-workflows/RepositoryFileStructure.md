@@ -33,3 +33,4 @@ These are the components in ELMO
 | Filename | URL |
 | -------- | --- |
 | interventions.owl | None |
+| ecosystems.owl | None |

@@ -34,15 +34,8 @@ Import(<https://w3id.org/elmo/elmo/components/your-component-name.owl>)
 ```
 
 5) Refresh your repo by running `sh run.sh make update_repo` - this should create a new file in src/ontology/components.
-6) In your custom makefile (src/ontology/elmo.Makefile) add a goal for your custom make file. In this example, the goal is a ROBOT template.
 
-```
-$(COMPONENTSDIR)/your-component-name.owl: $(SRC) ../templates/your-component-template.tsv 
-	$(ROBOT) template --template ../templates/your-component-template.tsv \
-  annotate --ontology-iri $(ONTBASE)/$@ --output $(COMPONENTSDIR)/your-component-name.owl
-```
-
-(If using a ROBOT template, do not forget to add your template tsv in src/templates/)
+6) Add your template .tsv in src/templates.
 
 7) Make the file by running `sh run.sh make components/your-component-name.owl`
 

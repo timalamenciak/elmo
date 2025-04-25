@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                c455c1b437f29372ba154d7ea473f85cd40b2856433a5e8651d96c89e30e8384
+CONFIG_HASH=                8e94e366051a84db42be93fcd14864523c4daa11c76fcae5700049da2d7135cb
 
 
 # ----------------------------------------
@@ -53,7 +53,7 @@ OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
 ANNOTATE_CONVERT_FILE =     annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) convert -f ofn --output $@.tmp.owl && mv $@.tmp.owl $@
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/interventions.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/interventions.owl $(COMPONENTSDIR)/ecosystems.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 EDIT_PREPROCESSED =         $(TMPDIR)/$(ONT)-preprocess.owl
 PATTERNDIR=                 ../patterns
@@ -459,6 +459,14 @@ $(COMPONENTSDIR)/interventions.owl: $(TEMPLATEDIR)/interventions.tsv
 		$(ANNOTATE_CONVERT_FILE); fi
 
 .PRECIOUS: $(COMPONENTSDIR)/interventions.owl
+
+
+$(COMPONENTSDIR)/ecosystems.owl: $(TEMPLATEDIR)/ecosystems.tsv
+	if [ $(COMP) = true ] ; then $(ROBOT) template --prefix 'ELMO: https://w3id.org/elmo/elmo_' \
+		$(patsubst %, --template %, $^) \
+		$(ANNOTATE_CONVERT_FILE); fi
+
+.PRECIOUS: $(COMPONENTSDIR)/ecosystems.owl
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------

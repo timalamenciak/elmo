@@ -22,6 +22,8 @@ Import(<https://w3id.org/elmo/elmo/imports/envo_import.owl>)
 
 Import(<https://w3id.org/elmo/elmo/components/interventions.owl>)
 
+Import(<https://w3id.org/elmo/elmo/components/ecosystems.owl>)
+
 
 Import(<https://w3id.org/elmo/elmo/patterns/definitions.owl>)
 Annotation(dcterms:description "None")

@@ -45,6 +45,11 @@ components:
       template_options: "--prefix 'ELMO: https://w3id.org/elmo/elmo_'"
       use_template: true
       templates:
-        - interventions.tsv
+        - interventions.tsv    
+    - filename: ecosystems.owl
+      template_options: "--prefix 'ELMO: https://w3id.org/elmo/elmo_'"
+      use_template: true
+      templates:
+        - ecosystems.tsv
 robot_java_args: '-Xmx8G'
 allow_equivalents: 'all'
