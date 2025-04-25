@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/imports/orcidio_import.owl>
-<https://w3id.org/elmo/elmo/releases/2025-04-22/imports/orcidio_import.owl>
-Annotation(owl:versionInfo "2025-04-22")
+<https://w3id.org/elmo/elmo/releases/2025-04-25/imports/orcidio_import.owl>
+Annotation(owl:versionInfo "2025-04-25")
 
 Declaration(NamedIndividual(<https://orcid.org/0000-0002-1296-2528>))
 Declaration(NamedIndividual(<https://orcid.org/0000-0002-4366-3088>))

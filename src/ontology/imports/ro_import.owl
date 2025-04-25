@@ -7,10 +7,11 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/imports/ro_import.owl>
-<https://w3id.org/elmo/elmo/releases/2025-04-22/imports/ro_import.owl>
+<https://w3id.org/elmo/elmo/releases/2025-04-25/imports/ro_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/ro/releases/2025-03-05/ro-base.owl>)
-Annotation(owl:versionInfo "2025-04-22")
+Annotation(owl:versionInfo "2025-04-25")
 
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000254>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
@@ -25,6 +26,7 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
 Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/homepage>))
+
 
 
 )
