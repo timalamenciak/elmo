@@ -24,9 +24,13 @@ repo_url: https://github.com/timalamenciak/elmo/
 nav:
   - Getting started: index.md
   - ELMO in HTML: lode.html
-  - Basic user:
-  - Advanced user:
-  - Mechanic:
+  - Basic user: 
+      - Basic user overview: basicuser.md
+  - Advanced user: 
+    - Advanced user overview: advanceduser.md
+    - Contributing: contributing.md
+  - Mechanic: 
+    - Mechanic overview: mechanic.md
     - Standard ODK workflows:
           - Overview: odk-workflows/index.md
           - Editors Workflow: odk-workflows/EditorsWorkflow.md
@@ -42,7 +46,4 @@ nav:
     - Design Patterns:
       - Design Patterns Overview: templates/dosdp.md 
   - Cite: cite.md
-  - How-to guides:
-      - Contributing: contributing.md
-  - Reference:
 
