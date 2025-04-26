@@ -30,9 +30,7 @@ import_group:
     - oboInOwl:hasAlternativeId
   products:
     - id: ro
-      module_type: minimal
     - id: bfo
-      module_type: minimal
     - id: envo
       module_type: minimal
     - id: cob
