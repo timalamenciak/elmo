@@ -16,7 +16,7 @@ These are the current imports in ELMO
 
 | Import | URL | Type |
 | ------ | --- | ---- |
-| ro | http://purl.obolibrary.org/obo/ro.owl | None |
+| ro | http://purl.obolibrary.org/obo/ro.owl | minimal |
 | bfo | http://purl.obolibrary.org/obo/bfo.owl | None |
 | envo | http://purl.obolibrary.org/obo/envo.owl | minimal |
 | cob | http://purl.obolibrary.org/obo/cob.owl | None |
