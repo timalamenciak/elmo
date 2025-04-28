@@ -2,3 +2,9 @@ ENVO:02500000 #environmental system process
 ENVO:01001170 #active ecosystem management process
 ENVO:01000254 #environmental system
 ENVO:00000191 #solid astronomical body part
+ENVO:01001110 #ecosystem
+ENVO:01000204 #tropical
+ENVO:01000203 #environmental condition
+PATO:0001018 #physical quality
+ENVO:01000343 #altitudinal condition
+ENVO:01000342 #montane

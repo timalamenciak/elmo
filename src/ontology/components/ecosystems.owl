@@ -7,10 +7,11 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/components/ecosystems.owl>
-<https://w3id.org/elmo/elmo/releases/2025-04-25/components/ecosystems.owl>
-Annotation(owl:versionInfo "2025-04-25")
+<https://w3id.org/elmo/elmo/releases/2025-04-28/components/ecosystems.owl>
+Annotation(owl:versionInfo "2025-04-28")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000191>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000203>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000254>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001110>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001884>))
@@ -20,8 +21,52 @@ Declaration(Class(<https://w3id.org/elmo/elmo_3630001>))
 Declaration(Class(<https://w3id.org/elmo/elmo_3630002>))
 Declaration(Class(<https://w3id.org/elmo/elmo_3630003>))
 Declaration(Class(<https://w3id.org/elmo/elmo_3630004>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630005>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630006>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630007>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630008>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630009>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630010>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630011>))
+Declaration(DataProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
+Declaration(Datatype(<http://purl.obolibrary.org/obo/ENVO_01000204>))
+Declaration(Datatype(<http://purl.obolibrary.org/obo/ENVO_01000342>))
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: <https://w3id.org/elmo/elmo_3630000> (lowland)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Upland_and_lowland>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630000> "A landform which has an elevation lower than 200m above sea level."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630000> "lowland"@en)
+
+# Datatype: <https://w3id.org/elmo/elmo_3630002> (rainforest plant community)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630002> "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy, is subject to high humidity and rainfall and includes populations of epiphytes, lianas and vegetation adapted to high moisture."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630002> "rainforest plant community"@en)
+
+# Datatype: <https://w3id.org/elmo/elmo_3630006> (forest plant community)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630006> "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <https://w3id.org/elmo/elmo_3630006> "thicket"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630006> "forest plant community"@en)
+
+# Datatype: <https://w3id.org/elmo/elmo_3630007> (seasonally dry)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630007> "An environmental condition in which an area receives ~1800 mm of rainfall per year, with a period of 3 to 6 months receiving less than 100 mm per month."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3630007> "arid"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630007> "seasonally dry"@en)
+
+# Datatype: <https://w3id.org/elmo/elmo_3630009> (subtropical)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Subtropics>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630009> "An environmental condition in which an area experiences hot summers and mild winters, and is located to the immediate north or south of the tropical zone."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630009> "subtropical"@en)
 
 
 ############################
@@ -40,8 +85,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001886> <http://purl.obolibrar
 
 # Class: <https://w3id.org/elmo/elmo_3630000> (lowland)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Upland_and_lowland>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630000> "A landform which has an elevation lower than 200m above sea level."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630000> "lowland"@en)
 SubClassOf(<https://w3id.org/elmo/elmo_3630000> <http://purl.obolibrary.org/obo/ENVO_01001884>)
 
 # Class: <https://w3id.org/elmo/elmo_3630001> (plant community)
@@ -52,8 +95,6 @@ SubClassOf(<https://w3id.org/elmo/elmo_3630001> <http://purl.obolibrary.org/obo/
 
 # Class: <https://w3id.org/elmo/elmo_3630002> (rainforest plant community)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630002> "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy, is subject to high humidity and rainfall and includes populations of epiphytes, lianas and vegetation adapted to high moisture."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630002> "rainforest plant community"@en)
 SubClassOf(<https://w3id.org/elmo/elmo_3630002> <https://w3id.org/elmo/elmo_3630001>)
 
 # Class: <https://w3id.org/elmo/elmo_3630003> (ecosystem functional group)
@@ -66,7 +107,48 @@ SubClassOf(<https://w3id.org/elmo/elmo_3630003> <http://purl.obolibrary.org/obo/
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630004> "An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located in a lowland landform."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630004> "tropical lowland rainforest"@en)
+EquivalentClasses(<https://w3id.org/elmo/elmo_3630004> ObjectIntersectionOf(DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000204>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630000>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630002>)))
 SubClassOf(<https://w3id.org/elmo/elmo_3630004> <https://w3id.org/elmo/elmo_3630003>)
+
+# Class: <https://w3id.org/elmo/elmo_3630005> (tropical dry forests and thickets)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630005> "An ecosystem functional group which has a forest plant community, experiences tropical climactic conditions and seasonally dry conditions."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630005> "tropical dry forests and thickets"@en)
+EquivalentClasses(<https://w3id.org/elmo/elmo_3630005> ObjectIntersectionOf(DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000204>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630006>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630007>)))
+SubClassOf(<https://w3id.org/elmo/elmo_3630005> <https://w3id.org/elmo/elmo_3630003>)
+
+# Class: <https://w3id.org/elmo/elmo_3630006> (forest plant community)
+
+SubClassOf(<https://w3id.org/elmo/elmo_3630006> <https://w3id.org/elmo/elmo_3630001>)
+
+# Class: <https://w3id.org/elmo/elmo_3630007> (seasonally dry)
+
+SubClassOf(<https://w3id.org/elmo/elmo_3630007> <http://purl.obolibrary.org/obo/ENVO_01000203>)
+
+# Class: <https://w3id.org/elmo/elmo_3630008> (subtropical dry forests and thickets)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630008> "An ecosystem functional group which has a forest plant community, experiences subtropical climactic conditions and seasonally dry conditions."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630008> "subtropical dry forests and thickets"@en)
+EquivalentClasses(<https://w3id.org/elmo/elmo_3630008> ObjectIntersectionOf(DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000204>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630006>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630009>)))
+SubClassOf(<https://w3id.org/elmo/elmo_3630008> <https://w3id.org/elmo/elmo_3630003>)
+
+# Class: <https://w3id.org/elmo/elmo_3630009> (subtropical)
+
+SubClassOf(<https://w3id.org/elmo/elmo_3630009> <http://purl.obolibrary.org/obo/ENVO_01000203>)
+
+# Class: <https://w3id.org/elmo/elmo_3630010> (tropical montane rainforests)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.3>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630010> "An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located at a montane altitude."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630010> "tropical montane rainforests"@en)
+EquivalentClasses(<https://w3id.org/elmo/elmo_3630010> ObjectIntersectionOf(DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000204>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000342>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630002>)))
+SubClassOf(<https://w3id.org/elmo/elmo_3630010> <https://w3id.org/elmo/elmo_3630003>)
+
+# Class: <https://w3id.org/elmo/elmo_3630011> (subtropical montane rainforests)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.3>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630011> "An ecosystem functional group which has a rainforest plant community, experiences subtropical climactic conditions and is located at a montane altitude."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630011> "subtropical montane rainforests"@en)
+EquivalentClasses(<https://w3id.org/elmo/elmo_3630011> ObjectIntersectionOf(DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000342>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630002>) DataSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630009>)))
+SubClassOf(<https://w3id.org/elmo/elmo_3630011> <https://w3id.org/elmo/elmo_3630003>)
 
 
 )

@@ -7,13 +7,13 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/imports/ro_import.owl>
-<https://w3id.org/elmo/elmo/releases/2025-04-25/imports/ro_import.owl>
+<https://w3id.org/elmo/elmo/releases/2025-04-28/imports/ro_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/ro/releases/2025-03-05/ro.owl>)
 Annotation(<http://purl.org/dc/terms/description> "The OBO Relations Ontology (RO) is a collection of OWL relations (ObjectProperties) intended for use across a wide variety of biological ontologies."@en)
 Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(<http://purl.org/dc/terms/title> "OBO Relations Ontology"@en)
 Annotation(owl:versionInfo "2025-03-05")
-Annotation(owl:versionInfo "2025-04-25")
+Annotation(owl:versionInfo "2025-04-28")
 Annotation(<http://xmlns.com/foaf/0.1/homepage> " https://github.com/oborel/obo-relations/"^^xsd:anyURI)
 
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
@@ -135,6 +135,7 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#cre
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
 Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/homepage>))
 
 ############################
@@ -400,6 +401,7 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002263> <http://purl.obo
 # Object Property: <http://purl.obolibrary.org/obo/RO_0002264> (acts upstream of or within)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002264> "c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/RO_0002264> "affects")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002264> "acts upstream of or within")
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002264> <http://purl.obolibrary.org/obo/RO_0002500>)
 
@@ -560,6 +562,7 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002412> <http://purl.obo
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002418> "p is 'causally upstream or within' q iff p is causally related to q, and the end of p precedes, or is coincident with, the end of q.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/RO_0002418> "We would like to make this disjoint with 'preceded by', but this is prohibited in OWL2")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/RO_0002418> "affects")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002418> "causally upstream of or within")
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/RO_0002501>)
 InverseObjectProperties(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/RO_0002427>)
