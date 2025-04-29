@@ -30,9 +30,11 @@ import_group:
     - oboInOwl:hasAlternativeId
   products:
     - id: ro
+      module_type: slme
     - id: bfo
     - id: envo
       module_type: minimal
+      make_base: TRUE
     - id: cob
     - id: orcidio
       mirror_from: https://w3id.org/orcidio/orcidio.owl
