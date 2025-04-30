@@ -49,7 +49,7 @@ components:
       templates:
         - interventions.tsv    
     - filename: ecosystems.owl
-      template_options: "--prefix 'ELMO: https://w3id.org/elmo/elmo_'"
+      template_options: "--prefix 'ELMO: https://w3id.org/elmo/elmo_' --input $(SRC)"
       use_template: true
       templates:
         - ecosystems.tsv

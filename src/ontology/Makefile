@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                3b4a511791bde370fed35f42ea4f44ae61465ca785c450dd1d7acf095d188213
+CONFIG_HASH=                7180dbf1c4ed0742d9416123a6edc8972982719fb4f65aedf3baa9b183bba9bb
 
 
 # ----------------------------------------
@@ -470,7 +470,7 @@ $(COMPONENTSDIR)/interventions.owl: $(TEMPLATEDIR)/interventions.tsv
 
 
 $(COMPONENTSDIR)/ecosystems.owl: $(TEMPLATEDIR)/ecosystems.tsv
-	if [ $(COMP) = true ] ; then $(ROBOT) template --prefix 'ELMO: https://w3id.org/elmo/elmo_' \
+	if [ $(COMP) = true ] ; then $(ROBOT) template --prefix 'ELMO: https://w3id.org/elmo/elmo_' --input $(SRC) \
 		$(patsubst %, --template %, $^) \
 		$(ANNOTATE_CONVERT_FILE); fi
 
