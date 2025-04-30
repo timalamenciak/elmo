@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                635ac03310d8e59b91db0a284c6b190d3037f61cb6bebda002f705e9490ba8c4
+CONFIG_HASH=                3b4a511791bde370fed35f42ea4f44ae61465ca785c450dd1d7acf095d188213
 
 
 # ----------------------------------------
@@ -383,10 +383,8 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms_combined.txt
 
 $(IMPORTDIR)/ro_import.owl: $(MIRRORDIR)/ro.owl $(IMPORTDIR)/ro_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-    extract -T $(IMPORTDIR)/ro_terms_combined.txt --copy-ontology-annotations true --force true --method BOT \
-		remove --base-iri $(OBOBASE)/RO --axioms external --preserve-structure false --trim false \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru \
-		remove $(patsubst %, --term %, $(ANNOTATION_PROPERTIES)) --term rdfs:label --term IAO:0000115  -T $(IMPORTDIR)/ro_terms_combined.txt --select complement --select "classes individuals annotation-properties" \
+		extract -T $(IMPORTDIR)/ro_terms_combined.txt --copy-ontology-annotations true --force true --individuals include --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		$(ANNOTATE_CONVERT_FILE); fi
 
 ## Module for ontology: envo
@@ -509,7 +507,7 @@ mirror-bfo: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/envo.owl
 mirror-envo: | $(TMPDIR)
 	curl -L $(OBOBASE)/envo.owl --create-dirs -o $(TMPDIR)/envo-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) convert -i $(TMPDIR)/envo-download.owl -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -i $(TMPDIR)/envo-download.owl --base-iri $(OBOBASE)/ENVO --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: cob
