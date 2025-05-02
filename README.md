@@ -2,9 +2,9 @@
 ![Build Status](https://github.com/timalamenciak/elmo/actions/workflows/qc.yml/badge.svg)
 # Ecolink Model Ontology (ELMO)
 
-Description: None
+Description: The Ecolink Model Ontology is a project ontology that describes ecosystem management processes, ecosystem types, and environmental variables. 
 
-More information can be found at http://obofoundry.org/ontology/elmo
+More information can be found in the [project documentation](https://timalamenciak.github.io/elmo).
 
 ## Versions
 
@@ -12,9 +12,7 @@ More information can be found at http://obofoundry.org/ontology/elmo
 
 The latest version of the ontology can always be found at:
 
-https://w3id.org/elmo/elmo.owl
-
-(note this will not show up until the request has been approved by obofoundry.org)
+https://w3id.org/elmo
 
 ### Editors' version
 
