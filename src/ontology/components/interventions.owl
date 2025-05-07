@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/components/interventions.owl>
-<https://w3id.org/elmo/elmo/releases/2025-04-30/components/interventions.owl>
-Annotation(owl:versionInfo "2025-04-30")
+<https://w3id.org/elmo/elmo/releases/2025-05-07/components/interventions.owl>
+Annotation(owl:versionInfo "2025-05-07")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001170>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001436>))
@@ -211,6 +211,7 @@ Declaration(Class(<https://w3id.org/elmo/elmo_3621019>))
 Declaration(Class(<https://w3id.org/elmo/elmo_3621020>))
 Declaration(Class(<https://w3id.org/elmo/elmo_3621021>))
 Declaration(Class(<https://w3id.org/elmo/elmo_3621022>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3621023>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
@@ -1446,12 +1447,12 @@ SubClassOf(<https://w3id.org/elmo/elmo_3620821> <https://w3id.org/elmo/elmo_3620
 
 # Class: <https://w3id.org/elmo/elmo_3620822> (community engagement process)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620822> "An awareness-raising process in which a humans are gathered in a given area and engaged in the restoration and conservation of biodiversity."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620822> "An ecosystem-oriented social process in which a humans are engaged in the restoration and conservation of biodiversity."@en)
 AnnotationAssertion(<http://purl.org/dc/terms/contributor> <https://w3id.org/elmo/elmo_3620822> <https://orcid.org/0000-0002-4366-3088>)
 AnnotationAssertion(<http://purl.org/dc/terms/contributor> <https://w3id.org/elmo/elmo_3620822> <https://orcid.org/0000-0003-4817-0423>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3620822> <https://orcid.org/0000-0002-1296-2528>)
 AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620822> "community engagement process"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3620822> <https://w3id.org/elmo/elmo_3620817>)
+SubClassOf(<https://w3id.org/elmo/elmo_3620822> <https://w3id.org/elmo/elmo_3620800>)
 
 # Class: <https://w3id.org/elmo/elmo_3620823> (pro-environmental behaviour change process)
 
@@ -1966,6 +1967,13 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3621022> "curtailment"@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3621022> "regulate wind turbine speed"@en)
 SubClassOf(<https://w3id.org/elmo/elmo_3621022> <http://purl.obolibrary.org/obo/ENVO_01001436>)
+
+# Class: <https://w3id.org/elmo/elmo_3621023> (fauna poisoning process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3621023> "A chemical ecosystem management process in which poison is introduced to reduce the population of fauna."@en)
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <https://w3id.org/elmo/elmo_3621023> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3621023> "fauna poisoning process"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3621023> <https://w3id.org/elmo/elmo_3620500>)
 
 
 )
