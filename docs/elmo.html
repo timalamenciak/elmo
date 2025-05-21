@@ -1,0 +1,1522 @@
+<html>
+    <head>
+        <title></title>
+    <style>
+        header {
+            background-color: #FF9500;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .box {
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            background-color: white;
+            text-align: left;
+        }
+        .term {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .box.highlighted {
+            border-color: #FF9500;
+            background-color: #FFD580;
+        }
+    </style>
+    <script>
+        function highlightBox() {
+            const hash = window.location.hash;
+            document.querySelectorAll('.box').forEach(box => {
+                box.classList.remove('highlighted');
+            });
+
+            if (hash) {
+                console.log(hash)
+                const box = document.querySelector(hash);                
+                if (box) {
+                    box.classList.add('highlighted');
+                    }
+            }
+        }
+
+        window.addEventListener('load', highlightBox);
+        window.addEventListener('hashchange', highlightBox);
+    </script>
+    </head>
+    <body>
+        <div id="elmo_3620020" class="box">
+            <div class="term">mechanical ecosystem management process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001170">http://purl.obolibrary.org/obo/ENVO_01001170</a><br/>
+            <b>Definition: </b>An active ecosystem management process during which a human employs machines or tools to directly impact an ecosystem and realize some ecosystem management goal.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+        </div>
+    </div><div id="elmo_3620021" class="box">
+            <div class="term">mechanical vegetation removal process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process during which vegetation is removed.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620021">https://w3id.org/elmo/elmo_3620021</a><br/>
+        </div>
+    </div><div id="elmo_3620022" class="box">
+            <div class="term">root wrench removal process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620021">https://w3id.org/elmo/elmo_3620021</a><br/>
+            <b>Definition: </b>A mechanical vegetation removal process in which a human employs a tool comprising a lever and gripping portion (root wrench).<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620022">https://w3id.org/elmo/elmo_3620022</a><br/>
+        </div>
+    </div><div id="elmo_3620023" class="box">
+            <div class="term">cut and cover removal process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620021">https://w3id.org/elmo/elmo_3620021</a><br/>
+            <b>Definition: </b>A mechanical vegetation removal process during which plants at ground level are cut and residual stumps are covered with a sun-blocking material (e.g. silage tarp).<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620023">https://w3id.org/elmo/elmo_3620023</a><br/>
+        </div>
+    </div><div id="elmo_3620024" class="box">
+            <div class="term">cutting removal process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620021">https://w3id.org/elmo/elmo_3620021</a><br/>
+            <b>Definition: </b>A mechanical vegetation removal process in which a human cuts and removes plant material.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620024">https://w3id.org/elmo/elmo_3620024</a><br/>
+        </div>
+    </div><div id="elmo_3620025" class="box">
+            <div class="term">spading removal process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620021">https://w3id.org/elmo/elmo_3620021</a><br/>
+            <b>Definition: </b>A mechanical vegetation removal process in which a human severs subsoil roots using a spade and pries the plant out of the ground.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620025">https://w3id.org/elmo/elmo_3620025</a><br/>
+        </div>
+    </div><div id="elmo_3620026" class="box">
+            <div class="term">canopy thinning process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620021">https://w3id.org/elmo/elmo_3620021</a><br/>
+            <b>Definition: </b>A mechanical vegetation removal process in which a human removes trees from a given area with the goal of reducing overall canopy cover thereby increasing light availability for understorey plants.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620026">https://w3id.org/elmo/elmo_3620026</a><br/>
+        </div>
+    </div><div id="elmo_3620027" class="box">
+            <div class="term">leaf litter removal process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620021">https://w3id.org/elmo/elmo_3620021</a><br/>
+            <b>Definition: </b>A mechanical vegetation removal process in which a human removes leaf litter from the ground thereby increasing the light availability for soil.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620027">https://w3id.org/elmo/elmo_3620027</a><br/>
+        </div>
+    </div><div id="elmo_3620028" class="box">
+            <div class="term">mechanical fauna control process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human controls fauna populations.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620028">https://w3id.org/elmo/elmo_3620028</a><br/>
+        </div>
+    </div><div id="elmo_3620029" class="box">
+            <div class="term">mammal trapping process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620028">https://w3id.org/elmo/elmo_3620028</a><br/>
+            <b>Definition: </b>A mechanical fauna control process in which a human uses traps to control fauna.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620029">https://w3id.org/elmo/elmo_3620029</a><br/>
+        </div>
+    </div><div id="elmo_3620030" class="box">
+            <div class="term">predator control process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620028">https://w3id.org/elmo/elmo_3620028</a><br/>
+            <b>Definition: </b>A mechanical fauna control process in which a human targets predators for removal from the ecosystem.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620030">https://w3id.org/elmo/elmo_3620030</a><br/>
+        </div>
+    </div><div id="elmo_3620031" class="box">
+            <div class="term">fencing process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620067">https://w3id.org/elmo/elmo_3620067</a><br/>
+            <b>Definition: </b>A mechanical fauna control process in which a human installs fencing to restrict either immigration or emmigration of fauna from a particular area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620031">https://w3id.org/elmo/elmo_3620031</a><br/>
+        </div>
+    </div><div id="elmo_3620032" class="box">
+            <div class="term">mechanical species deterrent process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620028">https://w3id.org/elmo/elmo_3620028</a><br/>
+            <b>Definition: </b>A mechanical fauna control process in which a human installs an electronic device to deter species from a particular area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620032">https://w3id.org/elmo/elmo_3620032</a><br/>
+        </div>
+    </div><div id="elmo_3620033" class="box">
+            <div class="term">mechanical hydrological alteration process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process during which a human deliberately alters the hydrologic cycle in an area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620033">https://w3id.org/elmo/elmo_3620033</a><br/>
+        </div>
+    </div><div id="elmo_3620034" class="box">
+            <div class="term">dam construction process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620033">https://w3id.org/elmo/elmo_3620033</a><br/>
+            <b>Definition: </b>A mechanical hydrological alteration process in which a human constructs some dam to restore a meander sequence to a river or stream.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620034">https://w3id.org/elmo/elmo_3620034</a><br/>
+        </div>
+    </div><div id="elmo_3620035" class="box">
+            <div class="term">dam removal process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620033">https://w3id.org/elmo/elmo_3620033</a><br/>
+            <b>Definition: </b>A mechanical hydrological alteration process in which a human removes some dam with the goal of altering the hydroperiod of surrounding lands and reconnecting rivers.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620035">https://w3id.org/elmo/elmo_3620035</a><br/>
+        </div>
+    </div><div id="elmo_3620036" class="box">
+            <div class="term">tile drain crushing process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620033">https://w3id.org/elmo/elmo_3620033</a><br/>
+            <b>Definition: </b>A mechanical hydrological alteration process in which a human uncovers and collapses subterranean tile drains in situ to reduce drainage on the landscape and restore wetland hydroperiod.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620036">https://w3id.org/elmo/elmo_3620036</a><br/>
+        </div>
+    </div><div id="elmo_3620037" class="box">
+            <div class="term">tile drain removal process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620033">https://w3id.org/elmo/elmo_3620033</a><br/>
+            <b>Definition: </b>A mechanical hydrological alteration process in which a human uncovers and removes subterranean tile drains to reduce drainage on the landscape and restore wetland hydroperiod.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620037">https://w3id.org/elmo/elmo_3620037</a><br/>
+        </div>
+    </div><div id="elmo_3620038" class="box">
+            <div class="term">nest site creation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human creates sites for fauna to breed, feed and shelter.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620038">https://w3id.org/elmo/elmo_3620038</a><br/>
+        </div>
+    </div><div id="elmo_3620039" class="box">
+            <div class="term">perch creation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human creates places for birds to perch.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620039">https://w3id.org/elmo/elmo_3620039</a><br/>
+        </div>
+    </div><div id="elmo_3620040" class="box">
+            <div class="term">buffer strip creation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human cultivates strips of flora between landscape features using earthworks and planting processes.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620040">https://w3id.org/elmo/elmo_3620040</a><br/>
+        </div>
+    </div><div id="elmo_3620041" class="box">
+            <div class="term">riparian buffer strip creation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620040">https://w3id.org/elmo/elmo_3620040</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human cultivates strips of flora in the riparian areas of rivers.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620041">https://w3id.org/elmo/elmo_3620041</a><br/>
+        </div>
+    </div><div id="elmo_3620042" class="box">
+            <div class="term">buffer strip retention process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human leaves strips of flora untouched when clearing the land for other purposes.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620042">https://w3id.org/elmo/elmo_3620042</a><br/>
+        </div>
+    </div><div id="elmo_3620043" class="box">
+            <div class="term">earthworks process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process during which the topology of some area is deliberately changed at least at the micro scale (e.g. 1m2).<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+        </div>
+    </div><div id="elmo_3620044" class="box">
+            <div class="term">berm creation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which earthen barriers (berms) are constructed with the goal of obstructing or slowing floodwaters.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620044">https://w3id.org/elmo/elmo_3620044</a><br/>
+        </div>
+    </div><div id="elmo_3620046" class="box">
+            <div class="term">pond creation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human creates a pond.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620046">https://w3id.org/elmo/elmo_3620046</a><br/>
+        </div>
+    </div><div id="elmo_3620047" class="box">
+            <div class="term">pond reprofiling process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human reshapes the banks or basin of a pond.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620047">https://w3id.org/elmo/elmo_3620047</a><br/>
+        </div>
+    </div><div id="elmo_3620048" class="box">
+            <div class="term">soil decompaction process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human alleviates the compaction of soil.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620048">https://w3id.org/elmo/elmo_3620048</a><br/>
+        </div>
+    </div><div id="elmo_3620049" class="box">
+            <div class="term">tilling process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620048">https://w3id.org/elmo/elmo_3620048</a><br/>
+            <b>Definition: </b>An earthworks process in which a human breaks up the soil, and sometimes adds organic matter.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620049">https://w3id.org/elmo/elmo_3620049</a><br/>
+        </div>
+    </div><div id="elmo_3620050" class="box">
+            <div class="term">ploughing process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620048">https://w3id.org/elmo/elmo_3620048</a><br/>
+            <b>Definition: </b>An earthworks process in which a human deeply breaks up and overturns soil and vegetation.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620050">https://w3id.org/elmo/elmo_3620050</a><br/>
+        </div>
+    </div><div id="elmo_3620052" class="box">
+            <div class="term">grading process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human creates a specific slope.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620052">https://w3id.org/elmo/elmo_3620052</a><br/>
+        </div>
+    </div><div id="elmo_3620053" class="box">
+            <div class="term">slope stabilization process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human installs inorganic material, usually a mesh, to stabilize a slope.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620053">https://w3id.org/elmo/elmo_3620053</a><br/>
+        </div>
+    </div><div id="elmo_3620054" class="box">
+            <div class="term">shoreline reinforcement process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human installs inorganic material, usually in a mesh, to stabilize a slope on the bank of a body of water.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620054">https://w3id.org/elmo/elmo_3620054</a><br/>
+        </div>
+    </div><div id="elmo_3620055" class="box">
+            <div class="term">pit and mound excavation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human digs pits and creates mounds to reproduce a natural disturbance regime.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620055">https://w3id.org/elmo/elmo_3620055</a><br/>
+        </div>
+    </div><div id="elmo_3620056" class="box">
+            <div class="term">channel realignment process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human realigns the channel of a stream by digging out replacement pathways and filling existing ones.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620056">https://w3id.org/elmo/elmo_3620056</a><br/>
+        </div>
+    </div><div id="elmo_3620057" class="box">
+            <div class="term">natural channel realignment process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620056">https://w3id.org/elmo/elmo_3620056</a><br/>
+            <b>Definition: </b>An earthworks process in which a human realigns the channel of a stream by digging out replacement pathways and filling existing ones with the goal of recreating a natural pool-riffle-pool meander sequence.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620057">https://w3id.org/elmo/elmo_3620057</a><br/>
+        </div>
+    </div><div id="elmo_3620058" class="box">
+            <div class="term">dredging process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human removes the sediment layer of a water body.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620058">https://w3id.org/elmo/elmo_3620058</a><br/>
+        </div>
+    </div><div id="elmo_3620059" class="box">
+            <div class="term">fauna passage creation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human creates a crossing (bridge or underpass) to help fauna pass through a barrier such as a road, fence or property.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620059">https://w3id.org/elmo/elmo_3620059</a><br/>
+        </div>
+    </div><div id="elmo_3620060" class="box">
+            <div class="term">topsoil removal process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human removes the topsoil layer.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620060">https://w3id.org/elmo/elmo_3620060</a><br/>
+        </div>
+    </div><div id="elmo_3620061" class="box">
+            <div class="term">erosion control process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human installs some material to reduce erosion.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620061">https://w3id.org/elmo/elmo_3620061</a><br/>
+        </div>
+    </div><div id="elmo_3620062" class="box">
+            <div class="term">erosion blanket process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620061">https://w3id.org/elmo/elmo_3620061</a><br/>
+            <b>Definition: </b>An erosion control process in which a human installs a textile.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620062">https://w3id.org/elmo/elmo_3620062</a><br/>
+        </div>
+    </div><div id="elmo_3620063" class="box">
+            <div class="term">erosion fencing process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620061">https://w3id.org/elmo/elmo_3620061</a><br/>
+            <b>Definition: </b>An erosion control process in which a human installs a fence with a geotextile to restrict sediment transport.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620063">https://w3id.org/elmo/elmo_3620063</a><br/>
+        </div>
+    </div><div id="elmo_3620064" class="box">
+            <div class="term">wattle fencing process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620061">https://w3id.org/elmo/elmo_3620061</a><br/>
+            <b>Definition: </b>An erosion control process in which a human interleaves live materials to make short fencing along a slope.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620064">https://w3id.org/elmo/elmo_3620064</a><br/>
+        </div>
+    </div><div id="elmo_3620065" class="box">
+            <div class="term">irrigation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human installs semi-permanent lines to supply a controlled amount of water to plants.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620065">https://w3id.org/elmo/elmo_3620065</a><br/>
+        </div>
+    </div><div id="elmo_3620066" class="box">
+            <div class="term">deterrence-focused predator control process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620030">https://w3id.org/elmo/elmo_3620030</a><br/>
+            <b>Definition: </b>A predator control process in which a human installs a mechanical device designed to deter predators from a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620066">https://w3id.org/elmo/elmo_3620066</a><br/>
+        </div>
+    </div><div id="elmo_3620067" class="box">
+            <div class="term">fauna exclusion process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620028">https://w3id.org/elmo/elmo_3620028</a><br/>
+            <b>Definition: </b>A mechanical fauna control process in which a human excludes fauna from a specific area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620067">https://w3id.org/elmo/elmo_3620067</a><br/>
+        </div>
+    </div><div id="elmo_3620068" class="box">
+            <div class="term">mechanical fauna deterrent process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620028">https://w3id.org/elmo/elmo_3620028</a><br/>
+            <b>Definition: </b>A mechanical fauna control process in which a human deters fauna from a specific area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620068">https://w3id.org/elmo/elmo_3620068</a><br/>
+        </div>
+    </div><div id="elmo_3620069" class="box">
+            <div class="term">fauna capture for conservation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620028">https://w3id.org/elmo/elmo_3620028</a><br/>
+            <b>Definition: </b>A mechanical fauna control process in which a human captures fauna for the purposes of protecting existing organisms from some threat.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620069">https://w3id.org/elmo/elmo_3620069</a><br/>
+        </div>
+    </div><div id="elmo_3620070" class="box">
+            <div class="term">fish bypass installation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human installs some means of bypassing hazards (e.g. dams) for fish.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620070">https://w3id.org/elmo/elmo_3620070</a><br/>
+        </div>
+    </div><div id="elmo_3620071" class="box">
+            <div class="term">fish ladder installation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620070">https://w3id.org/elmo/elmo_3620070</a><br/>
+            <b>Definition: </b>A fish bypass installation process in which a human installs a chute consisting of a series of stepped pools to allow fish to move past a dam.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620071">https://w3id.org/elmo/elmo_3620071</a><br/>
+        </div>
+    </div><div id="elmo_3620072" class="box">
+            <div class="term">ditch plugging process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human fills in a drainage ditch to restore the hydroperiod to a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620072">https://w3id.org/elmo/elmo_3620072</a><br/>
+        </div>
+    </div><div id="elmo_3620073" class="box">
+            <div class="term">sediment addition process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620043">https://w3id.org/elmo/elmo_3620043</a><br/>
+            <b>Definition: </b>An earthworks process in which a human adds sediment to a water body in order to modify the substrate composition.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620073">https://w3id.org/elmo/elmo_3620073</a><br/>
+        </div>
+    </div><div id="elmo_3620074" class="box">
+            <div class="term">new plant protection process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620020">https://w3id.org/elmo/elmo_3620020</a><br/>
+            <b>Definition: </b>A mechanical ecosystem management process in which a human installs a barrier to protect newly planted flora from herbivory.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620074">https://w3id.org/elmo/elmo_3620074</a><br/>
+        </div>
+    </div><div id="elmo_3620500" class="box">
+            <div class="term">chemical ecosystem management process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001170">http://purl.obolibrary.org/obo/ENVO_01001170</a><br/>
+            <b>Definition: </b>An active ecosystem management process in which a human applys or releases a chemical substance to realize some ecological management goal.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620500">https://w3id.org/elmo/elmo_3620500</a><br/>
+        </div>
+    </div><div id="elmo_3620501" class="box">
+            <div class="term">chemical application process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620500">https://w3id.org/elmo/elmo_3620500</a><br/>
+            <b>Definition: </b>A chemical ecosystem management process in which a human applies some chemical to an ecosystem.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620501">https://w3id.org/elmo/elmo_3620501</a><br/>
+        </div>
+    </div><div id="elmo_3620502" class="box">
+            <div class="term">fertilizer application process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620501">https://w3id.org/elmo/elmo_3620501</a><br/>
+            <b>Definition: </b>A chemical application process in which a human applies chemical fertilizer to a given area with the goal of increasing the available carbon, nitrogen or phosphorous.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620502">https://w3id.org/elmo/elmo_3620502</a><br/>
+        </div>
+    </div><div id="elmo_3620503" class="box">
+            <div class="term">lime application process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620501">https://w3id.org/elmo/elmo_3620501</a><br/>
+            <b>Definition: </b>A chemical application process in which a human adds lime to soil or water in order to reduce the pH.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620503">https://w3id.org/elmo/elmo_3620503</a><br/>
+        </div>
+    </div><div id="elmo_3620504" class="box">
+            <div class="term">herbicide application process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620501">https://w3id.org/elmo/elmo_3620501</a><br/>
+            <b>Definition: </b>A chemical application process in which a human applies herbicide to plants or soil in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620504">https://w3id.org/elmo/elmo_3620504</a><br/>
+        </div>
+    </div><div id="elmo_3620505" class="box">
+            <div class="term">glyphosate application process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620501">https://w3id.org/elmo/elmo_3620501</a><br/>
+            <b>Definition: </b>A herbicide application process in which a human applies the herbicide glyphosate to plants in some area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620505">https://w3id.org/elmo/elmo_3620505</a><br/>
+        </div>
+    </div><div id="elmo_3620506" class="box">
+            <div class="term">insecticide application process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620501">https://w3id.org/elmo/elmo_3620501</a><br/>
+            <b>Definition: </b>A chemical application process in which a human introduces an insecticide to some area with the goal of managing an insect population.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620506">https://w3id.org/elmo/elmo_3620506</a><br/>
+        </div>
+    </div><div id="elmo_3620600" class="box">
+            <div class="term">biological ecosystem management process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001170">http://purl.obolibrary.org/obo/ENVO_01001170</a><br/>
+            <b>Definition: </b>An active ecosystem management process in which a human adds or removes biological material from an area to realize some ecological management goal.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+        </div>
+    </div><div id="elmo_3620601" class="box">
+            <div class="term">planting process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human plants flora (defined as at least having sprouted true leaves) in the soil of a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620601">https://w3id.org/elmo/elmo_3620601</a><br/>
+        </div>
+    </div><div id="elmo_3620602" class="box">
+            <div class="term">plug planting process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620601">https://w3id.org/elmo/elmo_3620601</a><br/>
+            <b>Definition: </b>A planting process in which a human plants flora grown in a plug tray.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620602">https://w3id.org/elmo/elmo_3620602</a><br/>
+        </div>
+    </div><div id="elmo_3620603" class="box">
+            <div class="term">shrub planting process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620601">https://w3id.org/elmo/elmo_3620601</a><br/>
+            <b>Definition: </b>A planting process in which a human plants shrubs.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620603">https://w3id.org/elmo/elmo_3620603</a><br/>
+        </div>
+    </div><div id="elmo_3620604" class="box">
+            <div class="term">tree planting process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620601">https://w3id.org/elmo/elmo_3620601</a><br/>
+            <b>Definition: </b>A planting process in which a human plants trees.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620604">https://w3id.org/elmo/elmo_3620604</a><br/>
+        </div>
+    </div><div id="elmo_3620605" class="box">
+            <div class="term">seedling planting process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620604">https://w3id.org/elmo/elmo_3620604</a><br/>
+            <b>Definition: </b>A planting process in which a human plants trees that have been grown in plug trays.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620605">https://w3id.org/elmo/elmo_3620605</a><br/>
+        </div>
+    </div><div id="elmo_3620606" class="box">
+            <div class="term">caliper tree planting process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620604">https://w3id.org/elmo/elmo_3620604</a><br/>
+            <b>Definition: </b>A planting process in which a human plants trees that have grown to a diameter greater than 5 cm.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620606">https://w3id.org/elmo/elmo_3620606</a><br/>
+        </div>
+    </div><div id="elmo_3620607" class="box">
+            <div class="term">live staking process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620601">https://w3id.org/elmo/elmo_3620601</a><br/>
+            <b>Definition: </b>A planting process in which a human inserts cut branches of a flora into soil such that that flora will take root and grow.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620607">https://w3id.org/elmo/elmo_3620607</a><br/>
+        </div>
+    </div><div id="elmo_3620608" class="box">
+            <div class="term">nurse plant process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620601">https://w3id.org/elmo/elmo_3620601</a><br/>
+            <b>Definition: </b>A planting process in which a human plants flora with the goal of assisting the growth of other flora.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620608">https://w3id.org/elmo/elmo_3620608</a><br/>
+        </div>
+    </div><div id="elmo_3620609" class="box">
+            <div class="term">seeding process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human sows seeds in a particular area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620609">https://w3id.org/elmo/elmo_3620609</a><br/>
+        </div>
+    </div><div id="elmo_3620610" class="box">
+            <div class="term">tree seeding process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620609">https://w3id.org/elmo/elmo_3620609</a><br/>
+            <b>Definition: </b>A seeding process in which a human sows tree seeds.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620610">https://w3id.org/elmo/elmo_3620610</a><br/>
+        </div>
+    </div><div id="elmo_3620611" class="box">
+            <div class="term">line seeding process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620609">https://w3id.org/elmo/elmo_3620609</a><br/>
+            <b>Definition: </b>A seeding process in which a human sows seeds in lines along a landscape.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620611">https://w3id.org/elmo/elmo_3620611</a><br/>
+        </div>
+    </div><div id="elmo_3620612" class="box">
+            <div class="term">drill seeding process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620609">https://w3id.org/elmo/elmo_3620609</a><br/>
+            <b>Definition: </b>A seeding process in which a human uses a drill seeder to sow seeds.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620612">https://w3id.org/elmo/elmo_3620612</a><br/>
+        </div>
+    </div><div id="elmo_3620613" class="box">
+            <div class="term">broadcast seeding process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620609">https://w3id.org/elmo/elmo_3620609</a><br/>
+            <b>Definition: </b>A seeding process in which a human sows seeds by scattering them through the air.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620613">https://w3id.org/elmo/elmo_3620613</a><br/>
+        </div>
+    </div><div id="elmo_3620614" class="box">
+            <div class="term">hand broadcast seeding process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620613">https://w3id.org/elmo/elmo_3620613</a><br/>
+            <b>Definition: </b>A seeding process in which a human scatters seeds by hand.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620614">https://w3id.org/elmo/elmo_3620614</a><br/>
+        </div>
+    </div><div id="elmo_3620615" class="box">
+            <div class="term">hydroseeding process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620609">https://w3id.org/elmo/elmo_3620609</a><br/>
+            <b>Definition: </b>A seeding process in which a human applies seed in a slurry of nutrients and fixatives.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620615">https://w3id.org/elmo/elmo_3620615</a><br/>
+        </div>
+    </div><div id="elmo_3620616" class="box">
+            <div class="term">seed treatment process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human applies a treatment to seed prior to sowing it.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620616">https://w3id.org/elmo/elmo_3620616</a><br/>
+        </div>
+    </div><div id="elmo_3620617" class="box">
+            <div class="term">seed scarification process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620616">https://w3id.org/elmo/elmo_3620616</a><br/>
+            <b>Definition: </b>A seed treatment process in which a human damages the coating of the seed, usually using sandpaper, to enhance germination.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620617">https://w3id.org/elmo/elmo_3620617</a><br/>
+        </div>
+    </div><div id="elmo_3620618" class="box">
+            <div class="term">heat seed treatment process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620616">https://w3id.org/elmo/elmo_3620616</a><br/>
+            <b>Definition: </b>A seed treatment process in which a human applies heat to some seed in order to enhance germination.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620618">https://w3id.org/elmo/elmo_3620618</a><br/>
+        </div>
+    </div><div id="elmo_3620619" class="box">
+            <div class="term">chill seed treatment process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620616">https://w3id.org/elmo/elmo_3620616</a><br/>
+            <b>Definition: </b>A seed treatment process in which a human applies cold to some seed in order to enhance germination, such as in cold stratification.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620619">https://w3id.org/elmo/elmo_3620619</a><br/>
+        </div>
+    </div><div id="elmo_3620620" class="box">
+            <div class="term">soak seed treatment process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620616">https://w3id.org/elmo/elmo_3620616</a><br/>
+            <b>Definition: </b>A seed treatment process in which a human soaks seeds in order to enhance germination.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620620">https://w3id.org/elmo/elmo_3620620</a><br/>
+        </div>
+    </div><div id="elmo_3620621" class="box">
+            <div class="term">light seed treatment process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620616">https://w3id.org/elmo/elmo_3620616</a><br/>
+            <b>Definition: </b>A seed treatment process in which light is applied to seeds in order to enhance germination.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620621">https://w3id.org/elmo/elmo_3620621</a><br/>
+        </div>
+    </div><div id="elmo_3620622" class="box">
+            <div class="term">chemical seed treatment process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620616">https://w3id.org/elmo/elmo_3620616</a><br/>
+            <b>Definition: </b>A seed treatment process in which some chemical is applied to some seed in order to enhance germination.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620622">https://w3id.org/elmo/elmo_3620622</a><br/>
+        </div>
+    </div><div id="elmo_3620623" class="box">
+            <div class="term">biological fauna control process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human uses biological means to reduce or increase a population of fauna.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620623">https://w3id.org/elmo/elmo_3620623</a><br/>
+        </div>
+    </div><div id="elmo_3620624" class="box">
+            <div class="term">captive breeding and release process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human facilitates the breeding of fauna, rears the young for a period of time and releases them in some environment.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620624">https://w3id.org/elmo/elmo_3620624</a><br/>
+        </div>
+    </div><div id="elmo_3620625" class="box">
+            <div class="term">egg relocation and release process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620624">https://w3id.org/elmo/elmo_3620624</a><br/>
+            <b>Definition: </b>A captive breeding and release process in which a human collects eggs and relocates them to a safe environment, whereupon they are allowed to hatch.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620625">https://w3id.org/elmo/elmo_3620625</a><br/>
+        </div>
+    </div><div id="elmo_3620626" class="box">
+            <div class="term">egg incubation and release process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620625">https://w3id.org/elmo/elmo_3620625</a><br/>
+            <b>Definition: </b>An egg relocation and release process in which a human collects eggs and relocates them into an incubator, whereupon they are allowed to hatch and released into some environment.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620626">https://w3id.org/elmo/elmo_3620626</a><br/>
+        </div>
+    </div><div id="elmo_3620627" class="box">
+            <div class="term">young capture, rearing and release</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620624">https://w3id.org/elmo/elmo_3620624</a><br/>
+            <b>Definition: </b>A captive breeding and release process in which a human captures young fauna, rears them into adulthood and releases them into some environment.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620627">https://w3id.org/elmo/elmo_3620627</a><br/>
+        </div>
+    </div><div id="elmo_3620628" class="box">
+            <div class="term">supplemental water process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human provides supplemental water to flora or fauna.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620628">https://w3id.org/elmo/elmo_3620628</a><br/>
+        </div>
+    </div><div id="elmo_3620629" class="box">
+            <div class="term">supplemental feeding process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human provides supplemental food to fauna.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620629">https://w3id.org/elmo/elmo_3620629</a><br/>
+        </div>
+    </div><div id="elmo_3620630" class="box">
+            <div class="term">plant material transfer process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human transfers plant material from some area to another.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620630">https://w3id.org/elmo/elmo_3620630</a><br/>
+        </div>
+    </div><div id="elmo_3620631" class="box">
+            <div class="term">moss layer transfer process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620630">https://w3id.org/elmo/elmo_3620630</a><br/>
+            <b>Definition: </b>A plant material transfer process in which a human restores the hydroperiod of a peatland by blocking drainage ditches or other means and subsequently moves material from the moss layer (top 10 cm) of another peatland onto the one being restored.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620631">https://w3id.org/elmo/elmo_3620631</a><br/>
+        </div>
+    </div><div id="elmo_3620632" class="box">
+            <div class="term">soil transfer process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human transfers soil from one area to another.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620632">https://w3id.org/elmo/elmo_3620632</a><br/>
+        </div>
+    </div><div id="elmo_3620633" class="box">
+            <div class="term">fauna sterilization process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620623">https://w3id.org/elmo/elmo_3620623</a><br/>
+            <b>Definition: </b>A biological fauna control process in which a human renders some fauna sterile in order to reduce their population.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620633">https://w3id.org/elmo/elmo_3620633</a><br/>
+        </div>
+    </div><div id="elmo_3620634" class="box">
+            <div class="term">egg destruction process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620623">https://w3id.org/elmo/elmo_3620623</a><br/>
+            <b>Definition: </b>A biological fauna control process in which a human destroys the eggs of some fauna (e.g. oiling goose eggs).<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620634">https://w3id.org/elmo/elmo_3620634</a><br/>
+        </div>
+    </div><div id="elmo_3620635" class="box">
+            <div class="term">nest establishment deterrence process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620623">https://w3id.org/elmo/elmo_3620623</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human implements measures to deter fauna from establishing nest sites in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620635">https://w3id.org/elmo/elmo_3620635</a><br/>
+        </div>
+    </div><div id="elmo_3620636" class="box">
+            <div class="term">seabed amendment process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human adds material to a seabed to facilitate nesting.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620636">https://w3id.org/elmo/elmo_3620636</a><br/>
+        </div>
+    </div><div id="elmo_3620637" class="box">
+            <div class="term">soil amendment process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human adds some material to soil.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620637">https://w3id.org/elmo/elmo_3620637</a><br/>
+        </div>
+    </div><div id="elmo_3620638" class="box">
+            <div class="term">mulch addition process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620637">https://w3id.org/elmo/elmo_3620637</a><br/>
+            <b>Definition: </b>A soil amendment process in which a human adds mulch (i.e. woody debris).<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620638">https://w3id.org/elmo/elmo_3620638</a><br/>
+        </div>
+    </div><div id="elmo_3620639" class="box">
+            <div class="term">peat addition process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620637">https://w3id.org/elmo/elmo_3620637</a><br/>
+            <b>Definition: </b>A soil amendment process in which a human adds peat.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620639">https://w3id.org/elmo/elmo_3620639</a><br/>
+        </div>
+    </div><div id="elmo_3620640" class="box">
+            <div class="term">topsoil addition process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620637">https://w3id.org/elmo/elmo_3620637</a><br/>
+            <b>Definition: </b>A soil amendment process in which a human adds topsoil.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620640">https://w3id.org/elmo/elmo_3620640</a><br/>
+        </div>
+    </div><div id="elmo_3620641" class="box">
+            <div class="term">compost addition process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620637">https://w3id.org/elmo/elmo_3620637</a><br/>
+            <b>Definition: </b>A soil amendment process in which a human adds some composted organic material.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620641">https://w3id.org/elmo/elmo_3620641</a><br/>
+        </div>
+    </div><div id="elmo_3620642" class="box">
+            <div class="term">manure addition process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620637">https://w3id.org/elmo/elmo_3620637</a><br/>
+            <b>Definition: </b>A soil amendment process in which a human adds some manure.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620642">https://w3id.org/elmo/elmo_3620642</a><br/>
+        </div>
+    </div><div id="elmo_3620643" class="box">
+            <div class="term">artificial reef creation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human creates an artificial reef out of materials with the goal of attracting coral.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620643">https://w3id.org/elmo/elmo_3620643</a><br/>
+        </div>
+    </div><div id="elmo_3620644" class="box">
+            <div class="term">intentional grazing</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human introduces grazing animals to an area with the goal of recreating a disturbance regime.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620644">https://w3id.org/elmo/elmo_3620644</a><br/>
+        </div>
+    </div><div id="elmo_3620645" class="box">
+            <div class="term">mycorrhizae addition process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human adds mycorrhizae spores to some environment.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620645">https://w3id.org/elmo/elmo_3620645</a><br/>
+        </div>
+    </div><div id="elmo_3620646" class="box">
+            <div class="term">peatland rewetting process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human alters the hydroperiod of a peatland such that more water is available.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620646">https://w3id.org/elmo/elmo_3620646</a><br/>
+        </div>
+    </div><div id="elmo_3620647" class="box">
+            <div class="term">fauna rescue, rehabilitation and release process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620623">https://w3id.org/elmo/elmo_3620623</a><br/>
+            <b>Definition: </b>A biological fauna control process in which a human captures injured fauna from some environment, rehabilitates and releases them.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620647">https://w3id.org/elmo/elmo_3620647</a><br/>
+        </div>
+    </div><div id="elmo_3620648" class="box">
+            <div class="term">fauna reintroduction process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620623">https://w3id.org/elmo/elmo_3620623</a><br/>
+            <b>Definition: </b>A biological fauna control process in which a human reintroduces fauna into some environment where the fauna once existed.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620648">https://w3id.org/elmo/elmo_3620648</a><br/>
+        </div>
+    </div><div id="elmo_3620649" class="box">
+            <div class="term">fauna medical care process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620623">https://w3id.org/elmo/elmo_3620623</a><br/>
+            <b>Definition: </b>A biological fauna control process in which a human provides medical care to some fauna.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620649">https://w3id.org/elmo/elmo_3620649</a><br/>
+        </div>
+    </div><div id="elmo_3620650" class="box">
+            <div class="term">translocation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620600">https://w3id.org/elmo/elmo_3620600</a><br/>
+            <b>Definition: </b>A biological ecosystem management process in which a human translocates some flora or fauna from one area to another.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620650">https://w3id.org/elmo/elmo_3620650</a><br/>
+        </div>
+    </div><div id="elmo_3620651" class="box">
+            <div class="term">fauna translocation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620650">https://w3id.org/elmo/elmo_3620650</a><br/>
+            <b>Definition: </b>A translocation process in which a human translocates some fauna from one area to another.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620651">https://w3id.org/elmo/elmo_3620651</a><br/>
+        </div>
+    </div><div id="elmo_3620652" class="box">
+            <div class="term">coral translocation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620650">https://w3id.org/elmo/elmo_3620650</a><br/>
+            <b>Definition: </b>A translocation process in which a human translocates coral from one area to another.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620652">https://w3id.org/elmo/elmo_3620652</a><br/>
+        </div>
+    </div><div id="elmo_3620800" class="box">
+            <div class="term">ecosystem-oriented social process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_02500000">http://purl.obolibrary.org/obo/ENVO_02500000</a><br/>
+            <b>Definition: </b>An environmental system process in which a human employs social means to realize some ecosystem management goal.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+        </div>
+    </div><div id="elmo_3620801" class="box">
+            <div class="term">legislation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a humans collectively implement legislation with pro-environmental goals.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620801">https://w3id.org/elmo/elmo_3620801</a><br/>
+        </div>
+    </div><div id="elmo_3620802" class="box">
+            <div class="term">legal protection process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620801">https://w3id.org/elmo/elmo_3620801</a><br/>
+            <b>Definition: </b>A legislation process in which the legislation explicitly protects something from degradation.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620802">https://w3id.org/elmo/elmo_3620802</a><br/>
+        </div>
+    </div><div id="elmo_3620803" class="box">
+            <div class="term">legal habitat protection process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620802">https://w3id.org/elmo/elmo_3620802</a><br/>
+            <b>Definition: </b>A legal protection process in which the legal protection applies to a specific habitat.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620803">https://w3id.org/elmo/elmo_3620803</a><br/>
+        </div>
+    </div><div id="elmo_3620804" class="box">
+            <div class="term">legal landscape protection process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620802">https://w3id.org/elmo/elmo_3620802</a><br/>
+            <b>Definition: </b>A legal protection process in which the legal protection applies to a specific landscape.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620804">https://w3id.org/elmo/elmo_3620804</a><br/>
+        </div>
+    </div><div id="elmo_3620805" class="box">
+            <div class="term">legal species protection process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620802">https://w3id.org/elmo/elmo_3620802</a><br/>
+            <b>Definition: </b>A legal protection process in which the legal protection applies to some taxa.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620805">https://w3id.org/elmo/elmo_3620805</a><br/>
+        </div>
+    </div><div id="elmo_3620806" class="box">
+            <div class="term">legal marine area protection process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620802">https://w3id.org/elmo/elmo_3620802</a><br/>
+            <b>Definition: </b>A legal protection process in which the legal protection applies to some marine area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620806">https://w3id.org/elmo/elmo_3620806</a><br/>
+        </div>
+    </div><div id="elmo_3620807" class="box">
+            <div class="term">private land protection process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620802">https://w3id.org/elmo/elmo_3620802</a><br/>
+            <b>Definition: </b>A legal protection process in which the legal protection applies to some privately held land.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620807">https://w3id.org/elmo/elmo_3620807</a><br/>
+        </div>
+    </div><div id="elmo_3620808" class="box">
+            <div class="term">conservation easement process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620807">https://w3id.org/elmo/elmo_3620807</a><br/>
+            <b>Definition: </b>A private land protection process in which a landowner agrees to conserve a portion of their land in perpetuity.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620808">https://w3id.org/elmo/elmo_3620808</a><br/>
+        </div>
+    </div><div id="elmo_3620809" class="box">
+            <div class="term">area policy process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620801">https://w3id.org/elmo/elmo_3620801</a><br/>
+            <b>Definition: </b>A legislation process in which some legislation applies to some area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620809">https://w3id.org/elmo/elmo_3620809</a><br/>
+        </div>
+    </div><div id="elmo_3620810" class="box">
+            <div class="term">local bylaw process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620809">https://w3id.org/elmo/elmo_3620809</a><br/>
+            <b>Definition: </b>An area policy process in which some pro-conservation bylaw is established by a local authority.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620810">https://w3id.org/elmo/elmo_3620810</a><br/>
+        </div>
+    </div><div id="elmo_3620811" class="box">
+            <div class="term">provincial or state legislation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620801">https://w3id.org/elmo/elmo_3620801</a><br/>
+            <b>Definition: </b>A legislation process in which some group passes pro-conservation legislation at the state or province level.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620811">https://w3id.org/elmo/elmo_3620811</a><br/>
+        </div>
+    </div><div id="elmo_3620812" class="box">
+            <div class="term">national legislation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620801">https://w3id.org/elmo/elmo_3620801</a><br/>
+            <b>Definition: </b>A legislation process in which some group passes pro-conservation legislation at the national level.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620812">https://w3id.org/elmo/elmo_3620812</a><br/>
+        </div>
+    </div><div id="elmo_3620813" class="box">
+            <div class="term">international agreement process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a humans collectively agree to measures that protect, conserve and restore biodiversity.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620813">https://w3id.org/elmo/elmo_3620813</a><br/>
+        </div>
+    </div><div id="elmo_3620814" class="box">
+            <div class="term">active enforcement process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a human actively enforces the pro-conservation legislation or policies governing a specific area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620814">https://w3id.org/elmo/elmo_3620814</a><br/>
+        </div>
+    </div><div id="elmo_3620815" class="box">
+            <div class="term">human-wildlife conflict reduction process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a human implements measures to reduce conflict between fauna and humans.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620815">https://w3id.org/elmo/elmo_3620815</a><br/>
+        </div>
+    </div><div id="elmo_3620816" class="box">
+            <div class="term">human-assisted road crossing process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a human assists a species in crossing a road.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620816">https://w3id.org/elmo/elmo_3620816</a><br/>
+        </div>
+    </div><div id="elmo_3620817" class="box">
+            <div class="term">awareness-raising process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a human undertakes a process in order to make others more aware of threats to biodiversity.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620817">https://w3id.org/elmo/elmo_3620817</a><br/>
+        </div>
+    </div><div id="elmo_3620818" class="box">
+            <div class="term">social media campaign process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620817">https://w3id.org/elmo/elmo_3620817</a><br/>
+            <b>Definition: </b>An awareness-raising process in which a human uses social media to spread messages about threats to biodiversity.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620818">https://w3id.org/elmo/elmo_3620818</a><br/>
+        </div>
+    </div><div id="elmo_3620819" class="box">
+            <div class="term">community event creation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620817">https://w3id.org/elmo/elmo_3620817</a><br/>
+            <b>Definition: </b>An awareness-raising process in which a human hosts an event for the community in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620819">https://w3id.org/elmo/elmo_3620819</a><br/>
+        </div>
+    </div><div id="elmo_3620820" class="box">
+            <div class="term">education process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620817">https://w3id.org/elmo/elmo_3620817</a><br/>
+            <b>Definition: </b>An awareness-raising process in which a human endeavours to improve the knowledge of others vis-a-vis restoration or conservation of biodiversity.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620820">https://w3id.org/elmo/elmo_3620820</a><br/>
+        </div>
+    </div><div id="elmo_3620821" class="box">
+            <div class="term">citizen science process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620817">https://w3id.org/elmo/elmo_3620817</a><br/>
+            <b>Definition: </b>An awareness-raising process in which a humans gather measurements of some ecosystem elements.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620821">https://w3id.org/elmo/elmo_3620821</a><br/>
+        </div>
+    </div><div id="elmo_3620822" class="box">
+            <div class="term">community engagement process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620817">https://w3id.org/elmo/elmo_3620817</a><br/>
+            <b>Definition: </b>An awareness-raising process in which a humans are gathered in a given area and engaged in the restoration and conservation of biodiversity.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620822">https://w3id.org/elmo/elmo_3620822</a><br/>
+        </div>
+    </div><div id="elmo_3620823" class="box">
+            <div class="term">pro-environmental behaviour change process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a human endeavours to alter the behaviour of others vis-a-vis the degradation of ecosystems.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620823">https://w3id.org/elmo/elmo_3620823</a><br/>
+        </div>
+    </div><div id="elmo_3620824" class="box">
+            <div class="term">signage installation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620823">https://w3id.org/elmo/elmo_3620823</a><br/>
+            <b>Definition: </b>A pro-environmental behaviour change process in which signage is installed to encourage or deter activities in an area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620824">https://w3id.org/elmo/elmo_3620824</a><br/>
+        </div>
+    </div><div id="elmo_3620825" class="box">
+            <div class="term">individual outreach process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620823">https://w3id.org/elmo/elmo_3620823</a><br/>
+            <b>Definition: </b>A pro-environmental behaviour change process in which a human reaches out to people directly to encourage or deter activities in an area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620825">https://w3id.org/elmo/elmo_3620825</a><br/>
+        </div>
+    </div><div id="elmo_3620826" class="box">
+            <div class="term">landowner outreach process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620823">https://w3id.org/elmo/elmo_3620823</a><br/>
+            <b>Definition: </b>A pro-environmental behaviour change process in which a human reaches out to a landowner to encourage or deter activities in an area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620826">https://w3id.org/elmo/elmo_3620826</a><br/>
+        </div>
+    </div><div id="elmo_3620827" class="box">
+            <div class="term">sensitive features marking process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620823">https://w3id.org/elmo/elmo_3620823</a><br/>
+            <b>Definition: </b>A pro-environmental behaviour change process in which a human marks environmentally sensitive features to deter degradation or interference.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620827">https://w3id.org/elmo/elmo_3620827</a><br/>
+        </div>
+    </div><div id="elmo_3620828" class="box">
+            <div class="term">fundraising process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a human raises funds to support the restoration and conservation of a specific area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620828">https://w3id.org/elmo/elmo_3620828</a><br/>
+        </div>
+    </div><div id="elmo_3620829" class="box">
+            <div class="term">financial incentive process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which financial incentives are offered to a humans in order to take pro-environmental measures.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620829">https://w3id.org/elmo/elmo_3620829</a><br/>
+        </div>
+    </div><div id="elmo_3620830" class="box">
+            <div class="term">environmental usage regulation process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which some authority regulates the usage of environments.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620830">https://w3id.org/elmo/elmo_3620830</a><br/>
+        </div>
+    </div><div id="elmo_3620831" class="box">
+            <div class="term">regulate grazing</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620830">https://w3id.org/elmo/elmo_3620830</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority regulates grazing in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620831">https://w3id.org/elmo/elmo_3620831</a><br/>
+        </div>
+    </div><div id="elmo_3620832" class="box">
+            <div class="term">prohibit grazing</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620831">https://w3id.org/elmo/elmo_3620831</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority prohibits grazing in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620832">https://w3id.org/elmo/elmo_3620832</a><br/>
+        </div>
+    </div><div id="elmo_3620833" class="box">
+            <div class="term">regulate fishing</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620830">https://w3id.org/elmo/elmo_3620830</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority regulates fishing in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620833">https://w3id.org/elmo/elmo_3620833</a><br/>
+        </div>
+    </div><div id="elmo_3620834" class="box">
+            <div class="term">prohibit fishing</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620833">https://w3id.org/elmo/elmo_3620833</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority prohibits fishing in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620834">https://w3id.org/elmo/elmo_3620834</a><br/>
+        </div>
+    </div><div id="elmo_3620835" class="box">
+            <div class="term">regulate chemical usage</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620830">https://w3id.org/elmo/elmo_3620830</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority regulates chemical usage in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620835">https://w3id.org/elmo/elmo_3620835</a><br/>
+        </div>
+    </div><div id="elmo_3620836" class="box">
+            <div class="term">prohibit chemical usage</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620835">https://w3id.org/elmo/elmo_3620835</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority prohibits chemical usage in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620836">https://w3id.org/elmo/elmo_3620836</a><br/>
+        </div>
+    </div><div id="elmo_3620837" class="box">
+            <div class="term">regulate hunting</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620830">https://w3id.org/elmo/elmo_3620830</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority regulates hunting in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620837">https://w3id.org/elmo/elmo_3620837</a><br/>
+        </div>
+    </div><div id="elmo_3620838" class="box">
+            <div class="term">prohibit hunting</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620837">https://w3id.org/elmo/elmo_3620837</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority prohibits hunting in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620838">https://w3id.org/elmo/elmo_3620838</a><br/>
+        </div>
+    </div><div id="elmo_3620839" class="box">
+            <div class="term">regulate recreational activities</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620830">https://w3id.org/elmo/elmo_3620830</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority regulates recreational activities in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620839">https://w3id.org/elmo/elmo_3620839</a><br/>
+        </div>
+    </div><div id="elmo_3620840" class="box">
+            <div class="term">prohibit recreational activities</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620839">https://w3id.org/elmo/elmo_3620839</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority prohibits recreational activities in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620840">https://w3id.org/elmo/elmo_3620840</a><br/>
+        </div>
+    </div><div id="elmo_3620841" class="box">
+            <div class="term">limit public access</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620830">https://w3id.org/elmo/elmo_3620830</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority limits public access to a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620841">https://w3id.org/elmo/elmo_3620841</a><br/>
+        </div>
+    </div><div id="elmo_3620842" class="box">
+            <div class="term">prohibit public access</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620841">https://w3id.org/elmo/elmo_3620841</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority prohibits public access to a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620842">https://w3id.org/elmo/elmo_3620842</a><br/>
+        </div>
+    </div><div id="elmo_3620843" class="box">
+            <div class="term">regulate dredging</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620830">https://w3id.org/elmo/elmo_3620830</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority regulates dredging in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620843">https://w3id.org/elmo/elmo_3620843</a><br/>
+        </div>
+    </div><div id="elmo_3620844" class="box">
+            <div class="term">prohibit dredging</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620843">https://w3id.org/elmo/elmo_3620843</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority prohibits dredging in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620844">https://w3id.org/elmo/elmo_3620844</a><br/>
+        </div>
+    </div><div id="elmo_3620845" class="box">
+            <div class="term">regulate aquaculture</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620830">https://w3id.org/elmo/elmo_3620830</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority regulates aquaculture in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620845">https://w3id.org/elmo/elmo_3620845</a><br/>
+        </div>
+    </div><div id="elmo_3620846" class="box">
+            <div class="term">prohibit aquaculture</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620845">https://w3id.org/elmo/elmo_3620845</a><br/>
+            <b>Definition: </b>An environmental usage regulation process in which some authority prohibits aquaculture in a given area.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620846">https://w3id.org/elmo/elmo_3620846</a><br/>
+        </div>
+    </div><div id="elmo_3620847" class="box">
+            <div class="term">cultural ecosystem management process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a humans undertake shared practices passed down through generations to manage the ecosystem in which they live.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620847">https://w3id.org/elmo/elmo_3620847</a><br/>
+        </div>
+    </div><div id="elmo_3620848" class="box">
+            <div class="term">cultural ecosystem usage process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a humans harvest resources from the environment for shared practices that are passed down through generations.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620848">https://w3id.org/elmo/elmo_3620848</a><br/>
+        </div>
+    </div><div id="elmo_3620849" class="box">
+            <div class="term">plan specification change process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620800">https://w3id.org/elmo/elmo_3620800</a><br/>
+            <b>Definition: </b>A ecosystem-oriented social process in which a human alters the way in which some planned process is undertaken.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620849">https://w3id.org/elmo/elmo_3620849</a><br/>
+        </div>
+    </div><div id="elmo_3620850" class="box">
+            <div class="term">alter mowing timing</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620851">https://w3id.org/elmo/elmo_3620851</a><br/>
+            <b>Definition: </b>A change to the mowing regime in which a human alters the timing of regular mowing with the goal of protecting specific taxa.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620850">https://w3id.org/elmo/elmo_3620850</a><br/>
+        </div>
+    </div><div id="elmo_3620851" class="box">
+            <div class="term">alter mowing regime</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620849">https://w3id.org/elmo/elmo_3620849</a><br/>
+            <b>Definition: </b>A plan specification change process in which a human alters the mowing regime (i.e. frequency, height, timing)<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620851">https://w3id.org/elmo/elmo_3620851</a><br/>
+        </div>
+    </div><div id="elmo_3620852" class="box">
+            <div class="term">alter mowing height</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620851">https://w3id.org/elmo/elmo_3620851</a><br/>
+            <b>Definition: </b>A change to the mowing regime in which a human alters the height of a mower with the goal of protecting specific taxa.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620852">https://w3id.org/elmo/elmo_3620852</a><br/>
+        </div>
+    </div><div id="elmo_3620853" class="box">
+            <div class="term">alter tilling regime</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620849">https://w3id.org/elmo/elmo_3620849</a><br/>
+            <b>Definition: </b>A change to the tilling regime in which a human alters the frequency, timing or severity of a regular tilling process.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620853">https://w3id.org/elmo/elmo_3620853</a><br/>
+        </div>
+    </div><div id="elmo_3620854" class="box">
+            <div class="term">alter chemical regime</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620849">https://w3id.org/elmo/elmo_3620849</a><br/>
+            <b>Definition: </b>A change to the chemical regime in which a human alters the frequency, timing or severity of a regular chemical application process.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620854">https://w3id.org/elmo/elmo_3620854</a><br/>
+        </div>
+    </div><div id="elmo_3620855" class="box">
+            <div class="term">alter insecticide regime</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620854">https://w3id.org/elmo/elmo_3620854</a><br/>
+            <b>Definition: </b>A change to the insecticide regime in which a human alters the frequency, timing or severity of a regular insecticide application process.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620855">https://w3id.org/elmo/elmo_3620855</a><br/>
+        </div>
+    </div><div id="elmo_3620856" class="box">
+            <div class="term">alter fertilizer regime</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620849">https://w3id.org/elmo/elmo_3620849</a><br/>
+            <b>Definition: </b>A change to the fertilizer regime in which a human alters the frequency, timing or severity of a regular fertilizer application process.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620856">https://w3id.org/elmo/elmo_3620856</a><br/>
+        </div>
+    </div><div id="elmo_3620857" class="box">
+            <div class="term">alter lighting regime</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620849">https://w3id.org/elmo/elmo_3620849</a><br/>
+            <b>Definition: </b>A change to the lighting regime in which a human alters the frequency, timing or intensity of lighting.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620857">https://w3id.org/elmo/elmo_3620857</a><br/>
+        </div>
+    </div><div id="elmo_3620858" class="box">
+            <div class="term">alter grazing regime</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620849">https://w3id.org/elmo/elmo_3620849</a><br/>
+            <b>Definition: </b>A change to the grazing regime in which a human alters the frequency, timing or intensity of grazing.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620858">https://w3id.org/elmo/elmo_3620858</a><br/>
+        </div>
+    </div><div id="elmo_3620859" class="box">
+            <div class="term">alter dam regime</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620849">https://w3id.org/elmo/elmo_3620849</a><br/>
+            <b>Definition: </b>A change to the dam regime in which a human alters the frequency, timing or intensity of water released by a dam.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620859">https://w3id.org/elmo/elmo_3620859</a><br/>
+        </div>
+    </div><div id="elmo_3620860" class="box">
+            <div class="term">alter herbicide regime</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620854">https://w3id.org/elmo/elmo_3620854</a><br/>
+            <b>Definition: </b>A change to the herbicide regime in which a human alters the frequency, timing or severity of a regular herbicide application process.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620860">https://w3id.org/elmo/elmo_3620860</a><br/>
+        </div>
+    </div><div id="elmo_3620861" class="box">
+            <div class="term">cease herbicide usage</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3620860">https://w3id.org/elmo/elmo_3620860</a><br/>
+            <b>Definition: </b>A change to the herbicide regime in which a human ceases some herbicide application process.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3620861">https://w3id.org/elmo/elmo_3620861</a><br/>
+        </div>
+    </div><div id="elmo_3621000" class="box">
+            <div class="term">fishing with equipment modified for conservation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001436">http://purl.obolibrary.org/obo/ENVO_01001436</a><br/>
+            <b>Definition: </b>A planned environmental usage process in which fishing equipment is modified for conservation (e.g. bycatch deterrent devices are installed)<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621000">https://w3id.org/elmo/elmo_3621000</a><br/>
+        </div>
+    </div><div id="elmo_3621001" class="box">
+            <div class="term">fishing with net modified for conservation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621000">https://w3id.org/elmo/elmo_3621000</a><br/>
+            <b>Definition: </b>A fishing process in which a human uses a net that has been modified to reduce bycatch or accomplish some other conservation-oriented goal.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621001">https://w3id.org/elmo/elmo_3621001</a><br/>
+        </div>
+    </div><div id="elmo_3621002" class="box">
+            <div class="term">fishing with hook modified for conservation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621000">https://w3id.org/elmo/elmo_3621000</a><br/>
+            <b>Definition: </b>A fishing process in which a human uses a hook that has been modified for conservation.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621002">https://w3id.org/elmo/elmo_3621002</a><br/>
+        </div>
+    </div><div id="elmo_3621003" class="box">
+            <div class="term">fishing with added acoustic devices for conservation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621000">https://w3id.org/elmo/elmo_3621000</a><br/>
+            <b>Definition: </b>A fishing process in which a human adds acoustic devices to fishing gear to deter bycatch.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621003">https://w3id.org/elmo/elmo_3621003</a><br/>
+        </div>
+    </div><div id="elmo_3621004" class="box">
+            <div class="term">fishing with modified traps</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621000">https://w3id.org/elmo/elmo_3621000</a><br/>
+            <b>Definition: </b>A fishing process in which a human uses traps modified to deter bycatch.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621004">https://w3id.org/elmo/elmo_3621004</a><br/>
+        </div>
+    </div><div id="elmo_3621005" class="box">
+            <div class="term">fishing with modified line-setting procedure</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621000">https://w3id.org/elmo/elmo_3621000</a><br/>
+            <b>Definition: </b>A fishing process in which a human attaches bait to lines in a way that deters seabird scavenging (i.e. underwater)<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621005">https://w3id.org/elmo/elmo_3621005</a><br/>
+        </div>
+    </div><div id="elmo_3621006" class="box">
+            <div class="term">aquaculture process modified for conservation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001436">http://purl.obolibrary.org/obo/ENVO_01001436</a><br/>
+            <b>Definition: </b>A planned environmental usage process in which a human engages in aquaculture with modifications for conservation (e.g. disease control measures)<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621006">https://w3id.org/elmo/elmo_3621006</a><br/>
+        </div>
+    </div><div id="elmo_3621007" class="box">
+            <div class="term">underwater turbine modified for conservation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001436">http://purl.obolibrary.org/obo/ENVO_01001436</a><br/>
+            <b>Definition: </b>A planned environmental usage process in which a human installs an underwater turbine modified for conservation.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621007">https://w3id.org/elmo/elmo_3621007</a><br/>
+        </div>
+    </div><div id="elmo_3621008" class="box">
+            <div class="term">farming process modified for conservation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001436">http://purl.obolibrary.org/obo/ENVO_01001436</a><br/>
+            <b>Definition: </b>A planned environmental usage process in which a human engages in farming with modifications for the conservation of biodiversity.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621008">https://w3id.org/elmo/elmo_3621008</a><br/>
+        </div>
+    </div><div id="elmo_3621009" class="box">
+            <div class="term">farming with intercropping</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621008">https://w3id.org/elmo/elmo_3621008</a><br/>
+            <b>Definition: </b>A farming process modified for conservation in which a human grows two or more crop varities in close proximity to one another.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621009">https://w3id.org/elmo/elmo_3621009</a><br/>
+        </div>
+    </div><div id="elmo_3621010" class="box">
+            <div class="term">agroforestry process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621008">https://w3id.org/elmo/elmo_3621008</a><br/>
+            <b>Definition: </b>A farming process modified for conservation in which a human integrates trees and crops or pasture.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621010">https://w3id.org/elmo/elmo_3621010</a><br/>
+        </div>
+    </div><div id="elmo_3621011" class="box">
+            <div class="term">alley cropping farming process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621010">https://w3id.org/elmo/elmo_3621010</a><br/>
+            <b>Definition: </b>An agroforestry process in which crops are grown in between rows of trees and shrubs.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621011">https://w3id.org/elmo/elmo_3621011</a><br/>
+        </div>
+    </div><div id="elmo_3621012" class="box">
+            <div class="term">no-till farming</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621008">https://w3id.org/elmo/elmo_3621008</a><br/>
+            <b>Definition: </b>A farming process modified for conservation in which a human does not disturb the soil in between crop plantings.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621012">https://w3id.org/elmo/elmo_3621012</a><br/>
+        </div>
+    </div><div id="elmo_3621013" class="box">
+            <div class="term">organic farming regime</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621008">https://w3id.org/elmo/elmo_3621008</a><br/>
+            <b>Definition: </b>A farming process modified for conservation in which a human avoids synthetic or chemical inputs in the farming process. The definition of organic is often the subject of government regulation.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621013">https://w3id.org/elmo/elmo_3621013</a><br/>
+        </div>
+    </div><div id="elmo_3621014" class="box">
+            <div class="term">crop rotation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621008">https://w3id.org/elmo/elmo_3621008</a><br/>
+            <b>Definition: </b>A farming process modified for conservation in which the crop type is rotated year over year.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621014">https://w3id.org/elmo/elmo_3621014</a><br/>
+        </div>
+    </div><div id="elmo_3621015" class="box">
+            <div class="term">set aside farmland for conservation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621008">https://w3id.org/elmo/elmo_3621008</a><br/>
+            <b>Definition: </b>A farming process modified for conservation in which a human agrees not to farm some portion of a landscape.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621015">https://w3id.org/elmo/elmo_3621015</a><br/>
+        </div>
+    </div><div id="elmo_3621016" class="box">
+            <div class="term">forestry process modified for conservation</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001436">http://purl.obolibrary.org/obo/ENVO_01001436</a><br/>
+            <b>Definition: </b>A planned environmental usage process in which a human harvests trees in a manner that attempts to ameliorate the impact on the landscape.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621016">https://w3id.org/elmo/elmo_3621016</a><br/>
+        </div>
+    </div><div id="elmo_3621017" class="box">
+            <div class="term">coppice process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621016">https://w3id.org/elmo/elmo_3621016</a><br/>
+            <b>Definition: </b>A forestry process in which a human cuts trees down to the stump, allowing the trees to regenerate from the stump.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621017">https://w3id.org/elmo/elmo_3621017</a><br/>
+        </div>
+    </div><div id="elmo_3621018" class="box">
+            <div class="term">selective harvesting process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621016">https://w3id.org/elmo/elmo_3621016</a><br/>
+            <b>Definition: </b>A forestry process in which a human harvests trees according to their age with the goal of preserving some overall age for a forest stand.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621018">https://w3id.org/elmo/elmo_3621018</a><br/>
+        </div>
+    </div><div id="elmo_3621019" class="box">
+            <div class="term">woody debris removal process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621016">https://w3id.org/elmo/elmo_3621016</a><br/>
+            <b>Definition: </b>A forestry process in which a human removes coarse woody debris after harvesting trees, thereby reducing the risk and intensity of forest fire.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621019">https://w3id.org/elmo/elmo_3621019</a><br/>
+        </div>
+    </div><div id="elmo_3621020" class="box">
+            <div class="term">leave woody debris</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621016">https://w3id.org/elmo/elmo_3621016</a><br/>
+            <b>Definition: </b>A forestry process in which a human leaves coarse woody debris after harvesting, thereby increasing available resources.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621020">https://w3id.org/elmo/elmo_3621020</a><br/>
+        </div>
+    </div><div id="elmo_3621021" class="box">
+            <div class="term">shelterwood cutting process</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3621016">https://w3id.org/elmo/elmo_3621016</a><br/>
+            <b>Definition: </b>A forestry process in which a human primarily harvests large trees in order to increase light availability for seedling species.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621021">https://w3id.org/elmo/elmo_3621021</a><br/>
+        </div>
+    </div><div id="elmo_3621022" class="box">
+            <div class="term">regulate wind turbine speed</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001436">http://purl.obolibrary.org/obo/ENVO_01001436</a><br/>
+            <b>Definition: </b>A planned environmental usage process in which a human modifies the level of wind speed required to spin turbines, thereby preventing avifauna fatalities.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3621022">https://w3id.org/elmo/elmo_3621022</a><br/>
+        </div>
+    </div><div id="elmo_3630000" class="box">
+            <div class="term">lowland</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001884">http://purl.obolibrary.org/obo/ENVO_01001884</a><br/>
+            <b>Definition: </b>A landform which has an elevation lower than 200m above sea level.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630000">https://w3id.org/elmo/elmo_3630000</a><br/>
+        </div>
+    </div><div id="elmo_3630001" class="box">
+            <div class="term">plant community</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01000254">http://purl.obolibrary.org/obo/ENVO_01000254</a><br/>
+            <b>Definition: </b>An environmental system which consists of a set of plants at some stage in the community assembly process.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630001">https://w3id.org/elmo/elmo_3630001</a><br/>
+        </div>
+    </div><div id="elmo_3630002" class="box">
+            <div class="term">rainforest plant community</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3630001">https://w3id.org/elmo/elmo_3630001</a><br/>
+            <b>Definition: </b>A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy, is subject to high humidity and rainfall and includes populations of epiphytes, lianas and vegetation adapted to high moisture.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630002">https://w3id.org/elmo/elmo_3630002</a><br/>
+        </div>
+    </div><div id="elmo_3630003" class="box">
+            <div class="term">ecosystem functional group</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01001110">http://purl.obolibrary.org/obo/ENVO_01001110</a><br/>
+            <b>Definition: </b>A group of related ecosystems within a biome that share common ecological drivers, which in turn promote similar biotic traits that characterise the group.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630003">https://w3id.org/elmo/elmo_3630003</a><br/>
+        </div>
+    </div><div id="elmo_3630004" class="box">
+            <div class="term">tropical lowland rainforest</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3630003">https://w3id.org/elmo/elmo_3630003</a><br/>
+            <b>Definition: </b>An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located in a lowland landform.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630004">https://w3id.org/elmo/elmo_3630004</a><br/>
+        </div>
+    </div><div id="elmo_3630005" class="box">
+            <div class="term">tropical dry forests and thickets</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3630003">https://w3id.org/elmo/elmo_3630003</a><br/>
+            <b>Definition: </b>An ecosystem functional group which has a forest plant community, experiences tropical climactic conditions and seasonally dry conditions.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630005">https://w3id.org/elmo/elmo_3630005</a><br/>
+        </div>
+    </div><div id="elmo_3630006" class="box">
+            <div class="term">forest plant community</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3630001">https://w3id.org/elmo/elmo_3630001</a><br/>
+            <b>Definition: </b>A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630006">https://w3id.org/elmo/elmo_3630006</a><br/>
+        </div>
+    </div><div id="elmo_3630007" class="box">
+            <div class="term">seasonally dry</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01000203">http://purl.obolibrary.org/obo/ENVO_01000203</a><br/>
+            <b>Definition: </b>An environmental condition in which an area receives ~1800 mm of rainfall per year, with a period of 3 to 6 months receiving less than 100 mm per month.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630007">https://w3id.org/elmo/elmo_3630007</a><br/>
+        </div>
+    </div><div id="elmo_3630008" class="box">
+            <div class="term">subtropical dry forests and thickets</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3630003">https://w3id.org/elmo/elmo_3630003</a><br/>
+            <b>Definition: </b>An ecosystem functional group which has a forest plant community, experiences subtropical climactic conditions and seasonally dry conditions.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630008">https://w3id.org/elmo/elmo_3630008</a><br/>
+        </div>
+    </div><div id="elmo_3630009" class="box">
+            <div class="term">subtropical</div>
+        <div class="definition">
+            <b>Parent: </b><a href="http://purl.obolibrary.org/obo/ENVO_01000203">http://purl.obolibrary.org/obo/ENVO_01000203</a><br/>
+            <b>Definition: </b>An environmental condition in which an area experiences hot summers and mild winters, and is located to the immediate north or south of the tropical zone.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630009">https://w3id.org/elmo/elmo_3630009</a><br/>
+        </div>
+    </div><div id="elmo_3630010" class="box">
+            <div class="term">tropical montane rainforests</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3630003">https://w3id.org/elmo/elmo_3630003</a><br/>
+            <b>Definition: </b>An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located at a montane altitude.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630010">https://w3id.org/elmo/elmo_3630010</a><br/>
+        </div>
+    </div><div id="elmo_3630011" class="box">
+            <div class="term">subtropical montane rainforests</div>
+        <div class="definition">
+            <b>Parent: </b><a href="https://w3id.org/elmo/elmo_3630003">https://w3id.org/elmo/elmo_3630003</a><br/>
+            <b>Definition: </b>An ecosystem functional group which has a rainforest plant community, experiences subtropical conditions and is located at a montane altitude.<br/>
+            <b>URI: </b><a href="https://w3id.org/elmo/elmo_3630011">https://w3id.org/elmo/elmo_3630011</a><br/>
+        </div>
+    </div>
+    </body>
+</html>
