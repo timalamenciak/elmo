@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title></title>
+    <style>
+        header {
+            background-color: #FF9500;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .box {
+            border: 1px solid black;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            background-color: white;
+            text-align: left;
+        }
+        .term {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .box.highlighted {
+            border-color: #FF9500;
+            background-color: #FFD580;
+        }
+    </style>
+    <script>
+        function highlightBox() {
+            const hash = window.location.hash;
+            document.querySelectorAll('.box').forEach(box => {
+                box.classList.remove('highlighted');
+            });
+
+            if (hash) {
+                console.log(hash)
+                const box = document.querySelector(hash);                
+                if (box) {
+                    box.classList.add('highlighted');
+                    }
+            }
+        }
+
+        window.addEventListener('load', highlightBox);
+        window.addEventListener('hashchange', highlightBox);
+    </script>
+    </head>
+    <body>
+        {% for term, text in terms.items() %}<div id="{{ text.curie_safe }}" class="box">
+            <div class="term">{{ text.label }}</div>
+        <div class="definition">
+            <b>Parent: </b><a href="{{ text.parent }}">{{ text.parent }}</a><br/>
+            <b>Definition: </b>{{ text.definition }}<br/>
+            <b>URI: </b><a href="{{ text.uri }}">{{ text.uri }}</a><br/>
+        </div>
+    </div>{% endfor %}
+    </body>
+</html>
