@@ -65,8 +65,7 @@ This is part of the power of ontologies. You can give that dataset to anyone and
 
 A CURIE (**C**ompact **U**niform **R**esource **I**d**e**ntifier) is an abbreviated form of the URI. 
 
-For example:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bike:5
+For example: bike:5
 
 There are certain technologies ([RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework), [SPARQL](https://en.wikipedia.org/wiki/SPARQL)) that are built to work with CURIEs. In those formats, the prefix (e.g. bike:; also called a namespace) will be defined somewhere in the document. Like this:
 
@@ -80,9 +79,10 @@ This is basically saying: "Whenever you see "bike:", replace it with "https://w3
 
 Let's look at a real example:
 
-> You are conducting a systematic literature review and extracting the ecosystem type that each study occurs in. This is a messy task: some authors will write with little detail and just use the word "forest" and others may lean on different typologies. 
+&nbsp;&nbsp;&nbsp;*You are conducting a systematic literature review and extracting the ecosystem type that each study occurs in. This is a messy task: some authors will write with little detail and just use the word "forest" and others may lean on different typologies.*
 
 Or you could refer to terms that exist in ELMO as a subclass of [ecosystem functional group](https://w3id.org/elmo/elmo_3630003) (ELMO:3630003):
+
 - [tropical lowland rainforests](https://w3id.org/elmo/elmo_3630004) (ELMO:3630003)
 - [tropical montane rainforests](https://w3id.org/elmo/elmo_3630010) (ELMO:3630010)
 
@@ -91,6 +91,7 @@ Or you could refer to terms that exist in ELMO as a subclass of [ecosystem funct
 Metadata files describe what datasets contain. Metadata files can be as simple as a text file that contains some background about the dataset, or complex XML files that can be interpreted by machines. Ontologies can be useful no matter which form your metadata takes.
 
 The key is to use terms and provide their URI where relevant. For example: Let's pretend you did vegetation surveys in an area that has all the qualities of a [tropical lowland rainforests](https://w3id.org/elmo/elmo_3630004) (ELMO:3630003). You could:
+
 - Write "We conducted plant surveys in a tropical lowland rainforest (https://w3id.org/elmo/elmo_3630004)" in your `README.txt` file.
 - **or** Create an XML file compliant with the [Ecological Metadata Language (EML)](https://eml.ecoinformatics.org/) that includes [semantic annotation](https://eml.ecoinformatics.org/semantic-annotation-primer):
 
@@ -102,6 +103,7 @@ The key is to use terms and provide their URI where relevant. For example: Let's
 ```
 
 There are a few advantages to using ontologies in metadata:
+
 - A consistent, clear meaning is embedded in the link.
 - It can make your data more machine-interpretable and provide better indexing.
 - If terms are updated or replaced (deprecated), that will be reflected at the permalink.
