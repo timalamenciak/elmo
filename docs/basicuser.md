@@ -10,6 +10,7 @@ Let's look at an example of a simple bicycle ontology:
 ![A flowchart that shows bicycle and its subclasses](images/basic-bicycle-subclass.jpg)
 
 This example needs some definitions. Let's start with `bicycle`, for which we can consult our friend [Merriam-Webster](https://www.merriam-webster.com/dictionary/bicycle):
+
 - `bicycle` def. A vehicle which has two wheels, handlebars for steering, a saddle seat, and pedals by which it is propelled.
 
 > **Further reading on ontology definitions:** [OntoTip: Write simple, concise, clear, operational textual definitions](https://douroucouli.wordpress.com/2019/07/08/ontotip-write-simple-concise-clear-operational-textual-definitions/)
@@ -140,4 +141,5 @@ Once you get some experience using an ontology, you might feel the need to contr
 
 
 Other resources:
+
 - [OBO Academy Tutorial: From Tables to Linked Data](https://oboacademy.github.io/obook/tutorial/linking-data/)
