@@ -57,7 +57,7 @@ This ontology-aware bicycle store owner wisely used terms from the ontology! But
 
 One important feature of an ontology is that each term has a unique URI (commonly called URL) that should permanently point to that term's home on the web. The links in our example won't work, but here's one that does: http://purl.obolibrary.org/obo/ENVO_01000430. 
 
-This is part of the power of ontologies. You can hand that dataset to anyone and they can follow the links to find out the meaning of the term. Previously, you had to rely on the author supplying detailed metadata to explain what each entry means.
+This is part of the power of ontologies. You can give that dataset to anyone and they can follow the links to find out the meaning of the term. Previously, you had to rely on the author supplying detailed metadata to explain what each entry means.
 
 #### Got it - so what is the 'Type CURIE' column?
 
