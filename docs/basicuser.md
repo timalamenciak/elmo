@@ -21,6 +21,7 @@ Now we could go down a philosophical rabbit hole here (if you take off a wheel, 
 ### So what the heck is a subclass?
 
 In our (very simple) ontology, `bicycle` has two subclasses - `geared bicycle` and `fixed-gear bicycle`. Let's establish some definitions:
+
 - `geared bicycle` def. A bicycle which includes different sized gears as part of the drive-train and some mechanism to change gears.
 - `fixed-gear bicycle` def. A bicycle which includes fixed-size gears as part of the drive-train.
 
@@ -29,6 +30,7 @@ Here is the subclass magic: We do not need to repeat definitions. We know what a
 You might see this expressed in the form: `A is a B that Cs`.
 
 In this case:
+
 * A: `geared bicycle` is a
 * B: `bicycle` that
 * C: has changable, different-sized gears.
