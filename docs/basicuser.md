@@ -29,9 +29,9 @@ Here is the subclass magic: We do not need to repeat definitions. We know what a
 You might see this expressed in the form: `A is a B that Cs`.
 
 In this case:
-- A: `geared bicycle` is a
-- B: `bicycle` that
-- C: has changable, different-sized gears.
+* A: `geared bicycle` is a
+* B: `bicycle` that
+* C: has changable, different-sized gears.
 
 ![Two bicycles side-by-side comparing their essential features](images/basic-bicycle-twoterms.jpg)
 
