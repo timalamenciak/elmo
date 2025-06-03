@@ -78,16 +78,62 @@ This is basically saying: "Whenever you see "bike:", replace it with "https://w3
 
 Let's look at a real example:
 
-> You are conducting a systematic literature review and extracting the ecosystem type that each study occurs in. This is a messy task: some authors will write "forest" and others "tropical lowland rainforest" and others "tropical dry forest." 
+> You are conducting a systematic literature review and extracting the ecosystem type that each study occurs in. This is a messy task: some authors will write with little detail and just use the word "forest" and others may lean on different typologies. 
 
-You could split up the columns and have a "coarse ecosystem type" (e.g. forest) and a "fine ecosystem type" (e.g. boreal forest). Then you could describe what you mean by that in the metadata.
-
-Or you could refer to terms that exist in ELMO:
-- 
+Or you could refer to terms that exist in ELMO as a subclass of [ecosystem functional group](https://w3id.org/elmo/elmo_3630003) (ELMO:3630003):
+- [tropical lowland rainforests](https://w3id.org/elmo/elmo_3630004) (ELMO:3630003)
+- [tropical montane rainforests](https://w3id.org/elmo/elmo_3630010) (ELMO:3630010)
 
 ### Ontology as metadata
 
+Metadata files describe what datasets contain. Metadata files can be as simple as a text file that contains some background about the dataset, or complex XML files that can be interpreted by machines. Ontologies can be useful no matter which form your metadata takes.
+
+The key is to use terms and provide their URI where relevant. For example: Let's pretend you did vegetation surveys in an area that has all the qualities of a [tropical lowland rainforests](https://w3id.org/elmo/elmo_3630004) (ELMO:3630003). You could:
+- Write "We conducted plant surveys in a tropical lowland rainforest (https://w3id.org/elmo/elmo_3630004)" in your `README.txt` file.
+- **or** Create an XML file compliant with the [Ecological Metadata Language (EML)](https://eml.ecoinformatics.org/) that includes [semantic annotation](https://eml.ecoinformatics.org/semantic-annotation-primer):
+
+```
+    <annotation>
+        <propertyURI label="is about">http://purl.obolibrary.org/obo/IAO_0000136</propertyURI>
+        <valueURI label="tropical lowland rainforests">https://w3id.org/elmo/elmo_3630004</valueURI>
+    </annotation>
+```
+
+There are a few advantages to using ontologies in metadata:
+- A consistent, clear meaning is embedded in the link.
+- It can make your data more machine-interpretable and provide better indexing.
+- If terms are updated or replaced (deprecated), that will be reflected at the permalink.
+- Your dataset will be linked with other datasets that were collected in tropical lowland rainforests.
+- It is less work than writing out the whole ecosystem description.
+
 ### Ontology as knowledge base
 
-Other basic resources:
+(*This section moves a bit beyond the basics of ontology usage, so you might want to skip it if you are happy with the above two uses!*)
+
+The third and final basic use of an ontology is as a knowledge base in and of itself. Ontologies - especially domain ontologies - can tell you things about the relationships between things in a particular field of knowledge. 
+
+We haven't talked yet about a core concept in ontology land called 'axioms.' In addition to the plain-language definition of a term, it can also have logical statements that relate it to other terms in the ontology. Let's look at an example:
+
+![A screenshot from the software program Protégé](images/basic-axioms.jpg)
+
+Above you will see a screenshot from the ontology editor [Protégé](https://protege.stanford.edu/) that shows types of properties for our term: annotations (top) and axioms (bottom).
+
+There are a few annotations that should be familiar to you by now. The `label` is the plain language name of the term. The `definition` is its definition. The annotation property `database_cross_reference` is a link to an external database describing the term (in this case the IUCN's page for this ecosystem functional group).
+
+The bottom box contains axioms that relate this term to others. There are three listed under `equivalent to`, which means that this term is synonymous with this big long statement:
+
+```
+('has part' some tropical) and ('has part' some montane) and ('has part' some 'rainforest plant community')
+```
+
+What this means is that `tropical montane rainforests` experience tropical climactic conditions ([tropical](http://purl.obolibrary.org/obo/ENVO_01000204) (`ENVO:01000204`) which is a subclass of [environmental condition](http://purl.obolibrary.org/obo/ENVO_01000203)), are in montane environments ([montane](http://purl.obolibrary.org/obo/ENVO_01000342) which is a subclass of [altitudinal condition](http://purl.obolibrary.org/obo/ENVO_01000343)) and have a [rainforest plant community](https://w3id.org/elmo/elmo_3630002). 
+
+That's a whole lot more information than is contained in the label itself. Remember, computers are not great at interpreting text, but they can interpret logical relationships like axioms.
+
+# Where next?
+
+Once you get some experience using an ontology, you might feel the need to contribute. Maybe there's a term you need that is not contained in any ontology, or you find an inaccurate definition. Move on to our [advanced user](advanceduser.md) documentation to explore the next steps in your ontology journey.
+
+
+Other resources:
 - [OBO Academy Tutorial: From Tables to Linked Data](https://oboacademy.github.io/obook/tutorial/linking-data/)
