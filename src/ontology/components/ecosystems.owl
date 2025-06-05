@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/components/ecosystems.owl>
-<https://w3id.org/elmo/elmo/releases/2025-05-07/components/ecosystems.owl>
-Annotation(owl:versionInfo "2025-05-07")
+<https://w3id.org/elmo/elmo/releases/2025-06-05/components/ecosystems.owl>
+Annotation(owl:versionInfo "2025-06-05")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000191>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000203>))
@@ -17,6 +17,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000206>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000254>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000342>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000345>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000380>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001110>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001884>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001886>))
@@ -38,9 +39,18 @@ Declaration(Class(<https://w3id.org/elmo/elmo_3630014>))
 Declaration(Class(<https://w3id.org/elmo/elmo_3630015>))
 Declaration(Class(<https://w3id.org/elmo/elmo_3630016>))
 Declaration(Class(<https://w3id.org/elmo/elmo_3630017>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630018>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630019>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630020>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630021>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630022>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630023>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630024>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3630025>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
 
@@ -76,7 +86,7 @@ SubClassOf(<https://w3id.org/elmo/elmo_3630001> <http://purl.obolibrary.org/obo/
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630002> "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy, is subject to high humidity and rainfall and includes populations of epiphytes, lianas and vegetation adapted to high moisture."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630002> "rainforest plant community"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630002> <https://w3id.org/elmo/elmo_3630001>)
+SubClassOf(<https://w3id.org/elmo/elmo_3630002> <https://w3id.org/elmo/elmo_3630006>)
 
 # Class: <https://w3id.org/elmo/elmo_3630003> (ecosystem functional group)
 
@@ -154,7 +164,7 @@ SubClassOf(<https://w3id.org/elmo/elmo_3630013> <https://w3id.org/elmo/elmo_3630
 
 # Class: <https://w3id.org/elmo/elmo_3630014> (tropical heath forests)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.4>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630014> "An ecosystem functional group which consists of some heath and some forest plant communities and experiences tropical climactic conditions."@en)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.4>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630014> "An ecosystem functional group which has some heath and some forest plant communities and experiences tropical climactic conditions."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630014> "tropical heath forests"@en)
 EquivalentClasses(<https://w3id.org/elmo/elmo_3630014> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000204>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630006>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630013>)))
 SubClassOf(<https://w3id.org/elmo/elmo_3630014> <https://w3id.org/elmo/elmo_3630003>)
@@ -174,10 +184,66 @@ SubClassOf(<https://w3id.org/elmo/elmo_3630016> <https://w3id.org/elmo/elmo_3630
 
 # Class: <https://w3id.org/elmo/elmo_3630017> (deciduous temperate forests)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630017> "An ecosystem functional group which consists of a broadleaf forest plant community and experiences temperate climactic conditions."@en)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630017> "An ecosystem functional group which has a broadleaf forest plant community and experiences temperate climactic conditions."@en)
 AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630017> "deciduous temperate forests"@en)
 EquivalentClasses(<https://w3id.org/elmo/elmo_3630017> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000206>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630016>)))
 SubClassOf(<https://w3id.org/elmo/elmo_3630017> <https://w3id.org/elmo/elmo_3630003>)
+
+# Class: <https://w3id.org/elmo/elmo_3630018> (oceanic cool temperate rainforests)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.3>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630018> "An ecosystem functional group which has a rainforest plant community and experiences oceanic temperate climate conditions."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630018> "oceanic cool temperate rainforests"@en)
+EquivalentClasses(<https://w3id.org/elmo/elmo_3630018> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000380>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630002>)))
+SubClassOf(<https://w3id.org/elmo/elmo_3630018> <https://w3id.org/elmo/elmo_3630003>)
+
+# Class: <https://w3id.org/elmo/elmo_3630019> (warm temperate laurophyll forests)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.4>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630019> "An ecosystem functional group which has a laurel forest plant community and experiences temperate climactic conditions."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630019> "warm temperate laurophyll forests"@en)
+EquivalentClasses(<https://w3id.org/elmo/elmo_3630019> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000206>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630020>)))
+SubClassOf(<https://w3id.org/elmo/elmo_3630019> <https://w3id.org/elmo/elmo_3630003>)
+
+# Class: <https://w3id.org/elmo/elmo_3630020> (laurel forest)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Laurel_forest>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630020> "A plant community characterized by broadleaf tree species with evergreen, glossy, elongated leaves."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3630020> "laurisilva"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3630020> "laurissilva"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3630020> "laurophyll forest"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630020> "laurel forest"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3630020> <https://w3id.org/elmo/elmo_3630006>)
+
+# Class: <https://w3id.org/elmo/elmo_3630021> (fire-adapted ecosystem)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Pyric_herbivory>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630021> "An ecosystem which has a history of regular fires that reset the seccessional state of the ecosystem and vegetation adapted to survive or require regular fire."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3630021> "pyric"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630021> "fire-adapted ecosystem"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3630021> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3630022> (humid temperate)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.5>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630022> "A temperate condition which features frequent precipitation and humid conditions."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630022> "humid temperate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3630022> <http://purl.obolibrary.org/obo/ENVO_01000206>)
+
+# Class: <https://w3id.org/elmo/elmo_3630023> (temperate pyric humid forests)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.5>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630023> "An ecosystem functional group which has a forest plant community, experiences wet temperate conditions and has vegetation that is adapted to cycles of fire."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630023> "temperate pyric humid forests"@en)
+EquivalentClasses(<https://w3id.org/elmo/elmo_3630023> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630006>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630021>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630022>)))
+SubClassOf(<https://w3id.org/elmo/elmo_3630023> <https://w3id.org/elmo/elmo_3630003>)
+
+# Class: <https://w3id.org/elmo/elmo_3630024> (temperate pyric sclerophyll forests and woodlands)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.6>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630024> "An ecosystem functional group which has a sclerophyll forest plant community, experiences temperate climactic conditions and has vegetation that is adapted to cycles of fire."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630024> "temperate pyric sclerophyll forests and woodlands"@en)
+EquivalentClasses(<https://w3id.org/elmo/elmo_3630024> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000206>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630021>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630025>)))
+SubClassOf(<https://w3id.org/elmo/elmo_3630024> <https://w3id.org/elmo/elmo_3630003>)
+
+# Class: <https://w3id.org/elmo/elmo_3630025> (sclerophyll forest plant community)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Sclerophyll>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630025> "A forest plant community that consists mainly of sclerophyll woody plants, which are drought-adapted and feature stiff, leathery leaves."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630025> "sclerophyll forest plant community"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3630025> <https://w3id.org/elmo/elmo_3630006>)
 
 
 )

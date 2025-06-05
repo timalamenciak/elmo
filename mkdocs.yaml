@@ -8,6 +8,8 @@ plugins:
   #- table-reader (see https://github.com/INCATools/ontology-development-kit/issues/1028)
 markdown_extensions:
   - def_list
+  - pymdownx.tasklist:
+    custom_checkbox: true
   - pymdownx.highlight:
   - pymdownx.inlinehilite
   - pymdownx.snippets
