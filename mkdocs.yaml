@@ -26,7 +26,9 @@ nav:
   - Getting started: index.md
   - ELMO in HTML: lode.html
   - Basic user: 
-      - Basic user overview: basicuser.md
+    - Overview: basicuser.md
+    - What is an ontology?: basic-whatisontology.md
+    - How do I browse an ontology?: basic-viewing.md
   - Advanced user: 
     - Advanced user overview: advanceduser.md
     - Contributing: contributing.md
