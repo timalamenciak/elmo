@@ -1,6 +1,5 @@
-# What is an ontology?
+# What is an ontology? (Explain it like I'm 5!)
 
-## Explain it like I'm 5 years old (ELI5)
 An ontology is a list of terms and definitions that are organized by their relationships. The main relationship in ontology world is `subclass of`. Every term in an ontology is a subclass of some other term, all the way up to "thing" which is the root.
 
 Let's look at an example of a simple bicycle ontology:
