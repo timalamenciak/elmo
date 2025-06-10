@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: https://w3id.org/elmo/elmo/releases/2025-04-30/elmo.owl
+data-version: https://w3id.org/elmo/elmo/releases/2025-06-10/elmo.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -19,7 +19,7 @@ ontology: https://w3id.org/elmo/elmo.owl
 property_value: dcterms:description "None" xsd:string
 property_value: dcterms:license https://creativecommons.org/public-domain/
 property_value: dcterms:title "Ecolink Model Ontology (ELMO)" xsd:string
-property_value: owl:versionInfo "2025-04-30" xsd:string
+property_value: owl:versionInfo "2025-06-10" xsd:string
 
 [Term]
 id: BFO:0000002
@@ -131,6 +131,14 @@ xref: SPIRE:Tropical
 is_a: ENVO:01000203 ! environmental condition
 
 [Term]
+id: ENVO:01000206
+name: temperate
+def: "A temperate condition is an environmental condition in which an environmental system receives less solar irradiance than those with subpolar conditions, but greater than those with subtropical conditions." [https://en.wikipedia.org/wiki/Temperate_climate]
+synonym: "tepid climate" EXACT [https://en.wikipedia.org/wiki/Temperate_climate]
+xref: SPIRE:Temperate
+is_a: ENVO:01000203 ! environmental condition
+
+[Term]
 id: ENVO:01000254
 name: environmental system
 def: "A system which has the disposition to environ one or more material entities." [DOI:10.1186/2041-1480-4-43]
@@ -152,6 +160,18 @@ id: ENVO:01000343
 name: altitudinal condition
 def: "An altitudinal condition is an environmental condition in which ranges of factors such as temperature, humidity, soil composition, solar irradiation, and tree density vary with ranges in altitude." [https://en.wikipedia.org/wiki/Altitudinal_zonation]
 is_a: ENVO:01000203 ! environmental condition
+
+[Term]
+id: ENVO:01000345
+name: upper montane
+def: "An upper montane condition is a montane condition in which an altitude range falls immediately below the tree line." []
+is_a: ENVO:01000342 ! montane
+
+[Term]
+id: ENVO:01000380
+name: oceanic temperate
+def: "An oceanic temperate condition is a temperate condition which is strongly influenced by oceans and oceanic winds. Summers are cool and winters are cool, but not cold, and there is little frozen precipitation at lower elevations." [https://en.wikipedia.org/wiki/Temperate_zone]
+is_a: ENVO:01000206 ! temperate
 
 [Term]
 id: ENVO:01001110
@@ -1481,8 +1501,8 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620822
 name: community engagement process
-def: "An awareness-raising process in which a humans are gathered in a given area and engaged in the restoration and conservation of biodiversity." []
-is_a: elmo:3620817 ! awareness-raising process
+def: "An ecosystem-oriented social process in which a humans are engaged in the restoration and conservation of biodiversity." []
+is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 created_by: https://orcid.org/0000-0002-1296-2528
@@ -2002,6 +2022,13 @@ is_a: ENVO:01001436 ! planned environmental usage process
 property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
 
 [Term]
+id: elmo:3621023
+name: fauna poisoning process
+def: "A chemical ecosystem management process in which poison is introduced to reduce the population of fauna." []
+is_a: elmo:3620500 ! chemical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+
+[Term]
 id: elmo:3630000
 name: lowland
 def: "A landform which has an elevation lower than 200m above sea level." [https://en.wikipedia.org/wiki/Upland_and_lowland]
@@ -2017,7 +2044,7 @@ is_a: ENVO:01000254 ! environmental system
 id: elmo:3630002
 name: rainforest plant community
 def: "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy, is subject to high humidity and rainfall and includes populations of epiphytes, lianas and vegetation adapted to high moisture." []
-is_a: elmo:3630001 ! plant community
+is_a: elmo:3630006 ! forest plant community
 
 [Term]
 id: elmo:3630003
@@ -2027,7 +2054,7 @@ is_a: ENVO:01001110 ! ecosystem
 
 [Term]
 id: elmo:3630004
-name: tropical lowland rainforest
+name: tropical lowland rainforests
 def: "An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located in a lowland landform." [https://global-ecosystems.org/explore/groups/T1.1]
 is_a: elmo:3630003 ! ecosystem functional group
 intersection_of: BFO:0000051 elmo:3630000 ! has part lowland
@@ -2104,6 +2131,131 @@ intersection_of: BFO:0000051 ENVO:01000342 ! has part montane
 relationship: BFO:0000051 elmo:3630002 ! has part rainforest plant community
 relationship: BFO:0000051 elmo:3630009 ! has part subtropical
 relationship: BFO:0000051 ENVO:01000342 ! has part montane
+
+[Term]
+id: elmo:3630012
+name: subtropical lowland rainforests
+def: "An ecosystem functional group which has a rainforest plant community, experiences subtropical climactic conditions and is located in a lowland landform." [https://global-ecosystems.org/explore/groups/T1.1]
+is_a: elmo:3630003 ! ecosystem functional group
+
+[Term]
+id: elmo:3630013
+name: heath plant community
+def: "A plant community which consists mainly of open, low-growing woody vegetation." [https://en.wikipedia.org/wiki/Heath]
+synonym: "heathlands" RELATED []
+is_a: elmo:3630001 ! plant community
+
+[Term]
+id: elmo:3630014
+name: tropical heath forests
+def: "An ecosystem functional group which has some heath and some forest plant communities and experiences tropical climactic conditions." [https://global-ecosystems.org/explore/groups/T1.4]
+is_a: elmo:3630003 ! ecosystem functional group
+intersection_of: BFO:0000051 elmo:3630006 ! has part forest plant community
+intersection_of: BFO:0000051 elmo:3630013 ! has part heath plant community
+intersection_of: BFO:0000051 ENVO:01000204 ! has part tropical
+relationship: BFO:0000051 elmo:3630006 ! has part forest plant community
+relationship: BFO:0000051 elmo:3630013 ! has part heath plant community
+relationship: BFO:0000051 ENVO:01000204 ! has part tropical
+
+[Term]
+id: elmo:3630015
+name: temperate high montane forests
+def: "An ecosystem functional group which consists of a forest plant community, experiences temperate climactic conditions and is located in an upper montane region." [https://global-ecosystems.org/explore/groups/T2.1]
+is_a: elmo:3630003 ! ecosystem functional group
+intersection_of: BFO:0000051 elmo:3630006 ! has part forest plant community
+intersection_of: BFO:0000051 ENVO:01000206 ! has part temperate
+intersection_of: BFO:0000051 ENVO:01000345 ! has part upper montane
+relationship: BFO:0000051 elmo:3630006 ! has part forest plant community
+relationship: BFO:0000051 ENVO:01000206 ! has part temperate
+relationship: BFO:0000051 ENVO:01000345 ! has part upper montane
+
+[Term]
+id: elmo:3630016
+name: deciduous plant community
+def: "A plant community dominated by broadleaf deciduous trees." [https://global-ecosystems.org/explore/groups/T2.2]
+is_a: elmo:3630006 ! forest plant community
+
+[Term]
+id: elmo:3630017
+name: deciduous temperate forests
+def: "An ecosystem functional group which has a broadleaf forest plant community and experiences temperate climactic conditions." [https://global-ecosystems.org/explore/groups/T2.2]
+is_a: elmo:3630003 ! ecosystem functional group
+intersection_of: BFO:0000051 elmo:3630016 ! has part deciduous plant community
+intersection_of: BFO:0000051 ENVO:01000206 ! has part temperate
+relationship: BFO:0000051 elmo:3630016 ! has part deciduous plant community
+relationship: BFO:0000051 ENVO:01000206 ! has part temperate
+
+[Term]
+id: elmo:3630018
+name: oceanic cool temperate rainforests
+def: "An ecosystem functional group which has a rainforest plant community and experiences oceanic temperate climate conditions." [https://global-ecosystems.org/explore/groups/T2.3]
+is_a: elmo:3630003 ! ecosystem functional group
+intersection_of: BFO:0000051 elmo:3630002 ! has part rainforest plant community
+intersection_of: BFO:0000051 ENVO:01000380 ! has part oceanic temperate
+relationship: BFO:0000051 elmo:3630002 ! has part rainforest plant community
+relationship: BFO:0000051 ENVO:01000380 ! has part oceanic temperate
+
+[Term]
+id: elmo:3630019
+name: warm temperate laurophyll forests
+def: "An ecosystem functional group which has a laurel forest plant community and experiences temperate climactic conditions." [https://global-ecosystems.org/explore/groups/T2.4]
+is_a: elmo:3630003 ! ecosystem functional group
+intersection_of: BFO:0000051 elmo:3630020 ! has part laurel forest
+intersection_of: BFO:0000051 ENVO:01000206 ! has part temperate
+relationship: BFO:0000051 elmo:3630020 ! has part laurel forest
+relationship: BFO:0000051 ENVO:01000206 ! has part temperate
+
+[Term]
+id: elmo:3630020
+name: laurel forest
+def: "A plant community characterized by broadleaf tree species with evergreen, glossy, elongated leaves." [https://en.wikipedia.org/wiki/Laurel_forest]
+synonym: "laurisilva" EXACT []
+synonym: "laurissilva" EXACT []
+synonym: "laurophyll forest" EXACT []
+is_a: elmo:3630006 ! forest plant community
+
+[Term]
+id: elmo:3630021
+name: fire-adapted ecosystem
+def: "An ecosystem which has a history of regular fires that reset the seccessional state of the ecosystem and vegetation adapted to survive or require regular fire." [https://en.wikipedia.org/wiki/Pyric_herbivory]
+synonym: "pyric" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3630022
+name: humid temperate
+def: "A temperate condition which features frequent precipitation and humid conditions." [https://global-ecosystems.org/explore/groups/T2.5]
+is_a: ENVO:01000206 ! temperate
+
+[Term]
+id: elmo:3630023
+name: temperate pyric humid forests
+def: "An ecosystem functional group which has a forest plant community, experiences wet temperate conditions and has vegetation that is adapted to cycles of fire." [https://global-ecosystems.org/explore/groups/T2.5]
+is_a: elmo:3630003 ! ecosystem functional group
+intersection_of: BFO:0000051 elmo:3630006 ! has part forest plant community
+intersection_of: BFO:0000051 elmo:3630021 ! has part fire-adapted ecosystem
+intersection_of: BFO:0000051 elmo:3630022 ! has part humid temperate
+relationship: BFO:0000051 elmo:3630006 ! has part forest plant community
+relationship: BFO:0000051 elmo:3630021 ! has part fire-adapted ecosystem
+relationship: BFO:0000051 elmo:3630022 ! has part humid temperate
+
+[Term]
+id: elmo:3630024
+name: temperate pyric sclerophyll forests and woodlands
+def: "An ecosystem functional group which has a sclerophyll forest plant community, experiences temperate climactic conditions and has vegetation that is adapted to cycles of fire." [https://global-ecosystems.org/explore/groups/T2.6]
+is_a: elmo:3630003 ! ecosystem functional group
+intersection_of: BFO:0000051 elmo:3630021 ! has part fire-adapted ecosystem
+intersection_of: BFO:0000051 elmo:3630025 ! has part sclerophyll forest plant community
+intersection_of: BFO:0000051 ENVO:01000206 ! has part temperate
+relationship: BFO:0000051 elmo:3630021 ! has part fire-adapted ecosystem
+relationship: BFO:0000051 elmo:3630025 ! has part sclerophyll forest plant community
+relationship: BFO:0000051 ENVO:01000206 ! has part temperate
+
+[Term]
+id: elmo:3630025
+name: sclerophyll forest plant community
+def: "A forest plant community that consists mainly of sclerophyll woody plants, which are drought-adapted and feature stiff, leathery leaves." [https://en.wikipedia.org/wiki/Sclerophyll]
+is_a: elmo:3630006 ! forest plant community
 
 [Typedef]
 id: BFO:0000050

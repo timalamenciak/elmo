@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/components/ecosystems.owl>
-<https://w3id.org/elmo/elmo/releases/2025-06-05/components/ecosystems.owl>
-Annotation(owl:versionInfo "2025-06-05")
+<https://w3id.org/elmo/elmo/releases/2025-06-10/components/ecosystems.owl>
+Annotation(owl:versionInfo "2025-06-10")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000191>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000203>))

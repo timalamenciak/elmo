@@ -10,11 +10,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/elmo/elmo/elmo-simple.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/elmo/elmo/releases/2025-04-30/elmo-simple.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/elmo/elmo/releases/2025-06-10/elmo-simple.owl"/>
         <terms:description>None</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/public-domain/"/>
         <terms:title>Ecolink Model Ontology (ELMO)</terms:title>
-        <owl:versionInfo>2025-04-30</owl:versionInfo>
+        <owl:versionInfo>2025-06-10</owl:versionInfo>
     </owl:Ontology>
     
 

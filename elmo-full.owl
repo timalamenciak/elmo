@@ -18,11 +18,11 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/elmo/elmo/elmo-full.owl">
-        <owl:versionIRI rdf:resource="https://w3id.org/elmo/elmo/releases/2025-04-30/elmo-full.owl"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/elmo/elmo/releases/2025-06-10/elmo-full.owl"/>
         <dcterms:description>None</dcterms:description>
         <dcterms:license rdf:resource="https://creativecommons.org/public-domain/"/>
         <dcterms:title>Ecolink Model Ontology (ELMO)</dcterms:title>
-        <owl:versionInfo>2025-04-30</owl:versionInfo>
+        <owl:versionInfo>2025-06-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2683,6 +2683,30 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000206 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000206">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000203"/>
+        <obo:IAO_0000115>A temperate condition is an environmental condition in which an environmental system receives less solar irradiance than those with subpolar conditions, but greater than those with subtropical conditions.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>SPIRE:Temperate</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>tepid climate</oboInOwl:hasExactSynonym>
+        <rdfs:label>temperate</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A temperate condition is an environmental condition in which an environmental system receives less solar irradiance than those with subpolar conditions, but greater than those with subtropical conditions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Temperate_climate</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>tepid climate</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Temperate_climate</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01000254 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000254">
@@ -2732,6 +2756,32 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An altitudinal condition is an environmental condition in which ranges of factors such as temperature, humidity, soil composition, solar irradiation, and tree density vary with ranges in altitude.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000345 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000345">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000342"/>
+        <obo:IAO_0000115>An upper montane condition is a montane condition in which an altitude range falls immediately below the tree line.</obo:IAO_0000115>
+        <rdfs:label>upper montane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000380 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000380">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+        <obo:IAO_0000115>An oceanic temperate condition is a temperate condition which is strongly influenced by oceans and oceanic winds. Summers are cool and winters are cool, but not cold, and there is little frozen precipitation at lower elevations.</obo:IAO_0000115>
+        <rdfs:label>oceanic temperate</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000380"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An oceanic temperate condition is a temperate condition which is strongly influenced by oceans and oceanic winds. Summers are cool and winters are cool, but not cold, and there is little frozen precipitation at lower elevations.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Temperate_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5169,8 +5219,8 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- https://w3id.org/elmo/elmo_3620822 -->
 
     <owl:Class rdf:about="https://w3id.org/elmo/elmo_3620822">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3620817"/>
-        <obo:IAO_0000115 xml:lang="en">An awareness-raising process in which a humans are gathered in a given area and engaged in the restoration and conservation of biodiversity.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3620800"/>
+        <obo:IAO_0000115 xml:lang="en">An ecosystem-oriented social process in which a humans are engaged in the restoration and conservation of biodiversity.</obo:IAO_0000115>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
         <dcterms:contributor rdf:resource="https://orcid.org/0000-0003-4817-0423"/>
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
@@ -6025,6 +6075,17 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
+    <!-- https://w3id.org/elmo/elmo_3621023 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3621023">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3620500"/>
+        <obo:IAO_0000115 xml:lang="en">A chemical ecosystem management process in which poison is introduced to reduce the population of fauna.</obo:IAO_0000115>
+        <dcterms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
+        <rdfs:label xml:lang="en">fauna poisoning process</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/elmo/elmo_3630000 -->
 
     <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630000">
@@ -6054,7 +6115,7 @@ For example, A and B may be gene products and binding of B by A positively regul
     <!-- https://w3id.org/elmo/elmo_3630002 -->
 
     <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630002">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630001"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630006"/>
         <obo:IAO_0000115 xml:lang="en">A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy, is subject to high humidity and rainfall and includes populations of epiphytes, lianas and vegetation adapted to high moisture.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">rainforest plant community</rdfs:label>
     </owl:Class>
@@ -6119,7 +6180,7 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located in a lowland landform.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">tropical lowland rainforest</rdfs:label>
+        <rdfs:label xml:lang="en">tropical lowland rainforests</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630004"/>
@@ -6378,6 +6439,457 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget xml:lang="en">An ecosystem functional group which has a rainforest plant community, experiences subtropical conditions and is located at a montane altitude.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T1.3"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630012 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630012">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630003"/>
+        <obo:IAO_0000115 xml:lang="en">An ecosystem functional group which has a rainforest plant community, experiences subtropical climactic conditions and is located in a lowland landform.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">subtropical lowland rainforests</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An ecosystem functional group which has a rainforest plant community, experiences subtropical climactic conditions and is located in a lowland landform.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T1.1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630013 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630013">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630001"/>
+        <obo:IAO_0000115 xml:lang="en">A plant community which consists mainly of open, low-growing woody vegetation.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">heathlands</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">heath plant community</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A plant community which consists mainly of open, low-growing woody vegetation.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Heath"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630014 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630014">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000204"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630006"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630013"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000204"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An ecosystem functional group which has some heath and some forest plant communities and experiences tropical climactic conditions.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">tropical heath forests</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630014"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An ecosystem functional group which has some heath and some forest plant communities and experiences tropical climactic conditions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T1.4"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630015 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630015">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000345"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630006"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000345"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An ecosystem functional group which consists of a forest plant community, experiences temperate climactic conditions and is located in an upper montane region.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">temperate high montane forests</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An ecosystem functional group which consists of a forest plant community, experiences temperate climactic conditions and is located in an upper montane region.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T2.1"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630016 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630016">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630006"/>
+        <obo:IAO_0000115 xml:lang="en">A plant community dominated by broadleaf deciduous trees.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">deciduous plant community</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630016"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A plant community dominated by broadleaf deciduous trees.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T2.2"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630017 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630017">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630016"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An ecosystem functional group which has a broadleaf forest plant community and experiences temperate climactic conditions.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">deciduous temperate forests</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630017"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An ecosystem functional group which has a broadleaf forest plant community and experiences temperate climactic conditions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T2.2"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630018 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630018">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000380"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630002"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000380"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An ecosystem functional group which has a rainforest plant community and experiences oceanic temperate climate conditions.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">oceanic cool temperate rainforests</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630018"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An ecosystem functional group which has a rainforest plant community and experiences oceanic temperate climate conditions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T2.3"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630019 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630019">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630020"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630020"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An ecosystem functional group which has a laurel forest plant community and experiences temperate climactic conditions.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">warm temperate laurophyll forests</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630019"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An ecosystem functional group which has a laurel forest plant community and experiences temperate climactic conditions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T2.4"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630020 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630020">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630006"/>
+        <obo:IAO_0000115 xml:lang="en">A plant community characterized by broadleaf tree species with evergreen, glossy, elongated leaves.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym xml:lang="en">laurisilva</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">laurissilva</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">laurophyll forest</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">laurel forest</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630020"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A plant community characterized by broadleaf tree species with evergreen, glossy, elongated leaves.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Laurel_forest"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630021 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001110"/>
+        <obo:IAO_0000115 xml:lang="en">An ecosystem which has a history of regular fires that reset the seccessional state of the ecosystem and vegetation adapted to survive or require regular fire.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym xml:lang="en">pyric</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">fire-adapted ecosystem</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630021"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An ecosystem which has a history of regular fires that reset the seccessional state of the ecosystem and vegetation adapted to survive or require regular fire.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Pyric_herbivory"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630022 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+        <obo:IAO_0000115 xml:lang="en">A temperate condition which features frequent precipitation and humid conditions.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">humid temperate</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630022"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A temperate condition which features frequent precipitation and humid conditions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T2.5"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630023 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630023">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630006"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630021"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630022"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An ecosystem functional group which has a forest plant community, experiences wet temperate conditions and has vegetation that is adapted to cycles of fire.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">temperate pyric humid forests</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630023"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An ecosystem functional group which has a forest plant community, experiences wet temperate conditions and has vegetation that is adapted to cycles of fire.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T2.5"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630024 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630024">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630021"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630025"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000206"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630021"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/elmo/elmo_3630025"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">An ecosystem functional group which has a sclerophyll forest plant community, experiences temperate climactic conditions and has vegetation that is adapted to cycles of fire.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">temperate pyric sclerophyll forests and woodlands</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630024"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">An ecosystem functional group which has a sclerophyll forest plant community, experiences temperate climactic conditions and has vegetation that is adapted to cycles of fire.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://global-ecosystems.org/explore/groups/T2.6"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://w3id.org/elmo/elmo_3630025 -->
+
+    <owl:Class rdf:about="https://w3id.org/elmo/elmo_3630025">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3630006"/>
+        <obo:IAO_0000115 xml:lang="en">A forest plant community that consists mainly of sclerophyll woody plants, which are drought-adapted and feature stiff, leathery leaves.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">sclerophyll forest plant community</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3630025"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A forest plant community that consists mainly of sclerophyll woody plants, which are drought-adapted and feature stiff, leathery leaves.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Sclerophyll"/>
     </owl:Axiom>
     
 
