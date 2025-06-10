@@ -24,7 +24,8 @@ repo_url: https://github.com/timalamenciak/elmo/
 
 nav:
   - Getting started: index.md
-  - ELMO in HTML: lode.html
+  - ELMO in HTML (PyLODE): lode.html
+  - ELMO in HTML (basic): elmo.html
   - Basic user: 
     - Overview: basicuser.md
     - What is an ontology?: basic-whatisontology.md
@@ -48,5 +49,6 @@ nav:
           - Your ODK Repository Overview: odk-workflows/RepositoryFileStructure.md 
     - Design Patterns:
       - Design Patterns Overview: templates/dosdp.md 
+  - Sources: sources.md
   - Cite: cite.md
 
