@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: https://w3id.org/elmo/elmo/releases/2025-06-10/elmo.owl
+data-version: https://w3id.org/elmo/elmo/releases/2025-08-21/elmo.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -19,7 +19,7 @@ ontology: https://w3id.org/elmo/elmo.owl
 property_value: dcterms:description "None" xsd:string
 property_value: dcterms:license https://creativecommons.org/public-domain/
 property_value: dcterms:title "Ecolink Model Ontology (ELMO)" xsd:string
-property_value: owl:versionInfo "2025-06-10" xsd:string
+property_value: owl:versionInfo "2025-08-21" xsd:string
 
 [Term]
 id: BFO:0000002
@@ -103,10 +103,6 @@ name: root node
 [Term]
 id: ENVO:00000191
 name: solid astronomical body part
-def: "A part of an astronomical body which is primarily composed of solid material." [https://en.wikipedia.org/wiki/Landform]
-synonym: "geological feature" RELATED [ADL:FTT]
-synonym: "landform" RELATED []
-synonym: "physiographic feature" RELATED []
 xref: EcoLexicon:landform
 xref: EcoLexicon:landforms
 xref: FTT:754
@@ -118,75 +114,48 @@ xref: TGN:21401
 [Term]
 id: ENVO:01000203
 name: environmental condition
-def: "An environmental condition is a range of a determinate quality or combination of qualities that are present in an environmental system." [DOI:10.1186/2041-1480-4-43]
 is_a: PATO:0001018
 property_value: IAO:0000114 IAO:0000121
+created_by: ORCID:0000-0002-4366-3088
 
 [Term]
 id: ENVO:01000204
 name: tropical
-def: "A tropical condition is an environmental condition in which an environmental system receives high yearly solar irradiance per unit area and, on Earth, the Sun reaches a subsolar point at least once during the solar year. This results in a hot and moist year-round climate at low elevations, which have a monthly average temperature above 18 degrees Celsius." [https://en.wikipedia.org/wiki/Tropical]
 xref: EcoLexicon:the_tropics
 xref: SPIRE:Tropical
 is_a: ENVO:01000203 ! environmental condition
-
-[Term]
-id: ENVO:01000206
-name: temperate
-def: "A temperate condition is an environmental condition in which an environmental system receives less solar irradiance than those with subpolar conditions, but greater than those with subtropical conditions." [https://en.wikipedia.org/wiki/Temperate_climate]
-synonym: "tepid climate" EXACT [https://en.wikipedia.org/wiki/Temperate_climate]
-xref: SPIRE:Temperate
-is_a: ENVO:01000203 ! environmental condition
+created_by: ORCID:0000-0002-4366-3088
 
 [Term]
 id: ENVO:01000254
 name: environmental system
-def: "A system which has the disposition to environ one or more material entities." [DOI:10.1186/2041-1480-4-43]
-comment: In ENVO's alignment with the Basic Formal Ontology, this class is being considered as a subclass of a proposed BFO class "system". The relation "environed_by" is also under development. Roughly, a system which includes a material entity (at least partially) within its site and causally influences that entity may be considered to environ it. Following the completion of this alignment, this class' definition and the definitions of its subclasses will be revised.
 synonym: "environment" EXACT []
 xref: EcoLexicon:environment
-is_a: RO:0002577 ! system
-creation_date: 2013-09-23T16:04:08Z
 
 [Term]
 id: ENVO:01000342
 name: montane
-def: "An altitudinal condition which inheres in a bearer by virtue of the bearer being located at an altitude between mid-altitude forests and the tree line." [https://en.wikipedia.org/wiki/Altitudinal_zonation]
 xref: LTER:350
 is_a: ENVO:01000343 ! altitudinal condition
+created_by: ORCID:0000-0002-4366-3088
 
 [Term]
 id: ENVO:01000343
 name: altitudinal condition
-def: "An altitudinal condition is an environmental condition in which ranges of factors such as temperature, humidity, soil composition, solar irradiation, and tree density vary with ranges in altitude." [https://en.wikipedia.org/wiki/Altitudinal_zonation]
 is_a: ENVO:01000203 ! environmental condition
-
-[Term]
-id: ENVO:01000345
-name: upper montane
-def: "An upper montane condition is a montane condition in which an altitude range falls immediately below the tree line." []
-is_a: ENVO:01000342 ! montane
-
-[Term]
-id: ENVO:01000380
-name: oceanic temperate
-def: "An oceanic temperate condition is a temperate condition which is strongly influenced by oceans and oceanic winds. Summers are cool and winters are cool, but not cold, and there is little frozen precipitation at lower elevations." [https://en.wikipedia.org/wiki/Temperate_zone]
-is_a: ENVO:01000206 ! temperate
+created_by: ORCID:0000-0002-4366-3088
 
 [Term]
 id: ENVO:01001110
 name: ecosystem
-def: "An environmental system which includes both living and non-living components." [https://en.wikipedia.org/wiki/Ecosystem]
-xref: LTER:173 {xref="https://vocab.lternet.edu/vocab/vocab/index.php?tema=173&/ecosystems"}
+def: "An environmental system which includes both living and non-living components." []
+is_a: BFO:0000040 ! material entity
 is_a: ENVO:01000254 ! environmental system
 
 [Term]
 id: ENVO:01001170
 name: active ecosystem management process
-def: "A process during which an ecosystem, its parts, or the processes it participates in are modified by human intervention to accomplish an objective." [https://www.iucn.org/theme/protected-areas/about/protected-areas-categories/category-iv-habitatspecies-management-area]
 synonym: "ecosystem management" EXACT []
-synonym: "environmental management" RELATED []
-synonym: "Umweltmaßnahme" RELATED [www.awi.de/internas] {created_by="https://orcid.org/0000-0002-9620-2832"}
 is_a: ENVO:02500000 ! environmental system process
 relationship: RO:0000057 ENVO:01001110 ! has participant ecosystem
 relationship: RO:0002211 ENVO:02500000 ! regulates environmental system process
@@ -198,19 +167,6 @@ def: "A planned process during which humans access and obtain resources, benefit
 is_a: ENVO:02500000 ! environmental system process
 relationship: BFO:0000051 ENVO:01001170 ! has part active ecosystem management process
 created_by: https://orcid.org/0000-0002-4366-3088
-
-[Term]
-id: ENVO:01001884
-name: surface landform
-def: "A landform which occurs on the surface of an astronomical body." []
-synonym: "geographic feature" RELATED []
-is_a: ENVO:01001886 ! landform
-
-[Term]
-id: ENVO:01001886
-name: landform
-def: "A solid astronomical body part which has been formed from and is composed primarily of the matter of that astronomical body." [https://en.wikipedia.org/wiki/Landform]
-is_a: ENVO:00000191 ! solid astronomical body part
 
 [Term]
 id: ENVO:02500000
@@ -269,15 +225,6 @@ id: PATO:0000001
 name: quality
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
 is_a: BFO:0000020 ! specifically dependent continuant
-
-[Term]
-id: RO:0002577
-name: system
-def: "A material entity consisting of multiple components that are causally integrated." []
-is_a: BFO:0000040 ! material entity
-property_value: IAO:0000116 "May be replaced by a BFO class, as discussed in http://www.jbiomedsem.com/content/4/1/43" xsd:string
-property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
-property_value: IAO:0000119 "http://www.jbiomedsem.com/content/4/1/43" xsd:string
 
 [Term]
 id: elmo:3620020
@@ -759,6 +706,854 @@ is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3620100
+name: Tropical-subtropical lowland rainforests
+synonym: "T1.1" EXACT []
+synonym: "T1.1 Tropical-subtropical lowland rainforests" EXACT []
+synonym: "Tropical Lowland Rainforest" EXACT []
+synonym: "TT1.a1" EXACT []
+is_a: elmo:3620207 ! Tropical-subtropical forests biome
+
+[Term]
+id: elmo:3620101
+name: Tropical-subtropical dry forests and thickets
+synonym: "T1.2" EXACT []
+synonym: "T1.2 Tropical-subtropical dry forests and thickets" EXACT []
+is_a: elmo:3620207 ! Tropical-subtropical forests biome
+
+[Term]
+id: elmo:3620102
+name: Tropical-subtropical montane rainforests
+synonym: "T1.3" EXACT []
+synonym: "T1.3 Tropical-subtropical montane rainforests" EXACT []
+synonym: "Tropical Montane Rainforest" EXACT []
+synonym: "TT1.a2" EXACT []
+is_a: elmo:3620207 ! Tropical-subtropical forests biome
+
+[Term]
+id: elmo:3620103
+name: Tropical heath forests
+synonym: "T1.4 Tropical heath forests" EXACT []
+is_a: elmo:3620207 ! Tropical-subtropical forests biome
+
+[Term]
+id: elmo:3620104
+name: Boreal and temperate high montane forests and woodlands
+synonym: "T2.1 Boreal and temperate high montane forests and woodlands" EXACT []
+is_a: elmo:3620208 ! Temperate-boreal forests and woodlands biome
+
+[Term]
+id: elmo:3620105
+name: Deciduous temperate forests
+synonym: "T2.2 Deciduous temperate forests" EXACT []
+is_a: elmo:3620208 ! Temperate-boreal forests and woodlands biome
+
+[Term]
+id: elmo:3620106
+name: Oceanic cool temperate rainforests
+synonym: "T2.3 Oceanic cool temperate rainforests" EXACT []
+is_a: elmo:3620208 ! Temperate-boreal forests and woodlands biome
+
+[Term]
+id: elmo:3620107
+name: Warm temperate laurophyll forests
+synonym: "T2.4 Warm temperate laurophyll forests" EXACT []
+is_a: elmo:3620208 ! Temperate-boreal forests and woodlands biome
+
+[Term]
+id: elmo:3620108
+name: Temperate pyric humid forests
+synonym: "T2.5 Temperate pyric humid forests" EXACT []
+is_a: elmo:3620208 ! Temperate-boreal forests and woodlands biome
+
+[Term]
+id: elmo:3620109
+name: Temperate pyric sclerophyll forests and woodlands
+synonym: "T2.6 Temperate pyric sclerophyll forests and woodlands" EXACT []
+is_a: elmo:3620208 ! Temperate-boreal forests and woodlands biome
+
+[Term]
+id: elmo:3620110
+name: Seasonally dry tropical shrublands
+synonym: "T3.1 Seasonally dry tropical shrublands" EXACT []
+is_a: elmo:3620209 ! Shrublands and shrubby woodlands biome
+
+[Term]
+id: elmo:3620111
+name: Seasonally dry temperate heaths and shrublands
+synonym: "T3.2 Seasonally dry temperate heaths and shrublands" EXACT []
+is_a: elmo:3620209 ! Shrublands and shrubby woodlands biome
+
+[Term]
+id: elmo:3620112
+name: Cool temperate heathlands
+synonym: "T3.3 Cool temperate heathlands" EXACT []
+is_a: elmo:3620209 ! Shrublands and shrubby woodlands biome
+
+[Term]
+id: elmo:3620113
+name: Young rocky pavements, screes and lava flows
+synonym: "T3.4 Young rocky pavements, screes and lava flows" EXACT []
+is_a: elmo:3620209 ! Shrublands and shrubby woodlands biome
+
+[Term]
+id: elmo:3620114
+name: Trophic savannas
+synonym: "T4.1 Trophic savannas" EXACT []
+is_a: elmo:3620210 ! Savannas and grasslands biome
+
+[Term]
+id: elmo:3620115
+name: Pyric tussock savannas
+synonym: "T4.2 Pyric tussock savannas" EXACT []
+is_a: elmo:3620210 ! Savannas and grasslands biome
+
+[Term]
+id: elmo:3620116
+name: Hummock savannas
+synonym: "T4.3 Hummock savannas" EXACT []
+is_a: elmo:3620210 ! Savannas and grasslands biome
+
+[Term]
+id: elmo:3620117
+name: Temperate woodlands
+synonym: "T4.4 Temperate woodlands" EXACT []
+is_a: elmo:3620210 ! Savannas and grasslands biome
+
+[Term]
+id: elmo:3620118
+name: Temperate subhumid grasslands
+synonym: "T4.5 Temperate subhumid grasslands" EXACT []
+is_a: elmo:3620210 ! Savannas and grasslands biome
+
+[Term]
+id: elmo:3620119
+name: Semi-desert steppe
+synonym: "T5.1 Semi-desert steppe" EXACT []
+is_a: elmo:3620211 ! Deserts and semi-deserts biome
+
+[Term]
+id: elmo:3620120
+name: Succulent or thorny deserts and semi-deserts
+synonym: "T5.2 Succulent or thorny deserts and semi-deserts" EXACT []
+is_a: elmo:3620211 ! Deserts and semi-deserts biome
+
+[Term]
+id: elmo:3620121
+name: Sclerophyll hot deserts and semi-deserts
+synonym: "T5.3 Sclerophyll hot deserts and semi-deserts" EXACT []
+is_a: elmo:3620211 ! Deserts and semi-deserts biome
+
+[Term]
+id: elmo:3620122
+name: Cool deserts and semi-deserts
+synonym: "T5.4 Cool deserts and semi-deserts" EXACT []
+is_a: elmo:3620211 ! Deserts and semi-deserts biome
+
+[Term]
+id: elmo:3620123
+name: Hyper-arid deserts
+synonym: "T5.5 Hyper-arid deserts" EXACT []
+is_a: elmo:3620211 ! Deserts and semi-deserts biome
+
+[Term]
+id: elmo:3620124
+name: Ice sheets, glaciers and perennial snowfields
+synonym: "T6.1 Ice sheets, glaciers and perennial snowfields" EXACT []
+is_a: elmo:3620212 ! Polar/alpine (cryogenic) biome
+
+[Term]
+id: elmo:3620125
+name: Polar/alpine cliffs, screes, outcrops and lava flows
+synonym: "T6.2 Polar/alpine cliffs, screes, outcrops and lava flows" EXACT []
+is_a: elmo:3620212 ! Polar/alpine (cryogenic) biome
+
+[Term]
+id: elmo:3620126
+name: Polar tundra and deserts
+synonym: "T6.3 Polar tundra and deserts" EXACT []
+is_a: elmo:3620212 ! Polar/alpine (cryogenic) biome
+
+[Term]
+id: elmo:3620127
+name: Temperate alpine grasslands and shrublands
+synonym: "T6.4 Temperate alpine grasslands and shrublands" EXACT []
+is_a: elmo:3620212 ! Polar/alpine (cryogenic) biome
+
+[Term]
+id: elmo:3620128
+name: Sown pastures and fields
+synonym: "T7.2 Sown pastures and fields" EXACT []
+is_a: elmo:3620213 ! Intensive land-use biome
+
+[Term]
+id: elmo:3620129
+name: Plantations
+synonym: "T7.3 Plantations" EXACT []
+is_a: elmo:3620213 ! Intensive land-use biome
+
+[Term]
+id: elmo:3620130
+name: Urban and industrial ecosystems
+synonym: "T7.4 Urban and industrial ecosystems" EXACT []
+is_a: elmo:3620213 ! Intensive land-use biome
+
+[Term]
+id: elmo:3620131
+name: Derived semi-natural pastures and oldfields
+synonym: "T7.5 Derived semi-natural pastures and oldfields" EXACT []
+is_a: elmo:3620213 ! Intensive land-use biome
+
+[Term]
+id: elmo:3620132
+name: Aerobic caves
+synonym: "S1.1 Aerobic caves" EXACT []
+is_a: elmo:3620214 ! Anthropogenic subterranean voids biome
+
+[Term]
+id: elmo:3620133
+name: Endolithic systems
+synonym: "S1.2 Endolithic systems" EXACT []
+is_a: elmo:3620214 ! Anthropogenic subterranean voids biome
+
+[Term]
+id: elmo:3620134
+name: Anthropogenic subterranean voids
+synonym: "S2.1 Anthropogenic subterranean voids" EXACT []
+is_a: elmo:3620214 ! Anthropogenic subterranean voids biome
+
+[Term]
+id: elmo:3620135
+name: Underground streams and pools
+synonym: "SF1.1 Underground streams and pools" EXACT []
+is_a: elmo:3620215 ! Subterranean freshwaters biome
+
+[Term]
+id: elmo:3620136
+name: Groundwater ecosystems
+synonym: "SF1.2 Groundwater ecosystems" EXACT []
+is_a: elmo:3620215 ! Subterranean freshwaters biome
+
+[Term]
+id: elmo:3620137
+name: Water pipes and subterranean canals
+synonym: "SF2.1 Water pipes and subterranean canals" EXACT []
+is_a: elmo:3620216 ! Anthropogenic subterranean freshwaters biome
+
+[Term]
+id: elmo:3620138
+name: Flooded mines and other voids
+synonym: "SF2.2 Flooded mines and other voids" EXACT []
+is_a: elmo:3620216 ! Anthropogenic subterranean freshwaters biome
+
+[Term]
+id: elmo:3620139
+name: Subterranean tidal biome
+def: "The subterranean tidal biome is a biome that includes coastal pools and subterranean voids with a partially or entirely submerged connection to marine waters where sunlight is absent or too dim to sustain photosynthesis." [https://global-ecosystems.org/explore/groups/SM1]
+synonym: "SM1 Subterranean tidal biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620140
+name: Anchialine caves
+synonym: "SM1.1 Anchialine caves" EXACT []
+is_a: elmo:3620139 ! Subterranean tidal biome
+
+[Term]
+id: elmo:3620141
+name: Anchialine pools
+synonym: "SM1.2 Anchialine pools" EXACT []
+is_a: elmo:3620139 ! Subterranean tidal biome
+
+[Term]
+id: elmo:3620142
+name: Sea caves
+synonym: "SM1.3 Sea caves" EXACT []
+is_a: elmo:3620139 ! Subterranean tidal biome
+
+[Term]
+id: elmo:3620143
+name: Tropical flooded forests and peat forests
+synonym: "TF1.1 Tropical flooded forests and peat forests" EXACT []
+is_a: elmo:3620217 ! Palustrine wetlands biome
+
+[Term]
+id: elmo:3620144
+name: Subtropical/temperate forested wetlands
+synonym: "TF1.2 Subtropical/temperate forested wetlands" EXACT []
+is_a: elmo:3620217 ! Palustrine wetlands biome
+
+[Term]
+id: elmo:3620145
+name: Permanent marshes
+synonym: "TF1.3 Permanent marshes" EXACT []
+is_a: elmo:3620217 ! Palustrine wetlands biome
+
+[Term]
+id: elmo:3620146
+name: Seasonal floodplain marshes
+synonym: "TF1.4 Seasonal floodplain marshes" EXACT []
+is_a: elmo:3620217 ! Palustrine wetlands biome
+
+[Term]
+id: elmo:3620147
+name: Episodic arid floodplains
+synonym: "TF1.5 Episodic arid floodplains" EXACT []
+is_a: elmo:3620217 ! Palustrine wetlands biome
+
+[Term]
+id: elmo:3620148
+name: Boreal, temperate and montane peat bogs
+synonym: "TF1.6 Boreal, temperate and montane peat bogs" EXACT []
+is_a: elmo:3620217 ! Palustrine wetlands biome
+
+[Term]
+id: elmo:3620149
+name: Boreal and temperate fens
+synonym: "TF1.7 Boreal and temperate fens" EXACT []
+is_a: elmo:3620217 ! Palustrine wetlands biome
+
+[Term]
+id: elmo:3620150
+name: Permanent upland streams
+synonym: "F1.1 Permanent upland streams" EXACT []
+is_a: elmo:3620218 ! Rivers and streams biome
+
+[Term]
+id: elmo:3620151
+name: Permanent lowland rivers
+synonym: "F1.2 Permanent lowland rivers" EXACT []
+is_a: elmo:3620218 ! Rivers and streams biome
+
+[Term]
+id: elmo:3620152
+name: Freeze-thaw rivers and streams
+synonym: "F1.3 Freeze-thaw rivers and streams" EXACT []
+is_a: elmo:3620218 ! Rivers and streams biome
+
+[Term]
+id: elmo:3620153
+name: Seasonal upland streams
+synonym: "F1.4 Seasonal upland streams" EXACT []
+is_a: elmo:3620218 ! Rivers and streams biome
+
+[Term]
+id: elmo:3620154
+name: Seasonal lowland rivers
+synonym: "F1.5 Seasonal lowland rivers" EXACT []
+is_a: elmo:3620218 ! Rivers and streams biome
+
+[Term]
+id: elmo:3620155
+name: Episodic arid rivers
+synonym: "F1.6 Episodic arid rivers" EXACT []
+is_a: elmo:3620218 ! Rivers and streams biome
+
+[Term]
+id: elmo:3620156
+name: Large lowland rivers
+synonym: "F1.7 Large lowland rivers" EXACT []
+is_a: elmo:3620218 ! Rivers and streams biome
+
+[Term]
+id: elmo:3620157
+name: Large permanent freshwater lakes
+synonym: "F2.1 Large permanent freshwater lakes" EXACT []
+is_a: elmo:3620219 ! Lakes biome
+
+[Term]
+id: elmo:3620158
+name: Small permanent freshwater lakes
+synonym: "F2.2 Small permanent freshwater lakes" EXACT []
+is_a: elmo:3620219 ! Lakes biome
+
+[Term]
+id: elmo:3620159
+name: Seasonal freshwater lakes
+synonym: "F2.3 Seasonal freshwater lakes" EXACT []
+is_a: elmo:3620219 ! Lakes biome
+
+[Term]
+id: elmo:3620160
+name: Freeze-thaw freshwater lakes
+synonym: "F2.4 Freeze-thaw freshwater lakes" EXACT []
+is_a: elmo:3620219 ! Lakes biome
+
+[Term]
+id: elmo:3620161
+name: Ephemeral freshwater lakes
+synonym: "F2.5 Ephemeral freshwater lakes" EXACT []
+is_a: elmo:3620219 ! Lakes biome
+
+[Term]
+id: elmo:3620162
+name: Permanent salt and soda lakes
+synonym: "F2.6 Permanent salt and soda lakes" EXACT []
+is_a: elmo:3620219 ! Lakes biome
+
+[Term]
+id: elmo:3620163
+name: Ephemeral salt lakes
+synonym: "F2.7 Ephemeral salt lakes" EXACT []
+is_a: elmo:3620219 ! Lakes biome
+
+[Term]
+id: elmo:3620164
+name: Artesian springs and oases
+synonym: "F2.8 Artesian springs and oases" EXACT []
+is_a: elmo:3620219 ! Lakes biome
+
+[Term]
+id: elmo:3620165
+name: Geothermal pools and wetlands
+synonym: "F2.9 Geothermal pools and wetlands" EXACT []
+is_a: elmo:3620219 ! Lakes biome
+
+[Term]
+id: elmo:3620166
+name: Subglacial lakes
+synonym: "F2.10 Subglacial lakes" EXACT []
+is_a: elmo:3620219 ! Lakes biome
+
+[Term]
+id: elmo:3620167
+name: Large reservoirs
+synonym: "F3.1 Large reservoirs" EXACT []
+is_a: elmo:3620220 ! Artificial wetlands biome
+
+[Term]
+id: elmo:3620168
+name: Rice paddies
+synonym: "F3.3 Rice paddies" EXACT []
+is_a: elmo:3620220 ! Artificial wetlands biome
+
+[Term]
+id: elmo:3620169
+name: Freshwater aquafarms
+synonym: "F3.4 Freshwater aquafarms" EXACT []
+is_a: elmo:3620220 ! Artificial wetlands biome
+
+[Term]
+id: elmo:3620170
+name: Canals, ditches and drains
+synonym: "F3.5 Canals, ditches and drains" EXACT []
+is_a: elmo:3620220 ! Artificial wetlands biome
+
+[Term]
+id: elmo:3620171
+name: Deepwater coastal inlets
+synonym: "FM1.1 Deepwater coastal inlets" EXACT []
+is_a: elmo:3620221 ! Semi-confined transitional waters biome
+
+[Term]
+id: elmo:3620172
+name: Permanently open riverine estuaries and bays
+synonym: "FM1.2 Permanently open riverine estuaries and bays" EXACT []
+is_a: elmo:3620221 ! Semi-confined transitional waters biome
+
+[Term]
+id: elmo:3620173
+name: Intermittently closed and open lakes and lagoons
+synonym: "FM1.3 Intermittently closed and open lakes and lagoons" EXACT []
+is_a: elmo:3620221 ! Semi-confined transitional waters biome
+
+[Term]
+id: elmo:3620174
+name: Seagrass meadows
+synonym: "M1.1 Seagrass meadows" EXACT []
+is_a: elmo:3620222 ! Marine shelf biome
+
+[Term]
+id: elmo:3620175
+name: Kelp forests
+synonym: "M1.2 Kelp forests" EXACT []
+is_a: elmo:3620222 ! Marine shelf biome
+
+[Term]
+id: elmo:3620176
+name: Photic coral reefs
+synonym: "M1.3 Photic coral reefs" EXACT []
+is_a: elmo:3620222 ! Marine shelf biome
+
+[Term]
+id: elmo:3620177
+name: Shellfish beds and reefs
+synonym: "M1.4 Shellfish beds and reefs" EXACT []
+is_a: elmo:3620222 ! Marine shelf biome
+
+[Term]
+id: elmo:3620178
+name: Photo-limited marine animal forests
+synonym: "M1.5 Photo-limited marine animal forests" EXACT []
+is_a: elmo:3620222 ! Marine shelf biome
+
+[Term]
+id: elmo:3620179
+name: Subtidal rocky reefs
+synonym: "M1.6 Subtidal rocky reefs" EXACT []
+is_a: elmo:3620222 ! Marine shelf biome
+
+[Term]
+id: elmo:3620180
+name: Subtidal sand beds
+synonym: "M1.7 Subtidal sand beds" EXACT []
+is_a: elmo:3620222 ! Marine shelf biome
+
+[Term]
+id: elmo:3620181
+name: Subtidal mud plains
+synonym: "M1.8 Subtidal mud plains" EXACT []
+is_a: elmo:3620222 ! Marine shelf biome
+
+[Term]
+id: elmo:3620182
+name: Upwelling zones
+synonym: "M1.9 Upwelling zones" EXACT []
+is_a: elmo:3620222 ! Marine shelf biome
+
+[Term]
+id: elmo:3620183
+name: Rhodolith/Maërl beds
+synonym: "M1.10 Rhodolith/Maërl beds" EXACT []
+is_a: elmo:3620222 ! Marine shelf biome
+
+[Term]
+id: elmo:3620184
+name: Epipelagic ocean waters
+synonym: "M2.1 Epipelagic ocean waters" EXACT []
+is_a: elmo:3620223 ! Pelagic ocean waters biome
+
+[Term]
+id: elmo:3620185
+name: Mesopelagic ocean waters
+synonym: "M2.2 Mesopelagic ocean waters" EXACT []
+is_a: elmo:3620223 ! Pelagic ocean waters biome
+
+[Term]
+id: elmo:3620186
+name: Bathypelagic ocean waters
+synonym: "M2.3 Bathypelagic ocean waters" EXACT []
+is_a: elmo:3620223 ! Pelagic ocean waters biome
+
+[Term]
+id: elmo:3620187
+name: Abyssopelagic ocean waters
+synonym: "M2.4 Abyssopelagic ocean waters" EXACT []
+is_a: elmo:3620223 ! Pelagic ocean waters biome
+
+[Term]
+id: elmo:3620188
+name: Sea ice
+synonym: "M2.5 Sea ice" EXACT []
+is_a: elmo:3620223 ! Pelagic ocean waters biome
+
+[Term]
+id: elmo:3620189
+name: Continental and island slopes
+synonym: "M3.1 Continental and island slopes" EXACT []
+is_a: elmo:3620224 ! Deep sea floors biome
+
+[Term]
+id: elmo:3620190
+name: Submarine canyons
+synonym: "M3.2 Submarine canyons" EXACT []
+is_a: elmo:3620224 ! Deep sea floors biome
+
+[Term]
+id: elmo:3620191
+name: Abyssal plains
+synonym: "M3.3 Abyssal plains" EXACT []
+is_a: elmo:3620224 ! Deep sea floors biome
+
+[Term]
+id: elmo:3620192
+name: Seamounts, ridges and plateaus
+synonym: "M3.4 Seamounts, ridges and plateaus" EXACT []
+is_a: elmo:3620224 ! Deep sea floors biome
+
+[Term]
+id: elmo:3620193
+name: Deepwater biogenic beds
+synonym: "M3.5 Deepwater biogenic beds" EXACT []
+is_a: elmo:3620224 ! Deep sea floors biome
+
+[Term]
+id: elmo:3620194
+name: Hadal trenches and troughs
+synonym: "M3.6 Hadal trenches and troughs" EXACT []
+is_a: elmo:3620224 ! Deep sea floors biome
+
+[Term]
+id: elmo:3620195
+name: Chemosynthetically-based ecosystems
+synonym: "M3.7 Chemosynthetically-based ecosystems" EXACT []
+is_a: elmo:3620224 ! Deep sea floors biome
+
+[Term]
+id: elmo:3620196
+name: Submerged artificial structures
+synonym: "M4.1 Submerged artificial structures" EXACT []
+is_a: elmo:3620225 ! Anthropogenic marine biome
+
+[Term]
+id: elmo:3620197
+name: Rocky shorelines
+synonym: "MT1.1 Rocky shorelines" EXACT []
+is_a: elmo:3620226 ! Shorelines biome
+
+[Term]
+id: elmo:3620198
+name: Muddy shorelines
+synonym: "MT1.2 Muddy shorelines" EXACT []
+is_a: elmo:3620226 ! Shorelines biome
+
+[Term]
+id: elmo:3620199
+name: Sandy shorelines
+synonym: "MT1.3 Sandy shorelines" EXACT []
+is_a: elmo:3620226 ! Shorelines biome
+
+[Term]
+id: elmo:3620200
+name: Boulder and cobble shores
+synonym: "MT1.4 Boulder and cobble shores" EXACT []
+is_a: elmo:3620226 ! Shorelines biome
+
+[Term]
+id: elmo:3620201
+name: Coastal shrublands and grasslands
+synonym: "MT2.1 Coastal shrublands and grasslands" EXACT []
+is_a: elmo:3620227 ! Supralittoral coast biome
+
+[Term]
+id: elmo:3620202
+name: Large seabird and pinniped colonies
+synonym: "MT2.2 Large seabird and pinniped colonies" EXACT []
+is_a: elmo:3620227 ! Supralittoral coast biome
+
+[Term]
+id: elmo:3620203
+name: Artificial shorelines
+synonym: "MT3.1 Artificial shorelines" EXACT []
+is_a: elmo:3620228 ! Anthropogenic shorelines biome
+
+[Term]
+id: elmo:3620204
+name: Coastal river deltas
+synonym: "MFT1.1 Coastal river deltas" EXACT []
+is_a: elmo:3620229 ! Brackish tidal biome
+
+[Term]
+id: elmo:3620205
+name: Intertidal forests and shrublands
+synonym: "MFT1.2 Intertidal forests and shrublands" EXACT []
+is_a: elmo:3620229 ! Brackish tidal biome
+
+[Term]
+id: elmo:3620206
+name: Coastal saltmarshes and reedbeds
+synonym: "MFT1.3 Coastal saltmarshes and reedbeds" EXACT []
+is_a: elmo:3620229 ! Brackish tidal biome
+
+[Term]
+id: elmo:3620207
+name: Tropical-subtropical forests biome
+def: "The tropical-subtropical forests biome is a biome that includes moderate to highly productive ecosystems with closed tree canopies occurring at lower latitudes north and south of the equator, with fragmented occurrences extend to the subtropics in suitable mesoclimates." [https://global-ecosystems.org/explore/biomes/T1]
+synonym: "T1 Tropical-subtropical forests biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620208
+name: Temperate-boreal forests and woodlands biome
+def: "The temperate-boreal forests and woodlands biome is a biome that includes moderate to highly productive tree-dominated systems with a wide range of physiognomic and structural expressions distributed from warm-temperate to boreal latitudes." [https://global-ecosystems.org/explore/biomes/T2]
+synonym: "T2 Temperate-boreal forests and woodlands biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620209
+name: Shrublands and shrubby woodlands biome
+def: "The shrublands and shrub-dominated woodlands biome is a biome that includes oligotrophic systems occurring on acidic, sandy soils that are often shallow or skeletal, distributed across al llandmasses outside the polar regions." [https://global-ecosystems.org/explore/biomes/T3]
+synonym: "T3 Shrublands and shrubby woodlands biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620210
+name: Savannas and grasslands biome
+def: "The savannas and grasslands biome is a biome that has ecological functions closely linked to a mostly continuous ground layer of grasses that contribute moderate to very high levels of primary productivity driven by strongly seasonal water surplus and deficit cycles." [https://global-ecosystems.org/explore/biomes/T4]
+synonym: "T4 Savannas and grasslands biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620211
+name: Deserts and semi-deserts biome
+def: "The deserts and semi-deserts biome is a biome that includes low to very low biomass ecosystems occurring in arid or semi-arid climates, principally associated with the subtropical high-pressure belts and major continental rain shadows." [https://global-ecosystems.org/explore/biomes/T5]
+synonym: "T5 Deserts and semi-deserts biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620212
+name: Polar/alpine (cryogenic) biome
+def: "the polar/alpine biome is a biome that encompasses the extensive Arctic and Antarctic regions as well as high mountainous areas across all continental land masses, with low or very low primary productivity." [https://global-ecosystems.org/explore/biomes/T6]
+synonym: "T6 Polar/alpine (cryogenic) biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620213
+name: Intensive land-use biome
+def: "The intensive land-use biome is a biome that includes major anthropogenic enterprises of cropping, pastoralism, plantation farming, and urbanisation. Human intervention is a dominating influence on this biome, also known as the “anthrome”." [https://global-ecosystems.org/explore/biomes/T7]
+synonym: "T7 Intensive land-use biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620214
+name: Anthropogenic subterranean voids biome
+def: "The anthropogenic subterranean voids biome is a biome that  includes a single functional group of ecosystems that owe their genesis to excavation by humans. They include underground mines, transport tunnels, tombs, defence and energy installations, and other infrastructure." [https://global-ecosystems.org/explore/biomes/S2]
+synonym: "S2 Anthropogenic subterranean voids biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620215
+name: Subterranean freshwaters biome
+def: "The subterranean freshwaters biome is a biome that includes streams, small lakes and aquifers beneath the earth’s surface and potentially has the largest volume of water of all the freshwater biomes." [https://global-ecosystems.org/explore/biomes/SF1]
+synonym: "SF1 Subterranean freshwaters biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620216
+name: Anthropogenic subterranean freshwaters biome
+def: "The anthropogenic subterranean freshwaters biome is a biome that includes aquatic systems in underground canals, drains, sewers, water pipes, and flooded mines constructed by humans. These are usually well connected to surface waters." [https://global-ecosystems.org/explore/biomes/SF2]
+synonym: "SF2 Anthropogenic subterranean freshwaters biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620217
+name: Palustrine wetlands biome
+def: "The palustrine wetlands biome is a biome that includes vegetated floodplains, groundwater seeps, and mires with permanent or intermittent surface water. Although water and light are abundant at least periodically, saturation of the soil may result in oxygen deprivation below the ground. This suppresses microbial activity and, in many systems, production exceeds decomposition, resulting in peat accumulation." [https://global-ecosystems.org/explore/biomes/TF1]
+synonym: "TF1 Palustrine wetlands biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620218
+name: Rivers and streams biome
+def: "The rivers and streams biome is a biome that includes lotic (running water) ecosystems, flowing from elevated uplands or underground springs to deltas, estuaries, and lakes. They are defined primarily by their linear structure, unidirectional flow regimes, and close interaction with the surrounding landscape." [https://global-ecosystems.org/explore/biomes/F1]
+synonym: "F1 Rivers and streams biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620219
+name: Lakes biome
+def: "The lakes biome is a biome that includes lentic ecosystems defined by their still waters. They vary in area, depth, water regime, and connectivity to other aquatic systems across a global distribution." [https://global-ecosystems.org/explore/biomes/F2]
+synonym: "F2 Lakes biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620220
+name: Artificial wetlands biome
+def: "The artificial wetlands biome is a biome that includes built structures that hold or transfer water for human use, treatment, or disposal, including large storage reservoirs, farm dams or ponds, recreational and ornamental wetlands, rice paddies, freshwater aquafarms, wastewater storages and treatment ponds, and canals, ditches and drains." [https://global-ecosystems.org/explore/biomes/F3]
+synonym: "F3 Artificial wetlands biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620221
+name: Semi-confined transitional waters biome
+def: "The semi-confined transitional waters biome is a biome that includes coastal inlets that are influenced by inputs of both fresh and marine water from terrestrial catchments and ocean tides, waves, and currents. They include deep-water coastal inlets or fjords mostly restricted to high latitudes, as well as estuaries, bays, and lagoons, which are scattered around coastlines throughout the world." [https://global-ecosystems.org/explore/biomes/FM1]
+synonym: "FM1 Semi-confined transitional waters biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620222
+name: Marine shelf biome
+def: "The marine shelf biome is a biome that is distributed globally between the shoreline and deep sea-floor biomes and is dominated by benthic productivity. It includes ecosystems with biogenic substrates (such as seagrass meadows, kelp forests, oyster beds, and coral reefs) and minerogenic substrates including rocky reefs, sandy bottoms, and muddy bottoms." [https://global-ecosystems.org/explore/biomes/M1]
+synonym: "M1 Marine shelf biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620223
+name: Pelagic ocean waters biome
+def: "The pelagic ocean waters biome is a biome that comprises the open-ocean water column across all latitudes." [https://global-ecosystems.org/explore/biomes/M2]
+synonym: "M2 Pelagic ocean waters biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620224
+name: Deep sea floors biome
+def: "The deep sea floors biome is a biome that includes the entire oceanic benthos below ~250 m depth, where there is not enough light to support primary productivity through photosynthesis. It extends from the upper bathyal seafloor to the deepest parts of the ocean, at just under 11 km in the Mariana Trench." [https://global-ecosystems.org/explore/biomes/M3]
+synonym: "M3 Deep sea floors biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620225
+name: Anthropogenic marine biome
+def: "The anthropogenic marine biome is a biome that includes constructed, deposited or dumped artificial structures in the oceans that either confine managed marine organisms or attract marine biota that would not otherwise occupy such locations." [https://global-ecosystems.org/explore/biomes/M4]
+synonym: "M4 Anthropogenic marine biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620226
+name: Shorelines biome
+def: "The shorelines biome is a biome that includes naturally formed, intertidal abiogenic habitats situated at the interface between land and sea. The distribution of the biome spans all latitudes (temperate to polar) at which landmasses are present." [https://global-ecosystems.org/explore/biomes/MT1]
+synonym: "MT1 Shorelines biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620227
+name: Supralittoral coast biome
+def: "The supralittoral coastal biome includes the landward extent of the transition from marine to terrestrial biomes. It is elevated above the direct influence of waves and tides (see the Shoreline biome) and beyond the direct influence of freshwater seepage or rivers (see brackish tidal biota). Supratidal coastal ecosystems extend around all the world’s land masses, occupying a fringe from tens of metres to a few kilometres wide and covering the entire extent of many small islands." [https://global-ecosystems.org/explore/biomes/MT2]
+synonym: "MT2 Supralittoral coast biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620228
+name: Anthropogenic shorelines biome
+def: "The anthropogenic shorelines biome is a biome that is distributed globally where urbanised and industrial areas adjoin the coast, and includes some more remote structures such as artificial islands. It includes marine interfaces constructed from hard, smooth surfaces, including concrete, timber, lithic blocks, and earthen fill, adjoining, extending or replacing natural shores, or floating in proximity to them." [https://global-ecosystems.org/explore/biomes/MT3]
+synonym: "MT3 Anthropogenic shorelines biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620229
+name: Brackish tidal biome
+def: "The brackish tidal biome is a biome that is associated with prograding depositional shorelines at the interface of terrestrial, freshwater, and marine realms. The relative influences of marine, freshwater, and terrestrial processes vary from strongly fluvial deltas to marine-dominated intertidal forests and terrestrial-dominated coastal saltmarsh." [https://global-ecosystems.org/explore/biomes/MFT1]
+synonym: "MFT1 Brackish tidal biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620230
+name: Tropical alpine grasslands and shrublands
+synonym: "T6.5 Tropical alpine grasslands and shrublands" EXACT []
+is_a: elmo:3620212 ! Polar/alpine (cryogenic) biome
+
+[Term]
+id: elmo:3620231
+name: Annual croplands
+synonym: "T7.1 Annual croplands" EXACT []
+is_a: elmo:3620213 ! Intensive land-use biome
+
+[Term]
+id: elmo:3620232
+name: Constructed lacustrine wetlands
+synonym: "F3.2 Constructed lacustrine wetlands" EXACT []
+is_a: elmo:3620220 ! Artificial wetlands biome
+
+[Term]
+id: elmo:3620233
+name: Marine aquafarms
+synonym: "M4.2 Marine aquafarms" EXACT []
+is_a: elmo:3620225 ! Anthropogenic marine biome
+
+[Term]
+id: elmo:3620234
+name: Subterranean lithic biome
+def: "The subterranean lithic biome is a biome that includes non-aquatic lithic systems beneath the earth’s surface where sunlight is absent or of insufficient intensity to sustain photosynthesis." [https://global-ecosystems.org/explore/biomes/S1]
+synonym: "S1 Subterranean lithic biome" EXACT []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: elmo:3620235
+name: biome
+def: "An ecosystem delineated by broad features of structure and common major ecological drivers, typically global in scale." [https://global-ecosystems.org/page/typology]
+is_a: ENVO:01001110 ! ecosystem
 
 [Term]
 id: elmo:3620500
@@ -2028,235 +2823,6 @@ def: "A chemical ecosystem management process in which poison is introduced to r
 is_a: elmo:3620500 ! chemical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
 
-[Term]
-id: elmo:3630000
-name: lowland
-def: "A landform which has an elevation lower than 200m above sea level." [https://en.wikipedia.org/wiki/Upland_and_lowland]
-is_a: ENVO:01001884 ! surface landform
-
-[Term]
-id: elmo:3630001
-name: plant community
-def: "An environmental system which consists of a set of plants at some stage in the community assembly process." []
-is_a: ENVO:01000254 ! environmental system
-
-[Term]
-id: elmo:3630002
-name: rainforest plant community
-def: "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy, is subject to high humidity and rainfall and includes populations of epiphytes, lianas and vegetation adapted to high moisture." []
-is_a: elmo:3630006 ! forest plant community
-
-[Term]
-id: elmo:3630003
-name: ecosystem functional group
-def: "A group of related ecosystems within a biome that share common ecological drivers, which in turn promote similar biotic traits that characterise the group." [doi:10.1038/s41586-022-05318-4, https://global-ecosystems.org/page/typology]
-is_a: ENVO:01001110 ! ecosystem
-
-[Term]
-id: elmo:3630004
-name: tropical lowland rainforests
-def: "An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located in a lowland landform." [https://global-ecosystems.org/explore/groups/T1.1]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630000 ! has part lowland
-intersection_of: BFO:0000051 elmo:3630002 ! has part rainforest plant community
-intersection_of: BFO:0000051 ENVO:01000204 ! has part tropical
-relationship: BFO:0000051 elmo:3630000 ! has part lowland
-relationship: BFO:0000051 elmo:3630002 ! has part rainforest plant community
-relationship: BFO:0000051 ENVO:01000204 ! has part tropical
-
-[Term]
-id: elmo:3630005
-name: tropical dry forests and thickets
-def: "An ecosystem functional group which has a forest plant community, experiences tropical climactic conditions and seasonally dry conditions." [https://global-ecosystems.org/explore/groups/T1.2]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630006 ! has part forest plant community
-intersection_of: BFO:0000051 elmo:3630007 ! has part seasonally dry
-intersection_of: BFO:0000051 ENVO:01000204 ! has part tropical
-relationship: BFO:0000051 elmo:3630006 ! has part forest plant community
-relationship: BFO:0000051 elmo:3630007 ! has part seasonally dry
-relationship: BFO:0000051 ENVO:01000204 ! has part tropical
-
-[Term]
-id: elmo:3630006
-name: forest plant community
-def: "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy." []
-synonym: "thicket" NARROW []
-is_a: elmo:3630001 ! plant community
-
-[Term]
-id: elmo:3630007
-name: seasonally dry
-def: "An environmental condition in which an area receives ~1800 mm of rainfall per year, with a period of 3 to 6 months receiving less than 100 mm per month." [https://global-ecosystems.org/explore/groups/T1.2]
-synonym: "arid" RELATED []
-is_a: ENVO:01000203 ! environmental condition
-
-[Term]
-id: elmo:3630008
-name: subtropical dry forests and thickets
-def: "An ecosystem functional group which has a forest plant community, experiences subtropical climactic conditions and seasonally dry conditions." [https://global-ecosystems.org/explore/groups/T1.2]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630006 ! has part forest plant community
-intersection_of: BFO:0000051 elmo:3630009 ! has part subtropical
-intersection_of: BFO:0000051 ENVO:01000204 ! has part tropical
-relationship: BFO:0000051 elmo:3630006 ! has part forest plant community
-relationship: BFO:0000051 elmo:3630009 ! has part subtropical
-relationship: BFO:0000051 ENVO:01000204 ! has part tropical
-
-[Term]
-id: elmo:3630009
-name: subtropical
-def: "An environmental condition in which an area experiences hot summers and mild winters, and is located to the immediate north or south of the tropical zone." [https://en.wikipedia.org/wiki/Subtropics]
-is_a: ENVO:01000203 ! environmental condition
-
-[Term]
-id: elmo:3630010
-name: tropical montane rainforests
-def: "An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located at a montane altitude." [https://global-ecosystems.org/explore/groups/T1.3]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630002 ! has part rainforest plant community
-intersection_of: BFO:0000051 ENVO:01000204 ! has part tropical
-intersection_of: BFO:0000051 ENVO:01000342 ! has part montane
-relationship: BFO:0000051 elmo:3630002 ! has part rainforest plant community
-relationship: BFO:0000051 ENVO:01000204 ! has part tropical
-relationship: BFO:0000051 ENVO:01000342 ! has part montane
-
-[Term]
-id: elmo:3630011
-name: subtropical montane rainforests
-def: "An ecosystem functional group which has a rainforest plant community, experiences subtropical conditions and is located at a montane altitude." [https://global-ecosystems.org/explore/groups/T1.3]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630002 ! has part rainforest plant community
-intersection_of: BFO:0000051 elmo:3630009 ! has part subtropical
-intersection_of: BFO:0000051 ENVO:01000342 ! has part montane
-relationship: BFO:0000051 elmo:3630002 ! has part rainforest plant community
-relationship: BFO:0000051 elmo:3630009 ! has part subtropical
-relationship: BFO:0000051 ENVO:01000342 ! has part montane
-
-[Term]
-id: elmo:3630012
-name: subtropical lowland rainforests
-def: "An ecosystem functional group which has a rainforest plant community, experiences subtropical climactic conditions and is located in a lowland landform." [https://global-ecosystems.org/explore/groups/T1.1]
-is_a: elmo:3630003 ! ecosystem functional group
-
-[Term]
-id: elmo:3630013
-name: heath plant community
-def: "A plant community which consists mainly of open, low-growing woody vegetation." [https://en.wikipedia.org/wiki/Heath]
-synonym: "heathlands" RELATED []
-is_a: elmo:3630001 ! plant community
-
-[Term]
-id: elmo:3630014
-name: tropical heath forests
-def: "An ecosystem functional group which has some heath and some forest plant communities and experiences tropical climactic conditions." [https://global-ecosystems.org/explore/groups/T1.4]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630006 ! has part forest plant community
-intersection_of: BFO:0000051 elmo:3630013 ! has part heath plant community
-intersection_of: BFO:0000051 ENVO:01000204 ! has part tropical
-relationship: BFO:0000051 elmo:3630006 ! has part forest plant community
-relationship: BFO:0000051 elmo:3630013 ! has part heath plant community
-relationship: BFO:0000051 ENVO:01000204 ! has part tropical
-
-[Term]
-id: elmo:3630015
-name: temperate high montane forests
-def: "An ecosystem functional group which consists of a forest plant community, experiences temperate climactic conditions and is located in an upper montane region." [https://global-ecosystems.org/explore/groups/T2.1]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630006 ! has part forest plant community
-intersection_of: BFO:0000051 ENVO:01000206 ! has part temperate
-intersection_of: BFO:0000051 ENVO:01000345 ! has part upper montane
-relationship: BFO:0000051 elmo:3630006 ! has part forest plant community
-relationship: BFO:0000051 ENVO:01000206 ! has part temperate
-relationship: BFO:0000051 ENVO:01000345 ! has part upper montane
-
-[Term]
-id: elmo:3630016
-name: deciduous plant community
-def: "A plant community dominated by broadleaf deciduous trees." [https://global-ecosystems.org/explore/groups/T2.2]
-is_a: elmo:3630006 ! forest plant community
-
-[Term]
-id: elmo:3630017
-name: deciduous temperate forests
-def: "An ecosystem functional group which has a broadleaf forest plant community and experiences temperate climactic conditions." [https://global-ecosystems.org/explore/groups/T2.2]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630016 ! has part deciduous plant community
-intersection_of: BFO:0000051 ENVO:01000206 ! has part temperate
-relationship: BFO:0000051 elmo:3630016 ! has part deciduous plant community
-relationship: BFO:0000051 ENVO:01000206 ! has part temperate
-
-[Term]
-id: elmo:3630018
-name: oceanic cool temperate rainforests
-def: "An ecosystem functional group which has a rainforest plant community and experiences oceanic temperate climate conditions." [https://global-ecosystems.org/explore/groups/T2.3]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630002 ! has part rainforest plant community
-intersection_of: BFO:0000051 ENVO:01000380 ! has part oceanic temperate
-relationship: BFO:0000051 elmo:3630002 ! has part rainforest plant community
-relationship: BFO:0000051 ENVO:01000380 ! has part oceanic temperate
-
-[Term]
-id: elmo:3630019
-name: warm temperate laurophyll forests
-def: "An ecosystem functional group which has a laurel forest plant community and experiences temperate climactic conditions." [https://global-ecosystems.org/explore/groups/T2.4]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630020 ! has part laurel forest
-intersection_of: BFO:0000051 ENVO:01000206 ! has part temperate
-relationship: BFO:0000051 elmo:3630020 ! has part laurel forest
-relationship: BFO:0000051 ENVO:01000206 ! has part temperate
-
-[Term]
-id: elmo:3630020
-name: laurel forest
-def: "A plant community characterized by broadleaf tree species with evergreen, glossy, elongated leaves." [https://en.wikipedia.org/wiki/Laurel_forest]
-synonym: "laurisilva" EXACT []
-synonym: "laurissilva" EXACT []
-synonym: "laurophyll forest" EXACT []
-is_a: elmo:3630006 ! forest plant community
-
-[Term]
-id: elmo:3630021
-name: fire-adapted ecosystem
-def: "An ecosystem which has a history of regular fires that reset the seccessional state of the ecosystem and vegetation adapted to survive or require regular fire." [https://en.wikipedia.org/wiki/Pyric_herbivory]
-synonym: "pyric" EXACT []
-is_a: ENVO:01001110 ! ecosystem
-
-[Term]
-id: elmo:3630022
-name: humid temperate
-def: "A temperate condition which features frequent precipitation and humid conditions." [https://global-ecosystems.org/explore/groups/T2.5]
-is_a: ENVO:01000206 ! temperate
-
-[Term]
-id: elmo:3630023
-name: temperate pyric humid forests
-def: "An ecosystem functional group which has a forest plant community, experiences wet temperate conditions and has vegetation that is adapted to cycles of fire." [https://global-ecosystems.org/explore/groups/T2.5]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630006 ! has part forest plant community
-intersection_of: BFO:0000051 elmo:3630021 ! has part fire-adapted ecosystem
-intersection_of: BFO:0000051 elmo:3630022 ! has part humid temperate
-relationship: BFO:0000051 elmo:3630006 ! has part forest plant community
-relationship: BFO:0000051 elmo:3630021 ! has part fire-adapted ecosystem
-relationship: BFO:0000051 elmo:3630022 ! has part humid temperate
-
-[Term]
-id: elmo:3630024
-name: temperate pyric sclerophyll forests and woodlands
-def: "An ecosystem functional group which has a sclerophyll forest plant community, experiences temperate climactic conditions and has vegetation that is adapted to cycles of fire." [https://global-ecosystems.org/explore/groups/T2.6]
-is_a: elmo:3630003 ! ecosystem functional group
-intersection_of: BFO:0000051 elmo:3630021 ! has part fire-adapted ecosystem
-intersection_of: BFO:0000051 elmo:3630025 ! has part sclerophyll forest plant community
-intersection_of: BFO:0000051 ENVO:01000206 ! has part temperate
-relationship: BFO:0000051 elmo:3630021 ! has part fire-adapted ecosystem
-relationship: BFO:0000051 elmo:3630025 ! has part sclerophyll forest plant community
-relationship: BFO:0000051 ENVO:01000206 ! has part temperate
-
-[Term]
-id: elmo:3630025
-name: sclerophyll forest plant community
-def: "A forest plant community that consists mainly of sclerophyll woody plants, which are drought-adapted and feature stiff, leathery leaves." [https://en.wikipedia.org/wiki/Sclerophyll]
-is_a: elmo:3630006 ! forest plant community
-
 [Typedef]
 id: BFO:0000050
 name: part of
@@ -2573,7 +3139,7 @@ id: RO:0002086
 name: ends after
 comment: X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)
 subset: ro-eco
-property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-7073-9172
 is_transitive: true
 is_a: RO:0002222 ! temporally related to
 
@@ -2581,7 +3147,7 @@ is_a: RO:0002222 ! temporally related to
 id: RO:0002087
 name: immediately preceded by
 comment: X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)
-property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-7073-9172
 property_value: IAO:0000118 "starts_at_end_of" xsd:string
 is_a: BFO:0000062 ! preceded by
 inverse_of: RO:0002090 ! immediately precedes
@@ -2591,7 +3157,6 @@ id: RO:0002090
 name: immediately precedes
 comment: X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)
 subset: ro-eco
-property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
 property_value: IAO:0000117 https://orcid.org/0000-0002-7073-9172
 property_value: IAO:0000118 "ends_at_start_of" xsd:string
 property_value: IAO:0000118 "meets" xsd:string

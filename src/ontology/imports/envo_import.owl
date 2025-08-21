@@ -7,14 +7,14 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/imports/envo_import.owl>
-<https://w3id.org/elmo/elmo/releases/2025-06-10/imports/envo_import.owl>
+<https://w3id.org/elmo/elmo/releases/2025-08-21/imports/envo_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/contributor> <https://orcid.org/0000-0002-2996-719X>)
 Annotation(<http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-4366-3088>)
 Annotation(<http://purl.org/dc/elements/1.1/creator> "http://orcid.org/0000-0002-6601-2165")
 Annotation(<http://purl.org/dc/elements/1.1/creator> "http://orcid.org/0000-0002-8343-612X")
 Annotation(<http://purl.org/dc/elements/1.1/creator> "http://orcid.org/0000-0003-1604-1512")
 Annotation(<http://purl.org/dc/elements/1.1/description> "ENVO is an ontology which represents knowledge about environments,environmental processes, ecosystems, habitats, and related entities")
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/envo/releases/2025-02-05/envo.owl>)
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/envo/releases/2025-08-19/envo.owl>)
 Annotation(<http://purl.org/dc/elements/1.1/title> "The Environment Ontology")
 Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(<http://usefulinc.com/ns/doap#GitRepository> "https://github.com/EnvironmentOntology/envo/"^^xsd:anyURI)
@@ -25,24 +25,19 @@ Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.o
 Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/envo/modules/entity_attribute_location.owl>) VersionIRI(<null>))) [Axioms: 168 Logical Axioms: 29]")
 Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/envo/modules/entity_quality_location.owl>) VersionIRI(<null>))) [Axioms: 40 Logical Axioms: 6]")
 Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/envo/modules/process_attribute.owl>) VersionIRI(<null>))) [Axioms: 21 Logical Axioms: 2]")
-Annotation(owl:versionInfo "2025-02-05")
-Annotation(owl:versionInfo "2025-06-10")
+Annotation(owl:versionInfo "2025-08-19")
+Annotation(owl:versionInfo "2025-08-21")
 Annotation(<http://xmlns.com/foaf/0.1/homepage> "http://environmentontology.org/"^^xsd:anyURI)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000191>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000203>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000204>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000206>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000254>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000342>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000343>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000345>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000380>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001110>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001170>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001436>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001884>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001886>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_02500000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001018>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
@@ -91,7 +86,6 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
 Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/homepage>))
 
 ############################
@@ -111,7 +105,6 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01003004> "d
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_00000191> (solid astronomical body part)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Landform") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_00000191> "A part of an astronomical body which is primarily composed of solid material."@en)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_00000191> "EcoLexicon:landform")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_00000191> "EcoLexicon:landforms")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_00000191> "FTT:754")
@@ -119,79 +112,50 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_00000191> "SWEETRealm:Landform")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_00000191> "TGN:21400")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_00000191> "TGN:21401")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ADL:FTT") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_00000191> "geological feature")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_00000191> "landform")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_00000191> "physiographic feature")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_00000191> "solid astronomical body part")
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_01000203> (environmental condition)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/ENVO_01000203> <http://purl.obolibrary.org/obo/IAO_0000121>)
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "DOI:10.1186/2041-1480-4-43") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000203> "An environmental condition is a range of a determinate quality or combination of qualities that are present in an environmental system.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ENVO_01000203> "ORCID:0000-0002-4366-3088")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000203> "environmental condition")
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000203> <http://purl.obolibrary.org/obo/PATO_0001018>)
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_01000204> (tropical)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Tropical") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000204> "A tropical condition is an environmental condition in which an environmental system receives high yearly solar irradiance per unit area and, on Earth, the Sun reaches a subsolar point at least once during the solar year. This results in a hot and moist year-round climate at low elevations, which have a monthly average temperature above 18 degrees Celsius.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ENVO_01000204> "ORCID:0000-0002-4366-3088")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_01000204> "EcoLexicon:the_tropics")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_01000204> "SPIRE:Tropical")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000204> "tropical")
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000204> <http://purl.obolibrary.org/obo/ENVO_01000203>)
 
-# Class: <http://purl.obolibrary.org/obo/ENVO_01000206> (temperate)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Temperate_climate") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000206> "A temperate condition is an environmental condition in which an environmental system receives less solar irradiance than those with subpolar conditions, but greater than those with subtropical conditions.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_01000206> "SPIRE:Temperate")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Temperate_climate") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_01000206> "tepid climate")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000206> "temperate")
-SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000206> <http://purl.obolibrary.org/obo/ENVO_01000203>)
-
 # Class: <http://purl.obolibrary.org/obo/ENVO_01000254> (environmental system)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "DOI:10.1186/2041-1480-4-43") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000254> "A system which has the disposition to environ one or more material entities.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_01000254> "EcoLexicon:environment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_01000254> "environment")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000254> "environmental system")
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_01000342> (montane)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Altitudinal_zonation") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000342> "An altitudinal condition which inheres in a bearer by virtue of the bearer being located at an altitude between mid-altitude forests and the tree line.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ENVO_01000342> "ORCID:0000-0002-4366-3088")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_01000342> "LTER:350")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000342> "montane")
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000342> <http://purl.obolibrary.org/obo/ENVO_01000343>)
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_01000343> (altitudinal condition)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Altitudinal_zonation") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000343> "An altitudinal condition is an environmental condition in which ranges of factors such as temperature, humidity, soil composition, solar irradiation, and tree density vary with ranges in altitude.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ENVO_01000343> "ORCID:0000-0002-4366-3088")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000343> "altitudinal condition")
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000343> <http://purl.obolibrary.org/obo/ENVO_01000203>)
 
-# Class: <http://purl.obolibrary.org/obo/ENVO_01000345> (upper montane)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000345> "An upper montane condition is a montane condition in which an altitude range falls immediately below the tree line.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000345> "upper montane")
-SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000345> <http://purl.obolibrary.org/obo/ENVO_01000342>)
-
-# Class: <http://purl.obolibrary.org/obo/ENVO_01000380> (oceanic temperate)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Temperate_zone") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000380> "An oceanic temperate condition is a temperate condition which is strongly influenced by oceans and oceanic winds. Summers are cool and winters are cool, but not cold, and there is little frozen precipitation at lower elevations.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000380> "oceanic temperate")
-SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000380> <http://purl.obolibrary.org/obo/ENVO_01000206>)
-
 # Class: <http://purl.obolibrary.org/obo/ENVO_01001110> (ecosystem)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Ecosystem") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01001110> "An environmental system which includes both living and non-living components.")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://vocab.lternet.edu/vocab/vocab/index.php?tema=173&/ecosystems") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_01001110> "LTER:173")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001110> "ecosystem"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001110> <http://purl.obolibrary.org/obo/ENVO_01000254>)
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_01001170> (active ecosystem management process)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.iucn.org/theme/protected-areas/about/protected-areas-categories/category-iv-habitatspecies-management-area") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01001170> "A process during which an ecosystem, its parts, or the processes it participates in are modified by human intervention to accomplish an objective.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_01001170> "ecosystem management")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#created_by> "https://orcid.org/0000-0002-9620-2832") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "www.awi.de/internas") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_01001170> "Umweltmaßnahme"@de)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_01001170> "environmental management")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001170> "active ecosystem management process"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001170> <http://purl.obolibrary.org/obo/ENVO_02500000>)
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001170> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/ENVO_01001110>))
@@ -204,19 +168,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <h
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001436> "planned environmental usage process"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001436> <http://purl.obolibrary.org/obo/ENVO_02500000>)
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001436> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01001170>))
-
-# Class: <http://purl.obolibrary.org/obo/ENVO_01001884> (surface landform)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01001884> "A landform which occurs on the surface of an astronomical body."@en)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_01001884> "geographic feature"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001884> "surface landform"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001884> <http://purl.obolibrary.org/obo/ENVO_01001886>)
-
-# Class: <http://purl.obolibrary.org/obo/ENVO_01001886> (landform)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Landform>) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01001886> "A solid astronomical body part which has been formed from and is composed primarily of the matter of that astronomical body."@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001886> "landform"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001886> <http://purl.obolibrary.org/obo/ENVO_00000191>)
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_02500000> (environmental system process)
 

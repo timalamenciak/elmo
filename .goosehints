@@ -1,0 +1,62 @@
+# .goosehints for ELMO (EcoLink Model Ontology)
+
+## Project Overview
+The 
+
+## Repository Structure
+- `elmo.owl` - Main release file (latest version of OBI)
+- `src/ontology/` - Source files for ontology development
+  - `obi-edit.owl` - Main ELMO OWL file for manual editing
+  - `templates/` - ROBOT template files (TSV format) for different ELMO components
+  - `modules/` - Generated modules from ROBOT templates
+- `views/` - Specialized views and formats (including elmo.obo format)
+- `Makefile` - Build scripts and automation
+
+## Robot Templates Overview
+The `src/ontology/templates/` directory contains numerous TSV template files that define terms using the ROBOT template system. Key templates include:
+
+### Major Template Categories:
+
+1. **Ecosystems** (`ecosystems.tsv`)
+   - Comprehensive list of ecosystem types
+   - Includes IUCN Global Ecosystem Typology terms
+   
+2. **Interventions** (`interventions.tsv`)
+   - Contains terms describing human-led interventions into ecosystems.
+   - Each intervention is described as a process or plan modification.
+
+
+### Template Structure Pattern:
+All templates follow a consistent column structure:
+- `ontology ID` - ELMO term identifier (e.g., ELMO:0000001)
+- `label` - Primary term name
+- `definition` - Formal definition with source
+- `alternative label` - Synonyms and alternative names
+- `parent class` - Hierarchical relationships
+- Logical definition columns (varies by template type)
+- Curation metadata (editor, status, notes)
+
+## Development Workflow
+
+### Viewing github issues
+
+You can view issues like this:
+
+`gh issue view NNN --repo timalamenciak/elmo`
+
+But you should NEVER try and update an issue or make a commit or PR.
+
+### Term Editing Approaches:
+
+You should use robot-mcp to edit the template TSVs. There is no need to edit any other file generally.
+
+For new terms, ALWAYS use IDs in the ELMO:330xxxxx range
+
+After making edits to a template TSV, you can compile the corresponding OWL, to check for validity.
+E.g. if you edit `FOO.tsv`, then try:
+
+`make src/ontology/modules/FOO.owl`
+
+This should be done from the `obi` folder
+
+Note this may not work on all platforms, check with the user before installing new software.

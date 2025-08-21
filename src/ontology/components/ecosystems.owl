@@ -7,243 +7,1002 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/components/ecosystems.owl>
-<https://w3id.org/elmo/elmo/releases/2025-06-10/components/ecosystems.owl>
-Annotation(owl:versionInfo "2025-06-10")
+<https://w3id.org/elmo/elmo/releases/2025-08-21/components/ecosystems.owl>
+Annotation(owl:versionInfo "2025-08-21")
 
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000191>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000203>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000204>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000206>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000254>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000342>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000345>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000380>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001110>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001884>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001886>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630000>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630001>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630002>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630003>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630004>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630005>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630006>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630007>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630008>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630009>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630010>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630011>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630012>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630013>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630014>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630015>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630016>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630017>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630018>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630019>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630020>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630021>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630022>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630023>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630024>))
-Declaration(Class(<https://w3id.org/elmo/elmo_3630025>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620100>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620101>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620102>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620103>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620104>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620105>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620106>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620107>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620108>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620109>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620110>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620111>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620112>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620113>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620114>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620115>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620116>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620117>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620118>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620119>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620120>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620121>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620122>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620123>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620124>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620125>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620126>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620127>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620128>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620129>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620130>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620131>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620132>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620133>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620134>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620135>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620136>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620137>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620138>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620139>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620140>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620141>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620142>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620143>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620144>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620145>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620146>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620147>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620148>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620149>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620150>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620151>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620152>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620153>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620154>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620155>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620156>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620157>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620158>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620159>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620160>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620161>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620162>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620163>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620164>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620165>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620166>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620167>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620168>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620169>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620170>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620171>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620172>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620173>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620174>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620175>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620176>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620177>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620178>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620179>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620180>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620181>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620182>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620183>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620184>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620185>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620186>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620187>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620188>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620189>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620190>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620191>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620192>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620193>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620194>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620195>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620196>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620197>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620198>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620199>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620200>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620201>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620202>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620203>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620204>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620205>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620206>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620207>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620208>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620209>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620210>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620211>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620212>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620213>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620214>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620215>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620216>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620217>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620218>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620219>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620220>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620221>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620222>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620223>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620224>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620225>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620226>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620227>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620228>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620229>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620230>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620231>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620232>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620233>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620234>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3620235>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
-Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
-
 
 
 ############################
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/ENVO_01001884> (surface landform)
+# Class: <https://w3id.org/elmo/elmo_3620100> (Tropical-subtropical lowland rainforests)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001884> "surface landform"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001884> <http://purl.obolibrary.org/obo/ENVO_01001886>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620100> "T1.1"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620100> "T1.1 Tropical-subtropical lowland rainforests"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620100> "TT1.a1"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620100> "Tropical Lowland Rainforest"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620100> "Tropical-subtropical lowland rainforests"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620100> <https://w3id.org/elmo/elmo_3620207>)
 
-# Class: <http://purl.obolibrary.org/obo/ENVO_01001886> (landform)
+# Class: <https://w3id.org/elmo/elmo_3620101> (Tropical-subtropical dry forests and thickets)
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001886> "landform"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001886> <http://purl.obolibrary.org/obo/ENVO_00000191>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620101> "T1.2"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620101> "T1.2 Tropical-subtropical dry forests and thickets"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620101> "Tropical-subtropical dry forests and thickets"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620101> <https://w3id.org/elmo/elmo_3620207>)
 
-# Class: <https://w3id.org/elmo/elmo_3630000> (lowland)
+# Class: <https://w3id.org/elmo/elmo_3620102> (Tropical-subtropical montane rainforests)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Upland_and_lowland>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630000> "A landform which has an elevation lower than 200m above sea level."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630000> "lowland"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630000> <http://purl.obolibrary.org/obo/ENVO_01001884>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620102> "T1.3"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620102> "T1.3 Tropical-subtropical montane rainforests"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620102> "TT1.a2"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620102> "Tropical Montane Rainforest"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620102> "Tropical-subtropical montane rainforests"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620102> <https://w3id.org/elmo/elmo_3620207>)
 
-# Class: <https://w3id.org/elmo/elmo_3630001> (plant community)
+# Class: <https://w3id.org/elmo/elmo_3620103> (Tropical heath forests)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630001> "An environmental system which consists of a set of plants at some stage in the community assembly process."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630001> "plant community"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630001> <http://purl.obolibrary.org/obo/ENVO_01000254>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620103> "T1.4 Tropical heath forests"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620103> "Tropical heath forests"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620103> <https://w3id.org/elmo/elmo_3620207>)
 
-# Class: <https://w3id.org/elmo/elmo_3630002> (rainforest plant community)
+# Class: <https://w3id.org/elmo/elmo_3620104> (Boreal and temperate high montane forests and woodlands)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630002> "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy, is subject to high humidity and rainfall and includes populations of epiphytes, lianas and vegetation adapted to high moisture."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630002> "rainforest plant community"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630002> <https://w3id.org/elmo/elmo_3630006>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620104> "T2.1 Boreal and temperate high montane forests and woodlands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620104> "Boreal and temperate high montane forests and woodlands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620104> <https://w3id.org/elmo/elmo_3620208>)
 
-# Class: <https://w3id.org/elmo/elmo_3630003> (ecosystem functional group)
+# Class: <https://w3id.org/elmo/elmo_3620105> (Deciduous temperate forests)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1038/s41586-022-05318-4>) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/page/typology>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630003> "A group of related ecosystems within a biome that share common ecological drivers, which in turn promote similar biotic traits that characterise the group."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630003> "ecosystem functional group"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630003> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620105> "T2.2 Deciduous temperate forests"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620105> "Deciduous temperate forests"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620105> <https://w3id.org/elmo/elmo_3620208>)
 
-# Class: <https://w3id.org/elmo/elmo_3630004> (tropical lowland rainforests)
+# Class: <https://w3id.org/elmo/elmo_3620106> (Oceanic cool temperate rainforests)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630004> "An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located in a lowland landform."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630004> "tropical lowland rainforests"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630004> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000204>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630000>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630002>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630004> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620106> "T2.3 Oceanic cool temperate rainforests"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620106> "Oceanic cool temperate rainforests"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620106> <https://w3id.org/elmo/elmo_3620208>)
 
-# Class: <https://w3id.org/elmo/elmo_3630005> (tropical dry forests and thickets)
+# Class: <https://w3id.org/elmo/elmo_3620107> (Warm temperate laurophyll forests)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630005> "An ecosystem functional group which has a forest plant community, experiences tropical climactic conditions and seasonally dry conditions."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630005> "tropical dry forests and thickets"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630005> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000204>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630006>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630007>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630005> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620107> "T2.4 Warm temperate laurophyll forests"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620107> "Warm temperate laurophyll forests"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620107> <https://w3id.org/elmo/elmo_3620208>)
 
-# Class: <https://w3id.org/elmo/elmo_3630006> (forest plant community)
+# Class: <https://w3id.org/elmo/elmo_3620108> (Temperate pyric humid forests)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630006> "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy."@en)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <https://w3id.org/elmo/elmo_3630006> "thicket"@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630006> "forest plant community"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630006> <https://w3id.org/elmo/elmo_3630001>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620108> "T2.5 Temperate pyric humid forests"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620108> "Temperate pyric humid forests"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620108> <https://w3id.org/elmo/elmo_3620208>)
 
-# Class: <https://w3id.org/elmo/elmo_3630007> (seasonally dry)
+# Class: <https://w3id.org/elmo/elmo_3620109> (Temperate pyric sclerophyll forests and woodlands)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630007> "An environmental condition in which an area receives ~1800 mm of rainfall per year, with a period of 3 to 6 months receiving less than 100 mm per month."@en)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3630007> "arid"@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630007> "seasonally dry"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630007> <http://purl.obolibrary.org/obo/ENVO_01000203>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620109> "T2.6 Temperate pyric sclerophyll forests and woodlands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620109> "Temperate pyric sclerophyll forests and woodlands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620109> <https://w3id.org/elmo/elmo_3620208>)
 
-# Class: <https://w3id.org/elmo/elmo_3630008> (subtropical dry forests and thickets)
+# Class: <https://w3id.org/elmo/elmo_3620110> (Seasonally dry tropical shrublands)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630008> "An ecosystem functional group which has a forest plant community, experiences subtropical climactic conditions and seasonally dry conditions."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630008> "subtropical dry forests and thickets"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630008> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000204>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630006>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630009>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630008> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620110> "T3.1 Seasonally dry tropical shrublands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620110> "Seasonally dry tropical shrublands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620110> <https://w3id.org/elmo/elmo_3620209>)
 
-# Class: <https://w3id.org/elmo/elmo_3630009> (subtropical)
+# Class: <https://w3id.org/elmo/elmo_3620111> (Seasonally dry temperate heaths and shrublands)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Subtropics>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630009> "An environmental condition in which an area experiences hot summers and mild winters, and is located to the immediate north or south of the tropical zone."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630009> "subtropical"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630009> <http://purl.obolibrary.org/obo/ENVO_01000203>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620111> "T3.2 Seasonally dry temperate heaths and shrublands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620111> "Seasonally dry temperate heaths and shrublands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620111> <https://w3id.org/elmo/elmo_3620209>)
 
-# Class: <https://w3id.org/elmo/elmo_3630010> (tropical montane rainforests)
+# Class: <https://w3id.org/elmo/elmo_3620112> (Cool temperate heathlands)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.3>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630010> "An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located at a montane altitude."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630010> "tropical montane rainforests"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630010> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000204>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000342>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630002>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630010> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620112> "T3.3 Cool temperate heathlands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620112> "Cool temperate heathlands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620112> <https://w3id.org/elmo/elmo_3620209>)
 
-# Class: <https://w3id.org/elmo/elmo_3630011> (subtropical montane rainforests)
+# Class: <https://w3id.org/elmo/elmo_3620113> (Young rocky pavements, screes and lava flows)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.3>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630011> "An ecosystem functional group which has a rainforest plant community, experiences subtropical conditions and is located at a montane altitude."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630011> "subtropical montane rainforests"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630011> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000342>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630002>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630009>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630011> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620113> "T3.4 Young rocky pavements, screes and lava flows"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620113> "Young rocky pavements, screes and lava flows"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620113> <https://w3id.org/elmo/elmo_3620209>)
 
-# Class: <https://w3id.org/elmo/elmo_3630012> (subtropical lowland rainforests)
+# Class: <https://w3id.org/elmo/elmo_3620114> (Trophic savannas)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630012> "An ecosystem functional group which has a rainforest plant community, experiences subtropical climactic conditions and is located in a lowland landform."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630012> "subtropical lowland rainforests"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630012> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620114> "T4.1 Trophic savannas"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620114> "Trophic savannas"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620114> <https://w3id.org/elmo/elmo_3620210>)
 
-# Class: <https://w3id.org/elmo/elmo_3630013> (heath plant community)
+# Class: <https://w3id.org/elmo/elmo_3620115> (Pyric tussock savannas)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Heath>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630013> "A plant community which consists mainly of open, low-growing woody vegetation."@en)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3630013> "heathlands"@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630013> "heath plant community"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630013> <https://w3id.org/elmo/elmo_3630001>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620115> "T4.2 Pyric tussock savannas"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620115> "Pyric tussock savannas"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620115> <https://w3id.org/elmo/elmo_3620210>)
 
-# Class: <https://w3id.org/elmo/elmo_3630014> (tropical heath forests)
+# Class: <https://w3id.org/elmo/elmo_3620116> (Hummock savannas)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T1.4>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630014> "An ecosystem functional group which has some heath and some forest plant communities and experiences tropical climactic conditions."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630014> "tropical heath forests"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630014> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000204>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630006>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630013>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630014> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620116> "T4.3 Hummock savannas"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620116> "Hummock savannas"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620116> <https://w3id.org/elmo/elmo_3620210>)
 
-# Class: <https://w3id.org/elmo/elmo_3630015> (temperate high montane forests)
+# Class: <https://w3id.org/elmo/elmo_3620117> (Temperate woodlands)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630015> "An ecosystem functional group which consists of a forest plant community, experiences temperate climactic conditions and is located in an upper montane region."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630015> "temperate high montane forests"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630015> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000206>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000345>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630006>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630015> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620117> "T4.4 Temperate woodlands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620117> "Temperate woodlands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620117> <https://w3id.org/elmo/elmo_3620210>)
 
-# Class: <https://w3id.org/elmo/elmo_3630016> (deciduous plant community)
+# Class: <https://w3id.org/elmo/elmo_3620118> (Temperate subhumid grasslands)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630016> "A plant community dominated by broadleaf deciduous trees."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630016> "deciduous plant community"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630016> <https://w3id.org/elmo/elmo_3630006>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620118> "T4.5 Temperate subhumid grasslands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620118> "Temperate subhumid grasslands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620118> <https://w3id.org/elmo/elmo_3620210>)
 
-# Class: <https://w3id.org/elmo/elmo_3630017> (deciduous temperate forests)
+# Class: <https://w3id.org/elmo/elmo_3620119> (Semi-desert steppe)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630017> "An ecosystem functional group which has a broadleaf forest plant community and experiences temperate climactic conditions."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630017> "deciduous temperate forests"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630017> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000206>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630016>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630017> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620119> "T5.1 Semi-desert steppe"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620119> "Semi-desert steppe"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620119> <https://w3id.org/elmo/elmo_3620211>)
 
-# Class: <https://w3id.org/elmo/elmo_3630018> (oceanic cool temperate rainforests)
+# Class: <https://w3id.org/elmo/elmo_3620120> (Succulent or thorny deserts and semi-deserts)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.3>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630018> "An ecosystem functional group which has a rainforest plant community and experiences oceanic temperate climate conditions."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630018> "oceanic cool temperate rainforests"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630018> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000380>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630002>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630018> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620120> "T5.2 Succulent or thorny deserts and semi-deserts"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620120> "Succulent or thorny deserts and semi-deserts"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620120> <https://w3id.org/elmo/elmo_3620211>)
 
-# Class: <https://w3id.org/elmo/elmo_3630019> (warm temperate laurophyll forests)
+# Class: <https://w3id.org/elmo/elmo_3620121> (Sclerophyll hot deserts and semi-deserts)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.4>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630019> "An ecosystem functional group which has a laurel forest plant community and experiences temperate climactic conditions."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630019> "warm temperate laurophyll forests"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630019> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000206>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630020>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630019> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620121> "T5.3 Sclerophyll hot deserts and semi-deserts"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620121> "Sclerophyll hot deserts and semi-deserts"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620121> <https://w3id.org/elmo/elmo_3620211>)
 
-# Class: <https://w3id.org/elmo/elmo_3630020> (laurel forest)
+# Class: <https://w3id.org/elmo/elmo_3620122> (Cool deserts and semi-deserts)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Laurel_forest>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630020> "A plant community characterized by broadleaf tree species with evergreen, glossy, elongated leaves."@en)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3630020> "laurisilva"@en)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3630020> "laurissilva"@en)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3630020> "laurophyll forest"@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630020> "laurel forest"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630020> <https://w3id.org/elmo/elmo_3630006>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620122> "T5.4 Cool deserts and semi-deserts"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620122> "Cool deserts and semi-deserts"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620122> <https://w3id.org/elmo/elmo_3620211>)
 
-# Class: <https://w3id.org/elmo/elmo_3630021> (fire-adapted ecosystem)
+# Class: <https://w3id.org/elmo/elmo_3620123> (Hyper-arid deserts)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Pyric_herbivory>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630021> "An ecosystem which has a history of regular fires that reset the seccessional state of the ecosystem and vegetation adapted to survive or require regular fire."@en)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3630021> "pyric"@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630021> "fire-adapted ecosystem"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630021> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620123> "T5.5 Hyper-arid deserts"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620123> "Hyper-arid deserts"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620123> <https://w3id.org/elmo/elmo_3620211>)
 
-# Class: <https://w3id.org/elmo/elmo_3630022> (humid temperate)
+# Class: <https://w3id.org/elmo/elmo_3620124> (Ice sheets, glaciers and perennial snowfields)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.5>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630022> "A temperate condition which features frequent precipitation and humid conditions."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630022> "humid temperate"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630022> <http://purl.obolibrary.org/obo/ENVO_01000206>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620124> "T6.1 Ice sheets, glaciers and perennial snowfields"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620124> "Ice sheets, glaciers and perennial snowfields"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620124> <https://w3id.org/elmo/elmo_3620212>)
 
-# Class: <https://w3id.org/elmo/elmo_3630023> (temperate pyric humid forests)
+# Class: <https://w3id.org/elmo/elmo_3620125> (Polar/alpine cliffs, screes, outcrops and lava flows)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.5>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630023> "An ecosystem functional group which has a forest plant community, experiences wet temperate conditions and has vegetation that is adapted to cycles of fire."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630023> "temperate pyric humid forests"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630023> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630006>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630021>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630022>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630023> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620125> "T6.2 Polar/alpine cliffs, screes, outcrops and lava flows"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620125> "Polar/alpine cliffs, screes, outcrops and lava flows"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620125> <https://w3id.org/elmo/elmo_3620212>)
 
-# Class: <https://w3id.org/elmo/elmo_3630024> (temperate pyric sclerophyll forests and woodlands)
+# Class: <https://w3id.org/elmo/elmo_3620126> (Polar tundra and deserts)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/T2.6>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630024> "An ecosystem functional group which has a sclerophyll forest plant community, experiences temperate climactic conditions and has vegetation that is adapted to cycles of fire."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630024> "temperate pyric sclerophyll forests and woodlands"@en)
-EquivalentClasses(<https://w3id.org/elmo/elmo_3630024> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01000206>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630021>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <https://w3id.org/elmo/elmo_3630025>)))
-SubClassOf(<https://w3id.org/elmo/elmo_3630024> <https://w3id.org/elmo/elmo_3630003>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620126> "T6.3 Polar tundra and deserts"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620126> "Polar tundra and deserts"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620126> <https://w3id.org/elmo/elmo_3620212>)
 
-# Class: <https://w3id.org/elmo/elmo_3630025> (sclerophyll forest plant community)
+# Class: <https://w3id.org/elmo/elmo_3620127> (Temperate alpine grasslands and shrublands)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Sclerophyll>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3630025> "A forest plant community that consists mainly of sclerophyll woody plants, which are drought-adapted and feature stiff, leathery leaves."@en)
-AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3630025> "sclerophyll forest plant community"@en)
-SubClassOf(<https://w3id.org/elmo/elmo_3630025> <https://w3id.org/elmo/elmo_3630006>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620127> "T6.4 Temperate alpine grasslands and shrublands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620127> "Temperate alpine grasslands and shrublands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620127> <https://w3id.org/elmo/elmo_3620212>)
+
+# Class: <https://w3id.org/elmo/elmo_3620128> (Sown pastures and fields)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620128> "T7.2 Sown pastures and fields"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620128> "Sown pastures and fields"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620128> <https://w3id.org/elmo/elmo_3620213>)
+
+# Class: <https://w3id.org/elmo/elmo_3620129> (Plantations)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620129> "T7.3 Plantations"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620129> "Plantations"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620129> <https://w3id.org/elmo/elmo_3620213>)
+
+# Class: <https://w3id.org/elmo/elmo_3620130> (Urban and industrial ecosystems)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620130> "T7.4 Urban and industrial ecosystems"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620130> "Urban and industrial ecosystems"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620130> <https://w3id.org/elmo/elmo_3620213>)
+
+# Class: <https://w3id.org/elmo/elmo_3620131> (Derived semi-natural pastures and oldfields)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620131> "T7.5 Derived semi-natural pastures and oldfields"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620131> "Derived semi-natural pastures and oldfields"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620131> <https://w3id.org/elmo/elmo_3620213>)
+
+# Class: <https://w3id.org/elmo/elmo_3620132> (Aerobic caves)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620132> "S1.1 Aerobic caves"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620132> "Aerobic caves"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620132> <https://w3id.org/elmo/elmo_3620214>)
+
+# Class: <https://w3id.org/elmo/elmo_3620133> (Endolithic systems)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620133> "S1.2 Endolithic systems"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620133> "Endolithic systems"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620133> <https://w3id.org/elmo/elmo_3620214>)
+
+# Class: <https://w3id.org/elmo/elmo_3620134> (Anthropogenic subterranean voids)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620134> "S2.1 Anthropogenic subterranean voids"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620134> "Anthropogenic subterranean voids"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620134> <https://w3id.org/elmo/elmo_3620214>)
+
+# Class: <https://w3id.org/elmo/elmo_3620135> (Underground streams and pools)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620135> "SF1.1 Underground streams and pools"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620135> "Underground streams and pools"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620135> <https://w3id.org/elmo/elmo_3620215>)
+
+# Class: <https://w3id.org/elmo/elmo_3620136> (Groundwater ecosystems)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620136> "SF1.2 Groundwater ecosystems"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620136> "Groundwater ecosystems"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620136> <https://w3id.org/elmo/elmo_3620215>)
+
+# Class: <https://w3id.org/elmo/elmo_3620137> (Water pipes and subterranean canals)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620137> "SF2.1 Water pipes and subterranean canals"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620137> "Water pipes and subterranean canals"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620137> <https://w3id.org/elmo/elmo_3620216>)
+
+# Class: <https://w3id.org/elmo/elmo_3620138> (Flooded mines and other voids)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620138> "SF2.2 Flooded mines and other voids"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620138> "Flooded mines and other voids"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620138> <https://w3id.org/elmo/elmo_3620216>)
+
+# Class: <https://w3id.org/elmo/elmo_3620139> (Subterranean tidal biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/groups/SM1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620139> "The subterranean tidal biome is a biome that includes coastal pools and subterranean voids with a partially or entirely submerged connection to marine waters where sunlight is absent or too dim to sustain photosynthesis."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620139> "SM1 Subterranean tidal biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620139> "Subterranean tidal biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620139> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620140> (Anchialine caves)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620140> "SM1.1 Anchialine caves"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620140> "Anchialine caves"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620140> <https://w3id.org/elmo/elmo_3620139>)
+
+# Class: <https://w3id.org/elmo/elmo_3620141> (Anchialine pools)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620141> "SM1.2 Anchialine pools"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620141> "Anchialine pools"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620141> <https://w3id.org/elmo/elmo_3620139>)
+
+# Class: <https://w3id.org/elmo/elmo_3620142> (Sea caves)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620142> "SM1.3 Sea caves"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620142> "Sea caves"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620142> <https://w3id.org/elmo/elmo_3620139>)
+
+# Class: <https://w3id.org/elmo/elmo_3620143> (Tropical flooded forests and peat forests)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620143> "TF1.1 Tropical flooded forests and peat forests"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620143> "Tropical flooded forests and peat forests"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620143> <https://w3id.org/elmo/elmo_3620217>)
+
+# Class: <https://w3id.org/elmo/elmo_3620144> (Subtropical/temperate forested wetlands)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620144> "TF1.2 Subtropical/temperate forested wetlands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620144> "Subtropical/temperate forested wetlands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620144> <https://w3id.org/elmo/elmo_3620217>)
+
+# Class: <https://w3id.org/elmo/elmo_3620145> (Permanent marshes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620145> "TF1.3 Permanent marshes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620145> "Permanent marshes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620145> <https://w3id.org/elmo/elmo_3620217>)
+
+# Class: <https://w3id.org/elmo/elmo_3620146> (Seasonal floodplain marshes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620146> "TF1.4 Seasonal floodplain marshes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620146> "Seasonal floodplain marshes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620146> <https://w3id.org/elmo/elmo_3620217>)
+
+# Class: <https://w3id.org/elmo/elmo_3620147> (Episodic arid floodplains)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620147> "TF1.5 Episodic arid floodplains"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620147> "Episodic arid floodplains"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620147> <https://w3id.org/elmo/elmo_3620217>)
+
+# Class: <https://w3id.org/elmo/elmo_3620148> (Boreal, temperate and montane peat bogs)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620148> "TF1.6 Boreal, temperate and montane peat bogs"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620148> "Boreal, temperate and montane peat bogs"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620148> <https://w3id.org/elmo/elmo_3620217>)
+
+# Class: <https://w3id.org/elmo/elmo_3620149> (Boreal and temperate fens)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620149> "TF1.7 Boreal and temperate fens"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620149> "Boreal and temperate fens"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620149> <https://w3id.org/elmo/elmo_3620217>)
+
+# Class: <https://w3id.org/elmo/elmo_3620150> (Permanent upland streams)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620150> "F1.1 Permanent upland streams"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620150> "Permanent upland streams"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620150> <https://w3id.org/elmo/elmo_3620218>)
+
+# Class: <https://w3id.org/elmo/elmo_3620151> (Permanent lowland rivers)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620151> "F1.2 Permanent lowland rivers"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620151> "Permanent lowland rivers"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620151> <https://w3id.org/elmo/elmo_3620218>)
+
+# Class: <https://w3id.org/elmo/elmo_3620152> (Freeze-thaw rivers and streams)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620152> "F1.3 Freeze-thaw rivers and streams"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620152> "Freeze-thaw rivers and streams"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620152> <https://w3id.org/elmo/elmo_3620218>)
+
+# Class: <https://w3id.org/elmo/elmo_3620153> (Seasonal upland streams)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620153> "F1.4 Seasonal upland streams"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620153> "Seasonal upland streams"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620153> <https://w3id.org/elmo/elmo_3620218>)
+
+# Class: <https://w3id.org/elmo/elmo_3620154> (Seasonal lowland rivers)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620154> "F1.5 Seasonal lowland rivers"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620154> "Seasonal lowland rivers"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620154> <https://w3id.org/elmo/elmo_3620218>)
+
+# Class: <https://w3id.org/elmo/elmo_3620155> (Episodic arid rivers)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620155> "F1.6 Episodic arid rivers"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620155> "Episodic arid rivers"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620155> <https://w3id.org/elmo/elmo_3620218>)
+
+# Class: <https://w3id.org/elmo/elmo_3620156> (Large lowland rivers)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620156> "F1.7 Large lowland rivers"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620156> "Large lowland rivers"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620156> <https://w3id.org/elmo/elmo_3620218>)
+
+# Class: <https://w3id.org/elmo/elmo_3620157> (Large permanent freshwater lakes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620157> "F2.1 Large permanent freshwater lakes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620157> "Large permanent freshwater lakes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620157> <https://w3id.org/elmo/elmo_3620219>)
+
+# Class: <https://w3id.org/elmo/elmo_3620158> (Small permanent freshwater lakes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620158> "F2.2 Small permanent freshwater lakes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620158> "Small permanent freshwater lakes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620158> <https://w3id.org/elmo/elmo_3620219>)
+
+# Class: <https://w3id.org/elmo/elmo_3620159> (Seasonal freshwater lakes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620159> "F2.3 Seasonal freshwater lakes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620159> "Seasonal freshwater lakes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620159> <https://w3id.org/elmo/elmo_3620219>)
+
+# Class: <https://w3id.org/elmo/elmo_3620160> (Freeze-thaw freshwater lakes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620160> "F2.4 Freeze-thaw freshwater lakes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620160> "Freeze-thaw freshwater lakes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620160> <https://w3id.org/elmo/elmo_3620219>)
+
+# Class: <https://w3id.org/elmo/elmo_3620161> (Ephemeral freshwater lakes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620161> "F2.5 Ephemeral freshwater lakes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620161> "Ephemeral freshwater lakes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620161> <https://w3id.org/elmo/elmo_3620219>)
+
+# Class: <https://w3id.org/elmo/elmo_3620162> (Permanent salt and soda lakes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620162> "F2.6 Permanent salt and soda lakes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620162> "Permanent salt and soda lakes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620162> <https://w3id.org/elmo/elmo_3620219>)
+
+# Class: <https://w3id.org/elmo/elmo_3620163> (Ephemeral salt lakes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620163> "F2.7 Ephemeral salt lakes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620163> "Ephemeral salt lakes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620163> <https://w3id.org/elmo/elmo_3620219>)
+
+# Class: <https://w3id.org/elmo/elmo_3620164> (Artesian springs and oases)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620164> "F2.8 Artesian springs and oases"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620164> "Artesian springs and oases"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620164> <https://w3id.org/elmo/elmo_3620219>)
+
+# Class: <https://w3id.org/elmo/elmo_3620165> (Geothermal pools and wetlands)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620165> "F2.9 Geothermal pools and wetlands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620165> "Geothermal pools and wetlands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620165> <https://w3id.org/elmo/elmo_3620219>)
+
+# Class: <https://w3id.org/elmo/elmo_3620166> (Subglacial lakes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620166> "F2.10 Subglacial lakes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620166> "Subglacial lakes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620166> <https://w3id.org/elmo/elmo_3620219>)
+
+# Class: <https://w3id.org/elmo/elmo_3620167> (Large reservoirs)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620167> "F3.1 Large reservoirs"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620167> "Large reservoirs"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620167> <https://w3id.org/elmo/elmo_3620220>)
+
+# Class: <https://w3id.org/elmo/elmo_3620168> (Rice paddies)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620168> "F3.3 Rice paddies"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620168> "Rice paddies"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620168> <https://w3id.org/elmo/elmo_3620220>)
+
+# Class: <https://w3id.org/elmo/elmo_3620169> (Freshwater aquafarms)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620169> "F3.4 Freshwater aquafarms"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620169> "Freshwater aquafarms"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620169> <https://w3id.org/elmo/elmo_3620220>)
+
+# Class: <https://w3id.org/elmo/elmo_3620170> (Canals, ditches and drains)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620170> "F3.5 Canals, ditches and drains"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620170> "Canals, ditches and drains"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620170> <https://w3id.org/elmo/elmo_3620220>)
+
+# Class: <https://w3id.org/elmo/elmo_3620171> (Deepwater coastal inlets)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620171> "FM1.1 Deepwater coastal inlets"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620171> "Deepwater coastal inlets"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620171> <https://w3id.org/elmo/elmo_3620221>)
+
+# Class: <https://w3id.org/elmo/elmo_3620172> (Permanently open riverine estuaries and bays)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620172> "FM1.2 Permanently open riverine estuaries and bays"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620172> "Permanently open riverine estuaries and bays"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620172> <https://w3id.org/elmo/elmo_3620221>)
+
+# Class: <https://w3id.org/elmo/elmo_3620173> (Intermittently closed and open lakes and lagoons)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620173> "FM1.3 Intermittently closed and open lakes and lagoons"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620173> "Intermittently closed and open lakes and lagoons"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620173> <https://w3id.org/elmo/elmo_3620221>)
+
+# Class: <https://w3id.org/elmo/elmo_3620174> (Seagrass meadows)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620174> "M1.1 Seagrass meadows"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620174> "Seagrass meadows"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620174> <https://w3id.org/elmo/elmo_3620222>)
+
+# Class: <https://w3id.org/elmo/elmo_3620175> (Kelp forests)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620175> "M1.2 Kelp forests"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620175> "Kelp forests"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620175> <https://w3id.org/elmo/elmo_3620222>)
+
+# Class: <https://w3id.org/elmo/elmo_3620176> (Photic coral reefs)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620176> "M1.3 Photic coral reefs"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620176> "Photic coral reefs"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620176> <https://w3id.org/elmo/elmo_3620222>)
+
+# Class: <https://w3id.org/elmo/elmo_3620177> (Shellfish beds and reefs)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620177> "M1.4 Shellfish beds and reefs"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620177> "Shellfish beds and reefs"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620177> <https://w3id.org/elmo/elmo_3620222>)
+
+# Class: <https://w3id.org/elmo/elmo_3620178> (Photo-limited marine animal forests)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620178> "M1.5 Photo-limited marine animal forests"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620178> "Photo-limited marine animal forests"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620178> <https://w3id.org/elmo/elmo_3620222>)
+
+# Class: <https://w3id.org/elmo/elmo_3620179> (Subtidal rocky reefs)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620179> "M1.6 Subtidal rocky reefs"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620179> "Subtidal rocky reefs"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620179> <https://w3id.org/elmo/elmo_3620222>)
+
+# Class: <https://w3id.org/elmo/elmo_3620180> (Subtidal sand beds)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620180> "M1.7 Subtidal sand beds"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620180> "Subtidal sand beds"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620180> <https://w3id.org/elmo/elmo_3620222>)
+
+# Class: <https://w3id.org/elmo/elmo_3620181> (Subtidal mud plains)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620181> "M1.8 Subtidal mud plains"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620181> "Subtidal mud plains"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620181> <https://w3id.org/elmo/elmo_3620222>)
+
+# Class: <https://w3id.org/elmo/elmo_3620182> (Upwelling zones)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620182> "M1.9 Upwelling zones"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620182> "Upwelling zones"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620182> <https://w3id.org/elmo/elmo_3620222>)
+
+# Class: <https://w3id.org/elmo/elmo_3620183> (Rhodolith/Maërl beds)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620183> "M1.10 Rhodolith/Maërl beds"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620183> "Rhodolith/Maërl beds"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620183> <https://w3id.org/elmo/elmo_3620222>)
+
+# Class: <https://w3id.org/elmo/elmo_3620184> (Epipelagic ocean waters)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620184> "M2.1 Epipelagic ocean waters"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620184> "Epipelagic ocean waters"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620184> <https://w3id.org/elmo/elmo_3620223>)
+
+# Class: <https://w3id.org/elmo/elmo_3620185> (Mesopelagic ocean waters)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620185> "M2.2 Mesopelagic ocean waters"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620185> "Mesopelagic ocean waters"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620185> <https://w3id.org/elmo/elmo_3620223>)
+
+# Class: <https://w3id.org/elmo/elmo_3620186> (Bathypelagic ocean waters)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620186> "M2.3 Bathypelagic ocean waters"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620186> "Bathypelagic ocean waters"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620186> <https://w3id.org/elmo/elmo_3620223>)
+
+# Class: <https://w3id.org/elmo/elmo_3620187> (Abyssopelagic ocean waters)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620187> "M2.4 Abyssopelagic ocean waters"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620187> "Abyssopelagic ocean waters"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620187> <https://w3id.org/elmo/elmo_3620223>)
+
+# Class: <https://w3id.org/elmo/elmo_3620188> (Sea ice)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620188> "M2.5 Sea ice"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620188> "Sea ice"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620188> <https://w3id.org/elmo/elmo_3620223>)
+
+# Class: <https://w3id.org/elmo/elmo_3620189> (Continental and island slopes)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620189> "M3.1 Continental and island slopes"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620189> "Continental and island slopes"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620189> <https://w3id.org/elmo/elmo_3620224>)
+
+# Class: <https://w3id.org/elmo/elmo_3620190> (Submarine canyons)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620190> "M3.2 Submarine canyons"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620190> "Submarine canyons"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620190> <https://w3id.org/elmo/elmo_3620224>)
+
+# Class: <https://w3id.org/elmo/elmo_3620191> (Abyssal plains)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620191> "M3.3 Abyssal plains"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620191> "Abyssal plains"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620191> <https://w3id.org/elmo/elmo_3620224>)
+
+# Class: <https://w3id.org/elmo/elmo_3620192> (Seamounts, ridges and plateaus)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620192> "M3.4 Seamounts, ridges and plateaus"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620192> "Seamounts, ridges and plateaus"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620192> <https://w3id.org/elmo/elmo_3620224>)
+
+# Class: <https://w3id.org/elmo/elmo_3620193> (Deepwater biogenic beds)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620193> "M3.5 Deepwater biogenic beds"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620193> "Deepwater biogenic beds"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620193> <https://w3id.org/elmo/elmo_3620224>)
+
+# Class: <https://w3id.org/elmo/elmo_3620194> (Hadal trenches and troughs)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620194> "M3.6 Hadal trenches and troughs"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620194> "Hadal trenches and troughs"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620194> <https://w3id.org/elmo/elmo_3620224>)
+
+# Class: <https://w3id.org/elmo/elmo_3620195> (Chemosynthetically-based ecosystems)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620195> "M3.7 Chemosynthetically-based ecosystems"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620195> "Chemosynthetically-based ecosystems"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620195> <https://w3id.org/elmo/elmo_3620224>)
+
+# Class: <https://w3id.org/elmo/elmo_3620196> (Submerged artificial structures)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620196> "M4.1 Submerged artificial structures"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620196> "Submerged artificial structures"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620196> <https://w3id.org/elmo/elmo_3620225>)
+
+# Class: <https://w3id.org/elmo/elmo_3620197> (Rocky shorelines)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620197> "MT1.1 Rocky shorelines"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620197> "Rocky shorelines"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620197> <https://w3id.org/elmo/elmo_3620226>)
+
+# Class: <https://w3id.org/elmo/elmo_3620198> (Muddy shorelines)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620198> "MT1.2 Muddy shorelines"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620198> "Muddy shorelines"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620198> <https://w3id.org/elmo/elmo_3620226>)
+
+# Class: <https://w3id.org/elmo/elmo_3620199> (Sandy shorelines)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620199> "MT1.3 Sandy shorelines"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620199> "Sandy shorelines"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620199> <https://w3id.org/elmo/elmo_3620226>)
+
+# Class: <https://w3id.org/elmo/elmo_3620200> (Boulder and cobble shores)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620200> "MT1.4 Boulder and cobble shores"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620200> "Boulder and cobble shores"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620200> <https://w3id.org/elmo/elmo_3620226>)
+
+# Class: <https://w3id.org/elmo/elmo_3620201> (Coastal shrublands and grasslands)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620201> "MT2.1 Coastal shrublands and grasslands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620201> "Coastal shrublands and grasslands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620201> <https://w3id.org/elmo/elmo_3620227>)
+
+# Class: <https://w3id.org/elmo/elmo_3620202> (Large seabird and pinniped colonies)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620202> "MT2.2 Large seabird and pinniped colonies"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620202> "Large seabird and pinniped colonies"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620202> <https://w3id.org/elmo/elmo_3620227>)
+
+# Class: <https://w3id.org/elmo/elmo_3620203> (Artificial shorelines)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620203> "MT3.1 Artificial shorelines"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620203> "Artificial shorelines"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620203> <https://w3id.org/elmo/elmo_3620228>)
+
+# Class: <https://w3id.org/elmo/elmo_3620204> (Coastal river deltas)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620204> "MFT1.1 Coastal river deltas"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620204> "Coastal river deltas"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620204> <https://w3id.org/elmo/elmo_3620229>)
+
+# Class: <https://w3id.org/elmo/elmo_3620205> (Intertidal forests and shrublands)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620205> "MFT1.2 Intertidal forests and shrublands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620205> "Intertidal forests and shrublands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620205> <https://w3id.org/elmo/elmo_3620229>)
+
+# Class: <https://w3id.org/elmo/elmo_3620206> (Coastal saltmarshes and reedbeds)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620206> "MFT1.3 Coastal saltmarshes and reedbeds"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620206> "Coastal saltmarshes and reedbeds"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620206> <https://w3id.org/elmo/elmo_3620229>)
+
+# Class: <https://w3id.org/elmo/elmo_3620207> (Tropical-subtropical forests biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/T1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620207> "The tropical-subtropical forests biome is a biome that includes moderate to highly productive ecosystems with closed tree canopies occurring at lower latitudes north and south of the equator, with fragmented occurrences extend to the subtropics in suitable mesoclimates."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620207> "T1 Tropical-subtropical forests biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620207> "Tropical-subtropical forests biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620207> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620208> (Temperate-boreal forests and woodlands biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/T2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620208> "The temperate-boreal forests and woodlands biome is a biome that includes moderate to highly productive tree-dominated systems with a wide range of physiognomic and structural expressions distributed from warm-temperate to boreal latitudes."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620208> "T2 Temperate-boreal forests and woodlands biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620208> "Temperate-boreal forests and woodlands biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620208> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620209> (Shrublands and shrubby woodlands biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/T3>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620209> "The shrublands and shrub-dominated woodlands biome is a biome that includes oligotrophic systems occurring on acidic, sandy soils that are often shallow or skeletal, distributed across al llandmasses outside the polar regions."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620209> "T3 Shrublands and shrubby woodlands biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620209> "Shrublands and shrubby woodlands biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620209> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620210> (Savannas and grasslands biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/T4>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620210> "The savannas and grasslands biome is a biome that has ecological functions closely linked to a mostly continuous ground layer of grasses that contribute moderate to very high levels of primary productivity driven by strongly seasonal water surplus and deficit cycles."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620210> "T4 Savannas and grasslands biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620210> "Savannas and grasslands biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620210> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620211> (Deserts and semi-deserts biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/T5>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620211> "The deserts and semi-deserts biome is a biome that includes low to very low biomass ecosystems occurring in arid or semi-arid climates, principally associated with the subtropical high-pressure belts and major continental rain shadows."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620211> "T5 Deserts and semi-deserts biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620211> "Deserts and semi-deserts biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620211> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620212> (Polar/alpine (cryogenic) biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/T6>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620212> "the polar/alpine biome is a biome that encompasses the extensive Arctic and Antarctic regions as well as high mountainous areas across all continental land masses, with low or very low primary productivity."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620212> "T6 Polar/alpine (cryogenic) biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620212> "Polar/alpine (cryogenic) biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620212> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620213> (Intensive land-use biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/T7>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620213> "The intensive land-use biome is a biome that includes major anthropogenic enterprises of cropping, pastoralism, plantation farming, and urbanisation. Human intervention is a dominating influence on this biome, also known as the “anthrome”."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620213> "T7 Intensive land-use biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620213> "Intensive land-use biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620213> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620214> (Anthropogenic subterranean voids biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/S2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620214> "The anthropogenic subterranean voids biome is a biome that  includes a single functional group of ecosystems that owe their genesis to excavation by humans. They include underground mines, transport tunnels, tombs, defence and energy installations, and other infrastructure."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620214> "S2 Anthropogenic subterranean voids biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620214> "Anthropogenic subterranean voids biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620214> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620215> (Subterranean freshwaters biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/SF1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620215> "The subterranean freshwaters biome is a biome that includes streams, small lakes and aquifers beneath the earth’s surface and potentially has the largest volume of water of all the freshwater biomes."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620215> "SF1 Subterranean freshwaters biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620215> "Subterranean freshwaters biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620215> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620216> (Anthropogenic subterranean freshwaters biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/SF2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620216> "The anthropogenic subterranean freshwaters biome is a biome that includes aquatic systems in underground canals, drains, sewers, water pipes, and flooded mines constructed by humans. These are usually well connected to surface waters."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620216> "SF2 Anthropogenic subterranean freshwaters biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620216> "Anthropogenic subterranean freshwaters biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620216> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620217> (Palustrine wetlands biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/TF1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620217> "The palustrine wetlands biome is a biome that includes vegetated floodplains, groundwater seeps, and mires with permanent or intermittent surface water. Although water and light are abundant at least periodically, saturation of the soil may result in oxygen deprivation below the ground. This suppresses microbial activity and, in many systems, production exceeds decomposition, resulting in peat accumulation."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620217> "TF1 Palustrine wetlands biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620217> "Palustrine wetlands biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620217> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620218> (Rivers and streams biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/F1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620218> "The rivers and streams biome is a biome that includes lotic (running water) ecosystems, flowing from elevated uplands or underground springs to deltas, estuaries, and lakes. They are defined primarily by their linear structure, unidirectional flow regimes, and close interaction with the surrounding landscape."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620218> "F1 Rivers and streams biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620218> "Rivers and streams biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620218> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620219> (Lakes biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/F2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620219> "The lakes biome is a biome that includes lentic ecosystems defined by their still waters. They vary in area, depth, water regime, and connectivity to other aquatic systems across a global distribution."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620219> "F2 Lakes biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620219> "Lakes biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620219> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620220> (Artificial wetlands biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/F3>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620220> "The artificial wetlands biome is a biome that includes built structures that hold or transfer water for human use, treatment, or disposal, including large storage reservoirs, farm dams or ponds, recreational and ornamental wetlands, rice paddies, freshwater aquafarms, wastewater storages and treatment ponds, and canals, ditches and drains."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620220> "F3 Artificial wetlands biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620220> "Artificial wetlands biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620220> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620221> (Semi-confined transitional waters biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/FM1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620221> "The semi-confined transitional waters biome is a biome that includes coastal inlets that are influenced by inputs of both fresh and marine water from terrestrial catchments and ocean tides, waves, and currents. They include deep-water coastal inlets or fjords mostly restricted to high latitudes, as well as estuaries, bays, and lagoons, which are scattered around coastlines throughout the world."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620221> "FM1 Semi-confined transitional waters biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620221> "Semi-confined transitional waters biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620221> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620222> (Marine shelf biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/M1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620222> "The marine shelf biome is a biome that is distributed globally between the shoreline and deep sea-floor biomes and is dominated by benthic productivity. It includes ecosystems with biogenic substrates (such as seagrass meadows, kelp forests, oyster beds, and coral reefs) and minerogenic substrates including rocky reefs, sandy bottoms, and muddy bottoms."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620222> "M1 Marine shelf biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620222> "Marine shelf biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620222> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620223> (Pelagic ocean waters biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/M2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620223> "The pelagic ocean waters biome is a biome that comprises the open-ocean water column across all latitudes."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620223> "M2 Pelagic ocean waters biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620223> "Pelagic ocean waters biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620223> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620224> (Deep sea floors biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/M3>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620224> "The deep sea floors biome is a biome that includes the entire oceanic benthos below ~250 m depth, where there is not enough light to support primary productivity through photosynthesis. It extends from the upper bathyal seafloor to the deepest parts of the ocean, at just under 11 km in the Mariana Trench."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620224> "M3 Deep sea floors biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620224> "Deep sea floors biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620224> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620225> (Anthropogenic marine biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/M4>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620225> "The anthropogenic marine biome is a biome that includes constructed, deposited or dumped artificial structures in the oceans that either confine managed marine organisms or attract marine biota that would not otherwise occupy such locations."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620225> "M4 Anthropogenic marine biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620225> "Anthropogenic marine biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620225> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620226> (Shorelines biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/MT1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620226> "The shorelines biome is a biome that includes naturally formed, intertidal abiogenic habitats situated at the interface between land and sea. The distribution of the biome spans all latitudes (temperate to polar) at which landmasses are present."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620226> "MT1 Shorelines biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620226> "Shorelines biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620226> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620227> (Supralittoral coast biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/MT2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620227> "The supralittoral coastal biome includes the landward extent of the transition from marine to terrestrial biomes. It is elevated above the direct influence of waves and tides (see the Shoreline biome) and beyond the direct influence of freshwater seepage or rivers (see brackish tidal biota). Supratidal coastal ecosystems extend around all the world’s land masses, occupying a fringe from tens of metres to a few kilometres wide and covering the entire extent of many small islands."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620227> "MT2 Supralittoral coast biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620227> "Supralittoral coast biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620227> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620228> (Anthropogenic shorelines biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/MT3>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620228> "The anthropogenic shorelines biome is a biome that is distributed globally where urbanised and industrial areas adjoin the coast, and includes some more remote structures such as artificial islands. It includes marine interfaces constructed from hard, smooth surfaces, including concrete, timber, lithic blocks, and earthen fill, adjoining, extending or replacing natural shores, or floating in proximity to them."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620228> "MT3 Anthropogenic shorelines biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620228> "Anthropogenic shorelines biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620228> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620229> (Brackish tidal biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/MFT1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620229> "The brackish tidal biome is a biome that is associated with prograding depositional shorelines at the interface of terrestrial, freshwater, and marine realms. The relative influences of marine, freshwater, and terrestrial processes vary from strongly fluvial deltas to marine-dominated intertidal forests and terrestrial-dominated coastal saltmarsh."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620229> "MFT1 Brackish tidal biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620229> "Brackish tidal biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620229> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620230> (Tropical alpine grasslands and shrublands)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620230> "T6.5 Tropical alpine grasslands and shrublands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620230> "Tropical alpine grasslands and shrublands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620230> <https://w3id.org/elmo/elmo_3620212>)
+
+# Class: <https://w3id.org/elmo/elmo_3620231> (Annual croplands)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620231> "T7.1 Annual croplands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620231> "Annual croplands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620231> <https://w3id.org/elmo/elmo_3620213>)
+
+# Class: <https://w3id.org/elmo/elmo_3620232> (Constructed lacustrine wetlands)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620232> "F3.2 Constructed lacustrine wetlands"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620232> "Constructed lacustrine wetlands"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620232> <https://w3id.org/elmo/elmo_3620220>)
+
+# Class: <https://w3id.org/elmo/elmo_3620233> (Marine aquafarms)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620233> "M4.2 Marine aquafarms"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620233> "Marine aquafarms"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620233> <https://w3id.org/elmo/elmo_3620225>)
+
+# Class: <https://w3id.org/elmo/elmo_3620234> (Subterranean lithic biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/explore/biomes/S1>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620234> "The subterranean lithic biome is a biome that includes non-aquatic lithic systems beneath the earth’s surface where sunlight is absent or of insufficient intensity to sustain photosynthesis."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3620234> "S1 Subterranean lithic biome"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620234> "Subterranean lithic biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620234> <http://purl.obolibrary.org/obo/ENVO_01001110>)
+
+# Class: <https://w3id.org/elmo/elmo_3620235> (biome)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://global-ecosystems.org/page/typology>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3620235> "An ecosystem delineated by broad features of structure and common major ecological drivers, typically global in scale."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620235> "biome"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3620235> <http://purl.obolibrary.org/obo/ENVO_01001110>)
 
 
 )

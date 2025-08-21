@@ -13,9 +13,9 @@
         "val" : "Ecolink Model Ontology (ELMO)"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2025-06-10"
+        "val" : "2025-08-21"
       } ],
-      "version" : "https://w3id.org/elmo/elmo/releases/2025-06-10/elmo.json"
+      "version" : "https://w3id.org/elmo/elmo/releases/2025-08-21/elmo.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
@@ -113,21 +113,6 @@
       "lbl" : "solid astronomical body part",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "A part of an astronomical body which is primarily composed of solid material.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Landform" ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasRelatedSynonym",
-          "val" : "geological feature",
-          "xrefs" : [ "ADL:FTT" ]
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "landform"
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "physiographic feature"
-        } ],
         "xrefs" : [ {
           "val" : "EcoLexicon:landform"
         }, {
@@ -149,13 +134,12 @@
       "lbl" : "environmental condition",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "An environmental condition is a range of a determinate quality or combination of qualities that are present in an environmental system.",
-          "xrefs" : [ "DOI:10.1186/2041-1480-4-43" ]
-        },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
           "val" : "http://purl.obolibrary.org/obo/IAO_0000121"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "ORCID:0000-0002-4366-3088"
         } ]
       }
     }, {
@@ -163,32 +147,14 @@
       "lbl" : "tropical",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "A tropical condition is an environmental condition in which an environmental system receives high yearly solar irradiance per unit area and, on Earth, the Sun reaches a subsolar point at least once during the solar year. This results in a hot and moist year-round climate at low elevations, which have a monthly average temperature above 18 degrees Celsius.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Tropical" ]
-        },
         "xrefs" : [ {
           "val" : "EcoLexicon:the_tropics"
         }, {
           "val" : "SPIRE:Tropical"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/ENVO_01000206",
-      "lbl" : "temperate",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A temperate condition is an environmental condition in which an environmental system receives less solar irradiance than those with subpolar conditions, but greater than those with subtropical conditions.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Temperate_climate" ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "tepid climate",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Temperate_climate" ]
         } ],
-        "xrefs" : [ {
-          "val" : "SPIRE:Temperate"
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "ORCID:0000-0002-4366-3088"
         } ]
       }
     }, {
@@ -196,21 +162,12 @@
       "lbl" : "environmental system",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "A system which has the disposition to environ one or more material entities.",
-          "xrefs" : [ "DOI:10.1186/2041-1480-4-43" ]
-        },
-        "comments" : [ "In ENVO's alignment with the Basic Formal Ontology, this class is being considered as a subclass of a proposed BFO class \"system\". The relation \"environed_by\" is also under development. Roughly, a system which includes a material entity (at least partially) within its site and causally influences that entity may be considered to environ it. Following the completion of this alignment, this class' definition and the definitions of its subclasses will be revised." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "environment"
         } ],
         "xrefs" : [ {
           "val" : "EcoLexicon:environment"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2013-09-23T16:04:08Z"
         } ]
       }
     }, {
@@ -218,12 +175,12 @@
       "lbl" : "montane",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "An altitudinal condition which inheres in a bearer by virtue of the bearer being located at an altitude between mid-altitude forests and the tree line.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Altitudinal_zonation" ]
-        },
         "xrefs" : [ {
           "val" : "LTER:350"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "ORCID:0000-0002-4366-3088"
         } ]
       }
     }, {
@@ -231,29 +188,10 @@
       "lbl" : "altitudinal condition",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "An altitudinal condition is an environmental condition in which ranges of factors such as temperature, humidity, soil composition, solar irradiation, and tree density vary with ranges in altitude.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Altitudinal_zonation" ]
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/ENVO_01000345",
-      "lbl" : "upper montane",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An upper montane condition is a montane condition in which an altitude range falls immediately below the tree line."
-        }
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/ENVO_01000380",
-      "lbl" : "oceanic temperate",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An oceanic temperate condition is a temperate condition which is strongly influenced by oceans and oceanic winds. Summers are cool and winters are cool, but not cold, and there is little frozen precipitation at lower elevations.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Temperate_zone" ]
-        }
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "ORCID:0000-0002-4366-3088"
+        } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/ENVO_01001110",
@@ -261,32 +199,17 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An environmental system which includes both living and non-living components.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Ecosystem" ]
-        },
-        "xrefs" : [ {
-          "val" : "LTER:173"
-        } ]
+          "val" : "An environmental system which includes both living and non-living components."
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/ENVO_01001170",
       "lbl" : "active ecosystem management process",
       "type" : "CLASS",
       "meta" : {
-        "definition" : {
-          "val" : "A process during which an ecosystem, its parts, or the processes it participates in are modified by human intervention to accomplish an objective.",
-          "xrefs" : [ "https://www.iucn.org/theme/protected-areas/about/protected-areas-categories/category-iv-habitatspecies-management-area" ]
-        },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "ecosystem management"
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "Umweltmaßnahme",
-          "xrefs" : [ "www.awi.de/internas" ]
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "environmental management"
         } ]
       }
     }, {
@@ -301,29 +224,6 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "https://orcid.org/0000-0002-4366-3088"
         } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/ENVO_01001884",
-      "lbl" : "surface landform",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A landform which occurs on the surface of an astronomical body."
-        },
-        "synonyms" : [ {
-          "pred" : "hasRelatedSynonym",
-          "val" : "geographic feature"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/ENVO_01001886",
-      "lbl" : "landform",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A solid astronomical body part which has been formed from and is composed primarily of the matter of that astronomical body.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Landform" ]
-        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/ENVO_02500000",
@@ -448,25 +348,6 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001018",
       "type" : "CLASS"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0002577",
-      "lbl" : "system",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A material entity consisting of multiple components that are causally integrated."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "May be replaced by a BFO class, as discussed in http://www.jbiomedsem.com/content/4/1/43"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "https://orcid.org/0000-0002-6601-2165"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
-          "val" : "http://www.jbiomedsem.com/content/4/1/43"
-        } ]
-      }
     }, {
       "id" : "https://w3id.org/elmo/ELMO_0000000",
       "lbl" : "root node",
@@ -1526,6 +1407,1487 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "https://orcid.org/0000-0002-1296-2528"
         } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620100",
+      "lbl" : "Tropical-subtropical lowland rainforests",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T1.1"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "T1.1 Tropical-subtropical lowland rainforests"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "TT1.a1"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Tropical Lowland Rainforest"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620101",
+      "lbl" : "Tropical-subtropical dry forests and thickets",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T1.2"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "T1.2 Tropical-subtropical dry forests and thickets"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620102",
+      "lbl" : "Tropical-subtropical montane rainforests",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T1.3"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "T1.3 Tropical-subtropical montane rainforests"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "TT1.a2"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "Tropical Montane Rainforest"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620103",
+      "lbl" : "Tropical heath forests",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T1.4 Tropical heath forests"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620104",
+      "lbl" : "Boreal and temperate high montane forests and woodlands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T2.1 Boreal and temperate high montane forests and woodlands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620105",
+      "lbl" : "Deciduous temperate forests",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T2.2 Deciduous temperate forests"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620106",
+      "lbl" : "Oceanic cool temperate rainforests",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T2.3 Oceanic cool temperate rainforests"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620107",
+      "lbl" : "Warm temperate laurophyll forests",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T2.4 Warm temperate laurophyll forests"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620108",
+      "lbl" : "Temperate pyric humid forests",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T2.5 Temperate pyric humid forests"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620109",
+      "lbl" : "Temperate pyric sclerophyll forests and woodlands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T2.6 Temperate pyric sclerophyll forests and woodlands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620110",
+      "lbl" : "Seasonally dry tropical shrublands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T3.1 Seasonally dry tropical shrublands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620111",
+      "lbl" : "Seasonally dry temperate heaths and shrublands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T3.2 Seasonally dry temperate heaths and shrublands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620112",
+      "lbl" : "Cool temperate heathlands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T3.3 Cool temperate heathlands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620113",
+      "lbl" : "Young rocky pavements, screes and lava flows",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T3.4 Young rocky pavements, screes and lava flows"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620114",
+      "lbl" : "Trophic savannas",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T4.1 Trophic savannas"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620115",
+      "lbl" : "Pyric tussock savannas",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T4.2 Pyric tussock savannas"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620116",
+      "lbl" : "Hummock savannas",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T4.3 Hummock savannas"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620117",
+      "lbl" : "Temperate woodlands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T4.4 Temperate woodlands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620118",
+      "lbl" : "Temperate subhumid grasslands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T4.5 Temperate subhumid grasslands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620119",
+      "lbl" : "Semi-desert steppe",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T5.1 Semi-desert steppe"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620120",
+      "lbl" : "Succulent or thorny deserts and semi-deserts",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T5.2 Succulent or thorny deserts and semi-deserts"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620121",
+      "lbl" : "Sclerophyll hot deserts and semi-deserts",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T5.3 Sclerophyll hot deserts and semi-deserts"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620122",
+      "lbl" : "Cool deserts and semi-deserts",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T5.4 Cool deserts and semi-deserts"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620123",
+      "lbl" : "Hyper-arid deserts",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T5.5 Hyper-arid deserts"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620124",
+      "lbl" : "Ice sheets, glaciers and perennial snowfields",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T6.1 Ice sheets, glaciers and perennial snowfields"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620125",
+      "lbl" : "Polar/alpine cliffs, screes, outcrops and lava flows",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T6.2 Polar/alpine cliffs, screes, outcrops and lava flows"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620126",
+      "lbl" : "Polar tundra and deserts",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T6.3 Polar tundra and deserts"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620127",
+      "lbl" : "Temperate alpine grasslands and shrublands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T6.4 Temperate alpine grasslands and shrublands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620128",
+      "lbl" : "Sown pastures and fields",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T7.2 Sown pastures and fields"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620129",
+      "lbl" : "Plantations",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T7.3 Plantations"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620130",
+      "lbl" : "Urban and industrial ecosystems",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T7.4 Urban and industrial ecosystems"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620131",
+      "lbl" : "Derived semi-natural pastures and oldfields",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T7.5 Derived semi-natural pastures and oldfields"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620132",
+      "lbl" : "Aerobic caves",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "S1.1 Aerobic caves"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620133",
+      "lbl" : "Endolithic systems",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "S1.2 Endolithic systems"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620134",
+      "lbl" : "Anthropogenic subterranean voids",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "S2.1 Anthropogenic subterranean voids"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620135",
+      "lbl" : "Underground streams and pools",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "SF1.1 Underground streams and pools"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620136",
+      "lbl" : "Groundwater ecosystems",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "SF1.2 Groundwater ecosystems"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620137",
+      "lbl" : "Water pipes and subterranean canals",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "SF2.1 Water pipes and subterranean canals"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620138",
+      "lbl" : "Flooded mines and other voids",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "SF2.2 Flooded mines and other voids"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620139",
+      "lbl" : "Subterranean tidal biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The subterranean tidal biome is a biome that includes coastal pools and subterranean voids with a partially or entirely submerged connection to marine waters where sunlight is absent or too dim to sustain photosynthesis.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/groups/SM1" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "SM1 Subterranean tidal biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620140",
+      "lbl" : "Anchialine caves",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "SM1.1 Anchialine caves"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620141",
+      "lbl" : "Anchialine pools",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "SM1.2 Anchialine pools"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620142",
+      "lbl" : "Sea caves",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "SM1.3 Sea caves"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620143",
+      "lbl" : "Tropical flooded forests and peat forests",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "TF1.1 Tropical flooded forests and peat forests"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620144",
+      "lbl" : "Subtropical/temperate forested wetlands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "TF1.2 Subtropical/temperate forested wetlands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620145",
+      "lbl" : "Permanent marshes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "TF1.3 Permanent marshes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620146",
+      "lbl" : "Seasonal floodplain marshes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "TF1.4 Seasonal floodplain marshes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620147",
+      "lbl" : "Episodic arid floodplains",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "TF1.5 Episodic arid floodplains"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620148",
+      "lbl" : "Boreal, temperate and montane peat bogs",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "TF1.6 Boreal, temperate and montane peat bogs"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620149",
+      "lbl" : "Boreal and temperate fens",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "TF1.7 Boreal and temperate fens"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620150",
+      "lbl" : "Permanent upland streams",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F1.1 Permanent upland streams"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620151",
+      "lbl" : "Permanent lowland rivers",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F1.2 Permanent lowland rivers"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620152",
+      "lbl" : "Freeze-thaw rivers and streams",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F1.3 Freeze-thaw rivers and streams"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620153",
+      "lbl" : "Seasonal upland streams",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F1.4 Seasonal upland streams"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620154",
+      "lbl" : "Seasonal lowland rivers",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F1.5 Seasonal lowland rivers"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620155",
+      "lbl" : "Episodic arid rivers",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F1.6 Episodic arid rivers"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620156",
+      "lbl" : "Large lowland rivers",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F1.7 Large lowland rivers"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620157",
+      "lbl" : "Large permanent freshwater lakes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2.1 Large permanent freshwater lakes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620158",
+      "lbl" : "Small permanent freshwater lakes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2.2 Small permanent freshwater lakes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620159",
+      "lbl" : "Seasonal freshwater lakes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2.3 Seasonal freshwater lakes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620160",
+      "lbl" : "Freeze-thaw freshwater lakes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2.4 Freeze-thaw freshwater lakes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620161",
+      "lbl" : "Ephemeral freshwater lakes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2.5 Ephemeral freshwater lakes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620162",
+      "lbl" : "Permanent salt and soda lakes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2.6 Permanent salt and soda lakes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620163",
+      "lbl" : "Ephemeral salt lakes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2.7 Ephemeral salt lakes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620164",
+      "lbl" : "Artesian springs and oases",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2.8 Artesian springs and oases"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620165",
+      "lbl" : "Geothermal pools and wetlands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2.9 Geothermal pools and wetlands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620166",
+      "lbl" : "Subglacial lakes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2.10 Subglacial lakes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620167",
+      "lbl" : "Large reservoirs",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F3.1 Large reservoirs"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620168",
+      "lbl" : "Rice paddies",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F3.3 Rice paddies"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620169",
+      "lbl" : "Freshwater aquafarms",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F3.4 Freshwater aquafarms"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620170",
+      "lbl" : "Canals, ditches and drains",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F3.5 Canals, ditches and drains"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620171",
+      "lbl" : "Deepwater coastal inlets",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "FM1.1 Deepwater coastal inlets"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620172",
+      "lbl" : "Permanently open riverine estuaries and bays",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "FM1.2 Permanently open riverine estuaries and bays"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620173",
+      "lbl" : "Intermittently closed and open lakes and lagoons",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "FM1.3 Intermittently closed and open lakes and lagoons"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620174",
+      "lbl" : "Seagrass meadows",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1.1 Seagrass meadows"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620175",
+      "lbl" : "Kelp forests",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1.2 Kelp forests"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620176",
+      "lbl" : "Photic coral reefs",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1.3 Photic coral reefs"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620177",
+      "lbl" : "Shellfish beds and reefs",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1.4 Shellfish beds and reefs"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620178",
+      "lbl" : "Photo-limited marine animal forests",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1.5 Photo-limited marine animal forests"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620179",
+      "lbl" : "Subtidal rocky reefs",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1.6 Subtidal rocky reefs"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620180",
+      "lbl" : "Subtidal sand beds",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1.7 Subtidal sand beds"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620181",
+      "lbl" : "Subtidal mud plains",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1.8 Subtidal mud plains"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620182",
+      "lbl" : "Upwelling zones",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1.9 Upwelling zones"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620183",
+      "lbl" : "Rhodolith/Maërl beds",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1.10 Rhodolith/Maërl beds"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620184",
+      "lbl" : "Epipelagic ocean waters",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M2.1 Epipelagic ocean waters"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620185",
+      "lbl" : "Mesopelagic ocean waters",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M2.2 Mesopelagic ocean waters"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620186",
+      "lbl" : "Bathypelagic ocean waters",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M2.3 Bathypelagic ocean waters"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620187",
+      "lbl" : "Abyssopelagic ocean waters",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M2.4 Abyssopelagic ocean waters"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620188",
+      "lbl" : "Sea ice",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M2.5 Sea ice"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620189",
+      "lbl" : "Continental and island slopes",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M3.1 Continental and island slopes"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620190",
+      "lbl" : "Submarine canyons",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M3.2 Submarine canyons"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620191",
+      "lbl" : "Abyssal plains",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M3.3 Abyssal plains"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620192",
+      "lbl" : "Seamounts, ridges and plateaus",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M3.4 Seamounts, ridges and plateaus"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620193",
+      "lbl" : "Deepwater biogenic beds",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M3.5 Deepwater biogenic beds"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620194",
+      "lbl" : "Hadal trenches and troughs",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M3.6 Hadal trenches and troughs"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620195",
+      "lbl" : "Chemosynthetically-based ecosystems",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M3.7 Chemosynthetically-based ecosystems"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620196",
+      "lbl" : "Submerged artificial structures",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M4.1 Submerged artificial structures"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620197",
+      "lbl" : "Rocky shorelines",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MT1.1 Rocky shorelines"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620198",
+      "lbl" : "Muddy shorelines",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MT1.2 Muddy shorelines"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620199",
+      "lbl" : "Sandy shorelines",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MT1.3 Sandy shorelines"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620200",
+      "lbl" : "Boulder and cobble shores",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MT1.4 Boulder and cobble shores"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620201",
+      "lbl" : "Coastal shrublands and grasslands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MT2.1 Coastal shrublands and grasslands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620202",
+      "lbl" : "Large seabird and pinniped colonies",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MT2.2 Large seabird and pinniped colonies"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620203",
+      "lbl" : "Artificial shorelines",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MT3.1 Artificial shorelines"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620204",
+      "lbl" : "Coastal river deltas",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MFT1.1 Coastal river deltas"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620205",
+      "lbl" : "Intertidal forests and shrublands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MFT1.2 Intertidal forests and shrublands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620206",
+      "lbl" : "Coastal saltmarshes and reedbeds",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MFT1.3 Coastal saltmarshes and reedbeds"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620207",
+      "lbl" : "Tropical-subtropical forests biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The tropical-subtropical forests biome is a biome that includes moderate to highly productive ecosystems with closed tree canopies occurring at lower latitudes north and south of the equator, with fragmented occurrences extend to the subtropics in suitable mesoclimates.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/T1" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T1 Tropical-subtropical forests biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620208",
+      "lbl" : "Temperate-boreal forests and woodlands biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The temperate-boreal forests and woodlands biome is a biome that includes moderate to highly productive tree-dominated systems with a wide range of physiognomic and structural expressions distributed from warm-temperate to boreal latitudes.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/T2" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T2 Temperate-boreal forests and woodlands biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620209",
+      "lbl" : "Shrublands and shrubby woodlands biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The shrublands and shrub-dominated woodlands biome is a biome that includes oligotrophic systems occurring on acidic, sandy soils that are often shallow or skeletal, distributed across al llandmasses outside the polar regions.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/T3" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T3 Shrublands and shrubby woodlands biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620210",
+      "lbl" : "Savannas and grasslands biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The savannas and grasslands biome is a biome that has ecological functions closely linked to a mostly continuous ground layer of grasses that contribute moderate to very high levels of primary productivity driven by strongly seasonal water surplus and deficit cycles.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/T4" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T4 Savannas and grasslands biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620211",
+      "lbl" : "Deserts and semi-deserts biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The deserts and semi-deserts biome is a biome that includes low to very low biomass ecosystems occurring in arid or semi-arid climates, principally associated with the subtropical high-pressure belts and major continental rain shadows.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/T5" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T5 Deserts and semi-deserts biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620212",
+      "lbl" : "Polar/alpine (cryogenic) biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "the polar/alpine biome is a biome that encompasses the extensive Arctic and Antarctic regions as well as high mountainous areas across all continental land masses, with low or very low primary productivity.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/T6" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T6 Polar/alpine (cryogenic) biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620213",
+      "lbl" : "Intensive land-use biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The intensive land-use biome is a biome that includes major anthropogenic enterprises of cropping, pastoralism, plantation farming, and urbanisation. Human intervention is a dominating influence on this biome, also known as the “anthrome”.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/T7" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T7 Intensive land-use biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620214",
+      "lbl" : "Anthropogenic subterranean voids biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The anthropogenic subterranean voids biome is a biome that  includes a single functional group of ecosystems that owe their genesis to excavation by humans. They include underground mines, transport tunnels, tombs, defence and energy installations, and other infrastructure.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/S2" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "S2 Anthropogenic subterranean voids biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620215",
+      "lbl" : "Subterranean freshwaters biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The subterranean freshwaters biome is a biome that includes streams, small lakes and aquifers beneath the earth’s surface and potentially has the largest volume of water of all the freshwater biomes.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/SF1" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "SF1 Subterranean freshwaters biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620216",
+      "lbl" : "Anthropogenic subterranean freshwaters biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The anthropogenic subterranean freshwaters biome is a biome that includes aquatic systems in underground canals, drains, sewers, water pipes, and flooded mines constructed by humans. These are usually well connected to surface waters.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/SF2" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "SF2 Anthropogenic subterranean freshwaters biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620217",
+      "lbl" : "Palustrine wetlands biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The palustrine wetlands biome is a biome that includes vegetated floodplains, groundwater seeps, and mires with permanent or intermittent surface water. Although water and light are abundant at least periodically, saturation of the soil may result in oxygen deprivation below the ground. This suppresses microbial activity and, in many systems, production exceeds decomposition, resulting in peat accumulation.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/TF1" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "TF1 Palustrine wetlands biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620218",
+      "lbl" : "Rivers and streams biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The rivers and streams biome is a biome that includes lotic (running water) ecosystems, flowing from elevated uplands or underground springs to deltas, estuaries, and lakes. They are defined primarily by their linear structure, unidirectional flow regimes, and close interaction with the surrounding landscape.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/F1" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F1 Rivers and streams biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620219",
+      "lbl" : "Lakes biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The lakes biome is a biome that includes lentic ecosystems defined by their still waters. They vary in area, depth, water regime, and connectivity to other aquatic systems across a global distribution.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/F2" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F2 Lakes biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620220",
+      "lbl" : "Artificial wetlands biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The artificial wetlands biome is a biome that includes built structures that hold or transfer water for human use, treatment, or disposal, including large storage reservoirs, farm dams or ponds, recreational and ornamental wetlands, rice paddies, freshwater aquafarms, wastewater storages and treatment ponds, and canals, ditches and drains.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/F3" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F3 Artificial wetlands biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620221",
+      "lbl" : "Semi-confined transitional waters biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The semi-confined transitional waters biome is a biome that includes coastal inlets that are influenced by inputs of both fresh and marine water from terrestrial catchments and ocean tides, waves, and currents. They include deep-water coastal inlets or fjords mostly restricted to high latitudes, as well as estuaries, bays, and lagoons, which are scattered around coastlines throughout the world.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/FM1" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "FM1 Semi-confined transitional waters biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620222",
+      "lbl" : "Marine shelf biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The marine shelf biome is a biome that is distributed globally between the shoreline and deep sea-floor biomes and is dominated by benthic productivity. It includes ecosystems with biogenic substrates (such as seagrass meadows, kelp forests, oyster beds, and coral reefs) and minerogenic substrates including rocky reefs, sandy bottoms, and muddy bottoms.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/M1" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M1 Marine shelf biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620223",
+      "lbl" : "Pelagic ocean waters biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The pelagic ocean waters biome is a biome that comprises the open-ocean water column across all latitudes.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/M2" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M2 Pelagic ocean waters biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620224",
+      "lbl" : "Deep sea floors biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The deep sea floors biome is a biome that includes the entire oceanic benthos below ~250 m depth, where there is not enough light to support primary productivity through photosynthesis. It extends from the upper bathyal seafloor to the deepest parts of the ocean, at just under 11 km in the Mariana Trench.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/M3" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M3 Deep sea floors biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620225",
+      "lbl" : "Anthropogenic marine biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The anthropogenic marine biome is a biome that includes constructed, deposited or dumped artificial structures in the oceans that either confine managed marine organisms or attract marine biota that would not otherwise occupy such locations.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/M4" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M4 Anthropogenic marine biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620226",
+      "lbl" : "Shorelines biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The shorelines biome is a biome that includes naturally formed, intertidal abiogenic habitats situated at the interface between land and sea. The distribution of the biome spans all latitudes (temperate to polar) at which landmasses are present.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/MT1" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MT1 Shorelines biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620227",
+      "lbl" : "Supralittoral coast biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The supralittoral coastal biome includes the landward extent of the transition from marine to terrestrial biomes. It is elevated above the direct influence of waves and tides (see the Shoreline biome) and beyond the direct influence of freshwater seepage or rivers (see brackish tidal biota). Supratidal coastal ecosystems extend around all the world’s land masses, occupying a fringe from tens of metres to a few kilometres wide and covering the entire extent of many small islands.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/MT2" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MT2 Supralittoral coast biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620228",
+      "lbl" : "Anthropogenic shorelines biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The anthropogenic shorelines biome is a biome that is distributed globally where urbanised and industrial areas adjoin the coast, and includes some more remote structures such as artificial islands. It includes marine interfaces constructed from hard, smooth surfaces, including concrete, timber, lithic blocks, and earthen fill, adjoining, extending or replacing natural shores, or floating in proximity to them.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/MT3" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MT3 Anthropogenic shorelines biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620229",
+      "lbl" : "Brackish tidal biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The brackish tidal biome is a biome that is associated with prograding depositional shorelines at the interface of terrestrial, freshwater, and marine realms. The relative influences of marine, freshwater, and terrestrial processes vary from strongly fluvial deltas to marine-dominated intertidal forests and terrestrial-dominated coastal saltmarsh.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/MFT1" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "MFT1 Brackish tidal biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620230",
+      "lbl" : "Tropical alpine grasslands and shrublands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T6.5 Tropical alpine grasslands and shrublands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620231",
+      "lbl" : "Annual croplands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "T7.1 Annual croplands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620232",
+      "lbl" : "Constructed lacustrine wetlands",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "F3.2 Constructed lacustrine wetlands"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620233",
+      "lbl" : "Marine aquafarms",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "M4.2 Marine aquafarms"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620234",
+      "lbl" : "Subterranean lithic biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "The subterranean lithic biome is a biome that includes non-aquatic lithic systems beneath the earth’s surface where sunlight is absent or of insufficient intensity to sustain photosynthesis.",
+          "xrefs" : [ "https://global-ecosystems.org/explore/biomes/S1" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "S1 Subterranean lithic biome"
+        } ]
+      }
+    }, {
+      "id" : "https://w3id.org/elmo/elmo_3620235",
+      "lbl" : "biome",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An ecosystem delineated by broad features of structure and common major ecological drivers, typically global in scale.",
+          "xrefs" : [ "https://global-ecosystems.org/page/typology" ]
+        }
       }
     }, {
       "id" : "https://w3id.org/elmo/elmo_3620500",
@@ -4210,289 +5572,6 @@
         } ]
       }
     }, {
-      "id" : "https://w3id.org/elmo/elmo_3630000",
-      "lbl" : "lowland",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A landform which has an elevation lower than 200m above sea level.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Upland_and_lowland" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630001",
-      "lbl" : "plant community",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An environmental system which consists of a set of plants at some stage in the community assembly process."
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630002",
-      "lbl" : "rainforest plant community",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy, is subject to high humidity and rainfall and includes populations of epiphytes, lianas and vegetation adapted to high moisture."
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630003",
-      "lbl" : "ecosystem functional group",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A group of related ecosystems within a biome that share common ecological drivers, which in turn promote similar biotic traits that characterise the group.",
-          "xrefs" : [ "doi:10.1038/s41586-022-05318-4", "https://global-ecosystems.org/page/typology" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630004",
-      "lbl" : "tropical lowland rainforests",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located in a lowland landform.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T1.1" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630005",
-      "lbl" : "tropical dry forests and thickets",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a forest plant community, experiences tropical climactic conditions and seasonally dry conditions.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T1.2" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630006",
-      "lbl" : "forest plant community",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A plant community which consists mainly of plants with a tree growth form, possessing a continuous and closed canopy."
-        },
-        "synonyms" : [ {
-          "pred" : "hasNarrowSynonym",
-          "val" : "thicket"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630007",
-      "lbl" : "seasonally dry",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An environmental condition in which an area receives ~1800 mm of rainfall per year, with a period of 3 to 6 months receiving less than 100 mm per month.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T1.2" ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasRelatedSynonym",
-          "val" : "arid"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630008",
-      "lbl" : "subtropical dry forests and thickets",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a forest plant community, experiences subtropical climactic conditions and seasonally dry conditions.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T1.2" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630009",
-      "lbl" : "subtropical",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An environmental condition in which an area experiences hot summers and mild winters, and is located to the immediate north or south of the tropical zone.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Subtropics" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630010",
-      "lbl" : "tropical montane rainforests",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a rainforest plant community, experiences tropical climactic conditions and is located at a montane altitude.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T1.3" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630011",
-      "lbl" : "subtropical montane rainforests",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a rainforest plant community, experiences subtropical conditions and is located at a montane altitude.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T1.3" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630012",
-      "lbl" : "subtropical lowland rainforests",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a rainforest plant community, experiences subtropical climactic conditions and is located in a lowland landform.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T1.1" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630013",
-      "lbl" : "heath plant community",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A plant community which consists mainly of open, low-growing woody vegetation.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Heath" ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasRelatedSynonym",
-          "val" : "heathlands"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630014",
-      "lbl" : "tropical heath forests",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has some heath and some forest plant communities and experiences tropical climactic conditions.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T1.4" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630015",
-      "lbl" : "temperate high montane forests",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which consists of a forest plant community, experiences temperate climactic conditions and is located in an upper montane region.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T2.1" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630016",
-      "lbl" : "deciduous plant community",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A plant community dominated by broadleaf deciduous trees.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T2.2" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630017",
-      "lbl" : "deciduous temperate forests",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a broadleaf forest plant community and experiences temperate climactic conditions.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T2.2" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630018",
-      "lbl" : "oceanic cool temperate rainforests",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a rainforest plant community and experiences oceanic temperate climate conditions.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T2.3" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630019",
-      "lbl" : "warm temperate laurophyll forests",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a laurel forest plant community and experiences temperate climactic conditions.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T2.4" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630020",
-      "lbl" : "laurel forest",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A plant community characterized by broadleaf tree species with evergreen, glossy, elongated leaves.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Laurel_forest" ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "laurisilva"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "laurissilva"
-        }, {
-          "pred" : "hasExactSynonym",
-          "val" : "laurophyll forest"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630021",
-      "lbl" : "fire-adapted ecosystem",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem which has a history of regular fires that reset the seccessional state of the ecosystem and vegetation adapted to survive or require regular fire.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Pyric_herbivory" ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "pyric"
-        } ]
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630022",
-      "lbl" : "humid temperate",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A temperate condition which features frequent precipitation and humid conditions.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T2.5" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630023",
-      "lbl" : "temperate pyric humid forests",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a forest plant community, experiences wet temperate conditions and has vegetation that is adapted to cycles of fire.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T2.5" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630024",
-      "lbl" : "temperate pyric sclerophyll forests and woodlands",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "An ecosystem functional group which has a sclerophyll forest plant community, experiences temperate climactic conditions and has vegetation that is adapted to cycles of fire.",
-          "xrefs" : [ "https://global-ecosystems.org/explore/groups/T2.6" ]
-        }
-      }
-    }, {
-      "id" : "https://w3id.org/elmo/elmo_3630025",
-      "lbl" : "sclerophyll forest plant community",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "A forest plant community that consists mainly of sclerophyll woody plants, which are drought-adapted and feature stiff, leathery leaves.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Sclerophyll" ]
-        }
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "lbl" : "part of",
       "type" : "PROPERTY",
@@ -5107,7 +6186,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "David Osumi-Sutherland"
+          "val" : "https://orcid.org/0000-0002-7073-9172"
         } ]
       }
     }, {
@@ -5119,7 +6198,7 @@
         "comments" : [ "X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "David Osumi-Sutherland"
+          "val" : "https://orcid.org/0000-0002-7073-9172"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "starts_at_end_of"
@@ -5136,9 +6215,6 @@
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
           "val" : "https://orcid.org/0000-0002-7073-9172"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "David Osumi-Sutherland"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
           "val" : "ends_at_start_of"
@@ -6718,6 +7794,714 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001569",
+      "lbl" : "Western Australian Mulga Shrublands Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Western Australia Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AA1310"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/aa1310"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T17:25:21Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001571",
+      "lbl" : "Australasia Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "https://www.worldwildlife.org/biomes/deserts-and-xeric-shrublands"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T17:51:32Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001572",
+      "lbl" : "Tirari-Sturt Stony Desert Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Southern central Australia Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AA1309"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/aa1309"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T17:52:41Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001573",
+      "lbl" : "Simpson Desert Region",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Eastern central Australia Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AA1308"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/aa1308"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T17:54:35Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001574",
+      "lbl" : "Pilbara Shrublands Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Western Australia Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AA1307"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/aa1307"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T17:56:13Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001575",
+      "lbl" : "Carnarvon Xeric Shrublands Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Western coast of Australia Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AA1301"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/aa1301"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T18:10:52Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001576",
+      "lbl" : "Central Ranges Xeric Shrub Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Central Australia Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AA1302"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/aa1302"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T18:12:28Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001577",
+      "lbl" : "Gibson Desert Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Western central Australia"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AA1303"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/aa1303"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T18:15:11Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001578",
+      "lbl" : "The Great Sandy-Tanami Desert Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Northwestern Australia"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AA1304"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/aa1304"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T18:17:15Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001579",
+      "lbl" : "Great Victoria Desert Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Southern Australia Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AA1305"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/aa1305"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T18:24:06Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001580",
+      "lbl" : "Nullarbor Plains Xeric Shrubland Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Southern Australia Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AA1306"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/aa1306"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-05T18:26:16Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001583",
+      "lbl" : "Afrotropical Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "https://www.worldwildlife.org/biomes/deserts-and-xeric-shrublands"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:01:41Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001584",
+      "lbl" : "Succulent Karoo Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Southern Africa: Southern Namibia into South Africa"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1322"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1322"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:02:37Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001585",
+      "lbl" : "Yemen and Saudi Arabia Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Arabian Peninsula: Yemen and Saudi Arabia"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1321"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1321"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:07:38Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001586",
+      "lbl" : "Yemen, Saudi Arabia, and Oman Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Arabian Peninsula: Yemen, Saudi Arabia, and Oman"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1320"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1320"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:11:38Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001587",
+      "lbl" : "Somali Montane Xeric Woodland Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Somali montane xeric woodlands ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1319"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1319"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-4366-3088"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:13:00Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001588",
+      "lbl" : "Socotran Archipelago Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Islands east of the Horn of Africa and south of Yemen Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1318"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1318"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:15:07Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001589",
+      "lbl" : "Red Sea Coastal Desert Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "WWF:AT1317"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1317"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:18:55Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001590",
+      "lbl" : "Namibian Savanna Woodland Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "WWF:AT1316"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1316"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:20:56Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001591",
+      "lbl" : "Namib Desert Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Africa: Namibia Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1315"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1315"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:24:28Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001592",
+      "lbl" : "Nama Karoo Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "WWF:AT1314"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1314"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:26:15Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001593",
+      "lbl" : "Masai Xeric Grasslands and Shrublands Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "WWF:AT1313"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1313"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:28:43Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001594",
+      "lbl" : "Madagascar Succulent Woodlands Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "WWF:AT1312"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1312"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:30:23Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001595",
+      "lbl" : "Madagascar Spiny Thickets Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Madagascar spiny desert ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1311"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1311"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:31:29Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001596",
+      "lbl" : "Kaokoveld Desert Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Africa: Coastal Namibia and Angola Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1310"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1310"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:39:32Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001597",
+      "lbl" : "Kalahari Xeric Savanna Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "WWF:AT1309"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1309"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:42:47Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001598",
+      "lbl" : "Ile Europa and Bassas da India Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Southern Africa: Islands about half-way between southern Madagascar and southern Mozambique Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1308"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1308"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:44:54Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001599",
+      "lbl" : "Hobyo Grassland and Shrubland Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "Eastern Africa: Somalia"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1307"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1307"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:46:58Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001600",
+      "lbl" : "Oman and United Arab Emirates Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Arabian Peninsula: Oman and United Arab Emirates Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1306"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1306"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-06T22:54:57Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001601",
+      "lbl" : "Ethiopian Xeric Grasslands and Shrublands Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "WWF:AT1305"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1305"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-07T00:08:06Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001602",
+      "lbl" : "Eritrean Coastal Desert Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "WWF:AT1304"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1304"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-07T00:11:29Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001603",
+      "lbl" : "East Saharan Montane Xeric Woodland Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "North central Africa: Eastern Chad and small area of western Sudan"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1303"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1303"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-07T00:13:33Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001604",
+      "lbl" : "Oman, Yemen, and Saudi Arabia Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "Western Asia: Oman, Yemen, and Saudi Arabia Ecoregion"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:AT1302"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1302"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-07T00:16:12Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001605",
+      "lbl" : "Aldabra Island Xeric Scrub Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "WWF:AT1301"
+        }, {
+          "val" : "https://www.worldwildlife.org/ecoregions/at1301"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-03-07T00:18:09Z"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001626",
+      "lbl" : "Indo-Malay Ecoregion",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-04-26T23:38:50Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
+          "val" : "https://www.worldwildlife.org/biomes/deserts-and-xeric-shrublands"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001627",
+      "lbl" : "Thar Desert",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "Southern Asia: Western India into Pakistan"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:IM1304"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-04-26T23:40:13Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
+          "val" : "https://www.worldwildlife.org/ecoregions/im1304"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001628",
+      "lbl" : "Northwestern Thorn Scrub Forests",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "Southern Asia: Eastern India and western Pakistan"
+        } ],
+        "xrefs" : [ {
+          "val" : "WWF:IM1303"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-04-27T00:12:51Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
+          "val" : "https://www.worldwildlife.org/ecoregions/im1303"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ENVO_01001862",
+      "lbl" : "Solar radiation",
+      "type" : "INDIVIDUAL",
+      "meta" : {
+        "definition" : {
+          "val" : "Stellar radiation emitted from Sol."
+        }
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000002",
       "lbl" : "example to be eventually removed",
       "type" : "INDIVIDUAL",
@@ -6746,7 +8530,7 @@
       "type" : "INDIVIDUAL",
       "meta" : {
         "definition" : {
-          "val" : "Term created to ease viewing/sort terms for development purpose, and will not be included in a release"
+          "val" : "The term was created to ease viewing/sorting terms for development purposes, but will not be included in a release."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
@@ -6872,6 +8656,9 @@
           "val" : "researcher"
         } ]
       }
+    }, {
+      "id" : "https://www.wikidata.org/wiki/Q525",
+      "type" : "INDIVIDUAL"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000111",
       "type" : "PROPERTY",
@@ -7203,24 +8990,8 @@
       }
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
-      "lbl" : "has_related_synonym",
       "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION",
-      "meta" : {
-        "definition" : {
-          "val" : "An alternative label for a class or property that has been used synonymously with the primary term name, but the usage is not strictly correct."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "http://orcid.org/0000-0001-5208-3432"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000233",
-          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/21"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "https://github.com/information-artifact-ontology/ontology-metadata/issues/21"
-        } ]
-      }
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#id",
       "type" : "PROPERTY",
@@ -7295,14 +9066,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/ENVO_01000203"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/ENVO_01000206",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000203"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/ENVO_01000254",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/RO_0002577"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/ENVO_01000342",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/ENVO_01000343"
@@ -7311,13 +9074,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/ENVO_01000203"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/ENVO_01000345",
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001110",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000342"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/ENVO_01000380",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000206"
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/ENVO_01001110",
       "pred" : "is_a",
@@ -7343,14 +9102,6 @@
       "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
       "obj" : "http://purl.obolibrary.org/obo/ENVO_01001170"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001884",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001886"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001886",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_00000191"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/ENVO_02500000",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
@@ -7370,10 +9121,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000020"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/RO_0002577",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
     }, {
       "sub" : "https://w3id.org/elmo/elmo_3620020",
       "pred" : "is_a",
@@ -7586,6 +9333,550 @@
       "sub" : "https://w3id.org/elmo/elmo_3620074",
       "pred" : "is_a",
       "obj" : "https://w3id.org/elmo/elmo_3620020"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620100",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620207"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620101",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620207"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620102",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620207"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620103",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620207"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620104",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620208"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620105",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620208"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620106",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620208"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620107",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620208"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620108",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620208"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620109",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620208"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620110",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620209"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620111",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620209"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620112",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620209"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620113",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620209"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620114",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620210"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620115",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620210"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620116",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620210"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620117",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620210"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620118",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620210"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620119",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620211"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620120",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620211"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620121",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620211"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620122",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620211"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620123",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620211"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620124",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620212"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620125",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620212"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620126",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620212"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620127",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620212"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620128",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620213"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620129",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620213"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620130",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620213"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620131",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620213"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620132",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620214"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620133",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620214"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620134",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620214"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620135",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620215"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620136",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620215"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620137",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620216"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620138",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620216"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620139",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620140",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620139"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620141",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620139"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620142",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620139"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620143",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620217"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620144",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620217"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620145",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620217"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620146",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620217"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620147",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620217"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620148",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620217"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620149",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620217"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620150",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620218"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620151",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620218"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620152",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620218"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620153",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620218"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620154",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620218"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620155",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620218"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620156",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620218"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620157",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620219"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620158",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620219"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620159",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620219"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620160",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620219"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620161",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620219"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620162",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620219"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620163",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620219"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620164",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620219"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620165",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620219"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620166",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620219"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620167",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620220"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620168",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620220"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620169",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620220"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620170",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620220"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620171",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620221"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620172",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620221"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620173",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620221"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620174",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620222"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620175",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620222"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620176",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620222"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620177",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620222"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620178",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620222"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620179",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620222"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620180",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620222"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620181",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620222"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620182",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620222"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620183",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620222"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620184",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620223"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620185",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620223"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620186",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620223"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620187",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620223"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620188",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620223"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620189",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620224"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620190",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620224"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620191",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620224"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620192",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620224"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620193",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620224"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620194",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620224"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620195",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620224"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620196",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620225"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620197",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620226"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620198",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620226"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620199",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620226"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620200",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620226"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620201",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620227"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620202",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620227"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620203",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620228"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620204",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620229"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620205",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620229"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620206",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620229"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620207",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620208",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620209",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620210",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620211",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620212",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620213",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620214",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620215",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620216",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620217",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620218",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620219",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620220",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620221",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620222",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620223",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620224",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620225",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620226",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620227",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620228",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620229",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620230",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620212"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620231",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620213"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620232",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620220"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620233",
+      "pred" : "is_a",
+      "obj" : "https://w3id.org/elmo/elmo_3620225"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620234",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
+    }, {
+      "sub" : "https://w3id.org/elmo/elmo_3620235",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
     }, {
       "sub" : "https://w3id.org/elmo/elmo_3620500",
       "pred" : "is_a",
@@ -8171,242 +10462,6 @@
       "pred" : "is_a",
       "obj" : "https://w3id.org/elmo/elmo_3620500"
     }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630000",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001884"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630001",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000254"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630002",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630006"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630003",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630004",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630004",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000204"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630004",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630000"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630004",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630002"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630005",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630005",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000204"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630005",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630006"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630005",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630007"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630006",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630001"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630007",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000203"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630008",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630008",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000204"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630008",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630006"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630008",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630009"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630009",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000203"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630010",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630010",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000204"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630010",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000342"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630010",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630002"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630011",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630011",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000342"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630011",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630002"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630011",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630009"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630012",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630013",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630001"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630014",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630014",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000204"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630014",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630006"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630014",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630013"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630015",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630015",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000206"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630015",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000345"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630015",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630006"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630016",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630006"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630017",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630017",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000206"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630017",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630016"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630018",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630018",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000380"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630018",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630002"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630019",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630019",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000206"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630019",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630020"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630020",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630006"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630021",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001110"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630022",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000206"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630023",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630023",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630006"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630023",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630021"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630023",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630022"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630024",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630003"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630024",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "http://purl.obolibrary.org/obo/ENVO_01000206"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630024",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630021"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630024",
-      "pred" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "obj" : "https://w3id.org/elmo/elmo_3630025"
-    }, {
-      "sub" : "https://w3id.org/elmo/elmo_3630025",
-      "pred" : "is_a",
-      "obj" : "https://w3id.org/elmo/elmo_3630006"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000125",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000078"
@@ -8414,6 +10469,146 @@
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000428",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000078"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001569",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001572",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001573",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001574",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001575",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001576",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001577",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001578",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001579",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001580",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001571"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001584",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001585",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001586",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001587",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001588",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001589",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001590",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001591",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001592",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001593",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001594",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001595",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001596",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001597",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001598",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001599",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001600",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001601",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001602",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001603",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001604",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001605",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001583"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001627",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001626"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001628",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/ENVO_01001626"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/ENVO_01001862",
+      "pred" : "http://purl.obolibrary.org/obo/RO_0002608",
+      "obj" : "https://www.wikidata.org/wiki/Q525"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "pred" : "subPropertyOf",
@@ -8986,142 +11181,6 @@
       "sub" : "http://purl.obolibrary.org/obo/RO_0002559",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002566"
-    } ],
-    "logicalDefinitionAxioms" : [ {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630004",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000204"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630000"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630002"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630005",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000204"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630006"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630007"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630008",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000204"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630006"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630009"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630010",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000204"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000342"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630002"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630011",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000342"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630002"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630009"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630014",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000204"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630006"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630013"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630015",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000206"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000345"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630006"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630017",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000206"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630016"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630018",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000380"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630002"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630019",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000206"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630020"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630023",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630006"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630021"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630022"
-      } ]
-    }, {
-      "definedClassId" : "https://w3id.org/elmo/elmo_3630024",
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000206"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630021"
-      }, {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "https://w3id.org/elmo/elmo_3630025"
-      } ]
     } ],
     "domainRangeAxioms" : [ {
       "predicateId" : "http://purl.obolibrary.org/obo/BFO_0000050",
