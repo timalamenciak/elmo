@@ -24,6 +24,7 @@ repo_url: https://github.com/timalamenciak/elmo/
 
 nav:
   - Getting started: index.md
+  - Ecosystem types: ecosystems.md
   - ELMO in HTML (PyLODE): lode.html
   - ELMO in HTML (basic): elmo.html
   - Basic user: 
