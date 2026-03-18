@@ -3,7 +3,36 @@
     "allow": [
       "Bash(python \"C:/Users/Tim Alamenciak/Desktop/elmo_edit.py\")",
       "Bash(python3 -c \":*)",
-      "Bash(python3 \"C:/Users/Tim Alamenciak/Desktop/patch2.py\")"
+      "Bash(python3 \"C:/Users/Tim Alamenciak/Desktop/patch2.py\")",
+      "Bash(ls \"C:/Users/Tim Alamenciak/Documents/Coding/elmo/src/ontology/\"robot*)",
+      "Bash(java -version)",
+      "Read(//c/Program Files/**)",
+      "Bash(docker info:*)",
+      "Bash(docker version:*)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" --version)",
+      "Bash(ROBOT=\"java -jar ''C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar''\")",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" reason --catalog catalog-v001.xml --input elmo-edit.owl --reasoner ELK --output \"C:/Users/Tim Alamenciak/Desktop/elmo-reasoned.owl\")",
+      "Bash(tee \"C:/Users/Tim Alamenciak/Desktop/robot-reason.log\")",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" reason --catalog catalog-v001.xml --input elmo-edit.owl --reasoner ELK)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" reason --catalog catalog-v001.xml --input elmo-edit.owl --reasoner ELK -vvv)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" report --catalog catalog-v001.xml --input elmo-edit.owl --labels true --output \"C:/Users/Tim Alamenciak/Desktop/robot-report.tsv\")",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" template --prefix \"ELMO: https://w3id.org/elmo/elmo_\" --template \"../templates/interventions.tsv\" --output \"components/interventions.owl\")",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" template --prefix \"ELMO: https://w3id.org/elmo/elmo_\" --template \"../templates/interventions.tsv\" --output \"components/interventions.owl\" -v)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" reason --catalog catalog-v001.xml --input elmo-edit.owl --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" reason --catalog catalog-v001.xml --input elmo-edit.owl --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural -v)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" report --catalog catalog-v001.xml --input elmo-edit.owl --labels true --output \"reports/elmo-edit.owl-obo-report.tsv\")",
+      "Bash(python \"C:/Users/Tim Alamenciak/Desktop/check_ecosystems.py\")",
+      "Bash(python \"C:/Users/Tim Alamenciak/Desktop/check_eco2.py\")",
+      "Bash(python \"C:/Users/Tim Alamenciak/Desktop/eco_defs.py\")",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" template --prefix \"ELMO: https://w3id.org/elmo/elmo_\" --template ../templates/ecosystems.tsv --output components/ecosystems.owl)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" merge --catalog catalog-v001.xml --input elmo-edit.owl report --output reports/elmo-edit.owl-obo-report.tsv)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" reason --catalog catalog-v001.xml --input tmp/elmo-preprocess.owl --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl)",
+      "Bash(rm test.owl)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" convert --catalog catalog-v001.xml --input elmo-edit.owl --format ofn --output tmp/elmo-preprocess.owl)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" verify --catalog catalog-v001.xml -i tmp/elmo-preprocess.owl --queries ../sparql/owldef-self-reference-violation.sparql ../sparql/iri-range-violation.sparql ../sparql/label-with-iri-violation.sparql ../sparql/multiple-replaced_by-violation.sparql ../sparql/dc-properties-violation.sparql -O reports/)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" merge --catalog catalog-v001.xml --input elmo-edit.owl query --format csv --query ../sparql/class-count-by-prefix.sparql reports/class-counts.csv)",
+      "Bash(python \"C:/Users/Tim Alamenciak/Desktop/fix_syn.py\")",
+      "Bash(python -:*)"
     ]
   }
 }

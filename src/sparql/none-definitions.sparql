@@ -1,0 +1,14 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
+
+# Find all ELMO classes whose IAO:0000115 definition is "None" or empty
+SELECT ?entity ?label ?def WHERE {
+    ?entity a owl:Class .
+    ?entity IAO:0000115 ?def .
+    OPTIONAL { ?entity rdfs:label ?label }
+    FILTER(STRSTARTS(STR(?entity), "https://w3id.org/elmo/"))
+    FILTER(REGEX(STR(?def), "^[Nn]one\\.?$") || STR(?def) = "")
+    FILTER NOT EXISTS { ?entity owl:deprecated true }
+}
+ORDER BY ?entity

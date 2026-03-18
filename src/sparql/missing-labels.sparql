@@ -1,0 +1,11 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Find all ELMO classes missing an rdfs:label
+SELECT ?entity WHERE {
+    ?entity a owl:Class .
+    FILTER(STRSTARTS(STR(?entity), "https://w3id.org/elmo/"))
+    FILTER NOT EXISTS { ?entity rdfs:label ?label }
+    FILTER NOT EXISTS { ?entity owl:deprecated true }
+}
+ORDER BY ?entity
