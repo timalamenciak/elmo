@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: https://w3id.org/elmo/elmo/releases/2025-10-02/elmo-full.owl
+data-version: https://w3id.org/elmo/elmo/releases/2026-03-18/elmo-full.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -9,6 +9,7 @@ subsetdef: RO:0002259 ""
 idspace: dce http://purl.org/dc/elements/1.1/ 
 idspace: dcterms http://purl.org/dc/terms/ 
 idspace: doap http://usefulinc.com/ns/doap# 
+idspace: ELMOP https://w3id.org/elmo/property/ 
 idspace: foaf http://xmlns.com/foaf/0.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: skos http://www.w3.org/2004/02/skos/core# 
@@ -19,7 +20,7 @@ ontology: https://w3id.org/elmo/elmo/elmo-full.owl
 property_value: dcterms:description "None" xsd:string
 property_value: dcterms:license https://creativecommons.org/public-domain/
 property_value: dcterms:title "Ecolink Model Ontology (ELMO)" xsd:string
-property_value: owl:versionInfo "2025-10-02" xsd:string
+property_value: owl:versionInfo "2026-03-18" xsd:string
 
 [Term]
 id: BFO:0000002
@@ -103,6 +104,10 @@ name: root node
 [Term]
 id: ENVO:00000191
 name: solid astronomical body part
+def: "A part of an astronomical body which is primarily composed of solid material." [https://en.wikipedia.org/wiki/Landform]
+synonym: "geological feature" RELATED [ADL:FTT]
+synonym: "landform" RELATED []
+synonym: "physiographic feature" RELATED []
 xref: EcoLexicon:landform
 xref: EcoLexicon:landforms
 xref: FTT:754
@@ -114,27 +119,34 @@ xref: TGN:21401
 [Term]
 id: ENVO:01000203
 name: environmental condition
+def: "An environmental condition is a range of a determinate quality or combination of qualities that are present in an environmental system." [DOI:10.1186/2041-1480-4-43]
 is_a: PATO:0001018
 property_value: IAO:0000114 IAO:0000121
 created_by: ORCID:0000-0002-4366-3088
+creation_date: 2013-04-07T14:35:18Z
 
 [Term]
 id: ENVO:01000204
 name: tropical
+def: "A tropical condition is an environmental condition in which an environmental system receives high yearly solar irradiance per unit area and, on Earth, the Sun reaches a subsolar point at least once during the solar year. This results in a hot and moist year-round climate at low elevations, which have a monthly average temperature above 18 degrees Celsius." [https://en.wikipedia.org/wiki/Tropical]
 xref: EcoLexicon:the_tropics
 xref: SPIRE:Tropical
 is_a: ENVO:01000203 ! environmental condition
 created_by: ORCID:0000-0002-4366-3088
+creation_date: 2013-04-07T14:36:47Z
 
 [Term]
 id: ENVO:01000254
 name: environmental system
+def: "A system which has the disposition to environ one or more material entities." [DOI:10.1186/2041-1480-4-43]
 synonym: "environment" EXACT []
 xref: EcoLexicon:environment
+creation_date: 2013-09-23T16:04:08Z
 
 [Term]
 id: ENVO:01000342
 name: montane
+def: "An altitudinal condition which inheres in a bearer by virtue of the bearer being located at an altitude between mid-altitude forests and the tree line." [https://en.wikipedia.org/wiki/Altitudinal_zonation]
 xref: LTER:350
 is_a: ENVO:01000343 ! altitudinal condition
 created_by: ORCID:0000-0002-4366-3088
@@ -142,20 +154,25 @@ created_by: ORCID:0000-0002-4366-3088
 [Term]
 id: ENVO:01000343
 name: altitudinal condition
+def: "An altitudinal condition is an environmental condition in which ranges of factors such as temperature, humidity, soil composition, solar irradiation, and tree density vary with ranges in altitude." [https://en.wikipedia.org/wiki/Altitudinal_zonation]
 is_a: ENVO:01000203 ! environmental condition
 created_by: ORCID:0000-0002-4366-3088
 
 [Term]
 id: ENVO:01001110
 name: ecosystem
-def: "An environmental system which includes both living and non-living components." []
+def: "An environmental system which includes both living and non-living components." [https://en.wikipedia.org/wiki/Ecosystem]
+xref: LTER:173 {xref="https://vocab.lternet.edu/vocab/vocab/index.php?tema=173&/ecosystems"}
 is_a: BFO:0000040 ! material entity
 is_a: ENVO:01000254 ! environmental system
 
 [Term]
 id: ENVO:01001170
 name: active ecosystem management process
+def: "A process during which an ecosystem, its parts, or the processes it participates in are modified by human intervention to accomplish an objective." [https://www.iucn.org/theme/protected-areas/about/protected-areas-categories/category-iv-habitatspecies-management-area]
 synonym: "ecosystem management" EXACT []
+synonym: "environmental management" RELATED []
+synonym: "Umweltmaßnahme" RELATED [www.awi.de/internas] {created_by="https://orcid.org/0000-0002-9620-2832"}
 is_a: ENVO:02500000 ! environmental system process
 relationship: RO:0000057 ENVO:01001110 ! has participant ecosystem
 relationship: RO:0002211 ENVO:02500000 ! regulates environmental system process
@@ -233,6 +250,8 @@ def: "An active ecosystem management process during which a human employs machin
 is_a: ENVO:01001170 ! active ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -242,33 +261,47 @@ def: "A mechanical ecosystem management process during which vegetation is remov
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620022
-name: root wrench removal process
-def: "A mechanical vegetation removal process in which a human employs a tool comprising a lever and gripping portion (root wrench)." []
+name: grubbing process
+def: "A mechanical vegetation removal process in which vegetation is uprooted by severing subsoil roots and prying or pulling the plant from the ground, using hand tools such as a spade, mattock, or root wrench." []
+synonym: "root wrench removal" RELATED []
+synonym: "spading removal" RELATED []
+synonym: "uprooting" RELATED []
 is_a: elmo:3620021 ! mechanical vegetation removal process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620023
 name: cut and cover removal process
 def: "A mechanical vegetation removal process during which plants at ground level are cut and residual stumps are covered with a sun-blocking material (e.g. silage tarp)." []
+synonym: "solarization" RELATED []
 is_a: elmo:3620021 ! mechanical vegetation removal process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620024
 name: cutting removal process
-def: "A mechanical vegetation removal process in which a human cuts and removes plant material." []
+def: "A mechanical vegetation removal process in which a human cuts plant material above ground level. Cut material may be removed from the site (e.g. logging) or left in place (e.g. mowing). Methods include chainsaws, brushcutters, mowers, and hand tools." []
 is_a: elmo:3620021 ! mechanical vegetation removal process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -278,24 +311,31 @@ def: "A mechanical vegetation removal process in which a human severs subsoil ro
 is_a: elmo:3620021 ! mechanical vegetation removal process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "This term has been merged into grubbing process (ELMO:3620022). See that term for the consolidated definition." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620026
 name: canopy thinning process
-def: "A mechanical vegetation removal process in which a human removes trees from a given area with the goal of reducing overall canopy cover thereby increasing light availability for understorey plants." [doi:10.1111/rec.13043]
+def: "A mechanical vegetation removal process in which a human removes trees or large shrubs from a given area with goals that may include increasing light availability for understorey plants, reducing wildfire risk, or improving wildlife habitat." [doi:10.1111/rec.13043]
 is_a: elmo:3620021 ! mechanical vegetation removal process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620027
 name: leaf litter removal process
-def: "A mechanical vegetation removal process in which a human removes leaf litter from the ground thereby increasing the light availability for soil." []
-is_a: elmo:3620021 ! mechanical vegetation removal process
+def: "A mechanical ecosystem management process in which a human removes accumulated leaf litter from the ground surface, typically to reduce the seedbank of invasive plants, expose bare mineral soil for seeding, or alter conditions at the soil surface." []
+is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -305,6 +345,10 @@ def: "A mechanical ecosystem management process in which a human controls fauna 
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: ELMOP:hasCASCode "3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -314,6 +358,8 @@ def: "A mechanical fauna control process in which a human uses traps to control 
 is_a: elmo:3620028 ! mechanical fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -323,6 +369,10 @@ def: "A mechanical fauna control process in which a human targets predators for 
 is_a: elmo:3620028 ! mechanical fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: ELMOP:hasCASCode "3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -332,6 +382,10 @@ def: "A mechanical fauna control process in which a human installs fencing to re
 is_a: elmo:3620067 ! fauna exclusion process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.2" xsd:string
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -341,6 +395,10 @@ def: "A mechanical fauna control process in which a human installs an electronic
 is_a: elmo:3620028 ! mechanical fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: ELMOP:hasCASCode "3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -350,35 +408,48 @@ def: "A mechanical ecosystem management process during which a human deliberatel
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620034
 name: dam construction process
-def: "A mechanical hydrological alteration process in which a human constructs some dam to restore a meander sequence to a river or stream." [doi:10.1093/biosci/biu036]
+def: "A mechanical hydrological alteration process in which a human constructs a dam or barrier across a watercourse for ecological restoration purposes, such as to restore a meander sequence or to raise the water table of adjacent wetlands." [doi:10.1093/biosci/biu036]
 synonym: "beaver dam analogue" EXACT []
 is_a: elmo:3620033 ! mechanical hydrological alteration process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620035
 name: dam removal process
-def: "A mechanical hydrological alteration process in which a human removes some dam with the goal of altering the hydroperiod of surrounding lands and reconnecting rivers." [doi:10.12952/journal.elementa.000108]
+def: "A mechanical hydrological alteration process in which a human removes a dam or barrier with the goal of altering the hydroperiod of surrounding lands and reconnecting rivers to their floodplains." [doi:10.12952/journal.elementa.000108]
 is_a: elmo:3620033 ! mechanical hydrological alteration process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620036
-name: tile drain crushing process
-def: "A mechanical hydrological alteration process in which a human uncovers and collapses subterranean tile drains in situ to reduce drainage on the landscape and restore wetland hydroperiod." []
+name: tile drain decommissioning process
+def: "A mechanical hydrological alteration process in which a human decommissions subterranean tile drains by collapsing them in situ or by excavating and removing them, in order to reduce drainage and restore wetland hydroperiod." []
+synonym: "drain removal process" EXACT []
+synonym: "tile drain crushing process" EXACT []
+synonym: "tile drain removal process" EXACT []
 is_a: elmo:3620033 ! mechanical hydrological alteration process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
-property_value: IAO:0000116 "This technique is actively practiced by the Nature Conservancy of Canada, but has not been documented in the literature yet." xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "This term consolidates the formerly separate tile drain crushing process and tile drain removal process, as both achieve the same management goal by similar means." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -388,51 +459,71 @@ def: "A mechanical hydrological alteration process in which a human uncovers and
 is_a: elmo:3620033 ! mechanical hydrological alteration process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "This term has been merged into tile drain decommissioning process (ELMO:3620036). See that term for the consolidated definition." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620038
 name: nest site creation process
-def: "A mechanical ecosystem management process in which a human creates sites for fauna to breed, feed and shelter." [doi:10.1186/S41610-021-00192-Z]
+def: "A mechanical ecosystem management process in which a human creates or installs structures to provide nesting, roosting, or denning sites for fauna. Examples include bird nest boxes, raptor nesting platforms, bat boxes, and nesting mounds for turtles." [doi:10.1186/S41610-021-00192-Z]
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620039
-name: perch creation process
-def: "A mechanical ecosystem management process in which a human creates places for birds to perch." [doi:10.1007/s11258-016-0619-4]
+name: perch and roost creation process
+def: "A mechanical ecosystem management process in which a human creates structures such as posts, platforms, or dead snags for wildlife to perch or roost on. Such structures are used by birds of prey, bats, and other arboreal fauna." [doi:10.1007/s11258-016-0619-4]
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620040
 name: buffer strip creation process
-def: "A mechanical ecosystem management process in which a human cultivates strips of flora between landscape features using earthworks and planting processes." [doi:10.2134/jeq2018.03.0120]
+def: "A mechanical ecosystem management process in which a human establishes strips of vegetation between landscape features such as agricultural fields and watercourses, using earthworks and planting processes." [doi:10.2134/jeq2018.03.0120]
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.2" xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620041
 name: riparian buffer strip creation process
-def: "A mechanical ecosystem management process in which a human cultivates strips of flora in the riparian areas of rivers." [doi:10.1890/08-2064.1]
+def: "A mechanical ecosystem management process in which a human establishes strips of vegetation in the riparian areas of watercourses such as rivers, streams, and creeks." [doi:10.1890/08-2064.1]
 is_a: elmo:3620040 ! buffer strip creation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.2" xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620042
 name: buffer strip retention process
-def: "A mechanical ecosystem management process in which a human leaves strips of flora untouched when clearing the land for other purposes." [doi:10.2134/jeq2018.03.0120]
+def: "A mechanical ecosystem management process in which a human leaves strips of vegetation untouched when clearing land for other purposes, with the goal of retaining their ecological function as a buffer between landscape features." [doi:10.2134/jeq2018.03.0120]
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.2" xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Retention of an existing vegetated buffer may constitute an active management decision (e.g. legal protection or explicit exclusion from clearing). Consider whether passive retention qualifies as a mechanical process." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -442,7 +533,11 @@ def: "A mechanical ecosystem management process during which the topology of som
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
 property_value: IAO:0000116 "Difficult to suggest a firm border for scale. I doubt digging out a small hole would be called earthworks but settled on at least 1 m2 of earth moved. See Landscape Microscale Size and its associated scale properties for more nuance: ENVO:03620005; ENVO:03620006; ENVO:03620007; ENVO:03620008" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -452,6 +547,8 @@ def: "An earthworks process in which earthen barriers (berms) are constructed wi
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -461,6 +558,8 @@ def: "An earthworks process in which a human creates a pond." [doi:10.1007/s1053
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -470,6 +569,8 @@ def: "An earthworks process in which a human reshapes the banks or basin of a po
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -479,6 +580,8 @@ def: "An earthworks process in which a human alleviates the compaction of soil."
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -489,6 +592,8 @@ synonym: "soil ripping process" NARROW []
 is_a: elmo:3620048 ! soil decompaction process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -498,6 +603,8 @@ def: "An earthworks process in which a human deeply breaks up and overturns soil
 is_a: elmo:3620048 ! soil decompaction process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -507,6 +614,10 @@ def: "An earthworks process in which a human creates a specific slope." [https:/
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -516,15 +627,19 @@ def: "An earthworks process in which a human installs inorganic material, usuall
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620054
 name: shoreline reinforcement process
-def: "An earthworks process in which a human installs inorganic material, usually in a mesh, to stabilize a slope on the bank of a body of water." [https://en.wikipedia.org/wiki/Cellular_confinement]
+def: "An earthworks process in which a human installs material, which may be inorganic (e.g. rock riprap, geotextile mesh) or organic (e.g. timber cribbing, live stakes), to stabilize the bank of a body of water and reduce erosion." [https://en.wikipedia.org/wiki/Cellular_confinement]
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -534,6 +649,8 @@ def: "An earthworks process in which a human digs pits and creates mounds to rep
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -543,6 +660,8 @@ def: "An earthworks process in which a human realigns the channel of a stream by
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -552,6 +671,8 @@ def: "An earthworks process in which a human realigns the channel of a stream by
 is_a: elmo:3620056 ! channel realignment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -561,6 +682,8 @@ def: "An earthworks process in which a human removes the sediment layer of a wat
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -570,15 +693,19 @@ def: "A mechanical ecosystem management process in which a human creates a cross
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620060
 name: topsoil removal process
-def: "A mechanical ecosystem management process in which a human removes the topsoil layer." [doi:10.1111/avsc.12063]
+def: "A mechanical ecosystem management process in which a human removes the topsoil layer (the upper soil horizon rich in organic matter and nutrients) from an area, either to reduce excess nutrients that favour invasive species or to harvest donor soil containing seeds and soil biota for use elsewhere." [doi:10.1111/avsc.12063]
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -588,6 +715,8 @@ def: "A mechanical ecosystem management process in which a human installs some m
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -597,6 +726,8 @@ def: "An erosion control process in which a human installs a textile." []
 is_a: elmo:3620061 ! erosion control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -606,6 +737,8 @@ def: "An erosion control process in which a human installs a fence with a geotex
 is_a: elmo:3620061 ! erosion control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -615,15 +748,19 @@ def: "An erosion control process in which a human interleaves live materials to 
 is_a: elmo:3620061 ! erosion control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620065
 name: irrigation process
-def: "A mechanical ecosystem management process in which a human installs semi-permanent lines to supply a controlled amount of water to plants." [https://en.wikipedia.org/wiki/Irrigation]
+def: "A mechanical ecosystem management process in which water is supplied artificially to plants at a restoration site. Methods may include drip lines, sprinkler systems, manual watering, or passive devices such as ollas. Irrigation in restoration is typically used sparingly during plant establishment or in response to drought conditions." [https://en.wikipedia.org/wiki/Irrigation]
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -633,6 +770,10 @@ def: "A predator control process in which a human installs a mechanical device d
 is_a: elmo:3620030 ! predator control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: ELMOP:hasCASCode "3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -642,6 +783,10 @@ def: "A mechanical fauna control process in which a human excludes fauna from a 
 is_a: elmo:3620028 ! mechanical fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: ELMOP:hasCASCode "3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -651,6 +796,10 @@ def: "A mechanical fauna control process in which a human deters fauna from a sp
 is_a: elmo:3620028 ! mechanical fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: ELMOP:hasCASCode "3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -660,6 +809,8 @@ def: "A mechanical fauna control process in which a human captures fauna for the
 is_a: elmo:3620028 ! mechanical fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.4" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.4
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -669,6 +820,8 @@ def: "A mechanical ecosystem management process in which a human installs some m
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -678,6 +831,8 @@ def: "A fish bypass installation process in which a human installs a chute consi
 is_a: elmo:3620070 ! fish bypass installation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -687,6 +842,8 @@ def: "An earthworks process in which a human fills in a drainage ditch to restor
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -696,15 +853,19 @@ def: "An earthworks process in which a human adds sediment to a water body in or
 is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620074
-name: new plant protection process
-def: "A mechanical ecosystem management process in which a human installs a barrier to protect newly planted flora from herbivory." []
+name: plant protection process
+def: "A mechanical ecosystem management process in which a human installs barriers or protective structures around plants to protect them from herbivory, trampling, or other damage. Methods include site-level fencing, individual tree guards, tree tubes or shelters, and wire cages. Protection from browsing by wildlife or livestock is the most common application." []
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2025,313 +2186,399 @@ property_value: IAO:0000116 "Definition still being developed by eIVC team." xsd
 [Term]
 id: elmo:3620240
 name: Tropical Rainforest Subbiome
+def: "A subbiome of the Tropical-subtropical forests biome comprising closed-canopy, high-rainfall tropical and subtropical forests characterised by high biodiversity, year-round productivity, and complex multi-layered canopy structure." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298942/Tropical_Rainforest_Subbiome]
 synonym: "TT1.a" EXACT []
 synonym: "TT1.a Tropical Rainforest Subbiome" EXACT []
 is_a: elmo:3620207 ! Tropical-subtropical forests biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620241
 name: Tropical Dry Forest Subbiome
+def: "A subbiome of the Tropical-subtropical forests biome comprising seasonally dry tropical and subtropical forests and thickets characterised by drought-deciduous or semi-deciduous phenology and strongly seasonal productivity." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298943/Tropical_Dry_Forest_Subbiome]
 synonym: "TT1.b" EXACT []
 synonym: "TT1.b Tropical Dry Forest Subbiome" EXACT []
 is_a: elmo:3620207 ! Tropical-subtropical forests biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620242
 name: Warm Temperate Forest & Woodland Subbiome
+def: "A subbiome of the Temperate-boreal forests and woodlands biome comprising warm temperate forests and woodlands characterised by mixed evergreen-deciduous or evergreen canopies with moderate biodiversity and mild seasonal climates." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298945/Warm_Temperate_Forest_Woodland_Subbiome]
 synonym: "TT2.a" EXACT []
 synonym: "TT2.a Warm Temperate Forest & Woodland Subbiome" EXACT []
 is_a: elmo:3620208 ! Temperate-boreal forests and woodlands biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620243
 name: Cool Temperate Forest & Woodland Subbiome
+def: "A subbiome of the Temperate-boreal forests and woodlands biome comprising cool temperate forests and woodlands characterised by deciduous or mixed canopies, pronounced seasonality, and moderate to high productivity." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1333041/Cool_Temperate_Forest_Woodland_Subbiome]
 synonym: "TT2.b" EXACT []
 synonym: "TT2.b Cool Temperate Forest & Woodland Subbiome" EXACT []
 is_a: elmo:3620208 ! Temperate-boreal forests and woodlands biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620244
 name: Boreal Forest & Woodland Subbiome
+def: "A subbiome of the Temperate-boreal forests and woodlands biome comprising boreal forests and woodlands at high latitudes characterised by coniferous or mixed canopies, cold long winters, and a short growing season." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298944/Boreal_Forest_Woodland_Subbiome]
 synonym: "TT2.c" EXACT []
 synonym: "TT2.c Boreal Forest & Woodland Subbiome" EXACT []
 is_a: elmo:3620208 ! Temperate-boreal forests and woodlands biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620245
 name: Tropical Savanna Subbiome
+def: "A subbiome of the Tropical Savanna and Shrubland biome comprising open to semi-closed tropical savannas characterised by a continuous grass layer, scattered trees, and strongly seasonal rainfall with a pronounced dry season." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298946/Tropical_Savanna_Subbiome]
 synonym: "TT3.a" EXACT []
 synonym: "TT3.a Tropical Savanna Subbiome" EXACT []
 is_a: elmo:3620236 ! Tropical Savanna & Shrubland Biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620246
 name: Tropical Shrubland Subbiome
+def: "A subbiome of the Tropical Savanna and Shrubland biome comprising tropical shrublands characterised by woody shrub dominance, often on nutrient-poor or seasonally dry substrates with recurrent disturbance by fire or herbivory." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298947/Tropical_Shrubland_Subbiome]
 synonym: "TT3.b" EXACT []
 synonym: "TT3.b Tropical Shrubland Subbiome" EXACT []
 is_a: elmo:3620236 ! Tropical Savanna & Shrubland Biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620247
 name: Tropical Open Rock Subbiome
+def: "A subbiome of the Tropical Savanna and Shrubland biome comprising tropical cliff and rock outcrop ecosystems characterised by exposed rock substrates, extreme microclimate variability, sparse vegetation, and high local endemism." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298948/Tropical_Open_Rock_Subbiome]
 synonym: "TT3.c" EXACT []
 synonym: "TT3.c Tropical Open Rock Subbiome" EXACT []
 is_a: elmo:3620236 ! Tropical Savanna & Shrubland Biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620248
 name: Mediterranean-Dry Grassland & Shrubland Subbiome
+def: "A subbiome of the Temperate-Boreal Grassland and Shrubland biome comprising Mediterranean-climate and dry temperate grasslands and shrublands characterised by fire-adapted or drought-adapted vegetation and pronounced summer drought." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1333042/Mediterranean-Dry_Grassland_Shrubland_Subbiome]
 synonym: "TT4.a" EXACT []
 synonym: "TT4.a Mediterranean-Dry Grassland & Shrubland Subbiome" EXACT []
 is_a: elmo:3620237 ! Temperate-Boreal Grassland & Shrubland Biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620249
 name: Temperate Grassland & Shrubland Subbiome
+def: "A subbiome of the Temperate-Boreal Grassland and Shrubland biome comprising temperate grasslands and shrublands characterised by a dominant grass and forb layer with limited woody cover and seasonal moisture deficits." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298949/Temperate_Grassland_Shrubland_Subbiome]
 synonym: "TT4.b" EXACT []
 synonym: "TT4.b Temperate Grassland & Shrubland Subbiome" EXACT []
 is_a: elmo:3620237 ! Temperate-Boreal Grassland & Shrubland Biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620250
 name: Continental Boreal Shrubland & Grassland Subbiome
+def: "A subbiome of the Temperate-Boreal Grassland and Shrubland biome comprising continental boreal shrublands and grasslands at high latitudes characterised by cold continental climates, short growing seasons, and low productivity." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298950/Continental_Boreal_Shrubland_Grassland_Subbiome]
 synonym: "TT4.c" EXACT []
 synonym: "TT4.c Continental Boreal Shrubland & Grassland Subbiome" EXACT []
 is_a: elmo:3620237 ! Temperate-Boreal Grassland & Shrubland Biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620251
 name: Temperate-Boreal Open Rock Subbiome
+def: "A subbiome of the Temperate-Boreal Grassland and Shrubland biome comprising temperate and boreal cliff and rock outcrop ecosystems characterised by minimal soil development, stress-tolerant vegetation, and high local endemism." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298951/Temperate-Boreal_Open_Rock_Subbiome]
 synonym: "TT4.d" EXACT []
 synonym: "TT4.d Temperate-Boreal Open Rock Subbiome" EXACT []
 is_a: elmo:3620237 ! Temperate-Boreal Grassland & Shrubland Biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620252
 name: Cool Semi-desert Subbiome
+def: "A subbiome of the Deserts and semi-deserts biome comprising cool arid and semi-arid ecosystems characterised by low and variable precipitation, cold winters, and sparse shrub-steppe or herbaceous vegetation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298952/Cool_Semi-desert_Subbiome]
 synonym: "TT5.a" EXACT []
 synonym: "TT5.a Cool Semi-desert Subbiome" EXACT []
 is_a: elmo:3620211 ! Deserts and semi-deserts biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620253
 name: Warm Desert & Semi-desert Subbiome
+def: "A subbiome of the Deserts and semi-deserts biome comprising warm arid and hyper-arid ecosystems characterised by extreme heat, very low precipitation, and highly drought-adapted sparse vegetation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298953/Warm_Desert_Semi-desert_Subbiome]
 synonym: "TT5.b" EXACT []
 synonym: "TT5.b Warm Desert & Semi-desert Subbiome" EXACT []
 is_a: elmo:3620211 ! Deserts and semi-deserts biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620254
 name: Polar & Alpine Snow & Ice Subbiome
+def: "A subbiome of the Polar/alpine (cryogenic) biome comprising polar and high-altitude snow and ice ecosystems characterised by perennial or semi-permanent ice or snow cover and minimal biological productivity." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298954/Polar_Alpine_Snow_Ice_Subbiome]
 synonym: "TT6.a" EXACT []
 synonym: "TT6.a Polar & Alpine Snow & Ice Subbiome" EXACT []
 is_a: elmo:3620212 ! Polar/alpine (cryogenic) biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620255
 name: Temperate-Polar Alpine & Tundra Subbiome
+def: "A subbiome of the Polar/alpine (cryogenic) biome comprising temperate to polar alpine and tundra ecosystems characterised by cold temperatures, short growing seasons, permafrost or freeze-thaw cycles, and low-growing vegetation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298955/Temperate-Polar_Alpine_Tundra_Subbiome]
 synonym: "TT6.b" EXACT []
 synonym: "TT6.b Temperate-Polar Alpine & Tundra Subbiome" EXACT []
 is_a: elmo:3620212 ! Polar/alpine (cryogenic) biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620256
 name: Tropical Alpine Subbiome
+def: "A subbiome of the Polar/alpine (cryogenic) biome comprising high-altitude tropical alpine ecosystems characterised by intense UV radiation, large diurnal temperature variation, and distinctive Afroalpine or Andean vegetation forms." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298956/Tropical_Alpine_Subbiome]
 synonym: "TT6.c" EXACT []
 synonym: "TT6.c Tropical Alpine Subbiome" EXACT []
 is_a: elmo:3620212 ! Polar/alpine (cryogenic) biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620257
 name: Agricultural Land Subbiome
+def: "A subbiome of the Intensive land-use biome comprising cultivated croplands, pastures, and managed farmlands characterised by human modification of the land surface for food, fibre, and biomass production." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298957/Agricultural_Land_Subbiome]
 synonym: "TT7.a" EXACT []
 synonym: "TT7.a Agricultural Land Subbiome" EXACT []
 is_a: elmo:3620213 ! Intensive land-use biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620258
 name: Developed Land Subbiome
+def: "A subbiome of the Intensive land-use biome comprising urban, suburban, and built-up lands characterised by impervious surfaces, human infrastructure, and heavily modified ecological conditions." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298958/Developed_Land_Subbiome]
 synonym: "TT7.b" EXACT []
 synonym: "TT7.b Developed Land Subbiome" EXACT []
 is_a: elmo:3620213 ! Intensive land-use biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620259
 name: Derived Land Subbiome
+def: "A subbiome of the Intensive land-use biome comprising derived semi-natural lands such as plantation forests and highly modified vegetation characterised by human-altered successional trajectories and managed species composition." [https://global-ecosystems.org/explore/groups/T7]
 synonym: "TT7.c" EXACT []
 synonym: "TT7.c Derived Land Subbiome" EXACT []
 is_a: elmo:3620213 ! Intensive land-use biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 property_value: IAO:0000116 "No link on NatureServe Explorer." xsd:string
 
 [Term]
 id: elmo:3620260
 name: Forested Wetland Subbiome
+def: "A subbiome of the Palustrine wetlands biome comprising freshwater forested wetlands characterised by waterlogged soils supporting tree-dominated canopies adapted to periodic or permanent inundation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298960/Forested_Wetland_Subbiome]
 synonym: "TP1.a" EXACT []
 synonym: "TP1.a Forested Wetland Subbiome" EXACT []
 is_a: elmo:3620217 ! Palustrine wetlands biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620261
 name: Emergent Open Wetland Subbiome
+def: "A subbiome of the Palustrine wetlands biome comprising open freshwater wetlands characterised by emergent herbaceous or shrubby vegetation and standing or slow-moving water with seasonal to permanent inundation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298961/Emergent_Open_Wetland_Subbiome]
 synonym: "TP1.b" EXACT []
 synonym: "TP1.b Emergent Open Wetland Subbiome" EXACT []
 is_a: elmo:3620217 ! Palustrine wetlands biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620262
 name: Bog & Fen Subbiome
+def: "A subbiome of the Palustrine wetlands biome comprising peat-forming freshwater wetlands characterised by waterlogged, nutrient-poor, and often acidic conditions supporting sphagnum moss, sedge, and heath communities." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298962/Bog_Fen_Subbiome]
 synonym: "TP1.c" EXACT []
 synonym: "TP1.c Bog & Fen Subbiome" EXACT []
 is_a: elmo:3620217 ! Palustrine wetlands biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620263
 name: Freshwater Coast Subbiome
+def: "A subbiome of the Freshwater Coast biome comprising natural freshwater shoreline ecosystems characterised by dynamic water-level fluctuations, wave or current action, and characteristic riparian or lacustrine shore vegetation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298964/Freshwater_Coast_Subbiome]
 synonym: "TP2.a" EXACT []
 synonym: "TP2.a Freshwater Coast Subbiome" EXACT []
 is_a: elmo:3620238 ! Freshwater Coast Biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620264
 name: Developed Freshwater Coast Subbiome
+def: "A subbiome of the Anthropogenic Freshwater Coast biome comprising modified and developed freshwater shoreline ecosystems characterised by human infrastructure, altered hydrological regimes, and degraded or managed shoreline vegetation." [https://global-ecosystems.org/explore/groups/TF1]
 synonym: "TP3.a" EXACT []
 synonym: "TP3.a Developed Freshwater Coast Subbiome" EXACT []
 is_a: elmo:3620239 ! Anthropogenic Freshwater Coast Biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 property_value: IAO:0000116 "No link on NatureServe Explorer." xsd:string
 
 [Term]
 id: elmo:3620265
 name: Coastal Brackish Tidal Wetland Subbiome
+def: "A subbiome of the Brackish tidal biome comprising coastal wetlands subject to tidal influence and salinity gradients, characterised by emergent macrophytes such as saltmarsh grasses, mangroves, or halophytic vegetation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298966/Coastal_Brackish_Tidal_Wetland_Subbiome]
 synonym: "MB1.a" EXACT []
 synonym: "MB1.a Coastal Brackish Tidal Wetland Subbiome" EXACT []
 is_a: elmo:3620229 ! Brackish tidal biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620266
 name: Marine-Intertidal Shoreline Subbiome
+def: "A subbiome of the Shorelines biome comprising natural marine intertidal shoreline ecosystems characterised by regular tidal exposure, wave action, and communities of salt-tolerant organisms adapted to alternating aerial and aquatic conditions." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298967/Marine-Intertidal_Shoreline_Subbiome]
 synonym: "MS1.a" EXACT []
 synonym: "MS1.a Marine-Intertidal Shoreline Subbiome" EXACT []
 is_a: elmo:3620226 ! Shorelines biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620267
 name: Supralittoral Marine Coast Subbiome
+def: "A subbiome of the Supralittoral coast biome comprising coastal ecosystems above the high tide mark characterised by salt spray, periodic inundation, wind disturbance, and distinctive coastal dune or cliff vegetation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298968/Supralittoral_Marine_Coast_Subbiome]
 synonym: "MS2.a" EXACT []
 synonym: "MS2.a Supralittoral Marine Coast Subbiome" EXACT []
 is_a: elmo:3620227 ! Supralittoral coast biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620268
 name: Developed Marine Shoreline Subbiome
+def: "A subbiome of the Anthropogenic shorelines biome comprising developed and modified marine shoreline ecosystems characterised by human infrastructure such as seawalls, breakwaters, and hardened coastlines." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298969/Developed_Marine_Shoreline_Subbiome]
 synonym: "MS3.a" EXACT []
 synonym: "MS3.a Developed Marine Shoreline Subbiome" EXACT []
 is_a: elmo:3620228 ! Anthropogenic shorelines biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620269
 name: Tropical Thorn Woodland
-synonym: "Tropical Thorn Woodland" EXACT []
+def: "A tropical dry forest ecosystem characterised by thorny, drought-adapted trees and shrubs with sparse to moderate canopy cover, occurring in semi-arid tropical regions with a prolonged dry season." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298975/Tropical_Thorn_Woodland_Ecobiome]
 synonym: "TT1.b2" EXACT []
 synonym: "TT1.b2 Tropical Thorn Woodland" EXACT []
 is_a: elmo:3620241 ! Tropical Dry Forest Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620270
 name: Temperate Continental Conifer Forest & Woodland
-synonym: "Temperate Continental Conifer Forest & Woodland" EXACT []
+def: "A cool temperate forest and woodland ecosystem characterised by coniferous tree dominance in continental climates, with cold winters, moderate growing-season productivity, and often a sparse or ericaceous understorey." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298982/Temperate_Continental_Conifer_Forest_Woodland_Ecobiome]
 synonym: "TT2.b3" EXACT []
 synonym: "TT2.b3 Temperate Continental Conifer Forest & Woodland" EXACT []
 is_a: elmo:3620243 ! Cool Temperate Forest & Woodland Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620271
 name: Boreal Forest & Woodland
+def: "A boreal forest and woodland ecosystem characterised by coniferous tree dominance, a moss- and lichen-dominated understorey, seasonally frozen soils, and a short growing season at high latitudes." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298976/Boreal_Forest_Woodland_Ecobiome]
 synonym: "TT2.c1" EXACT []
 synonym: "TT2.c1 Boreal Forest & Woodland" EXACT []
 is_a: elmo:3620244 ! Boreal Forest & Woodland Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620272
 name: Tropical Lowland Savanna
+def: "A tropical savanna ecosystem characterised by a continuous grass layer interspersed with scattered trees or shrubs in lowland tropical regions, maintained by seasonal drought, fire, and herbivory." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298983/Tropical_Lowland_Savanna_Ecobiome]
 synonym: "ELMO:3620114" NARROW []
 synonym: "ELMO:3620115" NARROW []
 synonym: "ELMO:3620116" NARROW []
 synonym: "TT3.a1" EXACT []
 synonym: "TT3.a1 Tropical Lowland Savanna" EXACT []
 is_a: elmo:3620245 ! Tropical Savanna Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620273
 name: Tropical Cliff & Rock Outcrop
+def: "A tropical open-rock ecosystem characterised by exposed cliff and rock outcrop substrates, minimal soil, extreme microclimate variability, and highly specialised stress-tolerant plant communities with high local endemism." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298985/Tropical_Cliff_Rock_Outcrop_Ecobiome]
 synonym: "ELMO:3620113" BROAD []
 synonym: "TT3.c1" EXACT []
 synonym: "TT3.c1 Tropical Cliff & Rock Outcrop" EXACT []
 is_a: elmo:3620247 ! Tropical Open Rock Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620274
 name: Boreal Shrubland & Grassland
+def: "A continental boreal ecosystem characterised by dwarf shrub or grass-dominated vegetation in cold, continental climates, typically occupying areas beyond or above the boreal forest tree line with a short growing season." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298989/Boreal_Shrubland_Grassland_Ecobiome]
 synonym: "TT4.c1" EXACT []
 synonym: "TT4.c1 Boreal Shrubland & Grassland" EXACT []
 is_a: elmo:3620250 ! Continental Boreal Shrubland & Grassland Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620275
 name: Temperate-Boreal Cliff & Rock Outcrop
+def: "A temperate to boreal open-rock ecosystem characterised by exposed cliff faces and rock outcrops supporting stress-tolerant vascular plants, lichens, and bryophytes adapted to shallow soils and temperature extremes." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298990/Temperate-Boreal_Cliff_Rock_Outcrop_Ecobiome]
 synonym: "ELMO:3620113" BROAD []
 synonym: "TT4.d1" EXACT []
 synonym: "TT4.d1 Temperate-Boreal Cliff & Rock Outcrop" EXACT []
 is_a: elmo:3620251 ! Temperate-Boreal Open Rock Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620276
 name: Cool Desert & Semi-desert Shrub-Steppe
+def: "A cool desert and semi-desert ecosystem characterised by a sparse cover of cold-tolerant shrubs and grasses on arid substrates, with low and variable precipitation, cold winters, and biological soil crusts." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298991/Cool_Desert_Semi-desert_Shrub-Steppe_Ecobiome]
 synonym: "ELMO:3620119" NARROW []
 synonym: "ELMO:3620122" NARROW []
 synonym: "TT5.a1" EXACT []
 synonym: "TT5.a1 Cool Desert & Semi-desert Shrub-Steppe" EXACT []
 is_a: elmo:3620252 ! Cool Semi-desert Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620277
 name: Polar Tundra & Desert
+def: "A polar to alpine tundra and desert ecosystem characterised by permafrost, low temperatures, a brief growing season, and low-growing vegetation dominated by grasses, sedges, mosses, lichens, and dwarf shrubs." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298996/Polar_Tundra_Desert_Ecobiome]
 is_a: elmo:3620255 ! Temperate-Polar Alpine & Tundra Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620278
 name: Temperate Alpine Grassland & Shrubland
+def: "A temperate alpine ecosystem characterised by open grasslands and shrublands above the treeline, with short growing seasons, intense UV radiation, freeze-thaw cycles, and wind-adapted low-growing vegetation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1298997/Temperate_Alpine_Grassland_Shrubland_Ecobiome]
 synonym: "TT6.b2" EXACT []
 synonym: "TT6.b2 Temperate Alpine Grassland & Shrubland" EXACT []
 is_a: elmo:3620255 ! Temperate-Polar Alpine & Tundra Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620279
 name: Marsh, Wet Meadow & Shrub Wetland
+def: "An emergent open wetland ecosystem characterised by seasonally to permanently waterlogged soils supporting a continuous cover of herbaceous marsh plants, wet meadow grasses and sedges, or low wetland shrubs." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1299006/Marsh_Wet_Meadow_Shrub_Wetland_Ecobiome]
 synonym: "TP1.b1" EXACT []
 synonym: "TP1.b1 Marsh, Wet Meadow & Shrub Wetland" EXACT []
 is_a: elmo:3620261 ! Emergent Open Wetland Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620280
 name: Episodic Arid floodplain
+def: "An emergent open wetland ecosystem characterised by irregular and episodic flooding of arid or semi-arid lowlands, supporting ephemeral wetland communities that respond rapidly to infrequent flooding events." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1299007/Episodic_Arid_Floodplain_Ecobiome]
 is_a: elmo:3620261 ! Emergent Open Wetland Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620281
 name: Inland Salt Marsh
+def: "An emergent open wetland ecosystem characterised by saline or brackish soils in inland settings, dominated by halophytic herbaceous vegetation adapted to osmotic stress and periodic inundation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1299008/Inland_Salt_Marsh_Ecobiome]
 is_a: elmo:3620261 ! Emergent Open Wetland Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620282
 name: Coastal Freshwater Shore & Dune
+def: "A freshwater coastal ecosystem characterised by dynamic shoreline substrates of sand, gravel, or organic material along lake or river margins, supporting sparse to dense shoreline and dune vegetation." [https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.1299012/Coastal_Freshwater_Shore_Dune_Ecobiome]
 is_a: elmo:3620238 ! Freshwater Coast Biome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 
 [Term]
 id: elmo:3620283
 name: Developed Freshwater Shoreline
+def: "A developed freshwater coast ecosystem characterised by artificially modified shorelines of lakes, reservoirs, or rivers, including riprap, seawalls, and other engineered structures that alter natural shoreline processes." [https://global-ecosystems.org/explore/groups/TF1]
 synonym: "TP3.a1" EXACT []
 synonym: "TP3.a1 Developed Freshwater Shoreline" EXACT []
 is_a: elmo:3620264 ! Developed Freshwater Coast Subbiome
+property_value: IAO:0000116 "Definition sourced from IUCN Global Ecosystem Typology (https://global-ecosystems.org) and adapted for ontology use." xsd:string
 property_value: IAO:0000116 "No link on NatureServe Explorer." xsd:string
 
 [Term]
@@ -2341,6 +2588,10 @@ def: "An active ecosystem management process in which a human applys or releases
 is_a: ENVO:01001170 ! active ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2350,24 +2601,33 @@ def: "A chemical ecosystem management process in which a human applies some chem
 is_a: elmo:3620500 ! chemical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620502
 name: fertilizer application process
-def: "A chemical application process in which a human applies chemical fertilizer to a given area with the goal of increasing the available carbon, nitrogen or phosphorous." [wd:Q1213511]
+def: "A chemical application process in which a human applies fertilizer or nutrient amendments to a given area with the goal of increasing soil fertility or plant growth. Fertilizer may supply macronutrients (nitrogen, phosphorus, potassium), micronutrients, or organic matter." [wd:Q1213511]
 is_a: elmo:3620501 ! chemical application process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620503
 name: lime application process
-def: "A chemical application process in which a human adds lime to soil or water in order to reduce the pH." [doi:10.1046/j.1365-2427.2001.00788.x]
+def: "A chemical application process in which a human adds lime to soil or water in order to raise the pH and reduce acidity, thereby improving conditions for plant growth or reducing the availability of toxic compounds." [doi:10.1046/j.1365-2427.2001.00788.x]
 is_a: elmo:3620501 ! chemical application process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Corrected: the previous definition incorrectly stated that lime reduces pH. Lime raises pH, making soil less acidic." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2377,6 +2637,8 @@ def: "A chemical application process in which a human applies herbicide to plant
 is_a: elmo:3620501 ! chemical application process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2386,6 +2648,9 @@ def: "A herbicide application process in which a human applies the herbicide gly
 is_a: elmo:3620501 ! chemical application process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: IAO:0000116 "This term is deprecated. Glyphosate application is subsumed under herbicide application process (ELMO:3620504). Treating a single herbicide as a separate class-level term is inconsistent with the treatment of other herbicides." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2395,6 +2660,8 @@ def: "A chemical application process in which a human introduces an insecticide 
 is_a: elmo:3620501 ! chemical application process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2404,6 +2671,8 @@ def: "An active ecosystem management process in which a human adds or removes bi
 is_a: ENVO:01001170 ! active ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2413,6 +2682,8 @@ def: "A biological ecosystem management process in which a human plants flora (d
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2422,6 +2693,8 @@ def: "A planting process in which a human plants flora grown in a plug tray." [d
 is_a: elmo:3620601 ! planting process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2431,6 +2704,8 @@ def: "A planting process in which a human plants shrubs." []
 is_a: elmo:3620601 ! planting process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2440,6 +2715,8 @@ def: "A planting process in which a human plants trees." []
 is_a: elmo:3620601 ! planting process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2449,6 +2726,8 @@ def: "A planting process in which a human plants trees that have been grown in p
 is_a: elmo:3620604 ! tree planting process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2458,6 +2737,8 @@ def: "A planting process in which a human plants trees that have grown to a diam
 is_a: elmo:3620604 ! tree planting process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2467,6 +2748,8 @@ def: "A planting process in which a human inserts cut branches of a flora into s
 is_a: elmo:3620601 ! planting process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2476,6 +2759,8 @@ def: "A planting process in which a human plants flora with the goal of assistin
 is_a: elmo:3620601 ! planting process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2485,6 +2770,8 @@ def: "A biological ecosystem management process in which a human sows seeds in a
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2494,6 +2781,9 @@ def: "A seeding process in which a human sows tree seeds." []
 is_a: elmo:3620609 ! seeding process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "This term is deprecated. Tree seeds are sown using the same techniques as other seeds. Use seeding process (ELMO:3620609) or an appropriate sub-term instead." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2503,24 +2793,30 @@ def: "A seeding process in which a human sows seeds in lines along a landscape."
 is_a: elmo:3620609 ! seeding process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620612
 name: drill seeding process
-def: "A seeding process in which a human uses a drill seeder to sow seeds." [doi:10.3375/043.038.0504]
+def: "A seeding process in which a human uses a drill seeder to place seeds into the soil at a fixed spacing and depth, typically using machinery that opens a furrow, deposits the seed, and closes the furrow in a single pass." [doi:10.3375/043.038.0504]
 is_a: elmo:3620609 ! seeding process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620613
 name: broadcast seeding process
-def: "A seeding process in which a human sows seeds by scattering them through the air." [doi:10.3375/043.038.0504]
+def: "A seeding process in which a human scatters seeds across a surface at variable density, either by hand or using a mechanical spreader, without placing them at a specific depth." [doi:10.3375/043.038.0504]
 is_a: elmo:3620609 ! seeding process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2530,15 +2826,19 @@ def: "A seeding process in which a human scatters seeds by hand." [doi:10.1111/j
 is_a: elmo:3620613 ! broadcast seeding process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620615
 name: hydroseeding process
-def: "A seeding process in which a human applies seed in a slurry of nutrients and fixatives." [doi:10.3375/043.038.0504]
+def: "A seeding process in which a human applies seed mixed in a water-based slurry, often including a tackifier or binder and sometimes coloured with a tracer dye, by spraying it over a target area. Nutrients are not inherently included unless deliberately added to the mixture." [doi:10.3375/043.038.0504]
 is_a: elmo:3620609 ! seeding process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2548,6 +2848,8 @@ def: "A biological ecosystem management process in which a human applies a treat
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2557,6 +2859,8 @@ def: "A seed treatment process in which a human damages the coating of the seed,
 is_a: elmo:3620616 ! seed treatment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2566,6 +2870,8 @@ def: "A seed treatment process in which a human applies heat to some seed in ord
 is_a: elmo:3620616 ! seed treatment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2575,15 +2881,19 @@ def: "A seed treatment process in which a human applies cold to some seed in ord
 is_a: elmo:3620616 ! seed treatment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620620
-name: soak seed treatment process
+name: seed soak treatment process
 def: "A seed treatment process in which a human soaks seeds in order to enhance germination." [doi:10.1111/rec.13210]
 is_a: elmo:3620616 ! seed treatment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2593,6 +2903,8 @@ def: "A seed treatment process in which light is applied to seeds in order to en
 is_a: elmo:3620616 ! seed treatment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2602,6 +2914,8 @@ def: "A seed treatment process in which some chemical is applied to some seed in
 is_a: elmo:3620616 ! seed treatment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2611,6 +2925,8 @@ def: "A biological ecosystem management process in which a human uses biological
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2620,6 +2936,8 @@ def: "A biological ecosystem management process in which a human facilitates the
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.4.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.4.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2629,6 +2947,8 @@ def: "A captive breeding and release process in which a human collects eggs and 
 is_a: elmo:3620624 ! captive breeding and release process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.4.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.4.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2638,6 +2958,8 @@ def: "An egg relocation and release process in which a human collects eggs and r
 is_a: elmo:3620625 ! egg relocation and release process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.4.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.4.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2647,15 +2969,19 @@ def: "A captive breeding and release process in which a human captures young fau
 is_a: elmo:3620624 ! captive breeding and release process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.4.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.4.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620628
 name: supplemental water process
-def: "A biological ecosystem management process in which a human provides supplemental water to flora or fauna." []
+def: "A biological ecosystem management process in which a human provides supplemental water sources for wild fauna in areas where natural water availability is limited. Examples include constructing artificial ponds, guzzlers, or placing temporary water troughs for wildlife during drought. Distinct from irrigation process, which provides water to plants." []
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2665,6 +2991,8 @@ def: "A biological ecosystem management process in which a human provides supple
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2674,15 +3002,20 @@ def: "A biological ecosystem management process in which a human transfers plant
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620631
 name: moss layer transfer process
-def: "A plant material transfer process in which a human restores the hydroperiod of a peatland by blocking drainage ditches or other means and subsequently moves material from the moss layer (top 10 cm) of another peatland onto the one being restored." [doi:10.1016/j.ecoleng.2014.03.051]
+def: "A plant material transfer process in which a human collects material from the moss layer (approximately the top 10 cm) of a donor peatland and transfers it to a restoration site to reintroduce peatland-forming mosses and associated species." [doi:10.1016/j.ecoleng.2014.03.051]
 is_a: elmo:3620630 ! plant material transfer process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Hydrological restoration steps (e.g. blocking drainage ditches) that may precede or accompany moss transfer should be represented as separate processes under mechanical hydrological alteration process." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2692,6 +3025,8 @@ def: "A biological ecosystem management process in which a human transfers soil 
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2701,6 +3036,8 @@ def: "A biological fauna control process in which a human renders some fauna ste
 is_a: elmo:3620623 ! biological fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.1.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2710,6 +3047,8 @@ def: "A biological fauna control process in which a human destroys the eggs of s
 is_a: elmo:3620623 ! biological fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.1.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2719,6 +3058,8 @@ def: "A biological ecosystem management process in which a human implements meas
 is_a: elmo:3620623 ! biological fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.1.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2728,6 +3069,8 @@ def: "A biological ecosystem management process in which a human adds material t
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2737,6 +3080,8 @@ def: "A biological ecosystem management process in which a human adds some mater
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2746,6 +3091,8 @@ def: "A soil amendment process in which a human adds mulch (i.e. woody debris)."
 is_a: elmo:3620637 ! soil amendment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2755,6 +3102,8 @@ def: "A soil amendment process in which a human adds peat." []
 is_a: elmo:3620637 ! soil amendment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2764,6 +3113,8 @@ def: "A soil amendment process in which a human adds topsoil." []
 is_a: elmo:3620637 ! soil amendment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2773,6 +3124,8 @@ def: "A soil amendment process in which a human adds some composted organic mate
 is_a: elmo:3620637 ! soil amendment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2782,6 +3135,8 @@ def: "A soil amendment process in which a human adds some manure." [doi:10.2134/
 is_a: elmo:3620637 ! soil amendment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2791,6 +3146,8 @@ def: "A biological ecosystem management process in which a human creates an arti
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2800,6 +3157,10 @@ def: "A biological ecosystem management process in which a human introduces graz
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2809,15 +3170,20 @@ def: "A biological ecosystem management process in which a human adds mycorrhiza
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620646
 name: peatland rewetting process
-def: "A biological ecosystem management process in which a human alters the hydroperiod of a peatland such that more water is available." [doi:10.1007/s11027-023-10046-9]
-is_a: elmo:3620600 ! biological ecosystem management process
+def: "A mechanical hydrological alteration process in which a human raises the water table of a degraded peatland or wetland, typically by blocking drainage ditches or installing water control structures, with the goal of restoring wetland function and hydrology." [doi:10.1007/s11027-023-10046-9]
+is_a: elmo:3620033 ! mechanical hydrological alteration process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Reclassified from biological ecosystem management process to mechanical hydrological alteration process, as this intervention is fundamentally hydrological in nature." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2827,6 +3193,8 @@ def: "A biological fauna control process in which a human captures injured fauna
 is_a: elmo:3620623 ! biological fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2836,6 +3204,8 @@ def: "A biological fauna control process in which a human reintroduces fauna int
 is_a: elmo:3620623 ! biological fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2845,6 +3215,8 @@ def: "A biological fauna control process in which a human provides medical care 
 is_a: elmo:3620623 ! biological fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2854,6 +3226,8 @@ def: "A biological ecosystem management process in which a human translocates so
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2863,6 +3237,8 @@ def: "A translocation process in which a human translocates some fauna from one 
 is_a: elmo:3620650 ! translocation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2872,6 +3248,8 @@ def: "A translocation process in which a human translocates coral from one area 
 is_a: elmo:3620650 ! translocation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2881,15 +3259,19 @@ def: "An environmental system process in which a human employs social means to r
 is_a: ENVO:02500000 ! environmental system process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620801
 name: legislation process
-def: "A ecosystem-oriented social process in which a humans collectively implement legislation with pro-environmental goals." []
+def: "An ecosystem-oriented social process in which humans collectively implement legislation with pro-environmental goals." []
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2899,6 +3281,8 @@ def: "A legislation process in which the legislation explicitly protects somethi
 is_a: elmo:3620801 ! legislation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2908,6 +3292,8 @@ def: "A legal protection process in which the legal protection applies to a spec
 is_a: elmo:3620802 ! legal protection process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2917,6 +3303,8 @@ def: "A legal protection process in which the legal protection applies to a spec
 is_a: elmo:3620802 ! legal protection process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2926,6 +3314,10 @@ def: "A legal protection process in which the legal protection applies to some t
 is_a: elmo:3620802 ! legal protection process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.1" xsd:string
+property_value: ELMOP:hasCASCode "3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2935,6 +3327,8 @@ def: "A legal protection process in which the legal protection applies to some m
 is_a: elmo:3620802 ! legal protection process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2944,6 +3338,10 @@ def: "A legal protection process in which the legal protection applies to some p
 is_a: elmo:3620802 ! legal protection process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.1" xsd:string
+property_value: ELMOP:hasCASCode "1.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2953,6 +3351,8 @@ def: "A private land protection process in which a landowner agrees to conserve 
 is_a: elmo:3620807 ! private land protection process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2962,6 +3362,8 @@ def: "A legislation process in which some legislation applies to some area." []
 is_a: elmo:3620801 ! legislation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2971,6 +3373,8 @@ def: "An area policy process in which some pro-conservation bylaw is established
 is_a: elmo:3620809 ! area policy process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.1.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.1.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2980,6 +3384,8 @@ def: "A legislation process in which some group passes pro-conservation legislat
 is_a: elmo:3620801 ! legislation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.1.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.1.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -2989,24 +3395,30 @@ def: "A legislation process in which some group passes pro-conservation legislat
 is_a: elmo:3620801 ! legislation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.1.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.1.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620813
 name: international agreement process
-def: "A ecosystem-oriented social process in which a humans collectively agree to measures that protect, conserve and restore biodiversity." []
+def: "An ecosystem-oriented social process in which humans collectively agree to measures that protect, conserve, or restore ecosystems across national boundaries." []
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.1.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.1.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620814
-name: active enforcement process
-def: "A ecosystem-oriented social process in which a human actively enforces the pro-conservation legislation or policies governing a specific area." []
+name: enforcement and compliance process
+def: "An ecosystem-oriented social process in which a human enforces pro-conservation legislation and monitors compliance with relevant environmental laws, regulations, or agreements." []
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.4" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.4
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3016,6 +3428,10 @@ def: "A ecosystem-oriented social process in which a human implements measures t
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: ELMOP:hasCASCode "4.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3025,6 +3441,8 @@ def: "A ecosystem-oriented social process in which a human assists a species in 
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3034,6 +3452,8 @@ def: "A ecosystem-oriented social process in which a human undertakes a process 
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3043,6 +3463,8 @@ def: "An awareness-raising process in which a human uses social media to spread 
 is_a: elmo:3620817 ! awareness-raising process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3052,6 +3474,8 @@ def: "An awareness-raising process in which a human hosts an event for the commu
 is_a: elmo:3620817 ! awareness-raising process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3061,24 +3485,30 @@ def: "An awareness-raising process in which a human endeavours to improve the kn
 is_a: elmo:3620817 ! awareness-raising process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620821
 name: citizen science process
-def: "An awareness-raising process in which a humans gather measurements of some ecosystem elements." []
+def: "An awareness-raising process in which humans gather measurements of some ecosystem elements." []
 is_a: elmo:3620817 ! awareness-raising process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620822
 name: community engagement process
-def: "An ecosystem-oriented social process in which a humans are engaged in the restoration and conservation of biodiversity." []
+def: "An ecosystem-oriented social process in which humans are engaged in the restoration and conservation of local ecosystems." []
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3088,6 +3518,8 @@ def: "A ecosystem-oriented social process in which a human endeavours to alter t
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3097,6 +3529,8 @@ def: "A pro-environmental behaviour change process in which signage is installed
 is_a: elmo:3620823 ! pro-environmental behaviour change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3106,6 +3540,8 @@ def: "A pro-environmental behaviour change process in which a human reaches out 
 is_a: elmo:3620823 ! pro-environmental behaviour change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3115,6 +3551,8 @@ def: "A pro-environmental behaviour change process in which a human reaches out 
 is_a: elmo:3620823 ! pro-environmental behaviour change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3124,6 +3562,8 @@ def: "A pro-environmental behaviour change process in which a human marks enviro
 is_a: elmo:3620823 ! pro-environmental behaviour change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3133,15 +3573,19 @@ def: "A ecosystem-oriented social process in which a human raises funds to suppo
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "6.4" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.4
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620829
 name: financial incentive process
-def: "A ecosystem-oriented social process in which financial incentives are offered to a humans in order to take pro-environmental measures." []
+def: "An ecosystem-oriented social process in which financial incentives are offered to an individual, an organization, or a corporation in order to encourage pro-conservation behaviour or outcomes." []
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "6.4" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.4
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3151,6 +3595,8 @@ def: "A ecosystem-oriented social process in which some authority regulates the 
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3160,6 +3606,8 @@ def: "An environmental usage regulation process in which some authority regulate
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3169,6 +3617,8 @@ def: "An environmental usage regulation process in which some authority prohibit
 is_a: elmo:3620831 ! regulate grazing
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3178,6 +3628,8 @@ def: "An environmental usage regulation process in which some authority regulate
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3187,6 +3639,8 @@ def: "An environmental usage regulation process in which some authority prohibit
 is_a: elmo:3620833 ! regulate fishing
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3196,6 +3650,8 @@ def: "An environmental usage regulation process in which some authority regulate
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3205,6 +3661,8 @@ def: "An environmental usage regulation process in which some authority prohibit
 is_a: elmo:3620835 ! regulate chemical usage
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3214,6 +3672,8 @@ def: "An environmental usage regulation process in which some authority regulate
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3223,6 +3683,8 @@ def: "An environmental usage regulation process in which some authority prohibit
 is_a: elmo:3620837 ! regulate hunting
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3232,6 +3694,8 @@ def: "An environmental usage regulation process in which some authority regulate
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3241,6 +3705,8 @@ def: "An environmental usage regulation process in which some authority prohibit
 is_a: elmo:3620839 ! regulate recreational activities
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3250,6 +3716,8 @@ def: "An environmental usage regulation process in which some authority limits p
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3259,6 +3727,8 @@ def: "An environmental usage regulation process in which some authority prohibit
 is_a: elmo:3620841 ! limit public access
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3268,6 +3738,8 @@ def: "An environmental usage regulation process in which some authority regulate
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3277,6 +3749,8 @@ def: "An environmental usage regulation process in which some authority prohibit
 is_a: elmo:3620843 ! regulate dredging
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3286,6 +3760,8 @@ def: "An environmental usage regulation process in which some authority regulate
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3295,24 +3771,30 @@ def: "An environmental usage regulation process in which some authority prohibit
 is_a: elmo:3620845 ! regulate aquaculture
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "5.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620847
 name: cultural ecosystem management process
-def: "A ecosystem-oriented social process in which a humans undertake shared practices passed down through generations to manage the ecosystem in which they live." []
+def: "A ecosystem-oriented social process in which humans undertake shared practices passed down through generations to manage the ecosystem in which they live." []
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "6.5" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.5
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620848
 name: cultural ecosystem usage process
-def: "A ecosystem-oriented social process in which a humans harvest resources from the environment for shared practices that are passed down through generations." []
+def: "An ecosystem-oriented social process in which humans harvest resources from the environment for shared cultural purposes, following practices passed down through generations." []
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "6.5" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.5
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3322,6 +3804,8 @@ def: "A ecosystem-oriented social process in which a human alters the way in whi
 is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3331,6 +3815,8 @@ def: "A change to the mowing regime in which a human alters the timing of regula
 is_a: elmo:3620851 ! alter mowing regime
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3340,6 +3826,8 @@ def: "A plan specification change process in which a human alters the mowing reg
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3349,6 +3837,8 @@ def: "A change to the mowing regime in which a human alters the height of a mowe
 is_a: elmo:3620851 ! alter mowing regime
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3358,6 +3848,8 @@ def: "A change to the tilling regime in which a human alters the frequency, timi
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3367,6 +3859,8 @@ def: "A change to the chemical regime in which a human alters the frequency, tim
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3376,6 +3870,8 @@ def: "A change to the insecticide regime in which a human alters the frequency, 
 is_a: elmo:3620854 ! alter chemical regime
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3385,6 +3881,8 @@ def: "A change to the fertilizer regime in which a human alters the frequency, t
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3394,6 +3892,8 @@ def: "A change to the lighting regime in which a human alters the frequency, tim
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3403,6 +3903,8 @@ def: "A change to the grazing regime in which a human alters the frequency, timi
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3412,6 +3914,8 @@ def: "A change to the dam regime in which a human alters the frequency, timing o
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3421,6 +3925,8 @@ def: "A change to the herbicide regime in which a human alters the frequency, ti
 is_a: elmo:3620854 ! alter chemical regime
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3430,6 +3936,8 @@ def: "A change to the herbicide regime in which a human ceases some herbicide ap
 is_a: elmo:3620860 ! alter herbicide regime
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
@@ -3437,154 +3945,260 @@ id: elmo:3621000
 name: fishing with equipment modified for conservation
 def: "A planned environmental usage process in which fishing equipment is modified for conservation (e.g. bycatch deterrent devices are installed)" []
 is_a: ENVO:01001436 ! planned environmental usage process
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621001
 name: fishing with net modified for conservation
 def: "A fishing process in which a human uses a net that has been modified to reduce bycatch or accomplish some other conservation-oriented goal." []
 is_a: elmo:3621000 ! fishing with equipment modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621002
 name: fishing with hook modified for conservation
 def: "A fishing process in which a human uses a hook that has been modified for conservation." []
 is_a: elmo:3621000 ! fishing with equipment modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621003
 name: fishing with added acoustic devices for conservation
 def: "A fishing process in which a human adds acoustic devices to fishing gear to deter bycatch." []
 is_a: elmo:3621000 ! fishing with equipment modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621004
 name: fishing with modified traps
 def: "A fishing process in which a human uses traps modified to deter bycatch." []
 is_a: elmo:3621000 ! fishing with equipment modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621005
 name: fishing with modified line-setting procedure
 def: "A fishing process in which a human attaches bait to lines in a way that deters seabird scavenging (i.e. underwater)" []
 is_a: elmo:3621000 ! fishing with equipment modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621006
 name: aquaculture process modified for conservation
 def: "A planned environmental usage process in which a human engages in aquaculture with modifications for conservation (e.g. disease control measures)" []
 is_a: ENVO:01001436 ! planned environmental usage process
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621007
 name: underwater turbine modified for conservation
 def: "A planned environmental usage process in which a human installs an underwater turbine modified for conservation." []
 is_a: ENVO:01001436 ! planned environmental usage process
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621008
 name: farming process modified for conservation
 def: "A planned environmental usage process in which a human engages in farming with modifications for the conservation of biodiversity." []
 is_a: ENVO:01001436 ! planned environmental usage process
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621009
 name: farming with intercropping
 def: "A farming process modified for conservation in which a human grows two or more crop varities in close proximity to one another." [ISBN:9781933395210]
 is_a: elmo:3621008 ! farming process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621010
 name: agroforestry process
 def: "A farming process modified for conservation in which a human integrates trees and crops or pasture." [wd:Q397350]
 is_a: elmo:3621008 ! farming process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621011
 name: alley cropping farming process
 def: "An agroforestry process in which crops are grown in between rows of trees and shrubs." [ISBN:9781933395210]
 is_a: elmo:3621010 ! agroforestry process
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621012
 name: no-till farming
 def: "A farming process modified for conservation in which a human does not disturb the soil in between crop plantings." [wd:Q1227672]
 is_a: elmo:3621008 ! farming process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621013
 name: organic farming regime
 def: "A farming process modified for conservation in which a human avoids synthetic or chemical inputs in the farming process. The definition of organic is often the subject of government regulation." [https://en.wikipedia.org/wiki/Organic_farming]
 is_a: elmo:3621008 ! farming process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621014
 name: crop rotation
 def: "A farming process modified for conservation in which the crop type is rotated year over year." [ISBN:9781933395210]
 is_a: elmo:3621008 ! farming process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621015
 name: set aside farmland for conservation
 def: "A farming process modified for conservation in which a human agrees not to farm some portion of a landscape." [https://en.wikipedia.org/wiki/Set-aside]
 is_a: elmo:3621008 ! farming process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "1.2" xsd:string
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/1.2
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621016
 name: forestry process modified for conservation
 def: "A planned environmental usage process in which a human harvests trees in a manner that attempts to ameliorate the impact on the landscape." []
 is_a: ENVO:01001436 ! planned environmental usage process
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621017
 name: coppice process
 def: "A forestry process in which a human cuts trees down to the stump, allowing the trees to regenerate from the stump." [https://en.wikipedia.org/wiki/Coppicing]
 is_a: elmo:3621016 ! forestry process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621018
 name: selective harvesting process
 def: "A forestry process in which a human harvests trees according to their age with the goal of preserving some overall age for a forest stand." [https://en.wikipedia.org/wiki/Selection_cutting]
 is_a: elmo:3621016 ! forestry process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: ELMOP:hasCASCode "6.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+property_value: skos:broadMatch https://w3id.org/elmo/cas/6.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621019
 name: woody debris removal process
 def: "A forestry process in which a human removes coarse woody debris after harvesting trees, thereby reducing the risk and intensity of forest fire." [https://en.wikipedia.org/wiki/Coarse_woody_debris]
 is_a: elmo:3621016 ! forestry process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621020
 name: leave woody debris
 def: "A forestry process in which a human leaves coarse woody debris after harvesting, thereby increasing available resources." [https://en.wikipedia.org/wiki/Coarse_woody_debris]
 is_a: elmo:3621016 ! forestry process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621021
 name: shelterwood cutting process
 def: "A forestry process in which a human primarily harvests large trees in order to increase light availability for seedling species." [https://en.wikipedia.org/wiki/Shelterwood_cutting]
 is_a: elmo:3621016 ! forestry process modified for conservation
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621022
@@ -3593,14 +4207,485 @@ def: "A planned environmental usage process in which a human modifies the level 
 synonym: "curtailment" EXACT []
 synonym: "doi:10.1002/2688-8319.12371" BROAD []
 is_a: ENVO:01001436 ! planned environmental usage process
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621023
 name: fauna poisoning process
 def: "A chemical ecosystem management process in which poison is introduced to reduce the population of fauna." []
 is_a: elmo:3620500 ! chemical ecosystem management process
-property_value: dcterms:contributor https://orcid.org/0000-0002-1296-2528
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.1
+created_by: https://orcid.org/0000-0002-1296-2528
+
+[Term]
+id: elmo:3621024
+name: tile drain installation process
+def: "A mechanical hydrological alteration process in which a human installs subsurface tile drains to manage soil water levels, typically to reduce drainage from waterlogged soils or to control water levels on a restoration site." []
+is_a: elmo:3620033 ! mechanical hydrological alteration process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621025
+name: water control structure installation process
+def: "A mechanical hydrological alteration process in which a human installs a water control structure such as a weir, sluice gate, or stop-log to regulate water levels in a wetland, stream, or drainage ditch for ecological restoration purposes." []
+synonym: "sluice installation" EXACT []
+synonym: "weir installation" EXACT []
+is_a: elmo:3620033 ! mechanical hydrological alteration process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621026
+name: fungicide application process
+def: "A chemical application process in which a human applies a fungicide to a restoration site or to plant material in order to manage fungal pathogens that threaten plants or other organisms of conservation concern." []
+is_a: elmo:3620501 ! chemical application process
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621027
+name: soil acidification process
+def: "A chemical application process in which a human applies an acidifying amendment such as elemental sulfur to soil or water in order to lower the pH and improve conditions for acid-tolerant species such as heathland or bog vegetation." []
+synonym: "soil pH amendment" RELATED []
+is_a: elmo:3620501 ! chemical application process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations to complement lime application process, which raises pH." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621028
+name: seed ball application process
+def: "A seeding process in which a human distributes seeds encased in a ball of clay or organic material. Seed balls protect seeds from desiccation and predation and can be dispersed by hand, slingshot, or aerial drop into areas that are difficult to access." []
+synonym: "seed pellet application" EXACT []
+synonym: "seedbomb application" EXACT []
+is_a: elmo:3620609 ! seeding process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621029
+name: hay transfer process
+def: "A plant material transfer process in which a human cuts hay from a species-rich donor site and spreads it on a receptor restoration site in order to introduce plant propagules and associated invertebrates." []
+synonym: "brush harvesting" RELATED []
+synonym: "green hay transfer" EXACT []
+synonym: "hay strewing" EXACT []
+is_a: elmo:3620630 ! plant material transfer process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621030
+name: sod transfer process
+def: "A plant material transfer process in which a human moves intact blocks of vegetation and soil from a donor site to a receptor restoration site in order to introduce plant communities and associated soil biota." []
+synonym: "sod transplant process" EXACT []
+synonym: "turf transplant process" EXACT []
+is_a: elmo:3620630 ! plant material transfer process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621031
+name: forest floor litter transfer process
+def: "A plant material transfer process in which a human collects leaf litter and organic material from the forest floor of a donor site and spreads it on a restoration site to introduce seeds, spores, soil invertebrates, and soil microbiota characteristic of forest ecosystems." []
+is_a: elmo:3620630 ! plant material transfer process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621032
+name: wetland seedbank transfer process
+def: "A plant material transfer process in which a human excavates and transports wetland topsoil or sediment, rich in seeds and soil microbiota, from a donor wetland to a degraded or restored wetland receptor site in order to accelerate vegetation establishment." []
+synonym: "wetland muck transfer" EXACT []
+is_a: elmo:3620630 ! plant material transfer process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621033
+name: microbial inoculation process
+def: "A biological ecosystem management process in which a human introduces beneficial microorganisms such as nitrogen-fixing bacteria or mycorrhizal fungi spores to soil or plant propagules in order to improve plant establishment and soil function at a restoration site." []
+synonym: "bioinoculant application" RELATED []
+synonym: "mycorrhizae addition process" BROAD []
+synonym: "rhizobial inoculation" RELATED []
+synonym: "soil inoculation" RELATED []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations. Mycorrhizae addition process (ELMO:3620645) is retained as a narrower term." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621034
+name: municipal legislation process
+def: "A legislation process in which a local or municipal government passes bylaws or regulations with pro-conservation goals, such as prohibiting development in sensitive habitats or requiring urban green infrastructure." []
+synonym: "local bylaw process" RELATED []
+is_a: elmo:3620801 ! legislation process
+property_value: ELMOP:hasCASCode "5.1.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations to complement provincial/state and national legislation process terms." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/5.1.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621035
+name: cut and mulch process
+def: "A mechanical vegetation removal process in which a human cuts vegetation and chips or shreds it in place, leaving the resulting mulch on the ground surface. This simultaneously removes standing vegetation and deposits organic matter on the soil." []
+synonym: "chop and drop" RELATED []
+synonym: "mulch mowing" RELATED []
+is_a: elmo:3620021 ! mechanical vegetation removal process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621036
+name: mowing process
+def: "A mechanical vegetation removal process in which a human uses a mower to cut vegetation to a defined height above ground level. The cut material may be left in place or collected and removed. Mowing is commonly used to manage grassland, meadow, and road verge vegetation." []
+synonym: "cutting removal process" BROAD []
+is_a: elmo:3620021 ! mechanical vegetation removal process
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: https://w3id.org/elmo/cas/1
+name: Land/water protection
+def: "A conservation action in which land or water areas are formally or voluntarily protected from harmful activities to conserve biodiversity." []
+is_a: https://w3id.org/elmo/cas/ConservationAction ! conservation action
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/1.1
+name: Site/area protection
+def: "A land/water protection action in which a specific site or area is formally designated for conservation through legal or institutional mechanisms." []
+is_a: https://w3id.org/elmo/cas/1 ! Land/water protection
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/1.2
+name: Resource & habitat protection
+def: "A land/water protection action in which specific natural resources or habitats are legally or institutionally safeguarded from exploitation or degradation." []
+is_a: https://w3id.org/elmo/cas/1 ! Land/water protection
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/2
+name: Land/water management
+def: "A conservation action in which land or water areas are actively managed to maintain or improve their biodiversity values and ecological function." []
+is_a: https://w3id.org/elmo/cas/ConservationAction ! conservation action
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/2.1
+name: Site/area management
+def: "A land/water management action in which a specific site or area is actively managed using on-the-ground interventions to achieve defined conservation objectives." []
+is_a: https://w3id.org/elmo/cas/2 ! Land/water management
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/2.2
+name: Invasive/problematic species control
+def: "A land/water management action in which invasive or otherwise problematic species are controlled, suppressed, or eradicated to reduce their negative impacts on native biodiversity." []
+is_a: https://w3id.org/elmo/cas/2 ! Land/water management
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/2.3
+name: Habitat & natural process restoration
+def: "A land/water management action in which degraded habitats or disrupted natural ecological processes are actively restored toward a more natural condition." []
+is_a: https://w3id.org/elmo/cas/2 ! Land/water management
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3
+name: Species management
+def: "A conservation action directed at managing, recovering, or maintaining populations of one or more species." []
+is_a: https://w3id.org/elmo/cas/ConservationAction ! conservation action
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.1
+name: Species management
+def: "A species management action in which the population size, structure, or dynamics of a species are directly regulated through human intervention." []
+is_a: https://w3id.org/elmo/cas/3 ! Species management
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.1.1
+name: Harvest management
+def: "A species management action in which the harvest or take of a species is regulated or controlled to maintain sustainable population levels." []
+is_a: https://w3id.org/elmo/cas/3.1 ! Species management
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.1.2
+name: Trade management
+def: "A species management action in which the trade in a species or its products is regulated or controlled to prevent unsustainable exploitation." []
+is_a: https://w3id.org/elmo/cas/3.1 ! Species management
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.1.3
+name: Limiting population growth
+def: "A species management action in which the growth of a species population is actively limited, typically to reduce overabundance or human-wildlife conflict." []
+is_a: https://w3id.org/elmo/cas/3.1 ! Species management
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.2
+name: Species recovery
+def: "A species management action in which active interventions are carried out to increase the size or improve the conservation status of a threatened species population." []
+is_a: https://w3id.org/elmo/cas/3 ! Species management
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.3
+name: Species re-introduction
+def: "A species management action in which individuals of a species are deliberately moved to and released at a location where the species has been extirpated or was previously absent." []
+is_a: https://w3id.org/elmo/cas/3 ! Species management
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.3.1
+name: Reintroduction
+def: "A species re-introduction action in which individuals are released into a site within the species' historical native range where the species no longer occurs." []
+is_a: https://w3id.org/elmo/cas/3.3 ! Species re-introduction
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.3.2
+name: Benign introduction
+def: "A species re-introduction action in which individuals are intentionally moved and released at a location outside the species' historical range to fulfil an ecological or conservation function." []
+is_a: https://w3id.org/elmo/cas/3.3 ! Species re-introduction
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.4
+name: Ex-situ conservation
+def: "A species management action in which individuals, reproductive material, or genetic material are maintained outside their natural habitat for the purpose of conserving biodiversity." []
+is_a: https://w3id.org/elmo/cas/3 ! Species management
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.4.1
+name: Captive breeding/artificial propagation
+def: "An ex-situ conservation action in which animals or plants are bred or propagated under controlled conditions to maintain or supplement wild populations." []
+is_a: https://w3id.org/elmo/cas/3.4 ! Ex-situ conservation
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/3.4.2
+name: Genome resource bank
+def: "An ex-situ conservation action in which genetic material such as gametes, embryos, or DNA samples are collected and stored for the long-term preservation of biodiversity." []
+is_a: https://w3id.org/elmo/cas/3.4 ! Ex-situ conservation
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/4
+name: Education & awareness
+def: "A conservation action in which knowledge, skills, or awareness related to biodiversity and its conservation are communicated to target audiences." []
+is_a: https://w3id.org/elmo/cas/ConservationAction ! conservation action
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/4.1
+name: Formal education
+def: "An education and awareness action in which structured, accredited conservation knowledge and skills are delivered through schools, universities, or other formal educational institutions." []
+is_a: https://w3id.org/elmo/cas/4 ! Education & awareness
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/4.2
+name: Training
+def: "An education and awareness action in which practical conservation skills or knowledge are provided to specific groups such as practitioners, rangers, or resource managers." []
+is_a: https://w3id.org/elmo/cas/4 ! Education & awareness
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/4.3
+name: Awareness & communications
+def: "An education and awareness action in which information about biodiversity threats and conservation solutions is disseminated to the general public or specific audiences through media or outreach." []
+is_a: https://w3id.org/elmo/cas/4 ! Education & awareness
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5
+name: Law & policy
+def: "A conservation action in which legal instruments, policies, or regulations are developed, strengthened, or enforced to advance biodiversity conservation." []
+is_a: https://w3id.org/elmo/cas/ConservationAction ! conservation action
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.1
+name: Legislation
+def: "A law and policy action in which formal laws or statutes are developed, amended, or repealed to provide legal protection or support for biodiversity conservation." []
+is_a: https://w3id.org/elmo/cas/5 ! Law & policy
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.1.1
+name: International level
+def: "A legislation action in which international treaties, conventions, or multilateral agreements are developed or ratified to protect biodiversity at the global scale." []
+is_a: https://w3id.org/elmo/cas/5.1 ! Legislation
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.1.2
+name: National level
+def: "A legislation action in which national laws or statutes are developed, amended, or repealed to protect biodiversity within a country's jurisdiction." []
+is_a: https://w3id.org/elmo/cas/5.1 ! Legislation
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.1.3
+name: Sub-national level
+def: "A legislation action in which sub-national laws or regulations such as provincial, state, or municipal statutes are developed or amended to protect biodiversity." []
+is_a: https://w3id.org/elmo/cas/5.1 ! Legislation
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.1.4
+name: Scale unspecified
+def: "A legislation action in which laws or statutes protecting biodiversity are developed or amended at a jurisdictional scale that is not specified." []
+is_a: https://w3id.org/elmo/cas/5.1 ! Legislation
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.2
+name: Policies and regulations
+def: "A law and policy action in which non-statutory policies, administrative rules, or regulations are developed or strengthened to promote biodiversity conservation." []
+is_a: https://w3id.org/elmo/cas/5 ! Law & policy
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.3
+name: Private sector standards & codes
+def: "A law and policy action in which voluntary or mandatory standards and codes of practice are developed for the private sector to reduce its negative impacts on biodiversity." []
+is_a: https://w3id.org/elmo/cas/5 ! Law & policy
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.4
+name: Compliance and enforcement
+def: "A law and policy action in which existing laws, regulations, or standards protecting biodiversity are enforced and adherence is actively monitored." []
+is_a: https://w3id.org/elmo/cas/5 ! Law & policy
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.4.1
+name: International level
+def: "A compliance and enforcement action carried out through international bodies or mechanisms to ensure adherence to biodiversity-related conventions and multilateral agreements." []
+is_a: https://w3id.org/elmo/cas/5.4 ! Compliance and enforcement
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.4.2
+name: National level
+def: "A compliance and enforcement action carried out by national authorities to ensure adherence to biodiversity-related laws and regulations within a country." []
+is_a: https://w3id.org/elmo/cas/5.4 ! Compliance and enforcement
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.4.3
+name: Sub-national level
+def: "A compliance and enforcement action carried out by sub-national authorities such as provincial or municipal agencies to ensure adherence to biodiversity-related laws." []
+is_a: https://w3id.org/elmo/cas/5.4 ! Compliance and enforcement
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/5.4.4
+name: Scale unspecified
+def: "A compliance and enforcement action carried out to ensure adherence to biodiversity-related laws or regulations at a jurisdictional scale that is not specified." []
+is_a: https://w3id.org/elmo/cas/5.4 ! Compliance and enforcement
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/6
+name: Livelihood, economic & other incentives
+def: "A conservation action in which economic, livelihood, or social incentives are used to encourage behaviours or practices that benefit biodiversity conservation." []
+is_a: https://w3id.org/elmo/cas/ConservationAction ! conservation action
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/6.1
+name: Linked enterprises & livelihood alternatives
+def: "A livelihood and economic incentive action in which alternative income sources or enterprises compatible with conservation goals are developed for local communities." []
+is_a: https://w3id.org/elmo/cas/6 ! Livelihood, economic & other incentives
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/6.2
+name: Substitution
+def: "A livelihood and economic incentive action in which harmful or unsustainable products, practices, or exploited species are replaced with sustainable alternatives to reduce biodiversity impacts." []
+is_a: https://w3id.org/elmo/cas/6 ! Livelihood, economic & other incentives
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/6.3
+name: Market forces
+def: "A livelihood and economic incentive action in which market mechanisms such as eco-certification, sustainable sourcing standards, or consumer demand are harnessed to promote conservation-compatible practices." []
+is_a: https://w3id.org/elmo/cas/6 ! Livelihood, economic & other incentives
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/6.4
+name: Conservation payments
+def: "A livelihood and economic incentive action in which direct financial payments or transfers are made to landowners, communities, or individuals in exchange for managing land in a conservation-compatible manner." []
+is_a: https://w3id.org/elmo/cas/6 ! Livelihood, economic & other incentives
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/6.5
+name: Non-monetary values
+def: "A livelihood and economic incentive action in which the cultural, spiritual, aesthetic, or intrinsic values of biodiversity are recognised and promoted to motivate conservation behaviour." []
+is_a: https://w3id.org/elmo/cas/6 ! Livelihood, economic & other incentives
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
+
+[Term]
+id: https://w3id.org/elmo/cas/ConservationAction
+name: conservation action
+def: "A process undertaken by humans or organizations to protect, manage, or restore biodiversity and ecosystem services." []
+is_a: BFO:0000015 ! process
+property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
 
 [Typedef]
 id: BFO:0000050

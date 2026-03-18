@@ -37,7 +37,15 @@
       "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" reason --catalog catalog-v001.xml --input components/cas.owl --reasoner ELK)",
       "Bash(python3 \"C:/Users/Tim Alamenciak/Desktop/add_skos.py\")",
       "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" validate-profile --profile Full --input components/interventions.owl)",
-      "Bash(python \"C:/Users/Tim Alamenciak/Desktop/add_cas_code.py\")"
+      "Bash(python \"C:/Users/Tim Alamenciak/Desktop/add_cas_code.py\")",
+      "Bash(python \"C:/Users/Tim Alamenciak/Desktop/backport_cas_to_tsv.py\")",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" template --prefix 'ELMO: https://w3id.org/elmo/elmo_' --prefix 'skos: http://www.w3.org/2004/02/skos/core#' --template ../templates/interventions.tsv --output components/interventions.owl)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" template --catalog catalog-v001.xml --prefix 'ELMO: https://w3id.org/elmo/elmo_' --prefix 'skos: http://www.w3.org/2004/02/skos/core#' --input elmo-edit.owl --template ../templates/interventions.tsv --output components/interventions.owl)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" template --catalog catalog-v001.xml --prefix 'ELMO: https://w3id.org/elmo/elmo_' --prefix 'skos: http://www.w3.org/2004/02/skos/core#' --input elmo-edit.owl --template ../templates/interventions.tsv --output components/interventions.owl -vvv)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" template --catalog catalog-v001.xml --input elmo-edit.owl --prefix \"ELMO: https://w3id.org/elmo/elmo_\" --prefix \"skos: http://www.w3.org/2004/02/skos/core#\" --prefix \"ELMOP: https://w3id.org/elmo/property/\" --template ../templates/interventions.tsv --output components/interventions.owl)",
+      "Bash(grep -v \"^$\")",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" template --catalog catalog-v001.xml --prefix 'ELMO: https://w3id.org/elmo/elmo_' --prefix 'skos: http://www.w3.org/2004/02/skos/core#' --prefix 'ELMOP: https://w3id.org/elmo/property/' --input elmo-edit.owl --template ../templates/interventions.tsv annotate --ontology-iri 'https://w3id.org/elmo/elmo/components/interventions.owl' --annotation 'owl:versionInfo' '2026-03-18' convert -f ofn --output components/interventions.owl.tmp.owl)",
+      "Bash(mv components/interventions.owl.tmp.owl components/interventions.owl)"
     ]
   }
 }

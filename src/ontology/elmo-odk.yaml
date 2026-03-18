@@ -44,7 +44,7 @@ import_group:
 components:
   products:
     - filename: interventions.owl
-      template_options: "--prefix 'ELMO: https://w3id.org/elmo/elmo_'"
+      template_options: "--prefix 'ELMO: https://w3id.org/elmo/elmo_' --prefix 'skos: http://www.w3.org/2004/02/skos/core#' --prefix 'ELMOP: https://w3id.org/elmo/property/' --input $(SRC)"
       use_template: true
       templates:
         - interventions.tsv    

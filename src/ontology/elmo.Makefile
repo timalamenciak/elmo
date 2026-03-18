@@ -15,6 +15,31 @@ LOCAL_ROBOT_CATALOG = --catalog $(CATALOG)
 # ROBOT integration targets
 # ----------------------------------------
 
+## Rebuild the interventions component from its TSV template (local, outside Docker)
+.PHONY: interventions
+interventions:
+	$(LOCAL_ROBOT) template \
+		$(LOCAL_ROBOT_CATALOG) \
+		--prefix 'ELMO: https://w3id.org/elmo/elmo_' \
+		--prefix 'skos: http://www.w3.org/2004/02/skos/core#' \
+		--prefix 'ELMOP: https://w3id.org/elmo/property/' \
+		--input $(SRC) \
+		--template $(TEMPLATEDIR)/interventions.tsv \
+		--output $(COMPONENTSDIR)/interventions.owl
+	@echo "interventions.owl rebuilt."
+
+## Override the ODK-generated interventions.owl rule to add all required prefixes.
+## This keeps the Docker build working until `make update_repo` is run to regenerate
+## the Makefile from the updated elmo-odk.yaml.
+$(COMPONENTSDIR)/interventions.owl: $(TEMPLATEDIR)/interventions.tsv
+	if [ $(COMP) = true ] ; then $(ROBOT) template \
+		--prefix 'ELMO: https://w3id.org/elmo/elmo_' \
+		--prefix 'skos: http://www.w3.org/2004/02/skos/core#' \
+		--prefix 'ELMOP: https://w3id.org/elmo/property/' \
+		--input $(SRC) \
+		$(patsubst %, --template %, $^) \
+		$(ANNOTATE_CONVERT_FILE); fi
+
 ## Run ELK reasoning and check for unsatisfiable classes
 .PHONY: reason
 reason: $(EDIT_PREPROCESSED)
