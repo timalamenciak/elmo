@@ -1,0 +1,1972 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://timalamenciak.github.io/elmo/odk-workflows/LocalRobotWorkflow/">
+      
+      
+        <link rel="prev" href="../ReleaseWorkflow/">
+      
+      
+        <link rel="next" href="../RepoManagement/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Running QC checks & building a release locally - Ecolink Model Ontology (ELMO)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#running-qc-checks-and-building-a-release-locally" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Ecolink Model Ontology (ELMO)" class="md-header__button md-logo" aria-label="Ecolink Model Ontology (ELMO)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ecolink Model Ontology (ELMO)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Running QC checks & building a release locally
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/timalamenciak/elmo/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ecolink Model Ontology (ELMO)" class="md-nav__button md-logo" aria-label="Ecolink Model Ontology (ELMO)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Ecolink Model Ontology (ELMO)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/timalamenciak/elmo/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ecosystem types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lode.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ELMO in HTML (PyLODE)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elmo.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ELMO in HTML (basic)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic user
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Basic user
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basicuser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-whatisontology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is an ontology?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basic-viewing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How do I browse an ontology?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced user
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced user
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanceduser/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced user overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mechanic
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Mechanic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mechanic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mechanic overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Standard ODK workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            Standard ODK workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EditorsWorkflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editors Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReleaseWorkflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release Workflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Running QC checks & building a release locally
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Running QC checks & building a release locally
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-rebuild-components-from-robot-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Rebuild components from ROBOT templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Rebuild components from ROBOT templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interventions-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interventions component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecosystems-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ecosystems component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      CAS component
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pre-processing-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Pre-processing step
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-quality-control-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Quality-control checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Quality-control checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-reasoning-unsatisfiable-class-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Reasoning (unsatisfiable class check)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-obo-format-quality-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 OBO-format quality report
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-sparql-validation-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 SPARQL validation checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-dosdp-pattern-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 DOSDP pattern validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-explain-an-unsatisfiable-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Explain an unsatisfiable class
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-running-all-checks-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Running all checks together
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-building-a-release-without-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Building a release (without Docker)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Building a release (without Docker)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-prepare-a-release-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Prepare a release branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-rebuild-all-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Rebuild all components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-run-all-qc-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Run all QC checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-build-the-base-release-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Build the base release file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-build-the-full-release-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Build the full release file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-commit-push-and-open-a-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 Commit, push and open a pull request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-tag-the-release-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7 Tag the release on GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sparql-query-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. SPARQL query reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-reference-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Quick-reference card
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RepoManagement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage your ODK Repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SettingUpDockerForODK/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up Docker for ODK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UpdateImports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Imports management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ManageDocumentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing the documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ManageAutomatedTest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Managing your automated testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContinuousIntegration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RepositoryFileStructure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Your ODK Repository Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design Patterns
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            Design Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../templates/dosdp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Design Patterns Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-rebuild-components-from-robot-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Rebuild components from ROBOT templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Rebuild components from ROBOT templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interventions-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interventions component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecosystems-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ecosystems component
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cas-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      CAS component
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pre-processing-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Pre-processing step
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-quality-control-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Quality-control checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Quality-control checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-reasoning-unsatisfiable-class-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Reasoning (unsatisfiable class check)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-obo-format-quality-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 OBO-format quality report
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-sparql-validation-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 SPARQL validation checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-dosdp-pattern-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 DOSDP pattern validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-explain-an-unsatisfiable-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 Explain an unsatisfiable class
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-running-all-checks-together" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Running all checks together
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-building-a-release-without-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Building a release (without Docker)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Building a release (without Docker)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-prepare-a-release-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Prepare a release branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-rebuild-all-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Rebuild all components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-run-all-qc-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Run all QC checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-build-the-base-release-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Build the base release file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-build-the-full-release-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Build the full release file
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-commit-push-and-open-a-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 Commit, push and open a pull request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-tag-the-release-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7 Tag the release on GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sparql-query-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. SPARQL query reference
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-reference-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Quick-reference card
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="running-qc-checks-and-building-a-release-locally">Running QC checks and building a release locally</h1>
+<p>This page documents how to run ELMO's quality-control checks and build a release
+artefact from the command line, <strong>without Docker</strong>.
+The standard ODK release workflow uses Docker (<code>./run.sh make …</code>);
+use that approach when you want to produce an officially-versioned release.
+The commands below use a local <code>robot.jar</code> and are useful for fast iteration
+during editing — running checks in seconds rather than spinning up a container.</p>
+<hr />
+<h2 id="prerequisites">Prerequisites</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Java 11+</strong></td>
+<td>Java 22 is confirmed to work; run <code>java -version</code> to check</td>
+</tr>
+<tr>
+<td><strong>robot.jar</strong></td>
+<td>Located at <code>C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar</code>; version 1.9.7</td>
+</tr>
+<tr>
+<td><strong>Python 3</strong></td>
+<td>Required for editing TSV templates; run <code>python --version</code> to check</td>
+</tr>
+<tr>
+<td><strong>Git Bash</strong> (Windows)</td>
+<td>All commands below assume a Bash-compatible shell</td>
+</tr>
+</tbody>
+</table>
+<p>All commands must be run from the <strong><code>src/ontology/</code></strong> directory unless noted otherwise:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>path/to/elmo/src/ontology
+</code></pre></div>
+<p>For convenience, set a shell alias so you don't have to type the full jar path:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">robot</span><span class="o">=</span><span class="s1">&#39;java -jar &quot;C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar&quot;&#39;</span>
+</code></pre></div>
+<p>The remaining examples on this page use <code>robot</code> for brevity.</p>
+<hr />
+<h2 id="1-rebuild-components-from-robot-templates">1. Rebuild components from ROBOT templates</h2>
+<p>Run this whenever you have edited a <code>.tsv</code> template file and need to regenerate
+the corresponding OWL component before checking or releasing.</p>
+<h3 id="interventions-component">Interventions component</h3>
+<div class="highlight"><pre><span></span><code>robot<span class="w"> </span>template<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--prefix<span class="w"> </span><span class="s1">&#39;ELMO: https://w3id.org/elmo/elmo_&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--template<span class="w"> </span>../templates/interventions.tsv<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>components/interventions.owl
+</code></pre></div>
+<h3 id="ecosystems-component">Ecosystems component</h3>
+<div class="highlight"><pre><span></span><code>robot<span class="w"> </span>template<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--prefix<span class="w"> </span><span class="s1">&#39;ELMO: https://w3id.org/elmo/elmo_&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--template<span class="w"> </span>../templates/ecosystems.tsv<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>components/ecosystems.owl
+</code></pre></div>
+<h3 id="cas-component">CAS component</h3>
+<p><code>cas.owl</code> is maintained by hand in Functional Syntax — no rebuild step is needed.
+Edit <code>components/cas.owl</code> directly.</p>
+<hr />
+<h2 id="2-pre-processing-step">2. Pre-processing step</h2>
+<p>Several checks operate on a pre-processed version of the edit file.
+Regenerate it after any change:</p>
+<div class="highlight"><pre><span></span><code>robot<span class="w"> </span>convert<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--input<span class="w"> </span>elmo-edit.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--format<span class="w"> </span>ofn<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>tmp/elmo-preprocess.owl
+</code></pre></div>
+<p>This step is also the first thing <code>make reason</code> does, so it will be run
+automatically if you use the <code>make</code> targets below.</p>
+<hr />
+<h2 id="3-quality-control-checks">3. Quality-control checks</h2>
+<h3 id="31-reasoning-unsatisfiable-class-check">3.1 Reasoning (unsatisfiable class check)</h3>
+<p>Runs ELK over the full ontology (all components + imports) and fails if any
+class becomes unsatisfiable.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">make target</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>-f<span class="w"> </span>elmo.Makefile<span class="w"> </span>reason
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">raw ROBOT command</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>robot<span class="w"> </span>reason<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--input<span class="w"> </span>tmp/elmo-preprocess.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--reasoner<span class="w"> </span>ELK<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--equivalent-classes-allowed<span class="w"> </span>all<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--exclude-tautologies<span class="w"> </span>structural<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>test.owl<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>test.owl
+</code></pre></div>
+</div>
+</div>
+<p><strong>Expected output:</strong> no output on success (exit code 0). Any <code>ERROR</code> line means
+an unsatisfiable class was found; use the explain target (§ 3.5) to investigate.</p>
+<hr />
+<h3 id="32-obo-format-quality-report">3.2 OBO-format quality report</h3>
+<p>Runs the ROBOT <code>report</code> command over the merged ontology and writes a TSV to
+<code>reports/elmo-edit.owl-obo-report.tsv</code>.</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">make target</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>-f<span class="w"> </span>elmo.Makefile<span class="w"> </span>report
+</code></pre></div>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">raw ROBOT command</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>robot<span class="w"> </span>merge<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--input<span class="w"> </span>elmo-edit.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>report<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>reports/elmo-edit.owl-obo-report.tsv
+</code></pre></div>
+</div>
+</div>
+<p><strong>Interpreting the output</strong></p>
+<p>The report prints a summary line like:</p>
+<div class="highlight"><pre><span></span><code>ERROR:      14
+WARN:       37
+INFO:       65
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Expected count</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERROR on ELMO terms</td>
+<td>0</td>
+<td>Any error here needs to be fixed</td>
+</tr>
+<tr>
+<td>WARN on ELMO terms</td>
+<td>≤ 3</td>
+<td>Two pre-existing <code>duplicate_exact_synonym</code> on ecosystem types 3620108/3620109; one expected <code>duplicate_label_synonym</code> on merged term 3620037</td>
+</tr>
+<tr>
+<td>ERROR on imported terms</td>
+<td>14</td>
+<td>All <code>multiple_labels</code> on GO/IAO/oboInOwl — artefact of slim import labels; safe to ignore</td>
+</tr>
+<tr>
+<td>WARN on imported terms</td>
+<td>33 <code>missing_definition</code> + 1 <code>annotation_whitespace</code></td>
+<td>Artefacts of import slimming; safe to ignore</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33-sparql-validation-checks">3.3 SPARQL validation checks</h3>
+<p>Checks five structural rules against the pre-processed ontology:</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">make target</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>-f<span class="w"> </span>elmo.Makefile<span class="w"> </span>verify
+</code></pre></div>
+<p>This runs the three diagnostic queries
+(<code>missing-definitions</code>, <code>missing-labels</code>, <code>none-definitions</code>)
+and writes CSV results to <code>reports/</code>.</p>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">raw ROBOT command</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c1"># Structural integrity checks (5/5 should PASS)</span>
+robot<span class="w"> </span>verify<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-i<span class="w"> </span>tmp/elmo-preprocess.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--queries<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>../sparql/owldef-self-reference-violation.sparql<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>../sparql/iri-range-violation.sparql<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>../sparql/label-with-iri-violation.sparql<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>../sparql/multiple-replaced_by-violation.sparql<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>../sparql/dc-properties-violation.sparql<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-O<span class="w"> </span>reports/
+
+<span class="c1"># Diagnostic queries (produce CSV reports, do not fail the build)</span>
+robot<span class="w"> </span>merge<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--input<span class="w"> </span>elmo-edit.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>query<span class="w"> </span>--format<span class="w"> </span>csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--query<span class="w"> </span>../sparql/missing-definitions.sparql<span class="w"> </span>reports/missing-definitions.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--query<span class="w"> </span>../sparql/missing-labels.sparql<span class="w">      </span>reports/missing-labels.csv<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--query<span class="w"> </span>../sparql/none-definitions.sparql<span class="w">    </span>reports/none-definitions.csv
+</code></pre></div>
+</div>
+</div>
+<p><strong>Expected output:</strong> all five structural checks should print <code>PASS … 0 violation(s)</code>.
+The diagnostic query results in <code>reports/</code> should be empty (header row only) for a clean
+ontology — the only exception is <code>missing-definitions.csv</code>, which will always list
+the root metadata node <code>ELMO_0000000</code>.</p>
+<hr />
+<h3 id="34-dosdp-pattern-validation">3.4 DOSDP pattern validation</h3>
+<p>Validates the design-pattern TSVs against their YAML schemas:</p>
+<div class="highlight"><pre><span></span><code>dosdp<span class="w"> </span>validate<span class="w"> </span>-i<span class="w"> </span>elmo-edit.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--infile<span class="w"> </span>../patterns/definitions.tsv<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--template<span class="w"> </span>../patterns/definitions.yaml
+</code></pre></div>
+<hr />
+<h3 id="35-explain-an-unsatisfiable-class">3.5 Explain an unsatisfiable class</h3>
+<p>If reasoning fails and you need to understand <em>why</em> a class is unsatisfiable:</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">make target</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>-f<span class="w"> </span>elmo.Makefile<span class="w"> </span>explain<span class="w"> </span><span class="nv">CLASS</span><span class="o">=</span><span class="s2">&quot;https://w3id.org/elmo/elmo_3620001&quot;</span>
+</code></pre></div>
+<p>The explanation is written to <code>reports/explanation.md</code>.</p>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">raw ROBOT command</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>robot<span class="w"> </span>explain<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--input<span class="w"> </span>tmp/elmo-preprocess.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--reasoner<span class="w"> </span>ELK<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--axiom<span class="w"> </span><span class="s2">&quot;SubClassOf(&lt;https://w3id.org/elmo/elmo_3620001&gt; owl:Nothing)&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--explanation<span class="w"> </span>reports/explanation.md
+</code></pre></div>
+</div>
+</div>
+<hr />
+<h2 id="4-running-all-checks-together">4. Running all checks together</h2>
+<p>To replicate the full CI suite as closely as possible without Docker, run the
+checks in this order:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># From src/ontology/</span>
+
+<span class="c1"># 1. Rebuild any templates you have changed</span>
+robot<span class="w"> </span>template<span class="w"> </span>--prefix<span class="w"> </span><span class="s1">&#39;ELMO: https://w3id.org/elmo/elmo_&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--template<span class="w"> </span>../templates/interventions.tsv<span class="w"> </span>--output<span class="w"> </span>components/interventions.owl
+robot<span class="w"> </span>template<span class="w"> </span>--prefix<span class="w"> </span><span class="s1">&#39;ELMO: https://w3id.org/elmo/elmo_&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--template<span class="w"> </span>../templates/ecosystems.tsv<span class="w">   </span>--output<span class="w"> </span>components/ecosystems.owl
+
+<span class="c1"># 2. Pre-process</span>
+robot<span class="w"> </span>convert<span class="w"> </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--input<span class="w"> </span>elmo-edit.owl<span class="w"> </span>--format<span class="w"> </span>ofn<span class="w"> </span>--output<span class="w"> </span>tmp/elmo-preprocess.owl
+
+<span class="c1"># 3. Reason</span>
+robot<span class="w"> </span>reason<span class="w"> </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--input<span class="w"> </span>tmp/elmo-preprocess.owl<span class="w"> </span>--reasoner<span class="w"> </span>ELK<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--equivalent-classes-allowed<span class="w"> </span>all<span class="w"> </span>--exclude-tautologies<span class="w"> </span>structural<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>test.owl<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>rm<span class="w"> </span>test.owl
+
+<span class="c1"># 4. Structural SPARQL checks</span>
+robot<span class="w"> </span>verify<span class="w"> </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-i<span class="w"> </span>tmp/elmo-preprocess.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--queries<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>../sparql/owldef-self-reference-violation.sparql<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>../sparql/iri-range-violation.sparql<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>../sparql/label-with-iri-violation.sparql<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>../sparql/multiple-replaced_by-violation.sparql<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>../sparql/dc-properties-violation.sparql<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-O<span class="w"> </span>reports/
+
+<span class="c1"># 5. Quality report</span>
+robot<span class="w"> </span>merge<span class="w"> </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span>--input<span class="w"> </span>elmo-edit.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>report<span class="w"> </span>--output<span class="w"> </span>reports/elmo-edit.owl-obo-report.tsv
+</code></pre></div>
+<hr />
+<h2 id="5-building-a-release-without-docker">5. Building a release (without Docker)</h2>
+<p>!!! warning "Prefer Docker for official releases"
+    The ODK Docker workflow (<code>./run.sh make prepare_release -B</code>) is the canonical
+    method for producing versioned release artefacts because it pins tool versions
+    and runs the full pipeline including pattern compilation. Use the steps below
+    only when Docker is unavailable or for quick local testing of release outputs.</p>
+<h3 id="51-prepare-a-release-branch">5.1 Prepare a release branch</h3>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>pull
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>release-<span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span>
+</code></pre></div>
+<h3 id="52-rebuild-all-components">5.2 Rebuild all components</h3>
+<div class="highlight"><pre><span></span><code>robot<span class="w"> </span>template<span class="w"> </span>--prefix<span class="w"> </span><span class="s1">&#39;ELMO: https://w3id.org/elmo/elmo_&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--template<span class="w"> </span>../templates/interventions.tsv<span class="w"> </span>--output<span class="w"> </span>components/interventions.owl
+robot<span class="w"> </span>template<span class="w"> </span>--prefix<span class="w"> </span><span class="s1">&#39;ELMO: https://w3id.org/elmo/elmo_&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--template<span class="w"> </span>../templates/ecosystems.tsv<span class="w">   </span>--output<span class="w"> </span>components/ecosystems.owl
+</code></pre></div>
+<h3 id="53-run-all-qc-checks">5.3 Run all QC checks</h3>
+<p>Follow the steps in <a href="#4-running-all-checks-together">§ 4</a> and confirm everything
+passes before proceeding.</p>
+<h3 id="54-build-the-base-release-file">5.4 Build the base release file</h3>
+<p>The <strong>base</strong> release includes only ELMO-authored axioms (no imports merged in):</p>
+<div class="highlight"><pre><span></span><code>robot<span class="w"> </span>merge<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--input<span class="w"> </span>elmo-edit.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>annotate<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ontology-iri<span class="w"> </span><span class="s2">&quot;https://w3id.org/elmo/elmo&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--version-iri<span class="w"> </span><span class="s2">&quot;https://w3id.org/elmo/elmo/releases/</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">/elmo-base.owl&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--annotation<span class="w"> </span>owl:versionInfo<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>convert<span class="w"> </span>--format<span class="w"> </span>owl<span class="w"> </span>--output<span class="w"> </span>../../elmo-base.owl
+
+<span class="c1"># OBO and JSON variants</span>
+robot<span class="w"> </span>convert<span class="w"> </span>--input<span class="w"> </span>../../elmo-base.owl<span class="w"> </span>--format<span class="w"> </span>obo<span class="w">  </span>--output<span class="w"> </span>../../elmo-base.obo
+robot<span class="w"> </span>convert<span class="w"> </span>--input<span class="w"> </span>../../elmo-base.owl<span class="w"> </span>--format<span class="w"> </span>json<span class="w"> </span>--output<span class="w"> </span>../../elmo-base.json
+</code></pre></div>
+<h3 id="55-build-the-full-release-file">5.5 Build the full release file</h3>
+<p>The <strong>full</strong> release adds inferred axioms from the reasoner:</p>
+<div class="highlight"><pre><span></span><code>robot<span class="w"> </span>merge<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--input<span class="w"> </span>elmo-edit.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>reason<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--reasoner<span class="w"> </span>ELK<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--equivalent-classes-allowed<span class="w"> </span>all<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--exclude-tautologies<span class="w"> </span>structural<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>annotate<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--ontology-iri<span class="w"> </span><span class="s2">&quot;https://w3id.org/elmo/elmo&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--version-iri<span class="w"> </span><span class="s2">&quot;https://w3id.org/elmo/elmo/releases/</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">/elmo-full.owl&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--annotation<span class="w"> </span>owl:versionInfo<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>convert<span class="w"> </span>--format<span class="w"> </span>owl<span class="w"> </span>--output<span class="w"> </span>../../elmo-full.owl
+
+robot<span class="w"> </span>convert<span class="w"> </span>--input<span class="w"> </span>../../elmo-full.owl<span class="w"> </span>--format<span class="w"> </span>obo<span class="w">  </span>--output<span class="w"> </span>../../elmo-full.obo
+robot<span class="w"> </span>convert<span class="w"> </span>--input<span class="w"> </span>../../elmo-full.owl<span class="w"> </span>--format<span class="w"> </span>json<span class="w"> </span>--output<span class="w"> </span>../../elmo-full.json
+</code></pre></div>
+<h3 id="56-commit-push-and-open-a-pull-request">5.6 Commit, push and open a pull request</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>../..<span class="w">   </span><span class="c1"># back to repo root</span>
+git<span class="w"> </span>add<span class="w"> </span>elmo-base.owl<span class="w"> </span>elmo-base.obo<span class="w"> </span>elmo-base.json<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>elmo-full.owl<span class="w"> </span>elmo-full.obo<span class="w"> </span>elmo-full.json<span class="w"> </span><span class="se">\</span>
+<span class="w">        </span>src/ontology/components/
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Release </span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span><span class="s2">&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>release-<span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%d<span class="k">)</span>
+</code></pre></div>
+<p>Then open a pull request on GitHub and follow the review steps described in the
+<a href="../ReleaseWorkflow/">Release Workflow</a>.</p>
+<h3 id="57-tag-the-release-on-github">5.7 Tag the release on GitHub</h3>
+<p>Once the PR is merged to <code>main</code>, create a GitHub release as described in
+<a href="../ReleaseWorkflow/#create-a-github-release">Release Workflow § Create a GitHub release</a>.
+Use the date as the tag, prefixed with <code>v</code> — e.g. <code>v2026-03-18</code>.</p>
+<hr />
+<h2 id="6-sparql-query-reference">6. SPARQL query reference</h2>
+<p>All queries live in <code>src/sparql/</code>.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+<th>Used in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>owldef-self-reference-violation.sparql</code></td>
+<td>Flags definitions that reference their own class</td>
+<td><code>make verify</code> / CI</td>
+</tr>
+<tr>
+<td><code>iri-range-violation.sparql</code></td>
+<td>Flags annotation values that should be IRIs but are literals</td>
+<td><code>make verify</code> / CI</td>
+</tr>
+<tr>
+<td><code>label-with-iri-violation.sparql</code></td>
+<td>Flags labels that contain raw IRIs</td>
+<td><code>make verify</code> / CI</td>
+</tr>
+<tr>
+<td><code>multiple-replaced_by-violation.sparql</code></td>
+<td>Flags deprecated terms with more than one <code>replaced_by</code></td>
+<td><code>make verify</code> / CI</td>
+</tr>
+<tr>
+<td><code>dc-properties-violation.sparql</code></td>
+<td>Flags missing required Dublin Core properties</td>
+<td><code>make verify</code> / CI</td>
+</tr>
+<tr>
+<td><code>missing-definitions.sparql</code></td>
+<td>Lists ELMO classes without <code>IAO:0000115</code></td>
+<td><code>make verify</code> (diagnostic)</td>
+</tr>
+<tr>
+<td><code>missing-labels.sparql</code></td>
+<td>Lists ELMO classes without <code>rdfs:label</code></td>
+<td><code>make verify</code> (diagnostic)</td>
+</tr>
+<tr>
+<td><code>none-definitions.sparql</code></td>
+<td>Lists ELMO classes whose definition is literally "None"</td>
+<td><code>make verify</code> (diagnostic)</td>
+</tr>
+<tr>
+<td><code>basic-report.sparql</code></td>
+<td>General class statistics</td>
+<td>SPARQL exports</td>
+</tr>
+<tr>
+<td><code>class-count-by-prefix.sparql</code></td>
+<td>Counts classes grouped by IRI prefix</td>
+<td>SPARQL exports</td>
+</tr>
+<tr>
+<td><code>synonyms.sparql</code></td>
+<td>Exports all synonym annotations</td>
+<td>SPARQL exports</td>
+</tr>
+<tr>
+<td><code>obsoletes.sparql</code></td>
+<td>Lists deprecated/obsolete terms</td>
+<td>SPARQL exports</td>
+</tr>
+<tr>
+<td><code>edges.sparql</code></td>
+<td>Exports parent-child edges</td>
+<td>SPARQL exports</td>
+</tr>
+</tbody>
+</table>
+<p>Run any query ad hoc with:</p>
+<div class="highlight"><pre><span></span><code>robot<span class="w"> </span>merge<span class="w"> </span>--catalog<span class="w"> </span>catalog-v001.xml<span class="w"> </span>--input<span class="w"> </span>elmo-edit.owl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>query<span class="w"> </span>--format<span class="w"> </span>csv<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--query<span class="w"> </span>../sparql/QUERYNAME.sparql<span class="w"> </span>results.csv
+</code></pre></div>
+<hr />
+<h2 id="7-quick-reference-card">7. Quick-reference card</h2>
+<div class="highlight"><pre><span></span><code># Rebuild a template component
+robot template --prefix &#39;ELMO: ...&#39; --template ../templates/FOO.tsv --output components/FOO.owl
+
+# Pre-process
+robot convert --catalog catalog-v001.xml --input elmo-edit.owl --format ofn --output tmp/elmo-preprocess.owl
+
+# Reason
+robot reason --catalog catalog-v001.xml --input tmp/elmo-preprocess.owl --reasoner ELK \
+  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl &amp;&amp; rm test.owl
+
+# Structural checks
+robot verify --catalog catalog-v001.xml -i tmp/elmo-preprocess.owl \
+  --queries ../sparql/owldef-self-reference-violation.sparql \
+            ../sparql/iri-range-violation.sparql \
+            ../sparql/label-with-iri-violation.sparql \
+            ../sparql/multiple-replaced_by-violation.sparql \
+            ../sparql/dc-properties-violation.sparql \
+  -O reports/
+
+# Quality report
+robot merge --catalog catalog-v001.xml --input elmo-edit.owl \
+  report --output reports/elmo-edit.owl-obo-report.tsv
+
+# Explain an unsatisfiable class
+robot explain --catalog catalog-v001.xml --input tmp/elmo-preprocess.owl --reasoner ELK \
+  --axiom &quot;SubClassOf(&lt;IRI&gt; owl:Nothing)&quot; --explanation reports/explanation.md
+</code></pre></div>
+<p>Or use the <code>make</code> shortcuts defined in <code>src/ontology/elmo.Makefile</code>:</p>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span>-f<span class="w"> </span>elmo.Makefile<span class="w"> </span>reason
+make<span class="w"> </span>-f<span class="w"> </span>elmo.Makefile<span class="w"> </span>report
+make<span class="w"> </span>-f<span class="w"> </span>elmo.Makefile<span class="w"> </span>verify
+make<span class="w"> </span>-f<span class="w"> </span>elmo.Makefile<span class="w"> </span>explain<span class="w"> </span><span class="nv">CLASS</span><span class="o">=</span><span class="s2">&quot;https://w3id.org/elmo/elmo_XXXXXXX&quot;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
