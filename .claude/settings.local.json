@@ -32,7 +32,11 @@
       "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" verify --catalog catalog-v001.xml -i tmp/elmo-preprocess.owl --queries ../sparql/owldef-self-reference-violation.sparql ../sparql/iri-range-violation.sparql ../sparql/label-with-iri-violation.sparql ../sparql/multiple-replaced_by-violation.sparql ../sparql/dc-properties-violation.sparql -O reports/)",
       "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" merge --catalog catalog-v001.xml --input elmo-edit.owl query --format csv --query ../sparql/class-count-by-prefix.sparql reports/class-counts.csv)",
       "Bash(python \"C:/Users/Tim Alamenciak/Desktop/fix_syn.py\")",
-      "Bash(python -:*)"
+      "Bash(python -:*)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" validate-profile --profile Full --input components/cas.owl)",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" reason --catalog catalog-v001.xml --input components/cas.owl --reasoner ELK)",
+      "Bash(python3 \"C:/Users/Tim Alamenciak/Desktop/add_skos.py\")",
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" validate-profile --profile Full --input components/interventions.owl)"
     ]
   }
 }

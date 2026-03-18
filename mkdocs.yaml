@@ -40,6 +40,7 @@ nav:
           - Overview: odk-workflows/index.md
           - Editors Workflow: odk-workflows/EditorsWorkflow.md
           - Release Workflow: odk-workflows/ReleaseWorkflow.md
+          - Running QC checks & building a release locally: odk-workflows/LocalRobotWorkflow.md
           - Manage your ODK Repository: odk-workflows/RepoManagement.md
           - Setting up Docker for ODK: odk-workflows/SettingUpDockerForODK.md
           - Imports management: odk-workflows/UpdateImports.md
