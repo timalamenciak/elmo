@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python \"C:/Users/Tim Alamenciak/Desktop/elmo_edit.py\")",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 \"C:/Users/Tim Alamenciak/Desktop/patch2.py\")"
+    ]
+  }
+}
