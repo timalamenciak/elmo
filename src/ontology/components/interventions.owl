@@ -9,7 +9,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:elmo="https://w3id.org/elmo/elmo/">
     <Ontology/>
     
 
@@ -90,6 +91,11 @@
     <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
 
     <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+
+
+    <!-- https://w3id.org/elmo/elmo/hasCASCode -->
+
+    <AnnotationProperty rdf:about="https://w3id.org/elmo/elmo/hasCASCode"/>
     
 
     <!-- 
@@ -131,6 +137,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">mechanical ecosystem management process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2"/>
+    
+        <elmo:hasCASCode>2</elmo:hasCASCode>
     </Class>
     
 
@@ -146,6 +154,9 @@
         <rdfs:label xml:lang="en">mechanical vegetation removal process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -163,6 +174,8 @@
         <oboInOwl:hasRelatedSynonym xml:lang="en">uprooting</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">grubbing process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -178,6 +191,8 @@
         <oboInOwl:hasRelatedSynonym xml:lang="en">solarization</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">cut and cover removal process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -192,6 +207,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">cutting removal process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -207,6 +224,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">spading removal process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620025"/>
@@ -227,6 +246,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">canopy thinning process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620026"/>
@@ -247,6 +268,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">leaf litter removal process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -262,6 +285,9 @@
         <rdfs:label xml:lang="en">mechanical fauna control process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
+        <elmo:hasCASCode>3.1</elmo:hasCASCode>
     </Class>
     
 
@@ -276,6 +302,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">mammal trapping process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1"/>
+    
+        <elmo:hasCASCode>3.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620029"/>
@@ -297,6 +325,9 @@
         <rdfs:label xml:lang="en">predator control process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
+        <elmo:hasCASCode>3.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620030"/>
@@ -318,6 +349,9 @@
         <rdfs:label xml:lang="en">fencing process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
+    
+        <elmo:hasCASCode>1.2</elmo:hasCASCode>
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620031"/>
@@ -339,6 +373,9 @@
         <rdfs:label xml:lang="en">mechanical species deterrent process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
+        <elmo:hasCASCode>3.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620032"/>
@@ -359,6 +396,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">mechanical hydrological alteration process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620033"/>
@@ -381,6 +420,9 @@
         <rdfs:label xml:lang="en">dam construction process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620034"/>
@@ -401,6 +443,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">dam removal process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620035"/>
@@ -425,6 +469,8 @@
         <oboInOwl:hasExactSynonym xml:lang="en">tile drain removal process</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">tile drain decommissioning process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -440,6 +486,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">tile drain removal process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -454,6 +502,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">nest site creation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.2"/>
+    
+        <elmo:hasCASCode>3.2</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620038"/>
@@ -474,6 +524,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">perch and roost creation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.2"/>
+    
+        <elmo:hasCASCode>3.2</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620039"/>
@@ -495,6 +547,9 @@
         <rdfs:label xml:lang="en">buffer strip creation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>1.2</elmo:hasCASCode>
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620040"/>
@@ -516,6 +571,9 @@
         <rdfs:label xml:lang="en">riparian buffer strip creation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>1.2</elmo:hasCASCode>
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620041"/>
@@ -538,6 +596,9 @@
         <rdfs:label xml:lang="en">buffer strip retention process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>1.2</elmo:hasCASCode>
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620042"/>
@@ -560,6 +621,9 @@
         <rdfs:label xml:lang="en">earthworks process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -574,6 +638,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">berm creation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620044"/>
@@ -594,6 +660,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">pond creation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620046"/>
@@ -614,6 +682,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">pond reprofiling process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620047"/>
@@ -634,6 +704,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">soil decompaction process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620048"/>
@@ -655,6 +727,8 @@
         <oboInOwl:hasNarrowSynonym xml:lang="en">soil ripping process</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">tilling process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620049"/>
@@ -675,6 +749,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">ploughing process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620050"/>
@@ -696,6 +772,9 @@
         <rdfs:label xml:lang="en">grading process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620052"/>
@@ -716,6 +795,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">slope stabilization process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620053"/>
@@ -736,6 +817,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">shoreline reinforcement process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620054"/>
@@ -756,6 +839,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">pit and mound excavation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620055"/>
@@ -776,6 +861,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">channel realignment process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620056"/>
@@ -796,6 +883,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">natural channel realignment process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620057"/>
@@ -816,6 +905,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">dredging process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620058"/>
@@ -836,6 +927,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fauna passage creation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620059"/>
@@ -856,6 +949,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">topsoil removal process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620060"/>
@@ -876,6 +971,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">erosion control process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620061"/>
@@ -896,6 +993,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">erosion blanket process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -910,6 +1009,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">erosion fencing process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620063"/>
@@ -930,6 +1031,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">wattle fencing process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620064"/>
@@ -950,6 +1053,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">irrigation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620065"/>
@@ -971,6 +1076,9 @@
         <rdfs:label xml:lang="en">deterrence-focused predator control process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
+        <elmo:hasCASCode>3.1</elmo:hasCASCode>
     </Class>
     
 
@@ -986,6 +1094,9 @@
         <rdfs:label xml:lang="en">fauna exclusion process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
+        <elmo:hasCASCode>3.1</elmo:hasCASCode>
     </Class>
     
 
@@ -1001,6 +1112,9 @@
         <rdfs:label xml:lang="en">mechanical fauna deterrent process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
+        <elmo:hasCASCode>3.1</elmo:hasCASCode>
     </Class>
     
 
@@ -1015,6 +1129,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fauna capture for conservation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.4"/>
+    
+        <elmo:hasCASCode>3.4</elmo:hasCASCode>
     </Class>
     
 
@@ -1029,6 +1145,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fish bypass installation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1043,6 +1161,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fish ladder installation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620071"/>
@@ -1063,6 +1183,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">ditch plugging process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620072"/>
@@ -1083,6 +1205,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">sediment addition process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1097,6 +1221,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">plant protection process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1112,6 +1238,9 @@
         <rdfs:label xml:lang="en">chemical ecosystem management process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620500"/>
@@ -1133,6 +1262,9 @@
         <rdfs:label xml:lang="en">chemical application process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620501"/>
@@ -1153,6 +1285,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fertilizer application process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620502"/>
@@ -1174,6 +1308,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">lime application process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620503"/>
@@ -1194,6 +1330,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">herbicide application process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620504"/>
@@ -1215,6 +1353,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">glyphosate application process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620505"/>
@@ -1235,6 +1375,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">insecticide application process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620506"/>
@@ -1255,6 +1397,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">biological ecosystem management process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1269,6 +1413,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">planting process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1283,6 +1429,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">plug planting process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620602"/>
@@ -1303,6 +1451,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">shrub planting process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1317,6 +1467,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">tree planting process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1331,6 +1483,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">seedling planting process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1345,6 +1499,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">caliper tree planting process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1359,6 +1515,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">live staking process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1373,6 +1531,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">nurse plant process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620608"/>
@@ -1393,6 +1553,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">seeding process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1408,6 +1570,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">tree seeding process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1422,6 +1586,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">line seeding process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1436,6 +1602,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">drill seeding process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620612"/>
@@ -1456,6 +1624,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">broadcast seeding process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620613"/>
@@ -1476,6 +1646,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">hand broadcast seeding process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620614"/>
@@ -1496,6 +1668,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">hydroseeding process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620615"/>
@@ -1516,6 +1690,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">seed treatment process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620616"/>
@@ -1536,6 +1712,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">seed scarification process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620617"/>
@@ -1556,6 +1734,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">heat seed treatment process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620618"/>
@@ -1576,6 +1756,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">chill seed treatment process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620619"/>
@@ -1596,6 +1778,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">seed soak treatment process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620620"/>
@@ -1616,6 +1800,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">light seed treatment process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620621"/>
@@ -1636,6 +1822,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">chemical seed treatment process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620622"/>
@@ -1656,6 +1844,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">biological fauna control process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
     </Class>
     
 
@@ -1670,6 +1860,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">captive breeding and release process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.4.1"/>
+    
+        <elmo:hasCASCode>3.4.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620624"/>
@@ -1690,6 +1882,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">egg relocation and release process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.4.1"/>
+    
+        <elmo:hasCASCode>3.4.1</elmo:hasCASCode>
     </Class>
     
 
@@ -1704,6 +1898,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">egg incubation and release process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.4.1"/>
+    
+        <elmo:hasCASCode>3.4.1</elmo:hasCASCode>
     </Class>
     
 
@@ -1718,6 +1914,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">young capture, rearing and release</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.4.1"/>
+    
+        <elmo:hasCASCode>3.4.1</elmo:hasCASCode>
     </Class>
     
 
@@ -1732,6 +1930,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">supplemental water process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.2"/>
+    
+        <elmo:hasCASCode>3.2</elmo:hasCASCode>
     </Class>
     
 
@@ -1746,6 +1946,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">supplemental feeding process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.2"/>
+    
+        <elmo:hasCASCode>3.2</elmo:hasCASCode>
     </Class>
     
 
@@ -1760,6 +1962,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">plant material transfer process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1775,6 +1979,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">moss layer transfer process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620631"/>
@@ -1795,6 +2001,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">soil transfer process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1809,6 +2017,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fauna sterilization process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1.3"/>
+    
+        <elmo:hasCASCode>3.1.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1823,6 +2033,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">egg destruction process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1.3"/>
+    
+        <elmo:hasCASCode>3.1.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1837,6 +2049,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">nest establishment deterrence process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1.3"/>
+    
+        <elmo:hasCASCode>3.1.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1851,6 +2065,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">seabed amendment process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1865,6 +2081,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">soil amendment process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620637"/>
@@ -1885,6 +2103,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">mulch addition process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1899,6 +2119,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">peat addition process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1913,6 +2135,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">topsoil addition process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -1927,6 +2151,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">compost addition process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620641"/>
@@ -1947,6 +2173,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">manure addition process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620642"/>
@@ -1967,6 +2195,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">artificial reef creation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620643"/>
@@ -1988,6 +2218,9 @@
         <rdfs:label xml:lang="en">intentional grazing</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620644"/>
@@ -2008,6 +2241,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">mycorrhizae addition process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620645"/>
@@ -2029,6 +2264,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">peatland rewetting process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620646"/>
@@ -2049,6 +2286,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fauna rescue, rehabilitation and release process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.2"/>
+    
+        <elmo:hasCASCode>3.2</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620647"/>
@@ -2069,6 +2308,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fauna reintroduction process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.3.1"/>
+    
+        <elmo:hasCASCode>3.3.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2083,6 +2324,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fauna medical care process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.2"/>
+    
+        <elmo:hasCASCode>3.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2097,6 +2340,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">translocation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.3"/>
+    
+        <elmo:hasCASCode>3.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2111,6 +2356,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fauna translocation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.3.1"/>
+    
+        <elmo:hasCASCode>3.3.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2125,6 +2372,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">coral translocation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.3.1"/>
+    
+        <elmo:hasCASCode>3.3.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620652"/>
@@ -2145,6 +2394,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">ecosystem-oriented social process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5"/>
+    
+        <elmo:hasCASCode>5</elmo:hasCASCode>
     </Class>
     
 
@@ -2159,6 +2410,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">legislation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.1"/>
+    
+        <elmo:hasCASCode>5.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2173,6 +2426,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">legal protection process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.1"/>
+    
+        <elmo:hasCASCode>1.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2187,6 +2442,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">legal habitat protection process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.1"/>
+    
+        <elmo:hasCASCode>1.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2201,6 +2458,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">legal landscape protection process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.1"/>
+    
+        <elmo:hasCASCode>1.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2216,6 +2475,9 @@
         <rdfs:label xml:lang="en">legal species protection process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1"/>
+    
+        <elmo:hasCASCode>1.1</elmo:hasCASCode>
+        <elmo:hasCASCode>3.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2230,6 +2492,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">legal marine area protection process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.1"/>
+    
+        <elmo:hasCASCode>1.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2245,6 +2509,9 @@
         <rdfs:label xml:lang="en">private land protection process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.2"/>
+    
+        <elmo:hasCASCode>1.1</elmo:hasCASCode>
+        <elmo:hasCASCode>1.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2259,6 +2526,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">conservation easement process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.2"/>
+    
+        <elmo:hasCASCode>1.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2273,6 +2542,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">area policy process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2287,6 +2558,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">local bylaw process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.1.3"/>
+    
+        <elmo:hasCASCode>5.1.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2301,6 +2574,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">provincial or state legislation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.1.3"/>
+    
+        <elmo:hasCASCode>5.1.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2315,6 +2590,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">national legislation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.1.2"/>
+    
+        <elmo:hasCASCode>5.1.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2329,6 +2606,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">international agreement process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.1.1"/>
+    
+        <elmo:hasCASCode>5.1.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2343,6 +2622,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">enforcement and compliance process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.4"/>
+    
+        <elmo:hasCASCode>5.4</elmo:hasCASCode>
     </Class>
     
 
@@ -2358,6 +2639,9 @@
         <rdfs:label xml:lang="en">human-wildlife conflict reduction process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.3"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
+        <elmo:hasCASCode>4.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2372,6 +2656,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">human-assisted road crossing process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2386,6 +2672,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">awareness-raising process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.3"/>
+    
+        <elmo:hasCASCode>4.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2400,6 +2688,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">social media campaign process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.3"/>
+    
+        <elmo:hasCASCode>4.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2414,6 +2704,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">community event creation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.3"/>
+    
+        <elmo:hasCASCode>4.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2428,6 +2720,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">education process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.1"/>
+    
+        <elmo:hasCASCode>4.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2442,6 +2736,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">citizen science process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.3"/>
+    
+        <elmo:hasCASCode>4.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2456,6 +2752,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">community engagement process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.3"/>
+    
+        <elmo:hasCASCode>4.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2470,6 +2768,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">pro-environmental behaviour change process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.3"/>
+    
+        <elmo:hasCASCode>4.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3620823"/>
@@ -2490,6 +2790,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">signage installation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.3"/>
+    
+        <elmo:hasCASCode>4.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2504,6 +2806,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">individual outreach process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.3"/>
+    
+        <elmo:hasCASCode>4.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2518,6 +2822,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">landowner outreach process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/4.3"/>
+    
+        <elmo:hasCASCode>4.3</elmo:hasCASCode>
     </Class>
     
 
@@ -2532,6 +2838,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">sensitive features marking process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2546,6 +2854,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fundraising process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.4"/>
+    
+        <elmo:hasCASCode>6.4</elmo:hasCASCode>
     </Class>
     
 
@@ -2560,6 +2870,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">financial incentive process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.4"/>
+    
+        <elmo:hasCASCode>6.4</elmo:hasCASCode>
     </Class>
     
 
@@ -2574,6 +2886,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">environmental usage regulation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2588,6 +2902,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">regulate grazing</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2602,6 +2918,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">prohibit grazing</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2616,6 +2934,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">regulate fishing</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2630,6 +2950,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">prohibit fishing</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2644,6 +2966,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">regulate chemical usage</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2658,6 +2982,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">prohibit chemical usage</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2672,6 +2998,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">regulate hunting</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2686,6 +3014,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">prohibit hunting</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2700,6 +3030,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">regulate recreational activities</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2714,6 +3046,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">prohibit recreational activities</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2728,6 +3062,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">limit public access</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2742,6 +3078,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">prohibit public access</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2756,6 +3094,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">regulate dredging</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2770,6 +3110,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">prohibit dredging</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2784,6 +3126,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">regulate aquaculture</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2798,6 +3142,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">prohibit aquaculture</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.2"/>
+    
+        <elmo:hasCASCode>5.2</elmo:hasCASCode>
     </Class>
     
 
@@ -2812,6 +3158,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">cultural ecosystem management process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.5"/>
+    
+        <elmo:hasCASCode>6.5</elmo:hasCASCode>
     </Class>
     
 
@@ -2826,6 +3174,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">cultural ecosystem usage process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.5"/>
+    
+        <elmo:hasCASCode>6.5</elmo:hasCASCode>
     </Class>
     
 
@@ -2840,6 +3190,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">plan specification change process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2854,6 +3206,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter mowing timing</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2868,6 +3222,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter mowing regime</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2882,6 +3238,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter mowing height</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2896,6 +3254,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter tilling regime</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2910,6 +3270,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter chemical regime</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2924,6 +3286,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter insecticide regime</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2938,6 +3302,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter fertilizer regime</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2952,6 +3318,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter lighting regime</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2966,6 +3334,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter grazing regime</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2980,6 +3350,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter dam regime</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -2994,6 +3366,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">alter herbicide regime</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3008,6 +3382,8 @@
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">cease herbicide usage</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3020,6 +3396,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fishing with equipment modified for conservation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3032,6 +3410,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fishing with net modified for conservation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3044,6 +3424,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fishing with hook modified for conservation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3056,6 +3438,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fishing with added acoustic devices for conservation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3068,6 +3452,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fishing with modified traps</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3080,6 +3466,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fishing with modified line-setting procedure</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3093,6 +3481,9 @@
         <rdfs:label xml:lang="en">aquaculture process modified for conservation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3105,6 +3496,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">underwater turbine modified for conservation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3118,6 +3511,9 @@
         <rdfs:label xml:lang="en">farming process modified for conservation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3131,6 +3527,9 @@
         <rdfs:label xml:lang="en">farming with intercropping</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621009"/>
@@ -3150,6 +3549,9 @@
         <rdfs:label xml:lang="en">agroforestry process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621010"/>
@@ -3169,6 +3571,9 @@
         <rdfs:label xml:lang="en">alley cropping farming process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621011"/>
@@ -3187,6 +3592,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">no-till farming</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621012"/>
@@ -3206,6 +3613,9 @@
         <rdfs:label xml:lang="en">organic farming regime</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621013"/>
@@ -3224,6 +3634,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">crop rotation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621014"/>
@@ -3243,6 +3655,9 @@
         <rdfs:label xml:lang="en">set aside farmland for conservation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/1.2"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>1.2</elmo:hasCASCode>
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621015"/>
@@ -3262,6 +3677,9 @@
         <rdfs:label xml:lang="en">forestry process modified for conservation</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3274,6 +3692,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">coppice process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621017"/>
@@ -3293,6 +3713,9 @@
         <rdfs:label xml:lang="en">selective harvesting process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
         <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/6.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
+        <elmo:hasCASCode>6.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621018"/>
@@ -3311,6 +3734,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">woody debris removal process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621019"/>
@@ -3329,6 +3754,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">leave woody debris</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621020"/>
@@ -3347,6 +3774,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">shelterwood cutting process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621021"/>
@@ -3367,6 +3796,8 @@
         <oboInOwl:hasExactSynonym xml:lang="en">curtailment</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">regulate wind turbine speed</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.1"/>
+    
+        <elmo:hasCASCode>2.1</elmo:hasCASCode>
     </Class>
     <Axiom>
         <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3621022"/>
@@ -3385,6 +3816,8 @@
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
         <rdfs:label xml:lang="en">fauna poisoning process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/3.1"/>
+    
+        <elmo:hasCASCode>3.1</elmo:hasCASCode>
     </Class>
     
 
@@ -3399,6 +3832,8 @@
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-18T00:00:00Z</oboInOwl:creation_date>
         <rdfs:label xml:lang="en">tile drain installation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3415,6 +3850,8 @@
         <oboInOwl:hasExactSynonym xml:lang="en">weir installation</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">water control structure installation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3429,6 +3866,8 @@
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-18T00:00:00Z</oboInOwl:creation_date>
         <rdfs:label xml:lang="en">fungicide application process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.2"/>
+    
+        <elmo:hasCASCode>2.2</elmo:hasCASCode>
     </Class>
     
 
@@ -3444,6 +3883,8 @@
         <oboInOwl:hasRelatedSynonym xml:lang="en">soil pH amendment</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">soil acidification process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3460,6 +3901,8 @@
         <oboInOwl:hasExactSynonym xml:lang="en">seedbomb application</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">seed ball application process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3477,6 +3920,8 @@
         <oboInOwl:hasRelatedSynonym xml:lang="en">brush harvesting</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">hay transfer process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3493,6 +3938,8 @@
         <oboInOwl:hasExactSynonym xml:lang="en">turf transplant process</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">sod transfer process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3507,6 +3954,8 @@
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-18T00:00:00Z</oboInOwl:creation_date>
         <rdfs:label xml:lang="en">forest floor litter transfer process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3522,6 +3971,8 @@
         <oboInOwl:hasExactSynonym xml:lang="en">wetland muck transfer</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">wetland seedbank transfer process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3540,6 +3991,8 @@
         <oboInOwl:hasRelatedSynonym xml:lang="en">soil inoculation</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">microbial inoculation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3555,6 +4008,8 @@
         <oboInOwl:hasRelatedSynonym xml:lang="en">local bylaw process</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">municipal legislation process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/5.1.3"/>
+    
+        <elmo:hasCASCode>5.1.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3571,6 +4026,8 @@
         <oboInOwl:hasRelatedSynonym xml:lang="en">mulch mowing</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">cut and mulch process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
     
 
@@ -3586,6 +4043,8 @@
         <oboInOwl:hasBroadSynonym xml:lang="en">cutting removal process</oboInOwl:hasBroadSynonym>
         <rdfs:label xml:lang="en">mowing process</rdfs:label>
             <skos:broadMatch rdf:resource="https://w3id.org/elmo/cas/2.3"/>
+    
+        <elmo:hasCASCode>2.3</elmo:hasCASCode>
     </Class>
 </rdf:RDF>
 

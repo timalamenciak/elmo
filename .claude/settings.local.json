@@ -36,7 +36,8 @@
       "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" validate-profile --profile Full --input components/cas.owl)",
       "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" reason --catalog catalog-v001.xml --input components/cas.owl --reasoner ELK)",
       "Bash(python3 \"C:/Users/Tim Alamenciak/Desktop/add_skos.py\")",
-      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" validate-profile --profile Full --input components/interventions.owl)"
+      "Bash(java -jar \"C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/robot.jar\" validate-profile --profile Full --input components/interventions.owl)",
+      "Bash(python \"C:/Users/Tim Alamenciak/Desktop/add_cas_code.py\")"
     ]
   }
 }
