@@ -35,6 +35,8 @@ import_group:
     - id: envo
       module_type: minimal
       make_base: TRUE
+    - id: pato
+      module_type: minimal
     - id: cob
     - id: orcidio
       mirror_from: https://w3id.org/orcidio/orcidio.owl

@@ -13,7 +13,9 @@
   <uri name="https://w3id.org/elmo/elmo/imports/orcidio_import.owl" uri="imports/orcidio_import.owl"/>
   
   <uri name="https://w3id.org/elmo/elmo/imports/envo_import.owl" uri="imports/envo_import.owl"/>
-  
+
+  <uri name="https://w3id.org/elmo/elmo/imports/pato_import.owl" uri="imports/pato_import.owl"/>
+
   <uri name="https://w3id.org/elmo/elmo/components/interventions.owl" uri="components/interventions.owl"/>
   
   <uri name="https://w3id.org/elmo/elmo/components/ecosystems.owl" uri="components/ecosystems.owl"/>

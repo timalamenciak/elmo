@@ -12,6 +12,30 @@ LOCAL_ROBOT ?= java -jar "C:/Users/Tim Alamenciak/Documents/TReK/Racoon/ROBOT/ro
 LOCAL_ROBOT_CATALOG = --catalog $(CATALOG)
 
 # ----------------------------------------
+# Import list override
+# ----------------------------------------
+
+## Add `pato` as an import (see elmo-odk.yaml's import_group.products).
+## ENVO's own axioms reference PATO:0001018 ("physical quality") as a bare,
+## unlabelled class — envo_import.owl declares it but strips its label, so
+## release artifacts built without a real PATO import carry a dangling
+## reference that downstream OBO parsers (e.g. pronto) reject outright.
+## This override keeps the Docker build working until `make update_repo` is
+## run to regenerate the Makefile from the updated elmo-odk.yaml.
+IMPORTS = ro bfo envo pato cob orcidio
+
+## `make update_repo` would normally also emit a mirror-pato target (each
+## import's OBO Foundry mirror fetch is hand-written per ontology, not a
+## generic pattern rule) — added here so `$(MIRRORDIR)/pato.owl` is buildable
+## in the meantime. Mirrors mirror-bfo's plain fetch-and-convert shape; PATO
+## needs no axiom stripping the way envo's mirror rule does.
+.PHONY: mirror-pato
+.PRECIOUS: $(MIRRORDIR)/pato.owl
+mirror-pato: | $(TMPDIR)
+	curl -L $(OBOBASE)/pato.owl --create-dirs -o $(TMPDIR)/pato-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/pato-download.owl -o $(TMPDIR)/$@.owl
+
+# ----------------------------------------
 # ROBOT integration targets
 # ----------------------------------------
 

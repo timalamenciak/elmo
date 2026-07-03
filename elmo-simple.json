@@ -13,9 +13,9 @@
         "val" : "Ecolink Model Ontology (ELMO)"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-03-18"
+        "val" : "2026-07-03"
       } ],
-      "version" : "https://w3id.org/elmo/elmo/releases/2026-03-18/elmo-simple.json"
+      "version" : "https://w3id.org/elmo/elmo/releases/2026-07-03/elmo-simple.json"
     },
     "nodes" : [ {
       "id" : "https://w3id.org/elmo/ELMO_0000000",
@@ -129,10 +129,12 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+      "lbl" : "created by",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+      "lbl" : "creation date",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
