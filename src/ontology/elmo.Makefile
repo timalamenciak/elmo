@@ -52,6 +52,17 @@ interventions:
 		--output $(COMPONENTSDIR)/interventions.owl
 	@echo "interventions.owl rebuilt."
 
+## Rebuild the ecosystems component from its TSV template (local, outside Docker)
+.PHONY: ecosystems
+ecosystems:
+	$(LOCAL_ROBOT) template \
+		$(LOCAL_ROBOT_CATALOG) \
+		--prefix 'ELMO: https://w3id.org/elmo/elmo_' \
+		--input $(SRC) \
+		--template $(TEMPLATEDIR)/ecosystems.tsv \
+		--output $(COMPONENTSDIR)/ecosystems.owl
+	@echo "ecosystems.owl rebuilt."
+
 ## Override the ODK-generated interventions.owl rule to add all required prefixes.
 ## This keeps the Docker build working until `make update_repo` is run to regenerate
 ## the Makefile from the updated elmo-odk.yaml.
