@@ -1,59 +1,448 @@
-<html>
-    <head>
-        <title></title>
-    <style>
-        header {
-            background-color: #FF9500;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-        }
-        .box {
-            border: 1px solid black;
-            padding: 20px;
-            margin: 20px auto;
-            width: 300px;
-            background-color: white;
-            text-align: left;
-        }
-        .term {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-        }
-        .box.highlighted {
-            border-color: #FF9500;
-            background-color: #FFD580;
-        }
-    </style>
-    <script>
-        function highlightBox() {
-            const hash = window.location.hash;
-            document.querySelectorAll('.box').forEach(box => {
-                box.classList.remove('highlighted');
-            });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ELMO Terms</title>
+<style>
+    :root {
+        --accent: #FF9500;
+        --accent-light: #FFD580;
+        --border: #d9d9d9;
+        --muted: #6b6b6b;
+        --bg: #ffffff;
+        --bg-alt: #fafafa;
+    }
+    * { box-sizing: border-box; }
+    body {
+        margin: 0;
+        font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        color: #1c1c1c;
+        background: var(--bg-alt);
+    }
+    header {
+        background-color: var(--accent);
+        color: #fff;
+        padding: 16px 24px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .layout {
+        display: flex;
+        align-items: flex-start;
+    }
+    .sidebar {
+        width: 320px;
+        flex: 0 0 320px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border);
+        background: var(--bg);
+        padding: 12px;
+    }
+    .search-box {
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 14px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        margin-bottom: 6px;
+    }
+    .search-count {
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 10px;
+    }
+    .view-toggle {
+        display: flex;
+        gap: 4px;
+        margin-bottom: 10px;
+    }
+    .view-toggle button {
+        flex: 1;
+        padding: 6px 8px;
+        font-size: 13px;
+        border: 1px solid var(--border);
+        background: var(--bg);
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .view-toggle button.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+    }
+    .sidebar ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 14px;
+    }
+    .sidebar > #tree-view > ul,
+    .sidebar > #az-view > ul {
+        padding-left: 0;
+    }
+    .sidebar details > summary {
+        cursor: pointer;
+        font-size: 13.5px;
+        padding: 2px 0;
+    }
+    .sidebar details > summary::marker {
+        color: var(--muted);
+    }
+    .sidebar a {
+        color: #1c1c1c;
+        text-decoration: none;
+    }
+    .sidebar a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+    }
+    .root-group-label {
+        font-weight: 600;
+        font-size: 13px;
+        color: var(--muted);
+        margin: 10px 0 2px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+    .search-hidden {
+        display: none !important;
+    }
+    .az-letter {
+        font-weight: 700;
+        color: var(--accent);
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    #az-view { display: none; }
+    .sidebar.az-active #tree-view { display: none; }
+    .sidebar.az-active #az-view { display: block; }
 
-            if (hash) {
-                console.log(hash)
-                const box = document.querySelector(hash);                
-                if (box) {
-                    box.classList.add('highlighted');
-                    }
-            }
-        }
-
-        window.addEventListener('load', highlightBox);
-        window.addEventListener('hashchange', highlightBox);
-    </script>
-    </head>
-    <body>
-        {% for term, text in terms.items() %}<div id="{{ text.curie_safe }}" class="box">
-            <div class="term">{{ text.label }}</div>
-        <div class="definition">
-            <b>Parent: </b><a href="{{ text.parent }}">{{ text.parent }}</a><br/>
-            <b>Definition: </b>{{ text.definition }}<br/>
-            <b>URI: </b><a href="{{ text.uri }}">{{ text.uri }}</a><br/>
+    main {
+        flex: 1;
+        padding: 24px 32px;
+        max-width: 900px;
+    }
+    h2.root-heading {
+        margin-top: 40px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid var(--accent);
+        font-size: 18px;
+    }
+    h2.root-heading small {
+        font-weight: 400;
+        color: var(--muted);
+        font-size: 13px;
+    }
+    .box {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 14px 18px;
+        margin: 10px 0;
+        background: var(--bg);
+    }
+    .box.highlighted {
+        border-color: var(--accent);
+        background-color: var(--accent-light);
+    }
+    .term-label {
+        font-weight: 700;
+        font-size: 16px;
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .curie-badge {
+        display: inline-block;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12px;
+        color: var(--muted);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 1px 6px;
+    }
+    .field { margin-top: 8px; font-size: 14px; line-height: 1.4; }
+    .field-label { font-weight: 600; }
+    .xref-source { color: var(--muted); font-size: 12.5px; }
+    .synonym-group { margin-top: 2px; }
+    .synonym-type { color: var(--muted); }
+    ul.plain-list {
+        margin: 4px 0 0 0;
+        padding-left: 18px;
+    }
+    .deprecated-section {
+        margin-top: 48px;
+        border-top: 2px dashed var(--muted);
+        padding-top: 12px;
+    }
+    .box.deprecated {
+        background: #f2f2f2;
+        border-style: dashed;
+    }
+    .box.deprecated .term-label {
+        text-decoration: line-through;
+        color: var(--muted);
+    }
+    .obsolete-badge {
+        display: inline-block;
+        background: #b00020;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 1px 6px;
+        border-radius: 4px;
+        margin-right: 6px;
+        vertical-align: middle;
+    }
+</style>
+</head>
+<body>
+<header>ELMO Terms</header>
+<div class="layout">
+    <nav class="sidebar" id="sidebar">
+        <input type="text" class="search-box" id="search-box" placeholder="Search terms, synonyms, CURIEs...">
+        <div class="search-count" id="search-count"></div>
+        <div class="view-toggle">
+            <button type="button" id="tree-tab" class="active">Tree</button>
+            <button type="button" id="az-tab">A&ndash;Z</button>
         </div>
-    </div>{% endfor %}
-    </body>
+
+        <div id="tree-view">
+            {% macro render_node(node) %}
+            <li>
+                <details>
+                    <summary>
+                        <a class="term-link" href="#{{ node.term.anchor_id }}" data-search="{{ node.term.search_blob }}">{{ node.term.label }}</a>
+                    </summary>
+                    {% if node.children %}
+                    <ul>
+                        {% for child in node.children %}{{ render_node(child) }}{% endfor %}
+                    </ul>
+                    {% endif %}
+                </details>
+            </li>
+            {% endmacro %}
+
+            {% for root in roots %}
+            <div class="root-group-label">{{ root.heading.label }}</div>
+            <ul>
+                {% for node in root.nodes %}{{ render_node(node) }}{% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div id="az-view">
+            {% for letter, letter_terms in az_index %}
+            <div class="az-letter">{{ letter }}</div>
+            <ul>
+                {% for term in letter_terms %}
+                <li><a class="term-link" href="#{{ term.anchor_id }}" data-search="{{ term.search_blob }}">{{ term.label }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+    </nav>
+
+    <main>
+        {% for item in main_sequence %}
+            {% if item.kind == "heading" %}
+            <h2 class="root-heading" data-group="{{ item.group }}">
+                {{ item.heading.label }}
+                {% if item.heading.curie %}
+                <small>(<a href="{{ item.heading.href }}">{{ item.heading.curie }}</a>)</small>
+                {% endif %}
+            </h2>
+            {% else %}
+            {% set term = item.term %}
+            <div id="{{ term.anchor_id }}" class="box" data-group="{{ item.group }}" data-search="{{ term.search_blob }}" style="margin-left: {{ (item.depth - 1) * 20 }}px">
+                <span class="term-label">{{ term.label }}</span>
+                <span class="curie-badge">{{ term.curie }}</span>
+
+                {% if term.definition %}
+                <div class="field"><span class="field-label">Definition:</span> {{ term.definition }}
+                    {% if term.definition_source %}
+                    <div class="xref-source">Source:
+                        {% for src in term.definition_source %}{% if src.is_link %}<a href="{{ src.text }}">{{ src.text }}</a>{% else %}{{ src.text }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                {% if term.primary_parent %}
+                <div class="field"><span class="field-label">Parent:</span>
+                    <a href="{{ term.primary_parent.href }}">{{ term.primary_parent.label }}</a>
+                    <span class="xref-source">({{ term.primary_parent.curie }})</span>
+                </div>
+                {% endif %}
+
+                {% if term.additional_parents %}
+                <div class="field"><span class="field-label">Also a subclass of:</span>
+                    <ul class="plain-list">
+                        {% for p in term.additional_parents %}
+                        <li><a href="{{ p.href }}">{{ p.label }}</a> <span class="xref-source">({{ p.curie }})</span></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                {% if term.children %}
+                <div class="field"><span class="field-label">Subclasses:</span>
+                    <ul class="plain-list">
+                        {% for c in term.children %}
+                        <li><a href="#{{ c.anchor_id }}">{{ c.label }}</a> <span class="xref-source">({{ c.curie }})</span></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                {% for syn_type, syn_label in [("exact", "Exact synonyms"), ("broad", "Broad synonyms"), ("narrow", "Narrow synonyms"), ("related", "Related synonyms")] %}
+                    {% if term.synonyms[syn_type] %}
+                    <div class="field synonym-group"><span class="synonym-type">{{ syn_label }}:</span> {{ term.synonyms[syn_type] | join(", ") }}</div>
+                    {% endif %}
+                {% endfor %}
+
+                {% if term.comment %}
+                <div class="field"><span class="field-label">Comment:</span> {{ term.comment }}
+                    {% if term.comment_source %}
+                    <div class="xref-source">Source:
+                        {% for src in term.comment_source %}{% if src.is_link %}<a href="{{ src.text }}">{{ src.text }}</a>{% else %}{{ src.text }}{% endif %}{% if not loop.last %}; {% endif %}{% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                {% if term.editor_note %}
+                <div class="field"><span class="field-label">Editor's note:</span> {{ term.editor_note }}</div>
+                {% endif %}
+
+                {% if term.cas_codes or term.cas_matches %}
+                <div class="field"><span class="field-label">CAS mapping:</span>
+                    {% if term.cas_codes %}{{ term.cas_codes | join(", ") }}{% endif %}
+                    {% for m in term.cas_matches %} <a href="{{ m.href }}">{{ m.label }}</a>{% endfor %}
+                </div>
+                {% endif %}
+
+                <div class="field xref-source"><span class="field-label">URI:</span> <a href="{{ term.uri }}">{{ term.uri }}</a></div>
+            </div>
+            {% endif %}
+        {% endfor %}
+
+        {% if deprecated_terms %}
+        <div class="deprecated-section">
+            <h2 class="root-heading">Deprecated / obsolete terms</h2>
+            {% for term in deprecated_terms %}
+            <div id="{{ term.anchor_id }}" class="box deprecated" data-search="{{ term.search_blob }}">
+                <span class="obsolete-badge">OBSOLETE</span>
+                <span class="term-label">{{ term.label }}</span>
+                <span class="curie-badge">{{ term.curie }}</span>
+                {% if term.obsolescence_reason %}
+                <div class="field"><span class="field-label">Reason:</span> {{ term.obsolescence_reason }}</div>
+                {% endif %}
+                {% if term.replaced_by %}
+                <div class="field"><span class="field-label">Replaced by:</span> <a href="{{ term.replaced_by.href }}">{{ term.replaced_by.label }}</a> <span class="xref-source">({{ term.replaced_by.curie }})</span></div>
+                {% endif %}
+                <div class="field xref-source"><span class="field-label">URI:</span> <a href="{{ term.uri }}">{{ term.uri }}</a></div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </main>
+</div>
+
+<script>
+(function () {
+    function openAncestors(el) {
+        var node = el;
+        while (node) {
+            if (node.tagName === 'DETAILS') node.open = true;
+            node = node.parentElement;
+        }
+    }
+
+    function highlightBox() {
+        document.querySelectorAll('.box').forEach(function (box) {
+            box.classList.remove('highlighted');
+        });
+        var hash = window.location.hash;
+        if (!hash) return;
+        var box;
+        try { box = document.querySelector(hash); } catch (e) { return; }
+        if (!box) return;
+        box.classList.add('highlighted');
+        var sidebarLink = document.querySelector('#tree-view a[href="' + hash + '"]');
+        if (sidebarLink) openAncestors(sidebarLink);
+        box.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
+    window.addEventListener('load', highlightBox);
+    window.addEventListener('hashchange', highlightBox);
+
+    var treeTab = document.getElementById('tree-tab');
+    var azTab = document.getElementById('az-tab');
+    var sidebar = document.getElementById('sidebar');
+    treeTab.addEventListener('click', function () {
+        sidebar.classList.remove('az-active');
+        treeTab.classList.add('active');
+        azTab.classList.remove('active');
+    });
+    azTab.addEventListener('click', function () {
+        sidebar.classList.add('az-active');
+        azTab.classList.add('active');
+        treeTab.classList.remove('active');
+    });
+
+    var searchBox = document.getElementById('search-box');
+    var searchCount = document.getElementById('search-count');
+
+    function filterTreeView(query) {
+        document.querySelectorAll('#tree-view li').forEach(function (li) {
+            li.classList.toggle('search-hidden', !!query);
+        });
+        if (!query) return;
+        document.querySelectorAll('#tree-view .term-link').forEach(function (link) {
+            if (link.dataset.search.indexOf(query) === -1) return;
+            var li = link.closest('li');
+            while (li) {
+                li.classList.remove('search-hidden');
+                var details = li.querySelector(':scope > details');
+                if (details) details.open = true;
+                li = li.parentElement ? li.parentElement.closest('li') : null;
+            }
+        });
+    }
+
+    function filterAzView(query) {
+        document.querySelectorAll('#az-view li').forEach(function (li) {
+            var link = li.querySelector('.term-link');
+            var match = !query || link.dataset.search.indexOf(query) !== -1;
+            li.classList.toggle('search-hidden', !match);
+        });
+    }
+
+    function filterMain(query) {
+        var visible = 0;
+        var groupsVisible = {};
+        document.querySelectorAll('main .box').forEach(function (box) {
+            var match = !query || box.dataset.search.indexOf(query) !== -1;
+            box.classList.toggle('search-hidden', !match);
+            if (match) {
+                visible++;
+                if (box.dataset.group !== undefined) groupsVisible[box.dataset.group] = true;
+            }
+        });
+        document.querySelectorAll('main h2[data-group]').forEach(function (h) {
+            h.classList.toggle('search-hidden', !!query && !groupsVisible[h.dataset.group]);
+        });
+        return visible;
+    }
+
+    searchBox.addEventListener('input', function () {
+        var query = searchBox.value.trim().toLowerCase();
+        filterTreeView(query);
+        filterAzView(query);
+        var visible = filterMain(query);
+        searchCount.textContent = query ? (visible + ' matching term' + (visible === 1 ? '' : 's')) : '';
+    });
+})();
+</script>
+</body>
 </html>
