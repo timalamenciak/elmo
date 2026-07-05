@@ -334,7 +334,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620025> "spading rem
 AnnotationAssertion(owl:deprecated <https://w3id.org/elmo/elmo_3620025> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#broadMatch> <https://w3id.org/elmo/elmo_3620025> <https://w3id.org/elmo/cas/2.3>)
 AnnotationAssertion(<https://w3id.org/elmo/property/hasCASCode> <https://w3id.org/elmo/elmo_3620025> "2.3")
-SubClassOf(<https://w3id.org/elmo/elmo_3620025> <https://w3id.org/elmo/elmo_3620021>)
 
 # Class: <https://w3id.org/elmo/elmo_3620026> (canopy thinning process)
 
@@ -485,7 +484,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620037> "tile drain 
 AnnotationAssertion(owl:deprecated <https://w3id.org/elmo/elmo_3620037> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#broadMatch> <https://w3id.org/elmo/elmo_3620037> <https://w3id.org/elmo/cas/2.3>)
 AnnotationAssertion(<https://w3id.org/elmo/property/hasCASCode> <https://w3id.org/elmo/elmo_3620037> "2.3")
-SubClassOf(<https://w3id.org/elmo/elmo_3620037> <https://w3id.org/elmo/elmo_3620033>)
 
 # Class: <https://w3id.org/elmo/elmo_3620038> (nest site creation process)
 
@@ -964,7 +962,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620505> "glyphosate 
 AnnotationAssertion(owl:deprecated <https://w3id.org/elmo/elmo_3620505> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#broadMatch> <https://w3id.org/elmo/elmo_3620505> <https://w3id.org/elmo/cas/2.2>)
 AnnotationAssertion(<https://w3id.org/elmo/property/hasCASCode> <https://w3id.org/elmo/elmo_3620505> "2.2")
-SubClassOf(<https://w3id.org/elmo/elmo_3620505> <https://w3id.org/elmo/elmo_3620501>)
 
 # Class: <https://w3id.org/elmo/elmo_3620506> (insecticide application process)
 
@@ -1100,7 +1097,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620610> "tree seedin
 AnnotationAssertion(owl:deprecated <https://w3id.org/elmo/elmo_3620610> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#broadMatch> <https://w3id.org/elmo/elmo_3620610> <https://w3id.org/elmo/cas/2.3>)
 AnnotationAssertion(<https://w3id.org/elmo/property/hasCASCode> <https://w3id.org/elmo/elmo_3620610> "2.3")
-SubClassOf(<https://w3id.org/elmo/elmo_3620610> <https://w3id.org/elmo/elmo_3620609>)
 
 # Class: <https://w3id.org/elmo/elmo_3620611> (line seeding process)
 
@@ -1696,7 +1692,6 @@ AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3620810> "local bylaw
 AnnotationAssertion(owl:deprecated <https://w3id.org/elmo/elmo_3620810> "true"^^xsd:boolean)
 AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#broadMatch> <https://w3id.org/elmo/elmo_3620810> <https://w3id.org/elmo/cas/5.1.3>)
 AnnotationAssertion(<https://w3id.org/elmo/property/hasCASCode> <https://w3id.org/elmo/elmo_3620810> "5.1.3")
-SubClassOf(<https://w3id.org/elmo/elmo_3620810> <https://w3id.org/elmo/elmo_3620809>)
 
 # Class: <https://w3id.org/elmo/elmo_3620811> (provincial or state legislation process)
 
