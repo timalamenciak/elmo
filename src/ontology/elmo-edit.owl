@@ -29,6 +29,8 @@ Import(<https://w3id.org/elmo/elmo/components/interventions.owl>)
 
 Import(<https://w3id.org/elmo/elmo/components/ecosystems.owl>)
 
+Import(<https://w3id.org/elmo/elmo/components/variables.owl>)
+
 Import(<https://w3id.org/elmo/elmo/components/cas.owl>)
 
 

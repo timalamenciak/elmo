@@ -7,14 +7,14 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<https://w3id.org/elmo/elmo/imports/envo_import.owl>
-<https://w3id.org/elmo/elmo/releases/2026-03-18/imports/envo_import.owl>
+<https://w3id.org/elmo/elmo/releases/2026-07-07/imports/envo_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/contributor> <https://orcid.org/0000-0002-2996-719X>)
 Annotation(<http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-4366-3088>)
 Annotation(<http://purl.org/dc/elements/1.1/creator> "http://orcid.org/0000-0002-6601-2165")
 Annotation(<http://purl.org/dc/elements/1.1/creator> "http://orcid.org/0000-0002-8343-612X")
 Annotation(<http://purl.org/dc/elements/1.1/creator> "http://orcid.org/0000-0003-1604-1512")
 Annotation(<http://purl.org/dc/elements/1.1/description> "ENVO is an ontology which represents knowledge about environments,environmental processes, ecosystems, habitats, and related entities")
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/envo/releases/2025-10-20/envo.owl>)
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/envo/releases/2026-06-26/envo.owl>)
 Annotation(<http://purl.org/dc/elements/1.1/title> "The Environment Ontology")
 Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/>)
 Annotation(<http://usefulinc.com/ns/doap#GitRepository> "https://github.com/EnvironmentOntology/envo/"^^xsd:anyURI)
@@ -25,11 +25,12 @@ Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.o
 Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/envo/modules/entity_attribute_location.owl>) VersionIRI(<null>))) [Axioms: 168 Logical Axioms: 29]")
 Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/envo/modules/entity_quality_location.owl>) VersionIRI(<null>))) [Axioms: 40 Logical Axioms: 6]")
 Annotation(rdfs:comment "Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/envo/modules/process_attribute.owl>) VersionIRI(<null>))) [Axioms: 21 Logical Axioms: 2]")
-Annotation(owl:versionInfo "2025-10-20")
-Annotation(owl:versionInfo "2026-03-18")
+Annotation(owl:versionInfo "2026-06-26")
+Annotation(owl:versionInfo "2026-07-07")
 Annotation(<http://xmlns.com/foaf/0.1/homepage> "http://environmentontology.org/"^^xsd:anyURI)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000191>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00010005>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000203>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000204>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000254>))
@@ -37,13 +38,29 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000342>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000343>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001110>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001170>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001362>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001363>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001436>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_02500000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_06105203>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_06105240>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_06105271>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_09000017>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_09000026>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_09200001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_09200010>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_09200012>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_09200014>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_3100030>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_3100031>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_3200068>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_3200074>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001018>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000066>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/ENVO_01003004>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/ENVO_02000200>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))
@@ -52,9 +69,11 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000086>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000087>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000091>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001000>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0001025>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002007>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002084>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002180>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002211>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002219>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002220>))
@@ -88,6 +107,7 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#inSubset>))
 Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/homepage>))
 
 ############################
@@ -98,6 +118,12 @@ Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/homepage>))
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01003004> "A relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist through the separation or transformation of a part of the old entity, and the new entity inherits a significant portion of the matter belonging to that part of the old entity."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01003004> "derives from part of"@en)
+
+# Object Property: <http://purl.obolibrary.org/obo/ENVO_02000200> (has increased levels of)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_02000200> "A has part relationship between a whole and a part, where the number of parts present in the whole is higher than in comparable entities.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_02000200> "has increased levels of")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/ENVO_02000200> <http://purl.obolibrary.org/obo/RO_0002180>)
 
 
 
@@ -120,12 +146,18 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSyno
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_00000191> "physiographic feature")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_00000191> "solid astronomical body part")
 
+# Class: <http://purl.obolibrary.org/obo/ENVO_00010005> (soil bulk density)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_00010005> "A volumetric density quality which inheres in soil by virtue of some influence exerted by the soil's mass on a given volume."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_00010005> "soil bulk density"@en)
+
 # Class: <http://purl.obolibrary.org/obo/ENVO_01000203> (environmental condition)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/ENVO_01000203> <http://purl.obolibrary.org/obo/IAO_0000121>)
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "DOI:10.1186/2041-1480-4-43") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000203> "An environmental condition is a range of a determinate quality or combination of qualities that are present in an environmental system.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ENVO_01000203> "ORCID:0000-0002-4366-3088")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/ENVO_01000203> "2013-04-07T14:35:18Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/ENVO_01000203> "envoPolar")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000203> "environmental condition")
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000203> <http://purl.obolibrary.org/obo/PATO_0001018>)
 
@@ -152,6 +184,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000254> "e
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Altitudinal_zonation") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000342> "An altitudinal condition which inheres in a bearer by virtue of the bearer being located at an altitude between mid-altitude forests and the tree line.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ENVO_01000342> "ORCID:0000-0002-4366-3088")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/ENVO_01000342> "LTER:350")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/ENVO_01000342> "envoPolar")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000342> "montane")
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000342> <http://purl.obolibrary.org/obo/ENVO_01000343>)
 
@@ -159,6 +192,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000342> <http://purl.obolibrar
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Altitudinal_zonation") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01000343> "An altitudinal condition is an environmental condition in which ranges of factors such as temperature, humidity, soil composition, solar irradiation, and tree density vary with ranges in altitude.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ENVO_01000343> "ORCID:0000-0002-4366-3088")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/ENVO_01000343> "envoPolar")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01000343> "altitudinal condition")
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01000343> <http://purl.obolibrary.org/obo/ENVO_01000203>)
 
@@ -180,18 +214,120 @@ SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001170> <http://purl.obolibrar
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001170> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/ENVO_01001110>))
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001170> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/ENVO_02500000>))
 
+# Class: <http://purl.obolibrary.org/obo/ENVO_01001362> (atmospheric wind speed)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://en.wikipedia.org/wiki/Wind_speed") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01001362> "The speed of an atmospheric wind.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/ENVO_01001362> "flow velocity of wind")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/ENVO_01001362> "speed of wind")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/ENVO_01001362> "wind flow velocity")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/ENVO_01001362> "wind speed")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_01001362> "speed of atmospheric wind")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001362> "atmospheric wind speed"@en)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_01001363> (volume of hydrological precipitation)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://de.wikipedia.org/wiki/Niederschlag#Niederschlagsmenge") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01001363> "The volume of water which has fallen during a precipitation process.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_01001363> "Niederschlagsmenge"@de)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_01001363> "precipitation amount")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_01001363> "precipitation")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_01001363> "precipitation level")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_01001363> "precipitation quantity")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001363> "volume of hydrological precipitation"@en)
+
 # Class: <http://purl.obolibrary.org/obo/ENVO_01001436> (planned environmental usage process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_01001436> "A planned process during which humans access and obtain resources, benefits, or services from a natural or anthropised ecosystem.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ENVO_01001436> <https://orcid.org/0000-0002-4366-3088>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_01001436> "planned environmental usage process"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001436> <http://purl.obolibrary.org/obo/ENVO_02500000>)
 SubClassOf(<http://purl.obolibrary.org/obo/ENVO_01001436> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/ENVO_01001170>))
 
 # Class: <http://purl.obolibrary.org/obo/ENVO_02500000> (environmental system process)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_02500000> "A process in which includes the components of an environmental system as participants.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_02500000> "environmental system process"@en)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_06105203> (water table depth)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_06105203> "An elevation which inheres in a water table by virture of its vertical distance from a land surface."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_06105203> "depth of the water table"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_06105203> "depth to the water table"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_06105203> "height of the water table"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_06105203> "water table depth"@en)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_06105240> (cation exchange capacity)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.extension.purdue.edu/extmedia/ay/ay-238.html") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_06105240> "A physical quality which inheres in an environmental material by virtue of the material's ability to adsorb exchangeable cations."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_06105240> "CEC"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_06105240> "cation exchange capacity"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_06105240> <http://purl.obolibrary.org/obo/PATO_0001018>)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_06105271> (soil texture)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_06105271> "Texture which inheres in soil."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_06105271> "soil texture"@en)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_09000017> (concentration of nitrogen atom in soil)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_09000017> "The concentration of a nitrogen atom when measured in soil.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_09000017> "soil nitrogen atom concentration")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_09000017> "concentration of nitrogen atom in soil")
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_09000026> (concentration of liquid water in soil)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_09000026> "The concentration of a liquid water when measured in soil.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_09000026> "soil moisture content"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_09000026> "soil water content"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_09000026> "soil liquid water concentration")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_09000026> "concentration of liquid water in soil")
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_09200001> (temperature of air)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_09200001> "The temperature of some air.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_09200001> "air temperature")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_09200001> "temperature of air")
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_09200010> (acidity of soil)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_09200010> "The acidity of some soil.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_09200010> "soil acidity")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ENVO_09200010> "soil pH"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_09200010> "acidity of soil")
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_09200012> (temperature of soil)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_09200012> "The temperature of some soil.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_09200012> "soil temperature")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_09200012> "temperature of soil")
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_09200014> (temperature of water)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_09200014> "The temperature of some water.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_09200014> "water temperature")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_09200014> "temperature of water")
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_3100030> (acidity of water)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_3100030> "The acidity of some water.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_3100030> "water acidity")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_3100030> "acidity of water")
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_3100031> (depth of water)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_3100031> "The depth of some water.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_3100031> "water depth")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_3100031> "depth of water")
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_3200068> (concentration of phosphorus molecular entity in soil)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_3200068> "The concentration of phosphorus molecular entity when measured in soil.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_3200068> "soil phosphorus molecular entity concentration")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_3200068> "concentration of phosphorus molecular entity in soil")
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_3200074> (concentration of exchangeable potassium in soil)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ENVO_3200074> "The concentration of exchangeable potassium when measured in soil.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ENVO_3200074> "soil exchangeable potassium concentration")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ENVO_3200074> "concentration of exchangeable potassium in soil")
 
 
 )

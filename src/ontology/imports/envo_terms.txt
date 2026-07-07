@@ -8,3 +8,19 @@ ENVO:01000203 #environmental condition
 PATO:0001018 #physical quality
 ENVO:01000343 #altitudinal condition
 ENVO:01000342 #montane
+ENVO:09200001 #temperature of air (skos:exactMatch target for ELMO:3622002 air temperature)
+ENVO:01001363 #volume of hydrological precipitation (skos:exactMatch target for ELMO:3622003 precipitation amount)
+ENVO:01001362 #atmospheric wind speed (skos:exactMatch target for ELMO:3622005 wind speed)
+ENVO:09200010 #acidity of soil (skos:exactMatch target for ELMO:3622101 soil pH)
+ENVO:09200012 #temperature of soil (skos:exactMatch target for ELMO:3622102 soil temperature)
+ENVO:09000026 #concentration of liquid water in soil (skos:exactMatch target for ELMO:3622103 soil moisture content)
+ENVO:00010005 #soil bulk density (bridged directly into ELMO's soil variable hierarchy, no separate ELMO term)
+ENVO:06105271 #soil texture (bridged directly into ELMO's soil variable hierarchy, no separate ELMO term)
+ENVO:06105240 #cation exchange capacity (bridged directly into ELMO's soil variable hierarchy, no separate ELMO term)
+ENVO:09000017 #concentration of nitrogen atom in soil (skos:exactMatch target for ELMO:3622110 soil nitrogen concentration)
+ENVO:3200068 #concentration of phosphorus molecular entity in soil (skos:exactMatch target for ELMO:3622111 soil phosphorus concentration)
+ENVO:3200074 #concentration of exchangeable potassium in soil (skos:exactMatch target for ELMO:3622112 soil potassium concentration)
+ENVO:06105203 #water table depth (bridged directly into ELMO's hydrological variable hierarchy, no separate ELMO term)
+ENVO:3100031 #depth of water (skos:exactMatch target for ELMO:3622204 water depth)
+ENVO:09200014 #temperature of water (skos:exactMatch target for ELMO:3622205 water temperature)
+ENVO:3100030 #acidity of water (skos:exactMatch target for ELMO:3622206 water pH)

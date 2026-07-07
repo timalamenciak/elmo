@@ -55,6 +55,11 @@ components:
       use_template: true
       templates:
         - ecosystems.tsv
+    - filename: variables.owl
+      template_options: "--prefix 'ELMO: https://w3id.org/elmo/elmo_' --prefix 'skos: http://www.w3.org/2004/02/skos/core#' --input $(SRC)"
+      use_template: true
+      templates:
+        - variables.tsv
     - filename: cas.owl
       use_template: false
 robot_java_args: '-Xmx8G'

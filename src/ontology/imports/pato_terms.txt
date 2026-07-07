@@ -1,1 +1,2 @@
 PATO:0001018 #physical quality
+PATO:0085001 #salinity (skos:exactMatch target for ELMO:3622209 salinity)

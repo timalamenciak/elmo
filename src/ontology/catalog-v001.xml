@@ -20,6 +20,8 @@
   
   <uri name="https://w3id.org/elmo/elmo/components/ecosystems.owl" uri="components/ecosystems.owl"/>
 
+  <uri name="https://w3id.org/elmo/elmo/components/variables.owl" uri="components/variables.owl"/>
+
   <uri name="https://w3id.org/elmo/elmo/components/cas.owl" uri="components/cas.owl"/>
 
 
