@@ -1,6 +1,6 @@
 # Regenerate the local HTML documentation -- docs/elmo.html (via
-# owl2mkdocs.py) and docs/lode.html (via PyLODE) -- from the current
-# elmo.owl in the repo root.
+# owl2mkdocs.py) and docs/lode.html (via PyLODE) -- from a freshly merged
+# local ontology assembled from src/ontology/elmo-edit.owl and its imports.
 #
 # This only updates files in your working tree; it does NOT publish
 # anything. To publish the mkdocs site to GitHub Pages, run the Docker-based
@@ -11,17 +11,25 @@ $ErrorActionPreference = "Stop"
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RepoRoot = Join-Path $ScriptDir ".."
 $OntologyDir = Join-Path $RepoRoot "src\ontology"
+$RobotJar = if ($env:ROBOT_JAR) { $env:ROBOT_JAR } else { "C:\Users\Tim Alamenciak\Documents\TReK\Racoon\ROBOT\robot.jar" }
+function robot { java -jar $RobotJar @args }
+$DocsOntology = Join-Path $OntologyDir "tmp\elmo-docs-merged.owl"
 
 Set-Location $OntologyDir
+New-Item -ItemType Directory -Force -Path tmp | Out-Null
+
+Write-Host "== Preparing merged ontology for docs =="
+robot merge --catalog catalog-v001.xml --input elmo-edit.owl --output $DocsOntology
+Write-Host ""
 
 Write-Host "== Regenerating docs/elmo.html =="
-python scripts\owl2mkdocs.py "$RepoRoot\elmo.owl"
+python scripts\owl2mkdocs.py $DocsOntology
 Write-Host ""
 
 Write-Host "== Regenerating docs/lode.html (PyLODE) =="
-$pylodeCheck = python -c "import pylode" 2>&1
+python -c "import importlib.util, sys; sys.exit(0 if importlib.util.find_spec('pylode') else 1)" > $null
 if ($LASTEXITCODE -ne 0) {
-    Write-Error "PyLODE is not installed locally. Install it with: pip install pylode"
+    Write-Error "PyLODE is not installed for this Python. Install it with: python -m pip install pylode"
     exit 1
 }
-python -m pylode -o "$RepoRoot\docs\lode.html" "$RepoRoot\elmo.owl"
+python -m pylode -o "$RepoRoot\docs\lode.html" $DocsOntology

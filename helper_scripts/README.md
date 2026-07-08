@@ -31,7 +31,7 @@ ROBOT_JAR=/path/to/robot.jar ./helper_scripts/build-components.sh
 | `build-components.{sh,ps1}` | Rebuilds `interventions.owl`, `ecosystems.owl`, and `variables.owl` from their TSV templates in `src/templates/`. Run this after editing any TSV. |
 | `check.{sh,ps1}` | Runs ELK reasoning, SPARQL verification (missing labels/definitions), and an OBO quality report. Run this after `build-components` to catch problems before a release. |
 | `explain.{sh,ps1} <IRI>` | Explains why a class is unsatisfiable, e.g. `.\explain.ps1 "https://w3id.org/elmo/elmo_3620001"`. Use this when `check` reports an unsatisfiable class. |
-| `update-docs.{sh,ps1}` | Regenerates `docs/elmo.html` and `docs/lode.html` locally from `elmo.owl`. Doesn't publish anything. |
+| `update-docs.{sh,ps1}` | Regenerates `docs/elmo.html` and `docs/lode.html` locally from a freshly merged ontology. Doesn't publish anything. |
 
 ## Docker scripts (slower, need Docker Desktop running)
 

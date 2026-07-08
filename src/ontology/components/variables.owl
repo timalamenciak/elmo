@@ -1,1009 +1,960 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <Ontology/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
-
-    <AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
-
-    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
-
-    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
-
-    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
-
-    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
-
-    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
-
-    <AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
-
-    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
-
-    <Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_00010005 -->
-
-    <Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00010005">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622100"/>
-    </Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_06105203 -->
-
-    <Class rdf:about="http://purl.obolibrary.org/obo/ENVO_06105203">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-    </Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_06105240 -->
-
-    <Class rdf:about="http://purl.obolibrary.org/obo/ENVO_06105240">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622100"/>
-    </Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_06105271 -->
-
-    <Class rdf:about="http://purl.obolibrary.org/obo/ENVO_06105271">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622100"/>
-    </Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_09000026 -->
-
-    <Class rdf:about="http://purl.obolibrary.org/obo/ENVO_09000026">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622100"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622000 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <obo:IAO_0000115 xml:lang="en">A quality of an environmental system that reflects a physical, chemical, or hydrological condition of the abiotic environment and that can be measured or observed.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">environmental variable</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622001 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622001">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622000"/>
-        <obo:IAO_0000115 xml:lang="en">An environmental variable that describes the state of the atmosphere at or near a site over a given period, such as temperature, precipitation, humidity, or radiation.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">climatic and meteorological variable</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622002 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622002">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622001"/>
-        <obo:IAO_0000115 xml:lang="en">The temperature of the ambient air at a specified height above the ground surface at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">ambient temperature</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">air temperature</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_09200001"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622003 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622003">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622001"/>
-        <obo:IAO_0000115 xml:lang="en">The depth of water (from rain, snow, hail, or other forms) that reaches the ground surface at a site over a specified period.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">rainfall amount</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">precipitation</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">precipitation amount</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001363"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622004 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622004">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622001"/>
-        <obo:IAO_0000115 xml:lang="en">The ratio of the amount of water vapor actually present in the air to the amount that the air could hold at saturation at the same temperature, expressed as a percentage.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">RH</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">relative humidity</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622005 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622005">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622001"/>
-        <obo:IAO_0000115 xml:lang="en">The rate of horizontal air movement at a specified height above the ground surface at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">wind velocity</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">wind speed</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001362"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622006 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622006">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622001"/>
-        <obo:IAO_0000115 xml:lang="en">The amount of solar radiation in the 400-700 nm waveband reaching a site, which is the spectral range used by plants for photosynthesis.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">PAR</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">solar radiation</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment xml:lang="en">Often reported as an instantaneous flux density (micromol photons per square metre per second) or integrated as daily light integral.</rdfs:comment>
-        <rdfs:label xml:lang="en">photosynthetically active radiation</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001864"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622007 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622007">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622001"/>
-        <obo:IAO_0000115 xml:lang="en">A cumulative measure of heat accumulation calculated from the amount by which daily mean air temperature exceeds a specified base temperature over a growing season, used to predict plant development timing.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasBroadSynonym xml:lang="en">heat units</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">GDD</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">growing degree days</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622100 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622100">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622000"/>
-        <obo:IAO_0000115 xml:lang="en">An environmental variable that describes a physical, chemical, or biological property of the soil at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">soil variable</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622101 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622101">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622100"/>
-        <obo:IAO_0000115 xml:lang="en">A measure of the acidity or alkalinity of a soil, expressed as the negative logarithm of the hydrogen ion activity in a soil-water or soil-solution mixture.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">soil reaction</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">soil pH</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_09200010"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622102 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622102">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622100"/>
-        <obo:IAO_0000115 xml:lang="en">The temperature of the soil at a specified depth below the ground surface.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">soil temperature</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_09200012"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622105 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622105">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622100"/>
-        <obo:IAO_0000115 xml:lang="en">The force per unit area required to push a probe or cone into the soil to a specified depth, used as a field indicator of soil compaction.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">soil compaction</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">soil penetration resistance</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622106 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622106">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622100"/>
-        <obo:IAO_0000115 xml:lang="en">The proportion, by mass, of a soil sample composed of organic material derived from decomposed plant, animal, and microbial residues.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">SOM content</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">soil organic matter content</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622109 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622109">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622100"/>
-        <obo:IAO_0000115 xml:lang="en">The concentration of a plant-available nutrient in a soil sample.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">soil nutrient concentration</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622110 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622110">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622109"/>
-        <obo:IAO_0000115 xml:lang="en">The concentration of plant-available nitrogen (e.g. nitrate or ammonium) in a soil sample.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">soil N concentration</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">soil nitrogen concentration</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_09000017"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622111 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622111">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622109"/>
-        <obo:IAO_0000115 xml:lang="en">The concentration of plant-available phosphorus in a soil sample.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">soil P concentration</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">soil phosphorus concentration</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_3200068"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622112 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622112">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622109"/>
-        <obo:IAO_0000115 xml:lang="en">The concentration of plant-available potassium in a soil sample.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">soil K concentration</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">soil potassium concentration</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_3200074"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622200 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622200">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622000"/>
-        <obo:IAO_0000115 xml:lang="en">An environmental variable that describes a physical, chemical, or hydraulic property of a water body such as a stream, river, wetland, or lake.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">hydrological and water quality variable</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622201 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622201">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-        <obo:IAO_0000115 xml:lang="en">The volume of water passing through a stream cross-section per unit time.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">streamflow</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">discharge rate</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">stream discharge</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622202 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622202">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-        <obo:IAO_0000115 xml:lang="en">The speed at which water moves through a stream channel at a specified point.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">current velocity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">flow velocity</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">stream flow velocity</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622204 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622204">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-        <obo:IAO_0000115 xml:lang="en">The vertical distance from the water surface to the bed of a water body at a specified point.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">water level</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">stage</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment xml:lang="en">Also referred to as stage when measured relative to a fixed reference gauge over time.</rdfs:comment>
-        <rdfs:label xml:lang="en">water depth</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_3100031"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622205 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622205">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-        <obo:IAO_0000115 xml:lang="en">The temperature of the water in a water body at a specified depth and location.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">water temperature</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_09200014"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622206 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622206">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-        <obo:IAO_0000115 xml:lang="en">A measure of the acidity or alkalinity of a water sample, expressed as the negative logarithm of the hydrogen ion activity.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">water pH</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_3100030"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622207 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622207">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-        <obo:IAO_0000115 xml:lang="en">The concentration of oxygen gas dissolved in a water sample, typically expressed as milligrams per litre or percent saturation.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">DO concentration</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">dissolved oxygen concentration</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622208 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622208">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-        <obo:IAO_0000115 xml:lang="en">A measure of the cloudiness or haziness of water caused by suspended particulate matter, typically expressed in nephelometric turbidity units.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">turbidity</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622209 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622209">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-        <obo:IAO_0000115 xml:lang="en">A measure of the total concentration of dissolved salts in a water sample.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">salinity</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/PATO_0085001"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622210 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622210">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-        <obo:IAO_0000115 xml:lang="en">A measure of the capacity of a water sample to conduct electrical current, used as an indicator of its total dissolved ion concentration.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">specific conductance</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">electrical conductivity of water</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622211 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622211">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622200"/>
-        <obo:IAO_0000115 xml:lang="en">The concentration of a dissolved nutrient, such as nitrate or phosphate, in a water sample.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">water nutrient concentration</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">nutrient concentration in water</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622300 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622300">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <obo:IAO_0000115 xml:lang="en">A quality of an organism, population, community, or ecosystem that reflects a biotic structural, compositional, or functional characteristic and that can be measured or observed.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">ecological variable</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622301 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622301">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622300"/>
-        <obo:IAO_0000115 xml:lang="en">An ecological variable that describes the physical arrangement, density, or size of plant material at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">vegetation structure variable</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622302 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622302">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The proportion of ground area at a site that is vertically overhung by the combined foliage and branches of the plant canopy.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">canopy closure</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment xml:lang="en">Distinct from canopy closure, which measures the proportion of overhead sky hemisphere obstructed by canopy from a point on the ground.</rdfs:comment>
-        <rdfs:label xml:lang="en">canopy cover</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622303 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622303">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The vertical distance from the ground surface to the top of the plant canopy at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">canopy height</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622304 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622304">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The one-sided green leaf area per unit ground surface area, a dimensionless index of canopy leaf density.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">LAI</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">leaf area index</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/TO_0012001"/>
-    </Class>
-    <Axiom>
-        <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3622304"/>
-        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <annotatedTarget xml:lang="en">The one-sided green leaf area per unit ground surface area, a dimensionless index of canopy leaf density.</annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="doi:10.1093/jxb/erg263"/>
-    </Axiom>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622305 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622305">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The number of woody plant stems per unit ground area at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">stem count density</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">stocking density</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">stem density</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622306 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622306">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The diameter of a tree trunk measured at a standard height above the ground, conventionally 1.3 m internationally or 1.37 m (4.5 ft) in North America.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">DBH</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">diameter at breast height</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622307 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622307">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The cross-sectional area of a tree trunk at breast height, or the sum of such areas for all trees per unit ground area at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">basal area</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622308 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622308">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The proportion of ground area at a site covered by vegetation growing beneath the main forest canopy layer.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">understory cover</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622309 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622309">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The proportion of ground area at a site covered by the combined foliage of shrub-form vegetation.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">shrub cover</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622310 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622310">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The proportion of ground area at a site covered by the combined foliage of herbaceous (non-woody) vegetation.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">herb layer cover</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">herbaceous cover</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622311 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622311">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The vertical depth of the layer of dead plant material accumulated on the ground surface at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">leaf litter depth</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">litter depth</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622312 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622312">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622301"/>
-        <obo:IAO_0000115 xml:lang="en">The volume, per unit ground area, of downed dead wood at a site above a specified minimum diameter.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasBroadSynonym xml:lang="en">downed wood volume</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">CWD volume</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">coarse woody debris volume</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622400 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622400">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622300"/>
-        <obo:IAO_0000115 xml:lang="en">An ecological variable that describes the number, identity, relative representation, or spatial arrangement of species or individuals within a community at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">biodiversity and community composition variable</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622401 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622401">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622400"/>
-        <obo:IAO_0000115 xml:lang="en">The number of distinct species recorded within a defined sampling area or unit.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">species richness</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/PCO_0000010"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622402 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622402">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622400"/>
-        <obo:IAO_0000115 xml:lang="en">The variety of species present within a community, considering both the number of species and the relative abundance of individuals among them.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">species diversity</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/PCO_0000019"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622403 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622403">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622400"/>
-        <obo:IAO_0000115 xml:lang="en">A measure of how uniformly individuals are distributed among the species present in a community, independent of species richness.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">species evenness</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/PCO_0000023"/>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622404 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622404">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622400"/>
-        <obo:IAO_0000115 xml:lang="en">The proportion of ground area at a site covered by vegetation of species native to the region.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">native cover</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">percent native species cover</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622405 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622405">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622400"/>
-        <obo:IAO_0000115 xml:lang="en">The proportion of ground area at a site covered by vegetation of species classified as invasive or non-native.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">exotic species cover</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">invasive cover</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">percent invasive species cover</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622406 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622406">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622400"/>
-        <obo:IAO_0000115 xml:lang="en">The proportion of ground area at a site with no vegetation, litter, or rock cover.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">bare ground cover</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">percent bare ground cover</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622407 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622407">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622400"/>
-        <obo:IAO_0000115 xml:lang="en">The number of individuals of a given species per unit area or volume of habitat.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">population density</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622408 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622408">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622400"/>
-        <obo:IAO_0000115 xml:lang="en">The proportion that a given species&apos; individuals represent of the total number of individuals of all species recorded in a community.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">relative abundance</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">relative species abundance</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622500 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622500">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622300"/>
-        <obo:IAO_0000115 xml:lang="en">An ecological variable that describes the accumulation, storage, or cycling of biomass, carbon, or other materials at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">productivity and biogeochemical variable</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622501 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622501">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622500"/>
-        <obo:IAO_0000115 xml:lang="en">The mass of living plant material, per unit ground area, located above the soil surface at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">AGB</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">aboveground biomass</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622502 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622502">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622500"/>
-        <obo:IAO_0000115 xml:lang="en">The mass of living plant material, per unit ground area, located below the soil surface at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">BGB</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">root biomass</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">belowground biomass</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622503 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622503">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622500"/>
-        <obo:IAO_0000115 xml:lang="en">The rate at which plants at a site accumulate biomass through photosynthesis minus their own respiratory losses, over a specified period.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">NPP</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">net primary productivity</rdfs:label>
-    </Class>
-    <Axiom>
-        <annotatedSource rdf:resource="https://w3id.org/elmo/elmo_3622503"/>
-        <annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <annotatedTarget xml:lang="en">The rate at which plants at a site accumulate biomass through photosynthesis minus their own respiratory losses, over a specified period.</annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="doi:10.1890/1051-0761(2001)011[0356:MNPPIF]2.0.CO;2"/>
-    </Axiom>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622504 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622504">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622500"/>
-        <obo:IAO_0000115 xml:lang="en">The mass of carbon stored, per unit ground area, in a specified pool (such as living biomass, dead wood, litter, or soil) at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">carbon storage</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">carbon stock</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622505 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622505">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622500"/>
-        <obo:IAO_0000115 xml:lang="en">The rate at which dead organic material (such as litter or coarse woody debris) breaks down and loses mass at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">litter decomposition rate</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">decomposition rate</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622506 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622506">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622500"/>
-        <obo:IAO_0000115 xml:lang="en">The rate at which dead plant material (leaves, twigs, and other fine debris) is deposited onto the ground surface at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">litter production rate</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">litterfall rate</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622600 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622600">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622300"/>
-        <obo:IAO_0000115 xml:lang="en">An ecological variable that quantifies the frequency, intensity, or extent of a natural or anthropogenic disturbance acting on a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">disturbance and pressure variable</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622601 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622601">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622600"/>
-        <obo:IAO_0000115 xml:lang="en">The average length of time between successive fire events at a site.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">fire frequency</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment xml:lang="en">Distinct from fire frequency, which counts the number of fire events per unit time; the two are inversely related.</rdfs:comment>
-        <rdfs:label xml:lang="en">fire return interval</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622602 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622602">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622600"/>
-        <obo:IAO_0000115 xml:lang="en">A measure of the degree to which vegetation at a site is consumed or trampled by grazing animals over a specified period.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">grazing pressure</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">grazing intensity</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622603 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622603">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622600"/>
-        <obo:IAO_0000115 xml:lang="en">The number of flood events of a specified magnitude occurring at a site over a specified period.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">flood frequency</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622604 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622604">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622600"/>
-        <obo:IAO_0000115 xml:lang="en">A measure of the degree to which plant tissue at a site is consumed by herbivores over a specified period.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">herbivory intensity</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">herbivory pressure</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622700 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622700">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622300"/>
-        <obo:IAO_0000115 xml:lang="en">An ecological variable that quantifies the rate at which individuals in a population are added or lost over a specified period.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">population demographic rate variable</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622701 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622701">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622700"/>
-        <obo:IAO_0000115 xml:lang="en">The proportion of individuals present at the start of a specified period that remain alive at the end of that period.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <rdfs:label xml:lang="en">survival rate</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622702 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622702">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622700"/>
-        <obo:IAO_0000115 xml:lang="en">The rate at which new individuals (through birth, germination, or establishment) are added to a population over a specified period.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">recruitment</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">recruitment rate</rdfs:label>
-    </Class>
-    
-
-
-    <!-- https://w3id.org/elmo/elmo_3622703 -->
-
-    <Class rdf:about="https://w3id.org/elmo/elmo_3622703">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/elmo/elmo_3622700"/>
-        <obo:IAO_0000115 xml:lang="en">The rate at which individuals in a population die over a specified period.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1296-2528"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-05T00:00:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym xml:lang="en">death rate</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">mortality rate</rdfs:label>
-    </Class>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
-
+Prefix(:=<https://w3id.org/elmo/elmo/components/variables.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<https://w3id.org/elmo/elmo/components/variables.owl>
+<https://w3id.org/elmo/elmo/releases/2026-07-08/components/variables.owl>
+Annotation(owl:versionInfo "2026-07-08")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000019>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00010005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_06105203>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_06105240>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_06105271>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_09000026>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622000>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622001>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622002>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622003>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622004>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622005>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622006>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622007>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622100>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622101>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622102>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622105>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622106>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622109>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622110>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622111>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622112>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622200>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622201>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622202>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622204>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622205>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622206>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622207>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622208>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622209>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622210>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622211>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622300>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622301>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622302>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622303>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622304>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622305>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622306>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622307>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622308>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622309>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622310>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622311>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622312>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622400>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622401>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622402>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622403>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622404>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622405>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622406>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622407>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622408>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622500>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622501>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622502>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622503>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622504>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622505>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622506>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622600>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622601>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622602>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622603>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622604>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622700>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622701>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622702>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622703>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622704>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622705>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622706>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622707>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622708>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622709>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622710>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622711>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622712>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622713>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622714>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622715>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622716>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622717>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622718>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622719>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622720>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622800>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622801>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622802>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622803>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622804>))
+Declaration(Class(<https://w3id.org/elmo/elmo_3622805>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#creation_date>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#exactMatch>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_00010005> (<http://purl.obolibrary.org/obo/ENVO_00010005>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_00010005> <https://w3id.org/elmo/elmo_3622100>)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_06105203> (<http://purl.obolibrary.org/obo/ENVO_06105203>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_06105203> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_06105240> (<http://purl.obolibrary.org/obo/ENVO_06105240>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_06105240> <https://w3id.org/elmo/elmo_3622100>)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_06105271> (<http://purl.obolibrary.org/obo/ENVO_06105271>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_06105271> <https://w3id.org/elmo/elmo_3622100>)
+
+# Class: <http://purl.obolibrary.org/obo/ENVO_09000026> (<http://purl.obolibrary.org/obo/ENVO_09000026>)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ENVO_09000026> <https://w3id.org/elmo/elmo_3622100>)
+
+# Class: <https://w3id.org/elmo/elmo_3622000> (environmental variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622000> "A quality of an environmental system that reflects a physical, chemical, or hydrological condition of the abiotic environment and that can be measured or observed."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622000> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622000> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622000> "environmental variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622000> <http://purl.obolibrary.org/obo/BFO_0000019>)
+
+# Class: <https://w3id.org/elmo/elmo_3622001> (climatic and meteorological variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622001> "An environmental variable that describes the state of the atmosphere at or near a site over a given period, such as temperature, precipitation, humidity, or radiation."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622001> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622001> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622001> "climatic and meteorological variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622001> <https://w3id.org/elmo/elmo_3622000>)
+
+# Class: <https://w3id.org/elmo/elmo_3622002> (air temperature)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622002> "The temperature of the ambient air at a specified height above the ground surface at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622002> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622002> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622002> "ambient temperature"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622002> "air temperature"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622002> <http://purl.obolibrary.org/obo/ENVO_09200001>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622002> <https://w3id.org/elmo/elmo_3622001>)
+
+# Class: <https://w3id.org/elmo/elmo_3622003> (precipitation amount)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622003> "The depth of water (from rain, snow, hail, or other forms) that reaches the ground surface at a site over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622003> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622003> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622003> "rainfall amount"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3622003> "precipitation"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622003> "precipitation amount"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622003> <http://purl.obolibrary.org/obo/ENVO_01001363>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622003> <https://w3id.org/elmo/elmo_3622001>)
+
+# Class: <https://w3id.org/elmo/elmo_3622004> (relative humidity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622004> "The ratio of the amount of water vapor actually present in the air to the amount that the air could hold at saturation at the same temperature, expressed as a percentage."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622004> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622004> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622004> "RH"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622004> "relative humidity"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622004> <https://w3id.org/elmo/elmo_3622001>)
+
+# Class: <https://w3id.org/elmo/elmo_3622005> (wind speed)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622005> "The rate of horizontal air movement at a specified height above the ground surface at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622005> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622005> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622005> "wind velocity"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622005> "wind speed"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622005> <http://purl.obolibrary.org/obo/ENVO_01001362>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622005> <https://w3id.org/elmo/elmo_3622001>)
+
+# Class: <https://w3id.org/elmo/elmo_3622006> (photosynthetically active radiation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622006> "The amount of solar radiation in the 400-700 nm waveband reaching a site, which is the spectral range used by plants for photosynthesis."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622006> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622006> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622006> "PAR"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3622006> "solar radiation"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/elmo/elmo_3622006> "Often reported as an instantaneous flux density (micromol photons per square metre per second) or integrated as daily light integral."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622006> "photosynthetically active radiation"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622006> <http://purl.obolibrary.org/obo/ENVO_01001864>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622006> <https://w3id.org/elmo/elmo_3622001>)
+
+# Class: <https://w3id.org/elmo/elmo_3622007> (growing degree days)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622007> "A cumulative measure of heat accumulation calculated from the amount by which daily mean air temperature exceeds a specified base temperature over a growing season, used to predict plant development timing."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622007> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622007> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <https://w3id.org/elmo/elmo_3622007> "heat units"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622007> "GDD"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622007> "growing degree days"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622007> <https://w3id.org/elmo/elmo_3622001>)
+
+# Class: <https://w3id.org/elmo/elmo_3622100> (soil variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622100> "An environmental variable that describes a physical, chemical, or biological property of the soil at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622100> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622100> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622100> "soil variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622100> <https://w3id.org/elmo/elmo_3622000>)
+
+# Class: <https://w3id.org/elmo/elmo_3622101> (soil pH)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622101> "A measure of the acidity or alkalinity of a soil, expressed as the negative logarithm of the hydrogen ion activity in a soil-water or soil-solution mixture."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622101> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622101> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622101> "soil reaction"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622101> "soil pH"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622101> <http://purl.obolibrary.org/obo/ENVO_09200010>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622101> <https://w3id.org/elmo/elmo_3622100>)
+
+# Class: <https://w3id.org/elmo/elmo_3622102> (soil temperature)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622102> "The temperature of the soil at a specified depth below the ground surface."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622102> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622102> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622102> "soil temperature"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622102> <http://purl.obolibrary.org/obo/ENVO_09200012>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622102> <https://w3id.org/elmo/elmo_3622100>)
+
+# Class: <https://w3id.org/elmo/elmo_3622105> (soil penetration resistance)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622105> "The force per unit area required to push a probe or cone into the soil to a specified depth, used as a field indicator of soil compaction."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622105> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622105> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622105> "soil compaction"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622105> "soil penetration resistance"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622105> <https://w3id.org/elmo/elmo_3622100>)
+
+# Class: <https://w3id.org/elmo/elmo_3622106> (soil organic matter content)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622106> "The proportion, by mass, of a soil sample composed of organic material derived from decomposed plant, animal, and microbial residues."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622106> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622106> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622106> "SOM content"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622106> "soil organic matter content"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622106> <https://w3id.org/elmo/elmo_3622100>)
+
+# Class: <https://w3id.org/elmo/elmo_3622109> (soil nutrient concentration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622109> "The concentration of a plant-available nutrient in a soil sample."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622109> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622109> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622109> "soil nutrient concentration"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622109> <https://w3id.org/elmo/elmo_3622100>)
+
+# Class: <https://w3id.org/elmo/elmo_3622110> (soil nitrogen concentration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622110> "The concentration of plant-available nitrogen (e.g. nitrate or ammonium) in a soil sample."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622110> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622110> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622110> "soil N concentration"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622110> "soil nitrogen concentration"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622110> <http://purl.obolibrary.org/obo/ENVO_09000017>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622110> <https://w3id.org/elmo/elmo_3622109>)
+
+# Class: <https://w3id.org/elmo/elmo_3622111> (soil phosphorus concentration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622111> "The concentration of plant-available phosphorus in a soil sample."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622111> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622111> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622111> "soil P concentration"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622111> "soil phosphorus concentration"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622111> <http://purl.obolibrary.org/obo/ENVO_3200068>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622111> <https://w3id.org/elmo/elmo_3622109>)
+
+# Class: <https://w3id.org/elmo/elmo_3622112> (soil potassium concentration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622112> "The concentration of plant-available potassium in a soil sample."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622112> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622112> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622112> "soil K concentration"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622112> "soil potassium concentration"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622112> <http://purl.obolibrary.org/obo/ENVO_3200074>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622112> <https://w3id.org/elmo/elmo_3622109>)
+
+# Class: <https://w3id.org/elmo/elmo_3622200> (hydrological and water quality variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622200> "An environmental variable that describes a physical, chemical, or hydraulic property of a water body such as a stream, river, wetland, or lake."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622200> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622200> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622200> "hydrological and water quality variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622200> <https://w3id.org/elmo/elmo_3622000>)
+
+# Class: <https://w3id.org/elmo/elmo_3622201> (stream discharge)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622201> "The volume of water passing through a stream cross-section per unit time."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622201> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622201> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622201> "streamflow"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3622201> "discharge rate"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622201> "stream discharge"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622201> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622202> (stream flow velocity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622202> "The speed at which water moves through a stream channel at a specified point."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622202> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622202> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622202> "current velocity"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622202> "flow velocity"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622202> "stream flow velocity"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622202> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622204> (water depth)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622204> "The vertical distance from the water surface to the bed of a water body at a specified point."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622204> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622204> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622204> "water level"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3622204> "stage"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/elmo/elmo_3622204> "Also referred to as stage when measured relative to a fixed reference gauge over time."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622204> "water depth"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622204> <http://purl.obolibrary.org/obo/ENVO_3100031>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622204> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622205> (water temperature)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622205> "The temperature of the water in a water body at a specified depth and location."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622205> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622205> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622205> "water temperature"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622205> <http://purl.obolibrary.org/obo/ENVO_09200014>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622205> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622206> (water pH)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622206> "A measure of the acidity or alkalinity of a water sample, expressed as the negative logarithm of the hydrogen ion activity."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622206> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622206> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622206> "water pH"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622206> <http://purl.obolibrary.org/obo/ENVO_3100030>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622206> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622207> (dissolved oxygen concentration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622207> "The concentration of oxygen gas dissolved in a water sample, typically expressed as milligrams per litre or percent saturation."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622207> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622207> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622207> "DO concentration"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622207> "dissolved oxygen concentration"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622207> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622208> (turbidity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622208> "A measure of the cloudiness or haziness of water caused by suspended particulate matter, typically expressed in nephelometric turbidity units."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622208> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622208> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622208> "turbidity"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622208> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622209> (salinity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622209> "A measure of the total concentration of dissolved salts in a water sample."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622209> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622209> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622209> "salinity"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622209> <http://purl.obolibrary.org/obo/PATO_0085001>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622209> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622210> (electrical conductivity of water)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622210> "A measure of the capacity of a water sample to conduct electrical current, used as an indicator of its total dissolved ion concentration."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622210> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622210> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622210> "specific conductance"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622210> "electrical conductivity of water"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622210> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622211> (nutrient concentration in water)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622211> "The concentration of a dissolved nutrient, such as nitrate or phosphate, in a water sample."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622211> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622211> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622211> "water nutrient concentration"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622211> "nutrient concentration in water"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622211> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622300> (ecological variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622300> "A quality of an organism, population, community, or ecosystem that reflects a biotic structural, compositional, or functional characteristic and that can be measured or observed."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622300> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622300> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622300> "ecological variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622300> <http://purl.obolibrary.org/obo/BFO_0000019>)
+
+# Class: <https://w3id.org/elmo/elmo_3622301> (vegetation structure variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622301> "An ecological variable that describes the physical arrangement, density, or size of plant material at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622301> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622301> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622301> "vegetation structure variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622301> <https://w3id.org/elmo/elmo_3622300>)
+
+# Class: <https://w3id.org/elmo/elmo_3622302> (canopy cover)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622302> "The proportion of ground area at a site that is vertically overhung by the combined foliage and branches of the plant canopy."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622302> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622302> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3622302> "canopy closure"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/elmo/elmo_3622302> "Distinct from canopy closure, which measures the proportion of overhead sky hemisphere obstructed by canopy from a point on the ground."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622302> "canopy cover"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622302> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622303> (canopy height)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622303> "The vertical distance from the ground surface to the top of the plant canopy at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622303> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622303> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622303> "canopy height"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622303> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622304> (leaf area index)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1093/jxb/erg263>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622304> "The one-sided green leaf area per unit ground surface area, a dimensionless index of canopy leaf density."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622304> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622304> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622304> "LAI"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622304> "leaf area index"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622304> <http://purl.obolibrary.org/obo/TO_0012001>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622304> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622305> (stem density)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622305> "The number of woody plant stems per unit ground area at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622305> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622305> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622305> "stem count density"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3622305> "stocking density"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622305> "stem density"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622305> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622306> (diameter at breast height)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622306> "The diameter of a tree trunk measured at a standard height above the ground, conventionally 1.3 m internationally or 1.37 m (4.5 ft) in North America."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622306> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622306> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622306> "DBH"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622306> "diameter at breast height"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622306> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622307> (basal area)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622307> "The cross-sectional area of a tree trunk at breast height, or the sum of such areas for all trees per unit ground area at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622307> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622307> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622307> "basal area"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622307> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622308> (understory cover)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622308> "The proportion of ground area at a site covered by vegetation growing beneath the main forest canopy layer."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622308> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622308> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622308> "understory cover"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622308> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622309> (shrub cover)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622309> "The proportion of ground area at a site covered by the combined foliage of shrub-form vegetation."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622309> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622309> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622309> "shrub cover"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622309> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622310> (herbaceous cover)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622310> "The proportion of ground area at a site covered by the combined foliage of herbaceous (non-woody) vegetation."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622310> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622310> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622310> "herb layer cover"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622310> "herbaceous cover"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622310> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622311> (litter depth)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622311> "The vertical depth of the layer of dead plant material accumulated on the ground surface at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622311> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622311> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622311> "leaf litter depth"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622311> "litter depth"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622311> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622312> (coarse woody debris volume)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622312> "The volume, per unit ground area, of downed dead wood at a site above a specified minimum diameter."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622312> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622312> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <https://w3id.org/elmo/elmo_3622312> "downed wood volume"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622312> "CWD volume"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622312> "coarse woody debris volume"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622312> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622400> (biodiversity and community composition variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622400> "An ecological variable that describes the number, identity, relative representation, or spatial arrangement of species or individuals within a community at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622400> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622400> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622400> "biodiversity and community composition variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622400> <https://w3id.org/elmo/elmo_3622300>)
+
+# Class: <https://w3id.org/elmo/elmo_3622401> (species richness)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622401> "The number of distinct species recorded within a defined sampling area or unit."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622401> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622401> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622401> "species richness"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622401> <http://purl.obolibrary.org/obo/PCO_0000010>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622401> <https://w3id.org/elmo/elmo_3622400>)
+
+# Class: <https://w3id.org/elmo/elmo_3622402> (species diversity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622402> "The variety of species present within a community, considering both the number of species and the relative abundance of individuals among them."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622402> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622402> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622402> "species diversity"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622402> <http://purl.obolibrary.org/obo/PCO_0000019>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622402> <https://w3id.org/elmo/elmo_3622400>)
+
+# Class: <https://w3id.org/elmo/elmo_3622403> (species evenness)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622403> "A measure of how uniformly individuals are distributed among the species present in a community, independent of species richness."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622403> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622403> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622403> "species evenness"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/elmo/elmo_3622403> <http://purl.obolibrary.org/obo/PCO_0000023>)
+SubClassOf(<https://w3id.org/elmo/elmo_3622403> <https://w3id.org/elmo/elmo_3622400>)
+
+# Class: <https://w3id.org/elmo/elmo_3622404> (percent native species cover)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622404> "The proportion of ground area at a site covered by vegetation of species native to the region."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622404> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622404> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622404> "native cover"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622404> "percent native species cover"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622404> <https://w3id.org/elmo/elmo_3622400>)
+
+# Class: <https://w3id.org/elmo/elmo_3622405> (percent invasive species cover)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622405> "The proportion of ground area at a site covered by vegetation of species classified as invasive or non-native."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622405> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622405> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622405> "exotic species cover"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622405> "invasive cover"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622405> "percent invasive species cover"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622405> <https://w3id.org/elmo/elmo_3622400>)
+
+# Class: <https://w3id.org/elmo/elmo_3622406> (percent bare ground cover)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622406> "The proportion of ground area at a site with no vegetation, litter, or rock cover."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622406> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622406> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622406> "bare ground cover"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622406> "percent bare ground cover"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622406> <https://w3id.org/elmo/elmo_3622400>)
+
+# Class: <https://w3id.org/elmo/elmo_3622407> (population density)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622407> "The number of individuals of a given species per unit area or volume of habitat."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622407> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622407> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622407> "population density"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622407> <https://w3id.org/elmo/elmo_3622400>)
+
+# Class: <https://w3id.org/elmo/elmo_3622408> (relative species abundance)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622408> "The proportion that a given species' individuals represent of the total number of individuals of all species recorded in a community."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622408> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622408> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622408> "relative abundance"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622408> "relative species abundance"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622408> <https://w3id.org/elmo/elmo_3622400>)
+
+# Class: <https://w3id.org/elmo/elmo_3622500> (productivity and biogeochemical variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622500> "An ecological variable that describes the accumulation, storage, or cycling of biomass, carbon, or other materials at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622500> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622500> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622500> "productivity and biogeochemical variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622500> <https://w3id.org/elmo/elmo_3622300>)
+
+# Class: <https://w3id.org/elmo/elmo_3622501> (aboveground biomass)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622501> "The mass of living plant material, per unit ground area, located above the soil surface at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622501> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622501> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622501> "AGB"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622501> "aboveground biomass"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622501> <https://w3id.org/elmo/elmo_3622500>)
+
+# Class: <https://w3id.org/elmo/elmo_3622502> (belowground biomass)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622502> "The mass of living plant material, per unit ground area, located below the soil surface at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622502> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622502> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622502> "BGB"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3622502> "root biomass"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622502> "belowground biomass"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622502> <https://w3id.org/elmo/elmo_3622500>)
+
+# Class: <https://w3id.org/elmo/elmo_3622503> (net primary productivity)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1890/1051-0761(2001)011[0356:MNPPIF]2.0.CO;2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622503> "The rate at which plants at a site accumulate biomass through photosynthesis minus their own respiratory losses, over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622503> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622503> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622503> "NPP"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622503> "net primary productivity"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622503> <https://w3id.org/elmo/elmo_3622500>)
+
+# Class: <https://w3id.org/elmo/elmo_3622504> (carbon stock)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622504> "The mass of carbon stored, per unit ground area, in a specified pool (such as living biomass, dead wood, litter, or soil) at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622504> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622504> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622504> "carbon storage"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622504> "carbon stock"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622504> <https://w3id.org/elmo/elmo_3622500>)
+
+# Class: <https://w3id.org/elmo/elmo_3622505> (decomposition rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622505> "The rate at which dead organic material (such as litter or coarse woody debris) breaks down and loses mass at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622505> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622505> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622505> "litter decomposition rate"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622505> "decomposition rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622505> <https://w3id.org/elmo/elmo_3622500>)
+
+# Class: <https://w3id.org/elmo/elmo_3622506> (litterfall rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622506> "The rate at which dead plant material (leaves, twigs, and other fine debris) is deposited onto the ground surface at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622506> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622506> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622506> "litter production rate"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622506> "litterfall rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622506> <https://w3id.org/elmo/elmo_3622500>)
+
+# Class: <https://w3id.org/elmo/elmo_3622600> (disturbance and pressure variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622600> "An ecological variable that quantifies the frequency, intensity, or extent of a natural or anthropogenic disturbance acting on a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622600> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622600> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622600> "disturbance and pressure variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622600> <https://w3id.org/elmo/elmo_3622300>)
+
+# Class: <https://w3id.org/elmo/elmo_3622601> (fire return interval)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622601> "The average length of time between successive fire events at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622601> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622601> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3622601> "fire frequency"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/elmo/elmo_3622601> "Distinct from fire frequency, which counts the number of fire events per unit time; the two are inversely related."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622601> "fire return interval"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622601> <https://w3id.org/elmo/elmo_3622600>)
+
+# Class: <https://w3id.org/elmo/elmo_3622602> (grazing intensity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622602> "A measure of the degree to which vegetation at a site is consumed or trampled by grazing animals over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622602> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622602> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622602> "grazing pressure"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622602> "grazing intensity"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622602> <https://w3id.org/elmo/elmo_3622600>)
+
+# Class: <https://w3id.org/elmo/elmo_3622603> (flood frequency)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622603> "The number of flood events of a specified magnitude occurring at a site over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622603> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622603> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622603> "flood frequency"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622603> <https://w3id.org/elmo/elmo_3622600>)
+
+# Class: <https://w3id.org/elmo/elmo_3622604> (herbivory pressure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622604> "A measure of the degree to which plant tissue at a site is consumed by herbivores over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622604> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622604> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622604> "herbivory intensity"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622604> "herbivory pressure"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622604> <https://w3id.org/elmo/elmo_3622600>)
+
+# Class: <https://w3id.org/elmo/elmo_3622700> (population demographic rate variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622700> "An ecological variable that quantifies the rate at which individuals in a population are added or lost over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622700> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622700> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622700> "population demographic rate variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622700> <https://w3id.org/elmo/elmo_3622300>)
+
+# Class: <https://w3id.org/elmo/elmo_3622701> (survival rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622701> "The proportion of individuals present at the start of a specified period that remain alive at the end of that period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622701> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622701> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622701> "survival rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622701> <https://w3id.org/elmo/elmo_3622700>)
+
+# Class: <https://w3id.org/elmo/elmo_3622702> (recruitment rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622702> "The rate at which new individuals (through birth, germination, or establishment) are added to a population over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622702> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622702> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622702> "recruitment"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622702> "recruitment rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622702> <https://w3id.org/elmo/elmo_3622700>)
+
+# Class: <https://w3id.org/elmo/elmo_3622703> (mortality rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622703> "The rate at which individuals in a population die over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622703> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622703> "2026-07-05T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622703> "death rate"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622703> "mortality rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622703> <https://w3id.org/elmo/elmo_3622700>)
+
+# Class: <https://w3id.org/elmo/elmo_3622704> (plant recruitment variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622704> "An ecological variable that describes the germination, emergence, establishment, or early growth of individual plants at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622704> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622704> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622704> "plant establishment variable"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622704> "plant recruitment variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622704> <https://w3id.org/elmo/elmo_3622300>)
+
+# Class: <https://w3id.org/elmo/elmo_3622705> (seedling survival rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622705> "The proportion of seedlings present at the start of a specified monitoring period that remain alive at the end of that period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622705> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622705> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622705> "seedling survival"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622705> "seedling survival rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622705> <https://w3id.org/elmo/elmo_3622704>)
+
+# Class: <https://w3id.org/elmo/elmo_3622706> (seedling establishment rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622706> "The proportion of seedlings or introduced propagules that successfully transition from initial emergence to persistence as established plants at a restoration site over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622706> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622706> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622706> "seedling establishment"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622706> "seedling establishment rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622706> <https://w3id.org/elmo/elmo_3622704>)
+
+# Class: <https://w3id.org/elmo/elmo_3622707> (seedling growth rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622707> "The rate of increase in size (height, basal diameter, or dry mass) of individual seedlings over a specified time period at a restoration site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622707> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622707> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622707> "seedling growth"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622707> "seedling growth rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622707> <https://w3id.org/elmo/elmo_3622704>)
+
+# Class: <https://w3id.org/elmo/elmo_3622708> (seedling emergence rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622708> "The rate at which seeds germinate and produce seedlings that emerge above the soil surface at a site over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622708> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622708> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622708> "seedling emergence"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622708> "seedling emergence rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622708> <https://w3id.org/elmo/elmo_3622704>)
+
+# Class: <https://w3id.org/elmo/elmo_3622709> (seedling height)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622709> "The vertical distance from the base of a seedling at soil level to its apical meristem or tallest leaf tip at the time of measurement."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622709> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622709> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622709> "seedling height"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622709> <https://w3id.org/elmo/elmo_3622704>)
+
+# Class: <https://w3id.org/elmo/elmo_3622710> (seedling natural regeneration density)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622710> "The number of naturally regenerating seedlings per unit ground area at a site, arising without direct planting or seeding by humans."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622710> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622710> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622710> "natural regeneration density"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622710> "seedling regeneration"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622710> "seedling natural regeneration density"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622710> <https://w3id.org/elmo/elmo_3622704>)
+
+# Class: <https://w3id.org/elmo/elmo_3622711> (height growth increment)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622711> "The increase in height of a tree or seedling over a specified time period, used as a measure of vertical growth performance."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622711> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622711> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622711> "height growth"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622711> "height growth increment"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622711> <https://w3id.org/elmo/elmo_3622704>)
+
+# Class: <https://w3id.org/elmo/elmo_3622712> (root sucker density)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622712> "The number of root suckers — shoots arising from adventitious buds on the lateral roots or root collar of a parent plant — per unit ground area at a site over a specified monitoring period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622712> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622712> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622712> "root sucker production"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622712> "root sucker density"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622712> <https://w3id.org/elmo/elmo_3622704>)
+
+# Class: <https://w3id.org/elmo/elmo_3622713> (water table depth)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622713> "The vertical distance from the ground surface to the upper boundary of the saturated zone in the soil or peat at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622713> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622713> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622713> "water table level"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622713> "water table position"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/elmo/elmo_3622713> "Positive values indicate the water table is below ground surface; a value of zero indicates the water table is at the surface; negative values indicate inundation. Also reported as water table level relative to a fixed datum."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622713> "water table depth"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622713> <https://w3id.org/elmo/elmo_3622200>)
+
+# Class: <https://w3id.org/elmo/elmo_3622714> (light availability)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622714> "The amount of photosynthetically active radiation reaching a specified position such as the forest floor or understory, typically expressed as a proportion of above-canopy incident radiation or as an absolute flux density."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622714> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622714> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622714> "light penetration"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3622714> "understory light"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622714> "light availability"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622714> <https://w3id.org/elmo/elmo_3622001>)
+
+# Class: <https://w3id.org/elmo/elmo_3622715> (Sphagnum cover)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622715> "The proportion of ground area at a peatland site covered by living Sphagnum mosses."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622715> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622715> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622715> "Sphagnum regeneration"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/elmo/elmo_3622715> "Sphagnum cover is the standard measured quantity at a point in time; the term 'Sphagnum regeneration' is commonly used in the peatland restoration literature to refer to the same phenomenon, particularly when framing it as a post-restoration outcome."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622715> "Sphagnum cover"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622715> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622716> (microbial biomass)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622716> "The mass of living microbial cells (bacteria, fungi, and other microorganisms) per unit mass or volume of soil at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622716> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622716> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622716> "soil microbial biomass"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622716> "microbial biomass"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622716> <https://w3id.org/elmo/elmo_3622500>)
+
+# Class: <https://w3id.org/elmo/elmo_3622717> (vegetation cover)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622717> "The proportion of ground area at a site covered by the combined foliage and stems of all vascular plant growth forms including trees, shrubs, and herbaceous plants."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622717> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622717> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622717> "plant cover"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622717> "total vegetation cover"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/elmo/elmo_3622717> "Encompasses canopy cover (ELMO:3622302), shrub cover (ELMO:3622309), herbaceous cover (ELMO:3622310), and understory cover (ELMO:3622308) as narrower terms. Use this term when reporting total across-strata plant cover."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622717> "vegetation cover"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622717> <https://w3id.org/elmo/elmo_3622301>)
+
+# Class: <https://w3id.org/elmo/elmo_3622718> (competition intensity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622718> "A measure of the degree to which neighbouring plants reduce the growth, survival, or reproductive output of target plants at a site over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622718> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622718> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <https://w3id.org/elmo/elmo_3622718> "competitive pressure"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622718> "competition"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622718> "competition intensity"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622718> <https://w3id.org/elmo/elmo_3622600>)
+
+# Class: <https://w3id.org/elmo/elmo_3622719> (time since restoration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622719> "The elapsed time between the initiation of a restoration intervention at a site and the point of ecological measurement, used to characterize the site along a recovery trajectory."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622719> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622719> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622719> "post-restoration age"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622719> "restoration age"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622719> "time since restoration"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622719> <https://w3id.org/elmo/elmo_3622300>)
+
+# Class: <https://w3id.org/elmo/elmo_3622720> (restoration success index)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622720> "A composite measure evaluating the degree to which a restoration site has achieved specified ecological targets relative to a reference condition, assessed across one or more criteria such as species composition, structural complexity, or ecosystem function."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622720> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622720> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622720> "restoration success"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622720> "restoration success index"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622720> <https://w3id.org/elmo/elmo_3622300>)
+
+# Class: <https://w3id.org/elmo/elmo_3622800> (ecological process variable)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622800> "An ecological variable that describes the rate, stage, or trajectory of a natural ecological process occurring at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622800> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622800> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <https://w3id.org/elmo/elmo_3622800> "ecological dynamics variable"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622800> "ecological process variable"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622800> <https://w3id.org/elmo/elmo_3622300>)
+
+# Class: <https://w3id.org/elmo/elmo_3622801> (succession stage)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622801> "A categorical or ordinal characterization of the stage of ecological succession at a site, based on the composition and structure of the plant community relative to a reference successional trajectory."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622801> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622801> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <https://w3id.org/elmo/elmo_3622801> "successional stage"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622801> "succession"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622801> "succession stage"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622801> <https://w3id.org/elmo/elmo_3622800>)
+
+# Class: <https://w3id.org/elmo/elmo_3622802> (natural regeneration rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622802> "The rate at which native vegetation re-establishes at a site through unassisted ecological processes, without direct planting or seeding by humans, over a specified period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622802> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622802> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622802> "natural recovery"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622802> "natural regeneration rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622802> <https://w3id.org/elmo/elmo_3622800>)
+
+# Class: <https://w3id.org/elmo/elmo_3622803> (regeneration failure rate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622803> "The proportion of a site or planting cohort in which natural or assisted plant regeneration fails to achieve a specified establishment threshold over a monitoring period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622803> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622803> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622803> "regeneration failure"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622803> "regeneration failure rate"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622803> <https://w3id.org/elmo/elmo_3622800>)
+
+# Class: <https://w3id.org/elmo/elmo_3622804> (habitat loss area)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622804> "The area of habitat lost to anthropogenic disturbance, land-use change, or ecological degradation within a specified landscape unit over a defined time period."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622804> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622804> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622804> "habitat loss"@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622804> "habitat loss area"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622804> <https://w3id.org/elmo/elmo_3622600>)
+
+# Class: <https://w3id.org/elmo/elmo_3622805> (seismic line density)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622805> "The total linear extent or area of seismic exploration corridors — linear clearings cut through forested terrain during geophysical surveys for oil and gas exploration — per unit landscape area at a site."@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622805> <https://orcid.org/0000-0002-1296-2528>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622805> "2026-07-07T00:00:00Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622805> "seismic line coverage"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622805> "seismic lines"@en)
+AnnotationAssertion(rdfs:comment <https://w3id.org/elmo/elmo_3622805> "Seismic lines are a key disturbance type in Canadian boreal forest and peatland restoration, particularly in Alberta."@en)
+AnnotationAssertion(rdfs:label <https://w3id.org/elmo/elmo_3622805> "seismic line density"@en)
+SubClassOf(<https://w3id.org/elmo/elmo_3622805> <https://w3id.org/elmo/elmo_3622600>)
+
+
+)

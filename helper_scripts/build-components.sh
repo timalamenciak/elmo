@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# Rebuild the interventions and ecosystems OWL components from their TSV
-# templates (src/templates/interventions.tsv, src/templates/ecosystems.tsv).
+# Rebuild the interventions, ecosystems, and variables OWL components from
+# their TSV templates (src/templates/*.tsv).
 #
 # Runs entirely locally via ROBOT -- no Docker or `make` required (neither is
 # assumed to be installed). Mirrors the ROBOT pipeline defined in
 # src/ontology/elmo.Makefile (template -> annotate ontology/version IRI ->
 # convert to functional syntax), just without needing `make` itself. Run this
-# after editing either TSV, before checking your work (see check.sh) or
+# after editing any TSV, before checking your work (see check.sh) or
 # regenerating docs (see update-docs.sh).
 #
 # Override the ROBOT jar location with the ROBOT_JAR environment variable if
@@ -51,3 +51,18 @@ robot template \
   convert -f ofn --output components/ecosystems.owl.tmp.owl
 mv components/ecosystems.owl.tmp.owl components/ecosystems.owl
 echo "ecosystems.owl rebuilt."
+
+echo
+echo "== Rebuilding variables.owl =="
+robot template \
+  --catalog catalog-v001.xml \
+  --prefix 'ELMO: https://w3id.org/elmo/elmo_' \
+  --prefix 'skos: http://www.w3.org/2004/02/skos/core#' \
+  --input elmo-edit.owl \
+  --template ../templates/variables.tsv \
+  annotate --ontology-iri "$ONTBASE/components/variables.owl" \
+           -V "$ONTBASE/releases/$TODAY/components/variables.owl" \
+           --annotation owl:versionInfo "$TODAY" \
+  convert -f ofn --output components/variables.owl.tmp.owl
+mv components/variables.owl.tmp.owl components/variables.owl
+echo "variables.owl rebuilt."
