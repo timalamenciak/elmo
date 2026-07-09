@@ -1,12 +1,14 @@
 format-version: 1.2
-data-version: https://w3id.org/elmo/elmo/releases/2026-07-03/elmo.owl
+data-version: https://w3id.org/elmo/elmo/releases/2026-07-09/elmo.owl
 subsetdef: attribute_slim ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
+subsetdef: relational_slim ""
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
+subsetdef: scalar_slim ""
 idspace: dce http://purl.org/dc/elements/1.1/ 
 idspace: dcterms http://purl.org/dc/terms/ 
 idspace: doap http://usefulinc.com/ns/doap# 
@@ -21,7 +23,7 @@ ontology: https://w3id.org/elmo/elmo.owl
 property_value: dcterms:description "None" xsd:string
 property_value: dcterms:license https://creativecommons.org/public-domain/
 property_value: dcterms:title "Ecolink Model Ontology (ELMO)" xsd:string
-property_value: owl:versionInfo "2026-07-03" xsd:string
+property_value: owl:versionInfo "2026-07-09" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -43,7 +45,7 @@ name: continuant
 def: "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts." []
 is_a: BFO:0000001 ! entity
 disjoint_from: BFO:0000003 ! occurrent
-relationship: part_of BFO:0000002 {all_only="true"} ! continuant
+relationship: BFO:0000050 BFO:0000002 {all_only="true"} ! part of continuant
 property_value: BFO:0000179 "continuant" xsd:string
 property_value: BFO:0000180 "Continuant" xsd:string
 property_value: IAO:0000116 "BFO 2 Reference: Continuant entities are entities which can be sliced to yield parts only along the spatial dimension, yielding for example the parts of your table which we call its legs, its top, its nails. ‘My desk stretches from the window to the door. It has spatial parts, and can be sliced (in space) in two. With respect to time, however, a thing is a continuant.’ [60, p. 240" xsd:string
@@ -62,7 +64,7 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 id: BFO:0000003
 name: occurrent
 def: "An entity that has temporal parts and that happens, unfolds or develops through time." []
-relationship: part_of BFO:0000003 {all_only="true"} ! occurrent
+relationship: BFO:0000050 BFO:0000003 {all_only="true"} ! part of occurrent
 
 [Term]
 id: BFO:0000004
@@ -71,7 +73,7 @@ def: "b is an independent continuant = Def. b is a continuant which is such that
 comment: A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.
 is_a: BFO:0000002 ! continuant
 disjoint_from: BFO:0000020 ! specifically dependent continuant
-relationship: part_of BFO:0000004 {all_only="true"} ! independent continuant
+relationship: BFO:0000050 BFO:0000004 {all_only="true"} ! part of independent continuant
 
 [Term]
 id: BFO:0000015
@@ -92,13 +94,13 @@ name: realizable entity
 def: "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances." []
 is_a: BFO:0000020 ! specifically dependent continuant
 disjoint_from: BFO:0000019 ! quality
-relationship: part_of BFO:0000017 {all_only="true"} ! realizable entity
+relationship: BFO:0000050 BFO:0000017 {all_only="true"} ! part of realizable entity
 
 [Term]
 id: BFO:0000019
 name: quality
 is_a: BFO:0000020 ! specifically dependent continuant
-relationship: part_of BFO:0000019 {all_only="true"} ! quality
+relationship: BFO:0000050 BFO:0000019 {all_only="true"} ! part of quality
 
 [Term]
 id: BFO:0000020
@@ -106,7 +108,7 @@ name: specifically dependent continuant
 def: "b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])" [] {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/050-003"}
 comment: A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.
 is_a: BFO:0000002 ! continuant
-relationship: part_of BFO:0000020 {all_only="true"} ! specifically dependent continuant
+relationship: BFO:0000050 BFO:0000020 {all_only="true"} ! part of specifically dependent continuant
 property_value: BFO:0000179 "sdc" xsd:string
 property_value: BFO:0000180 "SpecificallyDependentContinuant" xsd:string
 property_value: IAO:0000112 "of one-sided specifically dependent continuants: the mass of this tomato" xsd:string
@@ -160,6 +162,12 @@ xref: FTT:96
 xref: SWEETRealm:Landform
 xref: TGN:21400
 xref: TGN:21401
+
+[Term]
+id: ENVO:00010005
+name: soil bulk density
+def: "A volumetric density quality which inheres in soil by virtue of some influence exerted by the soil's mass on a given volume." []
+is_a: elmo:3622100 ! soil variable
 
 [Term]
 id: ENVO:01000203
@@ -223,11 +231,31 @@ relationship: RO:0000057 ENVO:01001110 ! has participant ecosystem
 relationship: RO:0002211 ENVO:02500000 ! regulates environmental system process
 
 [Term]
+id: ENVO:01001362
+name: atmospheric wind speed
+def: "The speed of an atmospheric wind." [http://en.wikipedia.org/wiki/Wind_speed]
+synonym: "flow velocity of wind" BROAD []
+synonym: "speed of atmospheric wind" EXACT []
+synonym: "speed of wind" BROAD []
+synonym: "wind flow velocity" BROAD []
+synonym: "wind speed" BROAD []
+
+[Term]
+id: ENVO:01001363
+name: volume of hydrological precipitation
+def: "The volume of water which has fallen during a precipitation process." [http://de.wikipedia.org/wiki/Niederschlag#Niederschlagsmenge]
+synonym: "Niederschlagsmenge" EXACT []
+synonym: "precipitation" RELATED []
+synonym: "precipitation amount" EXACT []
+synonym: "precipitation level" RELATED []
+synonym: "precipitation quantity" RELATED []
+
+[Term]
 id: ENVO:01001436
 name: planned environmental usage process
 def: "A planned process during which humans access and obtain resources, benefits, or services from a natural or anthropised ecosystem." []
 is_a: BFO:0000003 ! occurrent
-relationship: has_part ENVO:01001170 ! active ecosystem management process
+relationship: BFO:0000051 ENVO:01001170 ! has part active ecosystem management process
 created_by: https://orcid.org/0000-0002-4366-3088
 
 [Term]
@@ -235,6 +263,93 @@ id: ENVO:02500000
 name: environmental system process
 def: "A process in which includes the components of an environmental system as participants." []
 is_a: BFO:0000015 ! process
+
+[Term]
+id: ENVO:06105203
+name: water table depth
+def: "An elevation which inheres in a water table by virture of its vertical distance from a land surface." []
+synonym: "depth of the water table" RELATED []
+synonym: "depth to the water table" RELATED []
+synonym: "height of the water table" RELATED []
+is_a: elmo:3622200 ! hydrological and water quality variable
+
+[Term]
+id: ENVO:06105240
+name: cation exchange capacity
+def: "A physical quality which inheres in an environmental material by virtue of the material's ability to adsorb exchangeable cations." [https://www.extension.purdue.edu/extmedia/ay/ay-238.html]
+synonym: "CEC" EXACT []
+is_a: elmo:3622100 ! soil variable
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: ENVO:06105271
+name: soil texture
+def: "Texture which inheres in soil." []
+is_a: elmo:3622100 ! soil variable
+
+[Term]
+id: ENVO:09000017
+name: concentration of nitrogen atom in soil
+def: "The concentration of a nitrogen atom when measured in soil." []
+synonym: "soil nitrogen atom concentration" EXACT []
+
+[Term]
+id: ENVO:09000026
+name: concentration of liquid water in soil
+def: "The concentration of a liquid water when measured in soil." []
+synonym: "soil liquid water concentration" EXACT []
+synonym: "soil moisture content" EXACT []
+synonym: "soil water content" EXACT []
+is_a: elmo:3622100 ! soil variable
+
+[Term]
+id: ENVO:09200001
+name: temperature of air
+def: "The temperature of some air." []
+synonym: "air temperature" EXACT []
+
+[Term]
+id: ENVO:09200010
+name: acidity of soil
+def: "The acidity of some soil." []
+synonym: "soil acidity" EXACT []
+synonym: "soil pH" RELATED []
+
+[Term]
+id: ENVO:09200012
+name: temperature of soil
+def: "The temperature of some soil." []
+synonym: "soil temperature" EXACT []
+
+[Term]
+id: ENVO:09200014
+name: temperature of water
+def: "The temperature of some water." []
+synonym: "water temperature" EXACT []
+
+[Term]
+id: ENVO:3100030
+name: acidity of water
+def: "The acidity of some water." []
+synonym: "water acidity" EXACT []
+
+[Term]
+id: ENVO:3100031
+name: depth of water
+def: "The depth of some water." []
+synonym: "water depth" EXACT []
+
+[Term]
+id: ENVO:3200068
+name: concentration of phosphorus molecular entity in soil
+def: "The concentration of phosphorus molecular entity when measured in soil." []
+synonym: "soil phosphorus molecular entity concentration" EXACT []
+
+[Term]
+id: ENVO:3200074
+name: concentration of exchangeable potassium in soil
+def: "The concentration of exchangeable potassium when measured in soil." []
+synonym: "soil exchangeable potassium concentration" EXACT []
 
 [Term]
 id: GO:0003674
@@ -291,6 +406,36 @@ def: "A dependent entity that inheres in a bearer by virtue of how the bearer is
 is_a: BFO:0000020 ! specifically dependent continuant
 
 [Term]
+id: PATO:0000033
+name: concentration of
+namespace: quality
+def: "A quality inhering in a substance by virtue of the amount of the bearer's there is mixed with another substance." [Wikipedia:http\://en.wikipedia.org/wiki/concentration]
+subset: attribute_slim
+subset: relational_slim
+subset: scalar_slim
+synonym: "concentration" EXACT []
+is_a: PATO:0000070 ! amount
+
+[Term]
+id: PATO:0000070
+name: amount
+namespace: quality
+alt_id: PATO:0000053
+alt_id: PATO:0000071
+alt_id: PATO:0001169
+alt_id: PATO:0001226
+def: "The number of entities of this type that are part of the whole organism." [PATOC:GVG]
+comment: This term was originally named "presence". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10.
+subset: attribute_slim
+synonym: "count in organism" RELATED []
+synonym: "number" RELATED []
+synonym: "presence" RELATED []
+synonym: "presence or absence in organism" EXACT []
+synonym: "quantitative" EXACT []
+is_a: PATO:0103000 ! quantitative
+relationship: RO:0015012 PATO:0001555 ! reciprocal of has number of
+
+[Term]
 id: PATO:0001018
 name: physical quality
 namespace: quality
@@ -321,6 +466,49 @@ xref: snap:Quality
 is_a: PATO:0000001 ! quality
 
 [Term]
+id: PATO:0001555
+name: has number of
+namespace: quality
+def: "The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts." [PATOC:CJM]
+subset: attribute_slim
+subset: relational_slim
+synonym: "cardinality" RELATED []
+synonym: "extra or missing physical or functional parts" EXACT []
+synonym: "has or lacks parts of type" EXACT []
+synonym: "mereological quality" EXACT []
+synonym: "number" RELATED []
+synonym: "number of" EXACT []
+xref: OBO_REL:has_part
+is_a: PATO:0000070 ! amount
+
+[Term]
+id: PATO:0001655
+name: osmolarity
+namespace: quality
+def: "A concentration quality inhering in a bearer by virtue of the bearer's amount of osmoles of solute per liter of solution." [Wikipedia:http\://en.wikipedia.org/wiki/Osmolarity]
+subset: attribute_slim
+subset: relational_slim
+subset: scalar_slim
+is_a: PATO:0000033 ! concentration of
+
+[Term]
+id: PATO:0085001
+name: salinity
+namespace: quality
+def: "An osmolarity quality inhering in a bearer by virtue of the total amount of ionic salts dissolved in the bearer." [http://db0nus869y26v.cloudfront.net/en/Salinity, https://en.wikipedia.org/wiki/Salinity, https://rwu.pressbooks.pub/webboceanography/chapter/5-3-salinity-patterns/, https://www.sciencedirect.com/referencework/9780080983004/treatise-on-geochemistry, https://www.sciencedirect.com/science/article/pii/B9780857096807500012]
+is_a: PATO:0001655 ! osmolarity
+property_value: dcterms:contributor https://orcid.org/0000-0002-3410-4655
+creation_date: 2020-10-30T08:08:48Z
+
+[Term]
+id: PATO:0103000
+name: quantitative
+namespace: quality
+def: "A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.nnlm.gov/guides/data-glossary/quantitative-data]
+is_a: PATO:0000001 ! quality
+created_by: https://orcid.org/0000-0001-8314-2140
+
+[Term]
 id: elmo:3620020
 name: mechanical ecosystem management process
 def: "An active ecosystem management process during which a human employs machines or tools to directly impact an ecosystem and realize some ecosystem management goal." []
@@ -347,6 +535,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620022
 name: grubbing process
+alt_id: elmo:3620025
 def: "A mechanical vegetation removal process in which vegetation is uprooted by severing subsoil roots and prying or pulling the plant from the ground, using hand tools such as a spade, mattock, or root wrench." []
 synonym: "root wrench removal" RELATED []
 synonym: "spading removal" RELATED []
@@ -378,18 +567,6 @@ is_a: elmo:3620021 ! mechanical vegetation removal process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.3" xsd:string
-property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
-created_by: https://orcid.org/0000-0002-1296-2528
-
-[Term]
-id: elmo:3620025
-name: spading removal process
-def: "A mechanical vegetation removal process in which a human severs subsoil roots using a spade and pries the plant out of the ground." [https://www.ontarioinvasiveplants.ca/wp-content/uploads/2018/05/OPWG-Spading-Postcard-1.pdf]
-is_a: elmo:3620021 ! mechanical vegetation removal process
-property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
-property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
-property_value: ELMOP:hasCASCode "2.3" xsd:string
-property_value: IAO:0000116 "This term has been merged into grubbing process (ELMO:3620022). See that term for the consolidated definition." xsd:string
 property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
@@ -517,6 +694,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620036
 name: tile drain decommissioning process
+alt_id: elmo:3620037
 def: "A mechanical hydrological alteration process in which a human decommissions subterranean tile drains by collapsing them in situ or by excavating and removing them, in order to reduce drainage and restore wetland hydroperiod." []
 synonym: "drain removal process" EXACT []
 synonym: "tile drain crushing process" EXACT []
@@ -526,18 +704,6 @@ property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.3" xsd:string
 property_value: IAO:0000116 "This term consolidates the formerly separate tile drain crushing process and tile drain removal process, as both achieve the same management goal by similar means." xsd:string
-property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
-created_by: https://orcid.org/0000-0002-1296-2528
-
-[Term]
-id: elmo:3620037
-name: tile drain removal process
-def: "A mechanical hydrological alteration process in which a human uncovers and removes subterranean tile drains to reduce drainage on the landscape and restore wetland hydroperiod." []
-is_a: elmo:3620033 ! mechanical hydrological alteration process
-property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
-property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
-property_value: ELMOP:hasCASCode "2.3" xsd:string
-property_value: IAO:0000116 "This term has been merged into tile drain decommissioning process (ELMO:3620036). See that term for the consolidated definition." xsd:string
 property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
@@ -592,13 +758,13 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620042
 name: buffer strip retention process
-def: "A mechanical ecosystem management process in which a human leaves strips of vegetation untouched when clearing land for other purposes, with the goal of retaining their ecological function as a buffer between landscape features." [doi:10.2134/jeq2018.03.0120]
+def: "A mechanical ecosystem management process in which a human makes an active and deliberate decision to exclude strips of existing vegetation from clearing or land management operations, with the goal of retaining their ecological function as a buffer between landscape features. This process requires a positive decision to protect the buffer area; passive or inadvertent omission of an area from clearing is not in scope." [doi:10.2134/jeq2018.03.0120]
 is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "1.2" xsd:string
 property_value: ELMOP:hasCASCode "2.3" xsd:string
-property_value: IAO:0000116 "Retention of an existing vegetated buffer may constitute an active management decision (e.g. legal protection or explicit exclusion from clearing). Consider whether passive retention qualifies as a mechanical process." xsd:string
+property_value: IAO:0000116 "Retention of an existing vegetated buffer is classified here as an active management decision: the deliberate exclusion of buffer areas from clearing operations. Where formal legal protection is the primary mechanism, consider also legal protection process (ELMO:3620802)." xsd:string
 property_value: skos:broadMatch https://w3id.org/elmo/cas/1.2
 property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
@@ -666,7 +832,7 @@ id: elmo:3620049
 name: tilling process
 def: "An earthworks process in which a human breaks up the soil, and sometimes adds organic matter." [doi:10.1111/j.1526-100X.1995.tb00096.x]
 synonym: "soil ripping process" NARROW []
-is_a: elmo:3620048 ! soil decompaction process
+is_a: elmo:3620043 ! earthworks process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.3" xsd:string
@@ -677,7 +843,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3620050
 name: ploughing process
 def: "An earthworks process in which a human deeply breaks up and overturns soil and vegetation." [doi:10.1007/s12224-024-09448-7]
-is_a: elmo:3620048 ! soil decompaction process
+is_a: elmo:3620049 ! tilling process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.3" xsd:string
@@ -2661,7 +2827,7 @@ property_value: IAO:0000116 "No link on NatureServe Explorer." xsd:string
 [Term]
 id: elmo:3620500
 name: chemical ecosystem management process
-def: "An active ecosystem management process in which a human applys or releases a chemical substance to realize some ecological management goal." [doi:10.1016/j.scitotenv.2021.148631]
+def: "An active ecosystem management process in which a human applies or releases a chemical substance to realize some ecological management goal." [doi:10.1016/j.scitotenv.2021.148631]
 is_a: ENVO:01001170 ! active ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -2710,23 +2876,12 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620504
 name: herbicide application process
+alt_id: elmo:3620505
 def: "A chemical application process in which a human applies herbicide to plants or soil in a given area." [doi:10.1111/avsc.12183]
 is_a: elmo:3620501 ! chemical application process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.2" xsd:string
-property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
-created_by: https://orcid.org/0000-0002-1296-2528
-
-[Term]
-id: elmo:3620505
-name: glyphosate application process
-def: "A herbicide application process in which a human applies the herbicide glyphosate to plants in some area." [doi:10.1111/avsc.12183]
-is_a: elmo:3620501 ! chemical application process
-property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
-property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
-property_value: ELMOP:hasCASCode "2.2" xsd:string
-property_value: IAO:0000116 "This term is deprecated. Glyphosate application is subsumed under herbicide application process (ELMO:3620504). Treating a single herbicide as a separate class-level term is inconsistent with the treatment of other herbicides." xsd:string
 property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
@@ -2766,7 +2921,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620602
 name: plug planting process
-def: "A planting process in which a human plants flora grown in a plug tray." [doi:10.1111/j.1526-100X.2007.00350.x]
+def: "A planting process in which a human plants flora grown in a plug tray — a tray with individual cells in which propagules are grown, whether from seed, cutting, or division — directly into a restoration site. The defining feature is the plug-tray propagule form, not the growth stage." [doi:10.1111/j.1526-100X.2007.00350.x]
 is_a: elmo:3620601 ! planting process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -2799,8 +2954,8 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620605
 name: seedling planting process
-def: "A planting process in which a human plants trees that have been grown in plug trays." []
-is_a: elmo:3620604 ! tree planting process
+def: "A planting process in which a human plants seedlings — young plants raised from seed in a greenhouse or nursery — of any growth form, including trees, shrubs, forbs, or grasses." []
+is_a: elmo:3620601 ! planting process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.3" xsd:string
@@ -2843,23 +2998,12 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620609
 name: seeding process
+alt_id: elmo:3620610
 def: "A biological ecosystem management process in which a human sows seeds in a particular area." []
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.3" xsd:string
-property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
-created_by: https://orcid.org/0000-0002-1296-2528
-
-[Term]
-id: elmo:3620610
-name: tree seeding process
-def: "A seeding process in which a human sows tree seeds." []
-is_a: elmo:3620609 ! seeding process
-property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
-property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
-property_value: ELMOP:hasCASCode "2.3" xsd:string
-property_value: IAO:0000116 "This term is deprecated. Tree seeds are sown using the same techniques as other seeds. Use seeding process (ELMO:3620609) or an appropriate sub-term instead." xsd:string
 property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 
@@ -2998,7 +3142,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620623
 name: biological fauna control process
-def: "A biological ecosystem management process in which a human uses biological means to reduce or increase a population of fauna." []
+def: "A biological ecosystem management process in which a human employs biological techniques to reduce the population size, reproductive success, or established range of a target fauna species, typically in the context of controlling overabundant or invasive populations." []
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3021,7 +3165,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3620625
 name: egg relocation and release process
 def: "A captive breeding and release process in which a human collects eggs and relocates them to a safe environment, whereupon they are allowed to hatch." []
-is_a: elmo:3620624 ! captive breeding and release process
+is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "3.4.1" xsd:string
@@ -3032,7 +3176,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3620626
 name: egg incubation and release process
 def: "An egg relocation and release process in which a human collects eggs and relocates them into an incubator, whereupon they are allowed to hatch and released into some environment." []
-is_a: elmo:3620625 ! egg relocation and release process
+is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "3.4.1" xsd:string
@@ -3099,7 +3243,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3620632
 name: soil transfer process
 def: "A biological ecosystem management process in which a human transfers soil from one area to another." []
-is_a: elmo:3620600 ! biological ecosystem management process
+is_a: elmo:3620020 ! mechanical ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.3" xsd:string
@@ -3131,7 +3275,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620635
 name: nest establishment deterrence process
-def: "A biological ecosystem management process in which a human implements measures to deter fauna from establishing nest sites in a given area." []
+def: "A biological fauna control process in which a human implements measures to deter fauna from establishing nest sites in a given area." []
 is_a: elmo:3620623 ! biological fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3142,7 +3286,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620636
 name: seabed amendment process
-def: "A biological ecosystem management process in which a human adds material to a seabed to facilitate nesting." []
+def: "A biological ecosystem management process in which a human adds material to the bed of a water body to improve habitat conditions for benthic fauna. Examples include adding gravel or coarse substrate to provide spawning habitat for fish, adding shell hash or crushed oyster shell to facilitate bivalve reef establishment, or adding coarse sand to support nesting by benthic invertebrates." []
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3164,7 +3308,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620638
 name: mulch addition process
-def: "A soil amendment process in which a human adds mulch (i.e. woody debris)." []
+def: "A soil amendment process in which a human applies a layer of organic material such as wood chips, shredded bark, straw, or leaf litter to the soil surface to retain moisture, suppress competing vegetation, regulate soil temperature, or add organic matter as it decomposes." []
 is_a: elmo:3620637 ! soil amendment process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3229,8 +3373,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620644
-name: intentional grazing
+name: intentional grazing process
 def: "A biological ecosystem management process in which a human introduces grazing animals to an area with the goal of recreating a disturbance regime." [doi:10.1111/j.1526-100X.2009.00567.x]
+synonym: "intentional grazing" EXACT []
 is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3244,7 +3389,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3620645
 name: mycorrhizae addition process
 def: "A biological ecosystem management process in which a human adds mycorrhizae spores to some environment." [doi:10.3389/fmicb.2016.01095]
-is_a: elmo:3620600 ! biological ecosystem management process
+is_a: elmo:3621033 ! microbial inoculation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.3" xsd:string
@@ -3267,7 +3412,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3620647
 name: fauna rescue, rehabilitation and release process
 def: "A biological fauna control process in which a human captures injured fauna from some environment, rehabilitates and releases them." [doi:10.1371/journal.pone.0265514]
-is_a: elmo:3620623 ! biological fauna control process
+is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "3.2" xsd:string
@@ -3278,7 +3423,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3620648
 name: fauna reintroduction process
 def: "A biological fauna control process in which a human reintroduces fauna into some environment where the fauna once existed." []
-is_a: elmo:3620623 ! biological fauna control process
+is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "3.3.1" xsd:string
@@ -3289,7 +3434,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3620649
 name: fauna medical care process
 def: "A biological fauna control process in which a human provides medical care to some fauna." []
-is_a: elmo:3620623 ! biological fauna control process
+is_a: elmo:3620600 ! biological ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "3.2" xsd:string
@@ -3444,17 +3589,6 @@ property_value: skos:broadMatch https://w3id.org/elmo/cas/5.2
 created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
-id: elmo:3620810
-name: local bylaw process
-def: "An area policy process in which some pro-conservation bylaw is established by a local authority." []
-is_a: elmo:3620809 ! area policy process
-property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
-property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
-property_value: ELMOP:hasCASCode "5.1.3" xsd:string
-property_value: skos:broadMatch https://w3id.org/elmo/cas/5.1.3
-created_by: https://orcid.org/0000-0002-1296-2528
-
-[Term]
 id: elmo:3620811
 name: provincial or state legislation process
 def: "A legislation process in which some group passes pro-conservation legislation at the state or province level." []
@@ -3515,7 +3649,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3620816
 name: human-assisted road crossing process
 def: "A ecosystem-oriented social process in which a human assists a species in crossing a road." []
-is_a: elmo:3620800 ! ecosystem-oriented social process
+is_a: elmo:3620028 ! mechanical fauna control process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.3" xsd:string
@@ -3570,7 +3704,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3620821
 name: citizen science process
 def: "An awareness-raising process in which humans gather measurements of some ecosystem elements." []
-is_a: elmo:3620817 ! awareness-raising process
+is_a: elmo:3620800 ! ecosystem-oriented social process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "4.3" xsd:string
@@ -3678,8 +3812,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620831
-name: regulate grazing
-def: "An environmental usage regulation process in which some authority regulates grazing in a given area." []
+name: grazing regulation process
+def: "An environmental usage regulation process in which a competent authority establishes rules governing the timing, intensity, stocking density, or spatial distribution of livestock or herbivore grazing on a designated area, in order to prevent habitat degradation and maintain or restore ecological condition." []
+synonym: "regulate grazing" EXACT []
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3689,9 +3824,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620832
-name: prohibit grazing
-def: "An environmental usage regulation process in which some authority prohibits grazing in a given area." []
-is_a: elmo:3620831 ! regulate grazing
+name: grazing prohibition process
+def: "A grazing regulation process in which a competent authority completely prohibits livestock or herbivore grazing on a designated area in order to protect or restore vegetation structure, prevent soil erosion, or allow ecological recovery." []
+synonym: "prohibit grazing" EXACT []
+is_a: elmo:3620831 ! grazing regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "5.2" xsd:string
@@ -3700,8 +3836,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620833
-name: regulate fishing
-def: "An environmental usage regulation process in which some authority regulates fishing in a given area." []
+name: fishing regulation process
+def: "An environmental usage regulation process in which a competent authority establishes rules governing the timing, location, method, or intensity of fishing in a designated water body or marine area, in order to prevent overexploitation of fish stocks and maintain aquatic ecosystem function." []
+synonym: "regulate fishing" EXACT []
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3711,9 +3848,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620834
-name: prohibit fishing
-def: "An environmental usage regulation process in which some authority prohibits fishing in a given area." []
-is_a: elmo:3620833 ! regulate fishing
+name: fishing prohibition process
+def: "A fishing regulation process in which a competent authority completely prohibits fishing activities in a designated water body or marine area, typically to allow fish stocks or aquatic ecosystems to recover from overexploitation." []
+synonym: "prohibit fishing" EXACT []
+is_a: elmo:3620833 ! fishing regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "5.2" xsd:string
@@ -3722,8 +3860,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620835
-name: regulate chemical usage
-def: "An environmental usage regulation process in which some authority regulates chemical usage in a given area." []
+name: chemical usage regulation process
+def: "An environmental usage regulation process in which a competent authority restricts or conditions the application of pesticides, fertilizers, or other chemicals within or adjacent to a designated area, in order to protect soil, water quality, or biodiversity." []
+synonym: "regulate chemical usage" EXACT []
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3733,9 +3872,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620836
-name: prohibit chemical usage
-def: "An environmental usage regulation process in which some authority prohibits chemical usage in a given area." []
-is_a: elmo:3620835 ! regulate chemical usage
+name: chemical usage prohibition process
+def: "A chemical usage regulation process in which a competent authority completely prohibits the application of specified chemicals within or adjacent to a designated area, in order to prevent contamination or ecological harm to sensitive habitats or species." []
+synonym: "prohibit chemical usage" EXACT []
+is_a: elmo:3620835 ! chemical usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "5.2" xsd:string
@@ -3744,8 +3884,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620837
-name: regulate hunting
-def: "An environmental usage regulation process in which some authority regulates hunting in a given area." []
+name: hunting regulation process
+def: "An environmental usage regulation process in which a competent authority establishes rules governing the timing, method, location, bag limit, or species targeting of hunting in a designated area, in order to prevent overexploitation and maintain wildlife populations." []
+synonym: "regulate hunting" EXACT []
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3755,9 +3896,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620838
-name: prohibit hunting
-def: "An environmental usage regulation process in which some authority prohibits hunting in a given area." []
-is_a: elmo:3620837 ! regulate hunting
+name: hunting prohibition process
+def: "A hunting regulation process in which a competent authority completely prohibits hunting of one or more species in a designated area, typically to protect threatened populations or to allow recovery from previous overexploitation." []
+synonym: "prohibit hunting" EXACT []
+is_a: elmo:3620837 ! hunting regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "5.2" xsd:string
@@ -3766,8 +3908,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620839
-name: regulate recreational activities
-def: "An environmental usage regulation process in which some authority regulates recreational activities in a given area." []
+name: recreational activity regulation process
+def: "An environmental usage regulation process in which a competent authority restricts or conditions recreational activities such as off-road vehicle use, hiking, camping, or water sports within a designated area, in order to reduce disturbance, erosion, or other ecological impacts." []
+synonym: "regulate recreational activities" EXACT []
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3777,9 +3920,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620840
-name: prohibit recreational activities
-def: "An environmental usage regulation process in which some authority prohibits recreational activities in a given area." []
-is_a: elmo:3620839 ! regulate recreational activities
+name: recreational activity prohibition process
+def: "A recreational activity regulation process in which a competent authority completely prohibits one or more recreational activities in a designated area or during a specified period in order to prevent ecological disturbance." []
+synonym: "prohibit recreational activities" EXACT []
+is_a: elmo:3620839 ! recreational activity regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "5.2" xsd:string
@@ -3788,8 +3932,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620841
-name: limit public access
-def: "An environmental usage regulation process in which some authority limits public access to a given area." []
+name: public access limitation process
+def: "An environmental usage regulation process in which a competent authority restricts the number of visitors, the areas open to visitors, or the periods during which a designated area may be accessed by the public, in order to reduce human disturbance to sensitive habitats or species." []
+synonym: "limit public access" EXACT []
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3799,9 +3944,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620842
-name: prohibit public access
-def: "An environmental usage regulation process in which some authority prohibits public access to a given area." []
-is_a: elmo:3620841 ! limit public access
+name: public access prohibition process
+def: "A public access limitation process in which a competent authority completely prohibits public entry to a designated area or zone, typically to protect sensitive ecological features from disturbance or to allow ecological restoration to proceed undisturbed." []
+synonym: "prohibit public access" EXACT []
+is_a: elmo:3620841 ! public access limitation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "5.2" xsd:string
@@ -3810,8 +3956,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620843
-name: regulate dredging
-def: "An environmental usage regulation process in which some authority regulates dredging in a given area." []
+name: dredging regulation process
+def: "An environmental usage regulation process in which a competent authority restricts or conditions the mechanical removal of sediment from a water body bed, estuary, or coastal zone, in order to protect aquatic habitats, benthic communities, or water quality." []
+synonym: "regulate dredging" EXACT []
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3821,9 +3968,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620844
-name: prohibit dredging
-def: "An environmental usage regulation process in which some authority prohibits dredging in a given area." []
-is_a: elmo:3620843 ! regulate dredging
+name: dredging prohibition process
+def: "A dredging regulation process in which a competent authority completely prohibits the removal of sediment from a designated water body or zone, in order to protect sensitive benthic habitats, aquatic ecosystems, or water quality." []
+synonym: "prohibit dredging" EXACT []
+is_a: elmo:3620843 ! dredging regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "5.2" xsd:string
@@ -3832,8 +3980,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620845
-name: regulate aquaculture
-def: "An environmental usage regulation process in which some authority regulates aquaculture in a given area." []
+name: aquaculture regulation process
+def: "An environmental usage regulation process in which a competent authority restricts or conditions aquaculture operations in a designated area, including requirements relating to species, stocking density, waste management, or disease control, in order to protect wild aquatic ecosystems." []
+synonym: "regulate aquaculture" EXACT []
 is_a: elmo:3620830 ! environmental usage regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3843,9 +3992,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620846
-name: prohibit aquaculture
-def: "An environmental usage regulation process in which some authority prohibits aquaculture in a given area." []
-is_a: elmo:3620845 ! regulate aquaculture
+name: aquaculture prohibition process
+def: "An aquaculture regulation process in which a competent authority completely prohibits aquaculture operations in a designated area, in order to protect wild aquatic species or sensitive marine or freshwater habitats." []
+synonym: "prohibit aquaculture" EXACT []
+is_a: elmo:3620845 ! aquaculture regulation process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "5.2" xsd:string
@@ -3877,8 +4027,8 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3620849
 name: plan specification change process
-def: "A ecosystem-oriented social process in which a human alters the way in which some planned process is undertaken." []
-is_a: elmo:3620800 ! ecosystem-oriented social process
+def: "An active ecosystem management process in which a human modifies the parameters of an ongoing management regime — such as its timing, frequency, intensity, or spatial extent — in order to improve ecological outcomes." []
+is_a: ENVO:01001170 ! active ecosystem management process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.1" xsd:string
@@ -3887,9 +4037,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620850
-name: alter mowing timing
+name: mowing timing alteration process
 def: "A change to the mowing regime in which a human alters the timing of regular mowing with the goal of protecting specific taxa." []
-is_a: elmo:3620851 ! alter mowing regime
+synonym: "alter mowing timing" EXACT []
+is_a: elmo:3620851 ! mowing regime alteration process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.1" xsd:string
@@ -3898,8 +4049,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620851
-name: alter mowing regime
+name: mowing regime alteration process
 def: "A plan specification change process in which a human alters the mowing regime (i.e. frequency, height, timing)" []
+synonym: "alter mowing regime" EXACT []
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3909,9 +4061,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620852
-name: alter mowing height
+name: mowing height alteration process
 def: "A change to the mowing regime in which a human alters the height of a mower with the goal of protecting specific taxa." []
-is_a: elmo:3620851 ! alter mowing regime
+synonym: "alter mowing height" EXACT []
+is_a: elmo:3620851 ! mowing regime alteration process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.1" xsd:string
@@ -3920,8 +4073,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620853
-name: alter tilling regime
+name: tilling regime alteration process
 def: "A change to the tilling regime in which a human alters the frequency, timing or severity of a regular tilling process." []
+synonym: "alter tilling regime" EXACT []
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3931,8 +4085,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620854
-name: alter chemical regime
+name: chemical regime alteration process
 def: "A change to the chemical regime in which a human alters the frequency, timing or severity of a regular chemical application process." []
+synonym: "alter chemical regime" EXACT []
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3942,9 +4097,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620855
-name: alter insecticide regime
+name: insecticide regime alteration process
 def: "A change to the insecticide regime in which a human alters the frequency, timing or severity of a regular insecticide application process." []
-is_a: elmo:3620854 ! alter chemical regime
+synonym: "alter insecticide regime" EXACT []
+is_a: elmo:3620854 ! chemical regime alteration process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.1" xsd:string
@@ -3953,8 +4109,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620856
-name: alter fertilizer regime
+name: fertilizer regime alteration process
 def: "A change to the fertilizer regime in which a human alters the frequency, timing or severity of a regular fertilizer application process." []
+synonym: "alter fertilizer regime" EXACT []
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3964,8 +4121,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620857
-name: alter lighting regime
+name: lighting regime alteration process
 def: "A change to the lighting regime in which a human alters the frequency, timing or intensity of lighting." []
+synonym: "alter lighting regime" EXACT []
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3975,8 +4133,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620858
-name: alter grazing regime
+name: grazing regime alteration process
 def: "A change to the grazing regime in which a human alters the frequency, timing or intensity of grazing." []
+synonym: "alter grazing regime" EXACT []
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3986,8 +4145,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620859
-name: alter dam regime
+name: dam regime alteration process
 def: "A change to the dam regime in which a human alters the frequency, timing or intensity of water released by a dam." []
+synonym: "alter dam regime" EXACT []
 is_a: elmo:3620849 ! plan specification change process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -3997,9 +4157,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620860
-name: alter herbicide regime
+name: herbicide regime alteration process
 def: "A change to the herbicide regime in which a human alters the frequency, timing or severity of a regular herbicide application process." []
-is_a: elmo:3620854 ! alter chemical regime
+synonym: "alter herbicide regime" EXACT []
+is_a: elmo:3620854 ! chemical regime alteration process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.1" xsd:string
@@ -4008,9 +4169,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3620861
-name: cease herbicide usage
+name: herbicide cessation process
 def: "A change to the herbicide regime in which a human ceases some herbicide application process." []
-is_a: elmo:3620860 ! alter herbicide regime
+synonym: "cease herbicide usage" EXACT []
+is_a: elmo:3620860 ! herbicide regime alteration process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "2.1" xsd:string
@@ -4019,8 +4181,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621000
-name: fishing with equipment modified for conservation
+name: conservation-modified fishing process
 def: "A planned environmental usage process in which fishing equipment is modified for conservation (e.g. bycatch deterrent devices are installed)" []
+synonym: "fishing with equipment modified for conservation" EXACT []
 is_a: ENVO:01001436 ! planned environmental usage process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -4030,9 +4193,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621001
-name: fishing with net modified for conservation
+name: conservation-modified net fishing process
 def: "A fishing process in which a human uses a net that has been modified to reduce bycatch or accomplish some other conservation-oriented goal." []
-is_a: elmo:3621000 ! fishing with equipment modified for conservation
+synonym: "fishing with net modified for conservation" EXACT []
+is_a: elmo:3621000 ! conservation-modified fishing process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "6.1" xsd:string
@@ -4041,9 +4205,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621002
-name: fishing with hook modified for conservation
+name: conservation-modified hook fishing process
 def: "A fishing process in which a human uses a hook that has been modified for conservation." []
-is_a: elmo:3621000 ! fishing with equipment modified for conservation
+synonym: "fishing with hook modified for conservation" EXACT []
+is_a: elmo:3621000 ! conservation-modified fishing process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "6.1" xsd:string
@@ -4052,9 +4217,10 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621003
-name: fishing with added acoustic devices for conservation
+name: acoustic bycatch deterrent fishing process
 def: "A fishing process in which a human adds acoustic devices to fishing gear to deter bycatch." []
-is_a: elmo:3621000 ! fishing with equipment modified for conservation
+synonym: "fishing with added acoustic devices for conservation" EXACT []
+is_a: elmo:3621000 ! conservation-modified fishing process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "6.1" xsd:string
@@ -4065,7 +4231,7 @@ created_by: https://orcid.org/0000-0002-1296-2528
 id: elmo:3621004
 name: fishing with modified traps
 def: "A fishing process in which a human uses traps modified to deter bycatch." []
-is_a: elmo:3621000 ! fishing with equipment modified for conservation
+is_a: elmo:3621000 ! conservation-modified fishing process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "6.1" xsd:string
@@ -4075,8 +4241,8 @@ created_by: https://orcid.org/0000-0002-1296-2528
 [Term]
 id: elmo:3621005
 name: fishing with modified line-setting procedure
-def: "A fishing process in which a human attaches bait to lines in a way that deters seabird scavenging (i.e. underwater)" []
-is_a: elmo:3621000 ! fishing with equipment modified for conservation
+def: "A conservation-modified fishing process in which a human modifies the procedure for deploying fishing lines — including adjustments to line-setting depth, bait attachment method, or deployment timing — in order to reduce incidental mortality of non-target species such as seabirds or sea turtles." []
+is_a: elmo:3621000 ! conservation-modified fishing process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
 property_value: ELMOP:hasCASCode "6.1" xsd:string
@@ -4122,8 +4288,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621009
-name: farming with intercropping
+name: intercropping process
 def: "A farming process modified for conservation in which a human grows two or more crop varities in close proximity to one another." [ISBN:9781933395210]
+synonym: "farming with intercropping" EXACT []
 is_a: elmo:3621008 ! farming process modified for conservation
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -4161,8 +4328,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621012
-name: no-till farming
+name: no-till farming process
 def: "A farming process modified for conservation in which a human does not disturb the soil in between crop plantings." [wd:Q1227672]
+synonym: "no-till farming" EXACT []
 is_a: elmo:3621008 ! farming process modified for conservation
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -4172,8 +4340,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621013
-name: organic farming regime
+name: organic farming process
 def: "A farming process modified for conservation in which a human avoids synthetic or chemical inputs in the farming process. The definition of organic is often the subject of government regulation." [https://en.wikipedia.org/wiki/Organic_farming]
+synonym: "organic farming regime" EXACT []
 is_a: elmo:3621008 ! farming process modified for conservation
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -4185,8 +4354,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621014
-name: crop rotation
+name: crop rotation process
 def: "A farming process modified for conservation in which the crop type is rotated year over year." [ISBN:9781933395210]
+synonym: "crop rotation" EXACT []
 is_a: elmo:3621008 ! farming process modified for conservation
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -4196,8 +4366,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621015
-name: set aside farmland for conservation
+name: farmland set-aside process
 def: "A farming process modified for conservation in which a human agrees not to farm some portion of a landscape." [https://en.wikipedia.org/wiki/Set-aside]
+synonym: "set aside farmland for conservation" EXACT []
 is_a: elmo:3621008 ! farming process modified for conservation
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -4257,8 +4428,9 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621020
-name: leave woody debris
+name: coarse woody debris retention process
 def: "A forestry process in which a human leaves coarse woody debris after harvesting, thereby increasing available resources." [https://en.wikipedia.org/wiki/Coarse_woody_debris]
+synonym: "leave woody debris" EXACT []
 is_a: elmo:3621016 ! forestry process modified for conservation
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -4279,10 +4451,11 @@ created_by: https://orcid.org/0000-0002-1296-2528
 
 [Term]
 id: elmo:3621022
-name: regulate wind turbine speed
+name: wind turbine speed regulation process
 def: "A planned environmental usage process in which a human modifies the level of wind speed required to spin turbines, thereby preventing avifauna fatalities." [doi:10.1002/2688-8319.12371]
 synonym: "curtailment" EXACT []
 synonym: "doi:10.1002/2688-8319.12371" BROAD []
+synonym: "regulate wind turbine speed" EXACT []
 is_a: ENVO:01001436 ! planned environmental usage process
 property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
 property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
@@ -4429,6 +4602,7 @@ creation_date: 2026-03-18T00:00:00Z
 [Term]
 id: elmo:3621034
 name: municipal legislation process
+alt_id: elmo:3620810
 def: "A legislation process in which a local or municipal government passes bylaws or regulations with pro-conservation goals, such as prohibiting development in sensitive habitats or requiring urban green infrastructure." []
 synonym: "local bylaw process" RELATED []
 is_a: elmo:3620801 ! legislation process
@@ -4455,13 +4629,1142 @@ creation_date: 2026-03-18T00:00:00Z
 id: elmo:3621036
 name: mowing process
 def: "A mechanical vegetation removal process in which a human uses a mower to cut vegetation to a defined height above ground level. The cut material may be left in place or collected and removed. Mowing is commonly used to manage grassland, meadow, and road verge vegetation." []
-synonym: "cutting removal process" BROAD []
-is_a: elmo:3620021 ! mechanical vegetation removal process
+is_a: elmo:3620024 ! cutting removal process
 property_value: ELMOP:hasCASCode "2.3" xsd:string
 property_value: IAO:0000116 "Added following Delphi survey recommendations." xsd:string
 property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
 created_by: https://orcid.org/0000-0002-1296-2528
 creation_date: 2026-03-18T00:00:00Z
+
+[Term]
+id: elmo:3621037
+name: prescribed fire process
+def: "A mechanical ecosystem management process in which a human deliberately ignites and manages a fire within a defined area under specified weather and fuel conditions, in order to mimic natural disturbance regimes, reduce fuel loads, improve habitat structure, or maintain fire-dependent ecosystems." []
+synonym: "controlled burning process" EXACT []
+synonym: "prescribed burning process" EXACT []
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621038
+name: assisted natural regeneration process
+def: "A biological ecosystem management process in which a human removes or reduces stressors such as grazing pressure, invasive species, or canopy closure to facilitate the natural recovery and regeneration of native vegetation, without direct planting or seeding." []
+synonym: "ANR" RELATED []
+synonym: "passive ecological restoration process" RELATED []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621039
+name: invasive species management process
+def: "An active ecosystem management process in which a human targets non-native invasive species for detection, reduction, or eradication in order to protect native biodiversity and restore ecological function. The specific method employed may be biological, chemical, or mechanical." []
+synonym: "invasive species control process" RELATED []
+synonym: "invasive species removal process" RELATED []
+is_a: ENVO:01001170 ! active ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621040
+name: coral gardening process
+def: "A biological ecosystem management process in which a human propagates coral by fragmenting donor colonies and growing the resulting fragments in underwater nurseries before transplanting them to degraded reef substrate, in order to increase coral cover and diversity at a restoration site." []
+synonym: "coral aquaculture process" RELATED []
+synonym: "coral fragmentation process" EXACT []
+synonym: "coral nursery process" RELATED []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621041
+name: aerial seeding process
+def: "A seeding process in which a human disperses seeds over a restoration site using aircraft such as helicopters or drones, typically to access terrain that is difficult to reach on foot or to cover large areas efficiently." []
+synonym: "drone seeding process" RELATED []
+synonym: "helicopter seeding process" RELATED []
+is_a: elmo:3620609 ! seeding process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621042
+name: herbaceous planting process
+def: "A planting process in which a human establishes herbaceous plants, including forbs, grasses, and sedges, as rooted individuals at a restoration site." []
+synonym: "forb planting process" RELATED []
+synonym: "grass plug planting process" RELATED []
+synonym: "wildflower planting process" RELATED []
+is_a: elmo:3620601 ! planting process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621043
+name: fire regime alteration process
+def: "A plan specification change process in which a human alters the timing, frequency, intensity, or spatial extent of fire applied to a managed area, in order to restore natural fire dynamics, reduce fuel loads, or improve habitat condition for fire-adapted species." []
+synonym: "burn regime modification process" RELATED []
+is_a: elmo:3620849 ! plan specification change process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.1" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.1
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621044
+name: rodenticide application process
+def: "A chemical application process in which a human applies a rodenticide to reduce or eradicate a population of invasive rodents, typically in island or bounded ecosystem restoration contexts where rodents threaten native wildlife." [doi:10.1371/journal.pone.0214314]
+is_a: elmo:3620501 ! chemical application process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621045
+name: wildlife disease management process
+def: "A biological ecosystem management process in which a human implements measures to prevent, detect, or reduce the spread of infectious diseases in wild fauna populations, in order to protect individual animals or conserve threatened species. Methods may include vaccination, treatment, culling of diseased individuals, or management of disease transmission pathways." []
+synonym: "wildlife health management process" RELATED []
+synonym: "wildlife vaccination process" RELATED []
+is_a: elmo:3620600 ! biological ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "3.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/3.2
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621046
+name: ecological monitoring process
+def: "An ecosystem-oriented social process in which a human systematically collects, records, and analyses data on the state or trajectory of ecosystems, species populations, or ecological processes, in order to assess biodiversity, detect environmental change, or evaluate the effectiveness of conservation interventions." []
+synonym: "baseline survey process" RELATED []
+synonym: "biodiversity monitoring process" RELATED []
+synonym: "ecological survey process" RELATED []
+is_a: elmo:3620800 ! ecosystem-oriented social process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "4.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/4.2
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621047
+name: habitat connectivity enhancement process
+def: "A mechanical ecosystem management process in which a human implements structures, plantings, or land management changes to increase the degree to which landscape elements allow organisms to move between habitat patches, in order to support population viability and ecological resilience." []
+synonym: "habitat corridor creation process" EXACT []
+synonym: "wildlife corridor establishment process" RELATED []
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621048
+name: acoustic deterrent process
+def: "A mechanical fauna deterrent process in which a human deploys sound-producing devices to deter fauna from a specific area or activity, including devices that emit distress calls, predator sounds, or ultrasonic signals." []
+synonym: "acoustic scaring device process" EXACT []
+is_a: elmo:3620068 ! mechanical fauna deterrent process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621049
+name: visual deterrent process
+def: "A mechanical fauna deterrent process in which a human deploys visual stimuli such as effigies, reflective tape, scarecrows, or predator decoys to deter fauna from a specific area or activity." []
+is_a: elmo:3620068 ! mechanical fauna deterrent process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621050
+name: molluscicide application process
+def: "A chemical application process in which a human applies a molluscicide to reduce or eliminate populations of invasive or pest molluscs, such as invasive snails or mussels, in order to protect native aquatic or terrestrial ecosystems." []
+is_a: elmo:3620501 ! chemical application process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621051
+name: piscicide application process
+def: "A chemical application process in which a human applies a piscicide to reduce or eradicate fish populations in a water body, typically to remove invasive fish species prior to native fish reintroduction." []
+is_a: elmo:3620501 ! chemical application process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.2" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.2
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-06-18
+
+[Term]
+id: elmo:3621052
+name: rewetting process
+def: "A mechanical hydrological alteration process in which a human raises the water table of a degraded terrestrial or wetland area by blocking drainage structures, filling drainage channels, or otherwise impeding water loss, in order to restore hydrological function." []
+comment: Peatland rewetting process (ELMO:3620646) is a narrower term applicable specifically to peatlands.
+synonym: "rewetting" EXACT []
+is_a: elmo:3620033 ! mechanical hydrological alteration process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07
+
+[Term]
+id: elmo:3621053
+name: site preparation process
+def: "A mechanical ecosystem management process in which a human modifies the physical, chemical, or biological conditions of a site prior to vegetation establishment, in order to improve conditions for seedling germination and plant establishment." []
+synonym: "site prep" EXACT []
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07
+
+[Term]
+id: elmo:3621054
+name: soil scarification process
+def: "A site preparation process in which a human mechanically disturbs the soil surface or duff layer, typically using a disc, rake, or roller, to expose mineral soil and create a favourable seedbed for germination and seedling establishment." []
+comment: Distinct from seed scarification process (ELMO:3620617), which refers to mechanical abrasion of seed coats to break dormancy. In restoration literature the term 'scarification' often refers to this soil-level treatment.
+synonym: "scarification (seedbed)" EXACT []
+is_a: elmo:3621053 ! site preparation process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07
+
+[Term]
+id: elmo:3621055
+name: transplanting process
+def: "A plant material transfer process in which a human removes whole rooted plants from a source location and establishes them at a restoration site, retaining the root system to promote post-transfer survival." []
+synonym: "transplanting" EXACT []
+is_a: elmo:3620630 ! plant material transfer process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07
+
+[Term]
+id: elmo:3621056
+name: straw mulch addition process
+def: "A mulch addition process in which a human spreads straw over a restoration site to retain soil moisture, reduce erosion, moderate soil temperature, or suppress competing vegetation germination." []
+synonym: "straw mulching" EXACT []
+is_a: elmo:3620638 ! mulch addition process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07
+
+[Term]
+id: elmo:3621057
+name: phosphorus fertilization process
+def: "A fertilizer application process in which a human applies a phosphorus-containing amendment to soil or vegetation at a restoration site to increase phosphorus availability for plant uptake." []
+synonym: "P addition" EXACT []
+synonym: "phosphorus addition" EXACT []
+is_a: elmo:3620502 ! fertilizer application process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07
+
+[Term]
+id: elmo:3621058
+name: nitrogen fertilization process
+def: "A fertilizer application process in which a human applies a nitrogen-containing amendment to soil or vegetation at a restoration site to increase nitrogen availability for plant uptake." []
+synonym: "N addition" EXACT []
+synonym: "nitrogen addition" EXACT []
+is_a: elmo:3620502 ! fertilizer application process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07
+
+[Term]
+id: elmo:3621059
+name: peat extraction process
+def: "A mechanical ecosystem management process in which a human removes peat from a peatland for commercial use as fuel or horticultural growing medium, causing drainage, subsidence, and ecological degradation of the peatland ecosystem." []
+comment: Represents a disturbance driver that typically necessitates subsequent restoration interventions such as peatland rewetting process (ELMO:3620646) and moss layer transfer process (ELMO:3620631).
+synonym: "peat harvesting" EXACT []
+synonym: "peat mining" EXACT []
+is_a: elmo:3620020 ! mechanical ecosystem management process
+property_value: dcterms:contributor https://orcid.org/0000-0002-4366-3088
+property_value: dcterms:contributor https://orcid.org/0000-0003-4817-0423
+property_value: ELMOP:hasCASCode "2.3" xsd:string
+property_value: skos:broadMatch https://w3id.org/elmo/cas/2.3
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07
+
+[Term]
+id: elmo:3622000
+name: environmental variable
+def: "A quality of an environmental system that reflects a physical, chemical, or hydrological condition of the abiotic environment and that can be measured or observed." []
+is_a: BFO:0000019 ! quality
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622001
+name: climatic and meteorological variable
+def: "An environmental variable that describes the state of the atmosphere at or near a site over a given period, such as temperature, precipitation, humidity, or radiation." []
+is_a: elmo:3622000 ! environmental variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622002
+name: air temperature
+def: "The temperature of the ambient air at a specified height above the ground surface at a site." []
+synonym: "ambient temperature" EXACT []
+is_a: elmo:3622001 ! climatic and meteorological variable
+property_value: skos:exactMatch ENVO:09200001
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622003
+name: precipitation amount
+def: "The depth of water (from rain, snow, hail, or other forms) that reaches the ground surface at a site over a specified period." []
+synonym: "precipitation" RELATED []
+synonym: "rainfall amount" EXACT []
+is_a: elmo:3622001 ! climatic and meteorological variable
+property_value: skos:exactMatch ENVO:01001363
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622004
+name: relative humidity
+def: "The ratio of the amount of water vapor actually present in the air to the amount that the air could hold at saturation at the same temperature, expressed as a percentage." []
+synonym: "RH" EXACT []
+is_a: elmo:3622001 ! climatic and meteorological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622005
+name: wind speed
+def: "The rate of horizontal air movement at a specified height above the ground surface at a site." []
+synonym: "wind velocity" EXACT []
+is_a: elmo:3622001 ! climatic and meteorological variable
+property_value: skos:exactMatch ENVO:01001362
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622006
+name: photosynthetically active radiation
+def: "The amount of solar radiation in the 400-700 nm waveband reaching a site, which is the spectral range used by plants for photosynthesis." []
+comment: Often reported as an instantaneous flux density (micromol photons per square metre per second) or integrated as daily light integral.
+synonym: "PAR" EXACT []
+synonym: "solar radiation" RELATED []
+is_a: elmo:3622001 ! climatic and meteorological variable
+property_value: skos:exactMatch ENVO:01001864
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622007
+name: growing degree days
+def: "A cumulative measure of heat accumulation calculated from the amount by which daily mean air temperature exceeds a specified base temperature over a growing season, used to predict plant development timing." []
+synonym: "GDD" EXACT []
+synonym: "heat units" BROAD []
+is_a: elmo:3622001 ! climatic and meteorological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622100
+name: soil variable
+def: "An environmental variable that describes a physical, chemical, or biological property of the soil at a site." []
+is_a: elmo:3622000 ! environmental variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622101
+name: soil pH
+def: "A measure of the acidity or alkalinity of a soil, expressed as the negative logarithm of the hydrogen ion activity in a soil-water or soil-solution mixture." []
+synonym: "soil reaction" EXACT []
+is_a: elmo:3622100 ! soil variable
+property_value: skos:exactMatch ENVO:09200010
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622102
+name: soil temperature
+def: "The temperature of the soil at a specified depth below the ground surface." []
+is_a: elmo:3622100 ! soil variable
+property_value: skos:exactMatch ENVO:09200012
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622105
+name: soil penetration resistance
+def: "The force per unit area required to push a probe or cone into the soil to a specified depth, used as a field indicator of soil compaction." []
+synonym: "soil compaction" EXACT []
+is_a: elmo:3622100 ! soil variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622106
+name: soil organic matter content
+def: "The proportion, by mass, of a soil sample composed of organic material derived from decomposed plant, animal, and microbial residues." []
+synonym: "SOM content" EXACT []
+is_a: elmo:3622100 ! soil variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622109
+name: soil nutrient concentration
+def: "The concentration of a plant-available nutrient in a soil sample." []
+is_a: elmo:3622100 ! soil variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622110
+name: soil nitrogen concentration
+def: "The concentration of plant-available nitrogen (e.g. nitrate or ammonium) in a soil sample." []
+synonym: "soil N concentration" EXACT []
+is_a: elmo:3622109 ! soil nutrient concentration
+property_value: skos:exactMatch ENVO:09000017
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622111
+name: soil phosphorus concentration
+def: "The concentration of plant-available phosphorus in a soil sample." []
+synonym: "soil P concentration" EXACT []
+is_a: elmo:3622109 ! soil nutrient concentration
+property_value: skos:exactMatch ENVO:3200068
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622112
+name: soil potassium concentration
+def: "The concentration of plant-available potassium in a soil sample." []
+synonym: "soil K concentration" EXACT []
+is_a: elmo:3622109 ! soil nutrient concentration
+property_value: skos:exactMatch ENVO:3200074
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622200
+name: hydrological and water quality variable
+def: "An environmental variable that describes a physical, chemical, or hydraulic property of a water body such as a stream, river, wetland, or lake." []
+is_a: elmo:3622000 ! environmental variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622201
+name: stream discharge
+def: "The volume of water passing through a stream cross-section per unit time." []
+synonym: "discharge rate" RELATED []
+synonym: "streamflow" EXACT []
+is_a: elmo:3622200 ! hydrological and water quality variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622202
+name: stream flow velocity
+def: "The speed at which water moves through a stream channel at a specified point." []
+synonym: "current velocity" EXACT []
+synonym: "flow velocity" EXACT []
+is_a: elmo:3622200 ! hydrological and water quality variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622204
+name: water depth
+def: "The vertical distance from the water surface to the bed of a water body at a specified point." []
+comment: Also referred to as stage when measured relative to a fixed reference gauge over time.
+synonym: "stage" RELATED []
+synonym: "water level" EXACT []
+is_a: elmo:3622200 ! hydrological and water quality variable
+property_value: skos:exactMatch ENVO:3100031
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622205
+name: water temperature
+def: "The temperature of the water in a water body at a specified depth and location." []
+is_a: elmo:3622200 ! hydrological and water quality variable
+property_value: skos:exactMatch ENVO:09200014
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622206
+name: water pH
+def: "A measure of the acidity or alkalinity of a water sample, expressed as the negative logarithm of the hydrogen ion activity." []
+is_a: elmo:3622200 ! hydrological and water quality variable
+property_value: skos:exactMatch ENVO:3100030
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622207
+name: dissolved oxygen concentration
+def: "The concentration of oxygen gas dissolved in a water sample, typically expressed as milligrams per litre or percent saturation." []
+synonym: "DO concentration" EXACT []
+is_a: elmo:3622200 ! hydrological and water quality variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622208
+name: turbidity
+def: "A measure of the cloudiness or haziness of water caused by suspended particulate matter, typically expressed in nephelometric turbidity units." []
+is_a: elmo:3622200 ! hydrological and water quality variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622209
+name: salinity
+def: "A measure of the total concentration of dissolved salts in a water sample." []
+is_a: elmo:3622200 ! hydrological and water quality variable
+property_value: skos:exactMatch PATO:0085001
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622210
+name: electrical conductivity of water
+def: "A measure of the capacity of a water sample to conduct electrical current, used as an indicator of its total dissolved ion concentration." []
+synonym: "specific conductance" EXACT []
+is_a: elmo:3622200 ! hydrological and water quality variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622211
+name: nutrient concentration in water
+def: "The concentration of a dissolved nutrient, such as nitrate or phosphate, in a water sample." []
+synonym: "water nutrient concentration" EXACT []
+is_a: elmo:3622200 ! hydrological and water quality variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622300
+name: ecological variable
+def: "A quality of an organism, population, community, or ecosystem that reflects a biotic structural, compositional, or functional characteristic and that can be measured or observed." []
+is_a: BFO:0000019 ! quality
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622301
+name: vegetation structure variable
+def: "An ecological variable that describes the physical arrangement, density, or size of plant material at a site." []
+is_a: elmo:3622300 ! ecological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622302
+name: canopy cover
+def: "The proportion of ground area at a site that is vertically overhung by the combined foliage and branches of the plant canopy." []
+comment: Distinct from canopy closure, which measures the proportion of overhead sky hemisphere obstructed by canopy from a point on the ground.
+synonym: "canopy closure" RELATED []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622303
+name: canopy height
+def: "The vertical distance from the ground surface to the top of the plant canopy at a site." []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622304
+name: leaf area index
+def: "The one-sided green leaf area per unit ground surface area, a dimensionless index of canopy leaf density." [doi:10.1093/jxb/erg263]
+synonym: "LAI" EXACT []
+is_a: elmo:3622301 ! vegetation structure variable
+property_value: skos:exactMatch TO:0012001
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622305
+name: stem density
+def: "The number of woody plant stems per unit ground area at a site." []
+synonym: "stem count density" EXACT []
+synonym: "stocking density" RELATED []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622306
+name: diameter at breast height
+def: "The diameter of a tree trunk measured at a standard height above the ground, conventionally 1.3 m internationally or 1.37 m (4.5 ft) in North America." []
+synonym: "DBH" EXACT []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622307
+name: basal area
+def: "The cross-sectional area of a tree trunk at breast height, or the sum of such areas for all trees per unit ground area at a site." []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622308
+name: understory cover
+def: "The proportion of ground area at a site covered by vegetation growing beneath the main forest canopy layer." []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622309
+name: shrub cover
+def: "The proportion of ground area at a site covered by the combined foliage of shrub-form vegetation." []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622310
+name: herbaceous cover
+def: "The proportion of ground area at a site covered by the combined foliage of herbaceous (non-woody) vegetation." []
+synonym: "herb layer cover" EXACT []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622311
+name: litter depth
+def: "The vertical depth of the layer of dead plant material accumulated on the ground surface at a site." []
+synonym: "leaf litter depth" EXACT []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622312
+name: coarse woody debris volume
+def: "The volume, per unit ground area, of downed dead wood at a site above a specified minimum diameter." []
+synonym: "CWD volume" EXACT []
+synonym: "downed wood volume" BROAD []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622400
+name: biodiversity and community composition variable
+def: "An ecological variable that describes the number, identity, relative representation, or spatial arrangement of species or individuals within a community at a site." []
+is_a: elmo:3622300 ! ecological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622401
+name: species richness
+def: "The number of distinct species recorded within a defined sampling area or unit." []
+is_a: elmo:3622400 ! biodiversity and community composition variable
+property_value: skos:exactMatch PCO:0000010
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622402
+name: species diversity
+def: "The variety of species present within a community, considering both the number of species and the relative abundance of individuals among them." []
+is_a: elmo:3622400 ! biodiversity and community composition variable
+property_value: skos:exactMatch PCO:0000019
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622403
+name: species evenness
+def: "A measure of how uniformly individuals are distributed among the species present in a community, independent of species richness." []
+is_a: elmo:3622400 ! biodiversity and community composition variable
+property_value: skos:exactMatch PCO:0000023
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622404
+name: percent native species cover
+def: "The proportion of ground area at a site covered by vegetation of species native to the region." []
+synonym: "native cover" EXACT []
+is_a: elmo:3622400 ! biodiversity and community composition variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622405
+name: percent invasive species cover
+def: "The proportion of ground area at a site covered by vegetation of species classified as invasive or non-native." []
+synonym: "exotic species cover" EXACT []
+synonym: "invasive cover" EXACT []
+is_a: elmo:3622400 ! biodiversity and community composition variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622406
+name: percent bare ground cover
+def: "The proportion of ground area at a site with no vegetation, litter, or rock cover." []
+synonym: "bare ground cover" EXACT []
+is_a: elmo:3622400 ! biodiversity and community composition variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622407
+name: population density
+def: "The number of individuals of a given species per unit area or volume of habitat." []
+is_a: elmo:3622400 ! biodiversity and community composition variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622408
+name: relative species abundance
+def: "The proportion that a given species' individuals represent of the total number of individuals of all species recorded in a community." []
+synonym: "relative abundance" EXACT []
+is_a: elmo:3622400 ! biodiversity and community composition variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622500
+name: productivity and biogeochemical variable
+def: "An ecological variable that describes the accumulation, storage, or cycling of biomass, carbon, or other materials at a site." []
+is_a: elmo:3622300 ! ecological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622501
+name: aboveground biomass
+def: "The mass of living plant material, per unit ground area, located above the soil surface at a site." []
+synonym: "AGB" EXACT []
+is_a: elmo:3622500 ! productivity and biogeochemical variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622502
+name: belowground biomass
+def: "The mass of living plant material, per unit ground area, located below the soil surface at a site." []
+synonym: "BGB" EXACT []
+synonym: "root biomass" RELATED []
+is_a: elmo:3622500 ! productivity and biogeochemical variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622503
+name: net primary productivity
+def: "The rate at which plants at a site accumulate biomass through photosynthesis minus their own respiratory losses, over a specified period." [doi:10.1890/1051-0761(2001)011%5B0356\:MNPPIF%5D2.0.CO;2]
+synonym: "NPP" EXACT []
+is_a: elmo:3622500 ! productivity and biogeochemical variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622504
+name: carbon stock
+def: "The mass of carbon stored, per unit ground area, in a specified pool (such as living biomass, dead wood, litter, or soil) at a site." []
+synonym: "carbon storage" EXACT []
+is_a: elmo:3622500 ! productivity and biogeochemical variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622505
+name: decomposition rate
+def: "The rate at which dead organic material (such as litter or coarse woody debris) breaks down and loses mass at a site." []
+synonym: "litter decomposition rate" EXACT []
+is_a: elmo:3622500 ! productivity and biogeochemical variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622506
+name: litterfall rate
+def: "The rate at which dead plant material (leaves, twigs, and other fine debris) is deposited onto the ground surface at a site." []
+synonym: "litter production rate" EXACT []
+is_a: elmo:3622500 ! productivity and biogeochemical variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622600
+name: disturbance and pressure variable
+def: "An ecological variable that quantifies the frequency, intensity, or extent of a natural or anthropogenic disturbance acting on a site." []
+is_a: elmo:3622300 ! ecological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622601
+name: fire return interval
+def: "The average length of time between successive fire events at a site." []
+comment: Distinct from fire frequency, which counts the number of fire events per unit time; the two are inversely related.
+synonym: "fire frequency" RELATED []
+is_a: elmo:3622600 ! disturbance and pressure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622602
+name: grazing intensity
+def: "A measure of the degree to which vegetation at a site is consumed or trampled by grazing animals over a specified period." []
+synonym: "grazing pressure" EXACT []
+is_a: elmo:3622600 ! disturbance and pressure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622603
+name: flood frequency
+def: "The number of flood events of a specified magnitude occurring at a site over a specified period." []
+is_a: elmo:3622600 ! disturbance and pressure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622604
+name: herbivory pressure
+def: "A measure of the degree to which plant tissue at a site is consumed by herbivores over a specified period." []
+synonym: "herbivory intensity" EXACT []
+is_a: elmo:3622600 ! disturbance and pressure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622700
+name: population demographic rate variable
+def: "An ecological variable that quantifies the rate at which individuals in a population are added or lost over a specified period." []
+is_a: elmo:3622300 ! ecological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622701
+name: survival rate
+def: "The proportion of individuals present at the start of a specified period that remain alive at the end of that period." []
+is_a: elmo:3622700 ! population demographic rate variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622702
+name: recruitment rate
+def: "The rate at which new individuals (through birth, germination, or establishment) are added to a population over a specified period." []
+synonym: "recruitment" EXACT []
+is_a: elmo:3622700 ! population demographic rate variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622703
+name: mortality rate
+def: "The rate at which individuals in a population die over a specified period." []
+synonym: "death rate" EXACT []
+is_a: elmo:3622700 ! population demographic rate variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-05T00:00:00Z
+
+[Term]
+id: elmo:3622704
+name: plant recruitment variable
+def: "An ecological variable that describes the germination, emergence, establishment, or early growth of individual plants at a site." []
+synonym: "plant establishment variable" EXACT []
+is_a: elmo:3622300 ! ecological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622705
+name: seedling survival rate
+def: "The proportion of seedlings present at the start of a specified monitoring period that remain alive at the end of that period." []
+synonym: "seedling survival" EXACT []
+is_a: elmo:3622704 ! plant recruitment variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622706
+name: seedling establishment rate
+def: "The proportion of seedlings or introduced propagules that successfully transition from initial emergence to persistence as established plants at a restoration site over a specified period." []
+synonym: "seedling establishment" EXACT []
+is_a: elmo:3622704 ! plant recruitment variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622707
+name: seedling growth rate
+def: "The rate of increase in size (height, basal diameter, or dry mass) of individual seedlings over a specified time period at a restoration site." []
+synonym: "seedling growth" EXACT []
+is_a: elmo:3622704 ! plant recruitment variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622708
+name: seedling emergence rate
+def: "The rate at which seeds germinate and produce seedlings that emerge above the soil surface at a site over a specified period." []
+synonym: "seedling emergence" EXACT []
+is_a: elmo:3622704 ! plant recruitment variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622709
+name: seedling height
+def: "The vertical distance from the base of a seedling at soil level to its apical meristem or tallest leaf tip at the time of measurement." []
+is_a: elmo:3622704 ! plant recruitment variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622710
+name: seedling natural regeneration density
+def: "The number of naturally regenerating seedlings per unit ground area at a site, arising without direct planting or seeding by humans." []
+synonym: "natural regeneration density" EXACT []
+synonym: "seedling regeneration" EXACT []
+is_a: elmo:3622704 ! plant recruitment variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622711
+name: height growth increment
+def: "The increase in height of a tree or seedling over a specified time period, used as a measure of vertical growth performance." []
+synonym: "height growth" EXACT []
+is_a: elmo:3622704 ! plant recruitment variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622712
+name: root sucker density
+def: "The number of root suckers — shoots arising from adventitious buds on the lateral roots or root collar of a parent plant — per unit ground area at a site over a specified monitoring period." []
+synonym: "root sucker production" EXACT []
+is_a: elmo:3622704 ! plant recruitment variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622713
+name: water table depth
+def: "The vertical distance from the ground surface to the upper boundary of the saturated zone in the soil or peat at a site." []
+comment: Positive values indicate the water table is below ground surface; a value of zero indicates the water table is at the surface; negative values indicate inundation. Also reported as water table level relative to a fixed datum.
+synonym: "water table level" EXACT []
+synonym: "water table position" EXACT []
+is_a: elmo:3622200 ! hydrological and water quality variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622714
+name: light availability
+def: "The amount of photosynthetically active radiation reaching a specified position such as the forest floor or understory, typically expressed as a proportion of above-canopy incident radiation or as an absolute flux density." []
+synonym: "light penetration" EXACT []
+synonym: "understory light" RELATED []
+is_a: elmo:3622001 ! climatic and meteorological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622715
+name: Sphagnum cover
+def: "The proportion of ground area at a peatland site covered by living Sphagnum mosses." []
+comment: Sphagnum cover is the standard measured quantity at a point in time; the term 'Sphagnum regeneration' is commonly used in the peatland restoration literature to refer to the same phenomenon, particularly when framing it as a post-restoration outcome.
+synonym: "Sphagnum regeneration" EXACT []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622716
+name: microbial biomass
+def: "The mass of living microbial cells (bacteria, fungi, and other microorganisms) per unit mass or volume of soil at a site." []
+synonym: "soil microbial biomass" EXACT []
+is_a: elmo:3622500 ! productivity and biogeochemical variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622717
+name: vegetation cover
+def: "The proportion of ground area at a site covered by the combined foliage and stems of all vascular plant growth forms including trees, shrubs, and herbaceous plants." []
+comment: Encompasses canopy cover (ELMO:3622302), shrub cover (ELMO:3622309), herbaceous cover (ELMO:3622310), and understory cover (ELMO:3622308) as narrower terms. Use this term when reporting total across-strata plant cover.
+synonym: "plant cover" EXACT []
+synonym: "total vegetation cover" EXACT []
+is_a: elmo:3622301 ! vegetation structure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622718
+name: competition intensity
+def: "A measure of the degree to which neighbouring plants reduce the growth, survival, or reproductive output of target plants at a site over a specified period." []
+synonym: "competition" EXACT []
+synonym: "competitive pressure" BROAD []
+is_a: elmo:3622600 ! disturbance and pressure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622719
+name: time since restoration
+def: "The elapsed time between the initiation of a restoration intervention at a site and the point of ecological measurement, used to characterize the site along a recovery trajectory." []
+synonym: "post-restoration age" EXACT []
+synonym: "restoration age" EXACT []
+is_a: elmo:3622300 ! ecological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622720
+name: restoration success index
+def: "A composite measure evaluating the degree to which a restoration site has achieved specified ecological targets relative to a reference condition, assessed across one or more criteria such as species composition, structural complexity, or ecosystem function." []
+synonym: "restoration success" EXACT []
+is_a: elmo:3622300 ! ecological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622800
+name: ecological process variable
+def: "An ecological variable that describes the rate, stage, or trajectory of a natural ecological process occurring at a site." []
+synonym: "ecological dynamics variable" RELATED []
+is_a: elmo:3622300 ! ecological variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622801
+name: succession stage
+def: "A categorical or ordinal characterization of the stage of ecological succession at a site, based on the composition and structure of the plant community relative to a reference successional trajectory." []
+synonym: "succession" EXACT []
+synonym: "successional stage" BROAD []
+is_a: elmo:3622800 ! ecological process variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622802
+name: natural regeneration rate
+def: "The rate at which native vegetation re-establishes at a site through unassisted ecological processes, without direct planting or seeding by humans, over a specified period." []
+synonym: "natural recovery" EXACT []
+is_a: elmo:3622800 ! ecological process variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622803
+name: regeneration failure rate
+def: "The proportion of a site or planting cohort in which natural or assisted plant regeneration fails to achieve a specified establishment threshold over a monitoring period." []
+synonym: "regeneration failure" EXACT []
+is_a: elmo:3622800 ! ecological process variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622804
+name: habitat loss area
+def: "The area of habitat lost to anthropogenic disturbance, land-use change, or ecological degradation within a specified landscape unit over a defined time period." []
+synonym: "habitat loss" EXACT []
+is_a: elmo:3622600 ! disturbance and pressure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
+
+[Term]
+id: elmo:3622805
+name: seismic line density
+def: "The total linear extent or area of seismic exploration corridors — linear clearings cut through forested terrain during geophysical surveys for oil and gas exploration — per unit landscape area at a site." []
+comment: Seismic lines are a key disturbance type in Canadian boreal forest and peatland restoration, particularly in Alberta.
+synonym: "seismic line coverage" EXACT []
+synonym: "seismic lines" EXACT []
+is_a: elmo:3622600 ! disturbance and pressure variable
+created_by: https://orcid.org/0000-0002-1296-2528
+creation_date: 2026-07-07T00:00:00Z
 
 [Term]
 id: https://w3id.org/elmo/cas/1
@@ -4765,6 +6068,57 @@ is_a: BFO:0000015 ! process
 property_value: dce:source https://www.iucnredlist.org/resources/conservation-actions
 
 [Typedef]
+id: BFO:0000050
+name: part of
+def: "a core relation that holds between a part and its whole" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000111 "is part of" xsd:string
+property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
+property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
+property_value: IAO:0000118 "part_of" xsd:string
+property_value: RO:0001900 RO:0001901
+property_value: RO:0040042 BFO:0000002
+property_value: RO:0040042 BFO:0000003
+property_value: RO:0040042 BFO:0000004
+property_value: RO:0040042 BFO:0000017
+property_value: RO:0040042 BFO:0000019
+property_value: RO:0040042 BFO:0000020
+property_value: RO:0040042 BFO:0000031
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
+property_value: seeAlso "http://www.obofoundry.org/ro/#OBO_REL:part_of" xsd:string
+property_value: seeAlso "https://wiki.geneontology.org/Part_of" xsd:anyURI
+is_transitive: true
+is_a: RO:0002131 ! overlaps
+inverse_of: BFO:0000051 ! has part
+
+[Typedef]
+id: BFO:0000051
+name: has part
+def: "a core relation that holds between a whole and its part" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
+property_value: IAO:0000111 "has part" xsd:string
+property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
+property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
+property_value: IAO:0000118 "has_part" xsd:string
+property_value: RO:0001900 RO:0001901
+is_transitive: true
+is_a: RO:0002131 ! overlaps
+
+[Typedef]
 id: BFO:0000062
 name: preceded by
 def: "x is preceded by y if and only if the time point at which y ends is before or equivalent to the time point at which x starts. Formally: x preceded by y iff ω(y) <= α(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point." []
@@ -4776,7 +6130,7 @@ property_value: IAO:0000118 "is preceded by" xsd:string
 property_value: IAO:0000118 "preceded_by" xsd:string
 domain: BFO:0000003 ! occurrent
 range: BFO:0000003 ! occurrent
-holds_over_chain: part_of BFO:0000062
+holds_over_chain: BFO:0000050 BFO:0000062
 is_transitive: true
 is_a: RO:0002086 ! ends after
 inverse_of: BFO:0000063 ! precedes
@@ -4789,7 +6143,7 @@ subset: ro-eco
 property_value: IAO:0000111 "precedes" xsd:string
 domain: BFO:0000003 ! occurrent
 range: BFO:0000003 ! occurrent
-holds_over_chain: part_of BFO:0000063
+holds_over_chain: BFO:0000050 BFO:0000063
 is_transitive: true
 is_a: RO:0002222 ! temporally related to
 
@@ -4797,6 +6151,12 @@ is_a: RO:0002222 ! temporally related to
 id: ENVO:01003004
 name: derives from part of
 def: "A relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist through the separation or transformation of a part of the old entity, and the new entity inherits a significant portion of the matter belonging to that part of the old entity." []
+
+[Typedef]
+id: ENVO:02000200
+name: has increased levels of
+def: "A has part relationship between a whole and a part, where the number of parts present in the whole is higher than in comparable entities." []
+is_a: RO:0002180 ! has component
 
 [Typedef]
 id: RO:0000052
@@ -4852,7 +6212,7 @@ property_value: IAO:0000116 "Has_participant is a primitive instance-level relat
 property_value: IAO:0000118 "has_participant" xsd:string
 domain: BFO:0000003 ! occurrent
 range: BFO:0000002 ! continuant
-holds_over_chain: has_part RO:0000057
+holds_over_chain: BFO:0000051 RO:0000057
 
 [Typedef]
 id: RO:0000079
@@ -5062,12 +6422,12 @@ subset: http://purl.obolibrary.org/obo/valid_for_gocam
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: RO:0001900 RO:0001901
-holds_over_chain: has_part part_of {RO:0002582="true"}
-holds_over_chain: has_part RO:0002131
-holds_over_chain: part_of part_of
+holds_over_chain: BFO:0000050 BFO:0000050
+holds_over_chain: BFO:0000051 BFO:0000050 {RO:0002582="true"}
+holds_over_chain: BFO:0000051 RO:0002131
 is_symmetric: true
 is_a: RO:0002323 ! mereotopologically related to
-transitive_over: part_of ! part_of
+transitive_over: BFO:0000050 ! part of
 expand_expression_to: "http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.obolibrary.org/obo/BFO_0000050 some ?Y)" []
 
 [Typedef]
@@ -5080,7 +6440,7 @@ property_value: IAO:0000116 "The definition of 'has component' is still under di
 property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
 property_value: RO:0001900 RO:0001901
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
-is_a: has_part ! has part
+is_a: BFO:0000051 ! has part
 
 [Typedef]
 id: RO:0002211
@@ -5160,7 +6520,7 @@ def: "c stands in this relationship to p if and only if there exists some p' suc
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000118 "has function in" xsd:string
 property_value: seeAlso http://purl.obolibrary.org/obo/ro/docs/reflexivity/
-holds_over_chain: RO:0002215 part_of {RO:0002582="true"}
+holds_over_chain: RO:0002215 BFO:0000050 {RO:0002582="true"}
 is_a: RO:0002328 ! functionally related to
 is_a: RO:0002500 ! causal agent in process
 
@@ -5249,9 +6609,9 @@ property_value: IAO:0000118 "inheres in part of" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 property_value: RO:0001900 RO:0001901
 property_value: seeAlso http://purl.obolibrary.org/obo/ro/docs/reflexivity/
-holds_over_chain: RO:0000052 part_of {RO:0002582="true"}
+holds_over_chain: RO:0000052 BFO:0000050 {RO:0002582="true"}
 is_a: RO:0002502 ! depends on
-transitive_over: part_of ! part_of
+transitive_over: BFO:0000050 ! part of
 
 [Typedef]
 id: RO:0002323
@@ -5277,7 +6637,7 @@ property_value: IAO:0000232 "This relation differs from the parent relation 'cap
 property_value: seeAlso "https://wiki.geneontology.org/Enables" xsd:anyURI
 is_a: RO:0002215 ! capable of
 inverse_of: RO:0002333 ! enabled by
-transitive_over: has_part ! has part
+transitive_over: BFO:0000051 ! has part
 transitive_over: RO:0002017 ! has component activity
 
 [Typedef]
@@ -5293,7 +6653,7 @@ name: part of structure that is capable of
 def: "this relation holds between c and p when c is part of some c', and c' is capable of p." []
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000118 "false" xsd:boolean
-holds_over_chain: part_of RO:0002215 {RO:0002581="true"}
+holds_over_chain: BFO:0000050 RO:0002215 {RO:0002581="true"}
 is_a: RO:0002328 ! functionally related to
 
 [Typedef]
@@ -5304,10 +6664,10 @@ property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000118 "actively involved in" xsd:string
 property_value: IAO:0000118 "enables part of" xsd:string
 property_value: seeAlso "https://wiki.geneontology.org/Involved_in" xsd:anyURI
-holds_over_chain: RO:0002327 part_of
+holds_over_chain: RO:0002327 BFO:0000050
 is_a: RO:0000056 ! participates in
 is_a: RO:0002431 ! involved in or involved in regulation of
-transitive_over: part_of ! part_of
+transitive_over: BFO:0000050 ! part of
 
 [Typedef]
 id: RO:0002333
@@ -5446,7 +6806,7 @@ property_value: IAO:0000118 "influences (processual)" xsd:string
 is_transitive: true
 is_a: RO:0002501 ! causal relation between processes
 inverse_of: RO:0002427 ! causally downstream of or within
-transitive_over: part_of ! part_of
+transitive_over: BFO:0000050 ! part of
 
 [Typedef]
 id: RO:0002427
@@ -5674,7 +7034,7 @@ name: has part structure that is capable of
 def: "s 'has part structure that is capable of' p if and only if there exists some part x such that s 'has part' x and x 'capable of' p" []
 property_value: IAO:0000112 "gland SubClassOf 'has part structure that is capable of' some 'secretion by cell'" xsd:string
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
-holds_over_chain: has_part RO:0002215
+holds_over_chain: BFO:0000051 RO:0002215
 is_a: RO:0002328 ! functionally related to
 is_a: RO:0002595 ! causal relation between material entity and a process
 
@@ -5754,7 +7114,7 @@ is_a: RO:0002578 ! directly regulates
 id: RO:0004031
 name: enables subfunction
 def: "Holds between an entity and an process P where the entity enables some larger compound process, and that larger process has-part P." []
-holds_over_chain: RO:0002327 has_part
+holds_over_chain: RO:0002327 BFO:0000051
 is_a: RO:0002328 ! functionally related to
 created_by: https://orcid.org/0000-0002-6601-2165
 creation_date: 2018-01-25T23:20:13Z
@@ -5852,6 +7212,12 @@ created_by: https://orcid.org/0000-0003-1813-6857
 creation_date: 2022-09-26T06:08:01Z
 
 [Typedef]
+id: RO:0015012
+name: reciprocal of
+def: "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e." [https://orcid.org/0000-0002-6601-2165]
+comment: There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality.
+
+[Typedef]
 id: RO:0017001
 name: device utilizes material
 def: "X device utilizes material Y means X and Y are material entities, and X is capable of some process P that has input Y." []
@@ -5890,61 +7256,4 @@ property_value: dcterms:contributor https://orcid.org/0000-0002-8688-6599
 holds_over_chain: RO:0002212 RO:0019001
 holds_over_chain: RO:0002213 RO:0019002
 is_a: RO:0019000 ! regulates characteristic
-
-[Typedef]
-id: has_part
-name: has part
-name: has_part
-namespace: quality
-def: "a core relation that holds between a whole and its part" []
-subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
-subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
-subset: http://purl.obolibrary.org/obo/valid_for_gocam
-xref: BFO:0000051
-property_value: IAO:0000111 "has part" xsd:string
-property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
-property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
-property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
-property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
-property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
-property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
-property_value: IAO:0000118 "has_part" xsd:string
-property_value: RO:0001900 RO:0001901
-is_transitive: true
-is_a: RO:0002131 ! overlaps
-
-[Typedef]
-id: part_of
-name: part of
-name: part_of
-namespace: quality
-def: "a core relation that holds between a part and its whole" []
-subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
-subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
-subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
-subset: http://purl.obolibrary.org/obo/valid_for_gocam
-xref: BFO:0000050
-property_value: IAO:0000111 "is part of" xsd:string
-property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
-property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
-property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
-property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
-property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
-property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
-property_value: IAO:0000118 "part_of" xsd:string
-property_value: RO:0001900 RO:0001901
-property_value: RO:0040042 BFO:0000002
-property_value: RO:0040042 BFO:0000003
-property_value: RO:0040042 BFO:0000004
-property_value: RO:0040042 BFO:0000017
-property_value: RO:0040042 BFO:0000019
-property_value: RO:0040042 BFO:0000020
-property_value: RO:0040042 BFO:0000031
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
-property_value: seeAlso "http://www.obofoundry.org/ro/#OBO_REL:part_of" xsd:string
-property_value: seeAlso "https://wiki.geneontology.org/Part_of" xsd:anyURI
-is_transitive: true
-is_a: RO:0002131 ! overlaps
-inverse_of: has_part ! has part
 

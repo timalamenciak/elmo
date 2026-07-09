@@ -13,9 +13,9 @@
         "val" : "Ecolink Model Ontology (ELMO)"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-07-03"
+        "val" : "2026-07-09"
       } ],
-      "version" : "https://w3id.org/elmo/elmo/releases/2026-07-03/elmo-simple.json"
+      "version" : "https://w3id.org/elmo/elmo/releases/2026-07-09/elmo-simple.json"
     },
     "nodes" : [ {
       "id" : "https://w3id.org/elmo/ELMO_0000000",
@@ -97,9 +97,37 @@
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000231",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000233",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
+      "lbl" : "term replaced by",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "Use on obsolete terms, relating the term to another term that can be used as a substitute"
+        },
+        "comments" : [ "Add as annotation triples in the granting ontology" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
+          "val" : "term replaced by"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
+          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
+          "val" : "Person:Alan Ruttenberg"
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
+          "val" : "Person:Alan Ruttenberg"
+        } ]
+      }
     }, {
       "id" : "http://purl.org/dc/terms/contributor",
       "type" : "PROPERTY",
@@ -129,12 +157,10 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-      "lbl" : "created by",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-      "lbl" : "creation date",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {

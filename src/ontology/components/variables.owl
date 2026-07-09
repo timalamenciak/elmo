@@ -626,7 +626,7 @@ SubClassOf(<https://w3id.org/elmo/elmo_3622502> <https://w3id.org/elmo/elmo_3622
 
 # Class: <https://w3id.org/elmo/elmo_3622503> (net primary productivity)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1890/1051-0761(2001)011[0356:MNPPIF]2.0.CO;2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622503> "The rate at which plants at a site accumulate biomass through photosynthesis minus their own respiratory losses, over a specified period."@en)
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <doi:10.1890/1051-0761(2001)011%5B0356:MNPPIF%5D2.0.CO;2>) <http://purl.obolibrary.org/obo/IAO_0000115> <https://w3id.org/elmo/elmo_3622503> "The rate at which plants at a site accumulate biomass through photosynthesis minus their own respiratory losses, over a specified period."@en)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <https://w3id.org/elmo/elmo_3622503> <https://orcid.org/0000-0002-1296-2528>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <https://w3id.org/elmo/elmo_3622503> "2026-07-05T00:00:00Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <https://w3id.org/elmo/elmo_3622503> "NPP"@en)
