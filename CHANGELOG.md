@@ -1,5 +1,9 @@
 # ELMO Ontology Changelog
 
+## 2026-07-08
+
+Tagged new release.
+
 ## 2026-06-18 — P3: Redundancy Resolution, New Terms, Semantic Precision
 
 Changes applied to `src/templates/interventions.tsv`. Adds 15 new terms (ELMO:3621037–3621051), deprecates 1 redundant term, reclassifies 1 term, and updates 5 definitions for semantic precision.
