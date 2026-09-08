@@ -10,6 +10,15 @@ body:
         [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md#reviewing-terms) before filling this in.
 
   - type: input
+    id: orcid_id
+    attributes:
+      label: ORCiD
+      description: What is your ORCiD identifier?
+      placeholder: 0000-0002-1296-2528
+    validations:
+      required: true
+
+  - type: input
     id: term_id
     attributes:
       label: Term ID
