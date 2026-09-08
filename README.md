@@ -1,8 +1,8 @@
 
 ![Build Status](https://github.com/timalamenciak/elmo/actions/workflows/qc.yml/badge.svg)
-# Ecolink Model Ontology (ELMO)
+# Ecological Management Ontology (ELMO)
 
-The Ecolink Model Ontology is a project ontology that describes ecosystem management processes, ecosystem types, and environmental variables. 
+The Ecological Management Ontology is an ontology that describes ecosystem management processes, ecosystem types, and environmental variables. 
 
 Lots more information can be found in the [project documentation](https://timalamenciak.github.io/elmo).
 

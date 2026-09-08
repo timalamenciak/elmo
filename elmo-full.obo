@@ -22,7 +22,7 @@ idspace: swrlb http://www.w3.org/2003/11/swrlb#
 ontology: https://w3id.org/elmo/elmo/elmo-full.owl
 property_value: dcterms:description "None" xsd:string
 property_value: dcterms:license https://creativecommons.org/public-domain/
-property_value: dcterms:title "Ecolink Model Ontology (ELMO)" xsd:string
+property_value: dcterms:title "Ecological Management Ontology (ELMO)" xsd:string
 property_value: owl:versionInfo "2026-07-09" xsd:string
 
 [Term]

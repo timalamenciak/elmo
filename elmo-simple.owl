@@ -15,7 +15,7 @@
         <owl:versionIRI rdf:resource="https://w3id.org/elmo/elmo/releases/2026-07-09/elmo-simple.owl"/>
         <terms:description>None</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/public-domain/"/>
-        <terms:title>Ecolink Model Ontology (ELMO)</terms:title>
+        <terms:title>Ecological Management Ontology (ELMO)</terms:title>
         <owl:versionInfo>2026-07-09</owl:versionInfo>
     </owl:Ontology>
     

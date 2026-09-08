@@ -1,4 +1,4 @@
-# Contributing to Ecolink Model Ontology (ELMO)
+# Contributing to Ecological Management Ontology (ELMO)
 
 :+1: First of all: Thank you for taking the time to contribute!
 
@@ -21,7 +21,7 @@ changes to this document in a pull request.
 
 ## Code of Conduct
 
-The Ecolink Model Ontology (ELMO) team strives to create a
+The Ecological Management Ontology (ELMO) team strives to create a
 welcoming environment for editors, users and other contributors.
 Please carefully read our [Code of Conduct](CODE_OF_CONDUCT.md).
 

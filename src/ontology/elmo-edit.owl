@@ -37,7 +37,7 @@ Import(<https://w3id.org/elmo/elmo/components/cas.owl>)
 Import(<https://w3id.org/elmo/elmo/patterns/definitions.owl>)
 Annotation(dcterms:description "None")
 Annotation(dcterms:license <https://creativecommons.org/public-domain/>)
-Annotation(dcterms:title "Ecolink Model Ontology (ELMO)")
+Annotation(dcterms:title "Ecological Management Ontology (ELMO)")
 
 
 Declaration(Class(<https://w3id.org/elmo/ELMO_0000000>))

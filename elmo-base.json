@@ -13,7 +13,7 @@
         "val" : "https://creativecommons.org/public-domain/"
       }, {
         "pred" : "http://purl.org/dc/terms/title",
-        "val" : "Ecolink Model Ontology (ELMO)"
+        "val" : "Ecological Management Ontology (ELMO)"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
         "val" : "2026-07-09"

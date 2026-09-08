@@ -1,7 +1,7 @@
 ---
 layout: ontology_detail
 id: elmo
-title: Ecolink Model Ontology (ELMO)
+title: Ecological Management Ontology (ELMO)
 jobs:
   - id: https://travis-ci.org/timalamenciak/elmo
     type: travis-ci
@@ -10,25 +10,25 @@ build:
   system: git
   path: "."
 contact:
-  email: 
-  label: 
-  github: 
-description: Ecolink Model Ontology (ELMO) is an ontology...
-domain: stuff
+  email: tim.alamenciak@gmail.com
+  label: Tim Alamenciak
+  github: https://github.com/timalamenciak
+description: Ecological Management Ontology (ELMO) is an ontology that contains terms relevant to ecological management, including the restoration and conservation of biodiversity. ELMO captures ecological interventions (e.g. planting, seeding, controlled burns), ecosystem types (e.g. IUCN's Ecosystem Functional Groups), and some environmental variables that are commonly measured in the discipline (e.g. species richness, species diversity).
+domain: restoration and conservation of biodiversity
 homepage: https://github.com/timalamenciak/elmo
 products:
   - id: elmo.owl
-    name: "Ecolink Model Ontology (ELMO) main release in OWL format"
+    name: "Ecological Management Ontology (ELMO) main release in OWL format"
   - id: elmo.obo
-    name: "Ecolink Model Ontology (ELMO) additional release in OBO format"
+    name: "Ecological Management Ontology (ELMO) additional release in OBO format"
   - id: elmo.json
-    name: "Ecolink Model Ontology (ELMO) additional release in OBOJSon format"
+    name: "Ecological Management Ontology (ELMO) additional release in OBOJSon format"
   - id: elmo/elmo-base.owl
-    name: "Ecolink Model Ontology (ELMO) main release in OWL format"
+    name: "Ecological Management Ontology (ELMO) main release in OWL format"
   - id: elmo/elmo-base.obo
-    name: "Ecolink Model Ontology (ELMO) additional release in OBO format"
+    name: "Ecological Management Ontology (ELMO) additional release in OBO format"
   - id: elmo/elmo-base.json
-    name: "Ecolink Model Ontology (ELMO) additional release in OBOJSon format"
+    name: "Ecological Management Ontology (ELMO) additional release in OBOJSon format"
 dependencies:
 - id: ro
 - id: cob

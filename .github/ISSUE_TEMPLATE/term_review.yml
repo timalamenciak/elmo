@@ -1,0 +1,104 @@
+name: Term review
+description: Review an existing ELMO term against how the concept is used in restoration documents and literature.
+title: "[REVIEW] "
+labels: ["term review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One issue per term. Please read the review guidance in
+        [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md#reviewing-terms) before filling this in.
+
+  - type: input
+    id: term_id
+    attributes:
+      label: Term ID
+      description: The ELMO identifier of the term under review.
+      placeholder: ELMO:0000123
+    validations:
+      required: true
+
+  - type: input
+    id: term_label
+    attributes:
+      label: Term label
+      placeholder: seeding
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources consulted
+      description: At least two independent sources that use this concept. A mix of report, guidance and peer-reviewed literature is better than three of the same kind.
+      placeholder: |
+        1.
+        2.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: coverage_verdict
+    attributes:
+      label: Coverage verdict
+      options:
+        - ADEQUATE — the term captures the concept as used in the sources
+        - PARTIAL — the term misses part of the concept
+        - MISSING — the term cannot be found in the literature
+        - REDUNDANT — this term overlaps another and they should merge
+    validations:
+      required: true
+
+  - type: textarea
+    id: coverage
+    attributes:
+      label: Coverage
+      description: Two or three sentences. What do the sources treat as belonging to this concept, and where does ELMO's boundary sit differently? For MISSING, name the nearest existing term. For REDUNDANT, give the other term's ID.
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_definition
+    attributes:
+      label: Current definition (verbatim)
+      description: Copy the definition exactly as it currently stands.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: fidelity_verdict
+    attributes:
+      label: Fidelity verdict
+      options:
+        - ACCURATE
+        - IMPRECISE
+        - INCORRECT
+    validations:
+      required: true
+
+  - type: textarea
+    id: canonical_citation
+    attributes:
+      label: Canonical citation
+      description: |
+        The single published source that best defines this concept, in full. Prefer, in order: a standards or guidance document; a peer-reviewed synthesis, review or textbook; a peer-reviewed primary article. Websites, blog posts and personal communications are not acceptable. If none exists, write "No canonical source found" and say what you searched.
+      placeholder: Gann, G.D., McDonald, T., Walder, B., Aronson, J., Nelson, C.R., Jonson, J., et al. (2019). International principles and standards for the practice of ecological restoration. Second edition. Restoration Ecology, 27(S1), S1–S46.
+    validations:
+      required: true
+
+  - type: textarea
+    id: fidelity
+    attributes:
+      label: Fidelity
+      description: |
+        If the definition should change, give the replacement wording in full, in genus-differentia form ("A [parent] that [distinguishing feature]"). Also note here if the label is wrong or non-standard, if a synonym is missing, or if the parent term is wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: comments
+    attributes:
+      label: Comments
+      description: Suggestions for improvement, specifically additional synonyms that can and should be added, or changes to the definition.
+    validations:
+      required: false
